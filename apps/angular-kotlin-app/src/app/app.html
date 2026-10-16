@@ -1,0 +1,164 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="shell" [class.sidebar-collapsed]="ui.sidebarCollapsed()" [class.drawer-open]="ui.drawerOpen()">
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="9" fill="var(--accent)" /><path d="M9 16.5l4.5 4.5L23 11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </span>
+      <span class="brand-name">TaskPilot</span>
+      <button type="button" class="icon-btn drawer-close" aria-label="Close navigation" (click)="ui.drawerOpen.set(false)">
+        <app-icon name="close" />
+      </button>
+    </div>
+    <nav>
+      <ul class="nav-list">
+        @for (item of nav; track item.path) {
+          <li>
+            <a
+              class="nav-link"
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              [attr.data-testid]="item.testId"
+              [attr.title]="ui.sidebarCollapsed() ? item.label : null"
+            >
+              <app-icon [name]="item.icon" [size]="20" />
+              <span class="nav-label">{{ item.label }}</span>
+            </a>
+          </li>
+        }
+      </ul>
+      @if (store.ready() && store.views().length) {
+        <h2 class="nav-heading" id="views-heading">Views</h2>
+        <ul class="nav-list" aria-labelledby="views-heading" data-testid="sidebar-views">
+          @for (v of store.views(); track v.id) {
+            <li class="view-item" data-testid="sidebar-view">
+              @if (renamingView() === v.id) {
+                <label class="sr-only" [for]="'rename-' + v.id">View name</label>
+                <input
+                  class="view-rename"
+                  [id]="'rename-' + v.id"
+                  data-testid="view-rename-input"
+                  maxlength="40"
+                  [value]="v.name"
+                  appAutofocus
+                  [attr.aria-invalid]="renameError() ? 'true' : null"
+                  (keydown.enter)="finishRename(v, $any($event.target).value)"
+                  (keydown.escape)="$event.stopPropagation(); renamingView.set(null)"
+                  (blur)="finishRename(v, $any($event.target).value)"
+                />
+                @if (renameError()) {
+                  <p class="field-error small">{{ renameError() }}</p>
+                }
+              } @else {
+                <a
+                  class="nav-link view-link"
+                  [class.active]="activeViewId() === v.id"
+                  [attr.aria-current]="activeViewId() === v.id ? 'page' : null"
+                  routerLink="/tasks"
+                  [queryParams]="viewParams(v)"
+                  [attr.title]="v.name + ' — ' + v.summary"
+                >
+                  <app-icon name="bookmark" [size]="18" />
+                  <span class="nav-label">{{ v.name }}</span>
+                </a>
+                <span class="view-actions">
+                  <a class="icon-btn icon-btn-xs" routerLink="/board" [queryParams]="boardParams(v)" [attr.aria-label]="'Open view ' + v.name + ' on the board'" [attr.title]="v.boardIgnoresStatus ? 'Open on board (status filter is shown as columns)' : 'Open on board'" data-testid="view-board-link">
+                    <app-icon name="board" [size]="13" />
+                  </a>
+                  <button type="button" class="icon-btn icon-btn-xs" [attr.aria-label]="'Rename view ' + v.name" (click)="startRename(v)">
+                    <app-icon name="edit" [size]="13" />
+                  </button>
+                  <button type="button" class="icon-btn icon-btn-xs" [attr.aria-label]="'Delete view ' + v.name" (click)="deleteView(v)">
+                    <app-icon name="trash" [size]="13" />
+                  </button>
+                </span>
+              }
+            </li>
+          }
+        </ul>
+      }
+    </nav>
+    <div class="sidebar-foot">
+      <button type="button" class="nav-link" (click)="ui.helpOpen.set(true)">
+        <app-icon name="keyboard" [size]="20" />
+        <span class="nav-label">Shortcuts <kbd>?</kbd></span>
+      </button>
+      <button
+        type="button"
+        class="nav-link collapse-toggle"
+        [attr.aria-expanded]="!ui.sidebarCollapsed()"
+        aria-controls="sidebar"
+        (click)="ui.sidebarCollapsed.set(!ui.sidebarCollapsed())"
+      >
+        <app-icon [name]="ui.sidebarCollapsed() ? 'chevronRight' : 'chevronLeft'" [size]="20" />
+        <span class="nav-label">Collapse</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" (click)="ui.drawerOpen.set(false)" aria-hidden="true"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button
+        type="button"
+        class="icon-btn menu-btn"
+        aria-label="Open navigation"
+        aria-controls="sidebar"
+        [attr.aria-expanded]="ui.drawerOpen()"
+        (click)="ui.drawerOpen.set(true)"
+      >
+        <app-icon name="menu" />
+      </button>
+      <form class="search" role="search" (submit)="$event.preventDefault(); applyGlobalSearch()">
+        <app-icon name="search" [size]="16" />
+        <label class="sr-only" for="global-search">Search tasks</label>
+        <input
+          #searchInput
+          id="global-search"
+          type="search"
+          data-testid="global-search"
+          placeholder="Search tasks…"
+          autocomplete="off"
+          [value]="globalSearch()"
+          (input)="onGlobalSearch($any($event.target).value)"
+        />
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </form>
+      <div class="topbar-actions">
+        @if (pomodoro.active()) {
+          <a
+            class="mini-timer"
+            [class.paused]="!pomodoro.running()"
+            [routerLink]="['/tasks', pomodoro.taskId()]"
+            [attr.aria-label]="'Pomodoro ' + pomodoro.display() + ' remaining for ' + pomodoro.taskTitle()"
+            data-testid="mini-timer"
+          >
+            <app-icon name="timer" [size]="16" />
+            <span class="mono">{{ pomodoro.display() }}</span>
+          </a>
+        }
+        <button type="button" class="icon-btn hide-sm" aria-label="Undo" [title]="store.history().undoLabel ? 'Undo: ' + store.history().undoLabel : 'Undo'" [disabled]="!store.history().canUndo" (click)="undo()">
+          <app-icon name="undo" />
+        </button>
+        <button type="button" class="icon-btn hide-sm" aria-label="Redo" [title]="store.history().redoLabel ? 'Redo: ' + store.history().redoLabel : 'Redo'" [disabled]="!store.history().canRedo" (click)="redo()">
+          <app-icon name="redo" />
+        </button>
+        <app-notifications-bell />
+        <button type="button" class="icon-btn" data-testid="theme-toggle" [attr.aria-label]="themeLabel()" [title]="themeLabel()" (click)="theme.toggle()">
+          <app-icon [name]="themeIcon()" />
+        </button>
+        <button type="button" class="btn btn-primary" data-testid="new-task-button" (click)="ui.openTaskModal()">
+          <app-icon name="plus" [size]="16" />
+          <span class="hide-sm">New task</span>
+        </button>
+      </div>
+    </header>
+    <main id="main" class="content" tabindex="-1">
+      <router-outlet />
+    </main>
+  </div>
+</div>
+<app-task-modal />
+<app-help-modal />
+<app-toasts />

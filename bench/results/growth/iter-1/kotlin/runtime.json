@@ -1,0 +1,69 @@
+{
+  "name": "growth-kotlin",
+  "load": {
+    "/dashboard": {
+      "ttfb": 8.6,
+      "fcp": 404,
+      "lcp": 404,
+      "dcl": 332.2,
+      "load": 358.3,
+      "heapMB": 7.7,
+      "transferKB": 313.4,
+      "jsKB": 303.2,
+      "requests": 4,
+      "errors": []
+    },
+    "/tasks": {
+      "ttfb": 7.6,
+      "fcp": 456,
+      "lcp": 456,
+      "dcl": 387.6,
+      "load": 414.3,
+      "heapMB": 8.8,
+      "transferKB": 313.4,
+      "jsKB": 303.2,
+      "requests": 4,
+      "errors": []
+    },
+    "/board": {
+      "ttfb": 7.1,
+      "fcp": 740,
+      "lcp": 740,
+      "dcl": 621.1,
+      "load": 683.8,
+      "heapMB": 17.9,
+      "transferKB": 313.4,
+      "jsKB": 303.2,
+      "requests": 4,
+      "errors": []
+    }
+  },
+  "interactions": {
+    "300": {
+      "nav_tasks": 172,
+      "search": 63,
+      "paginate": 111,
+      "nav_board": 453,
+      "board_cards": 300,
+      "nav_calendar": 112,
+      "nav_dashboard": 93,
+      "create_task": 432,
+      "heapMB": 29.6,
+      "failures": [],
+      "errors": []
+    },
+    "5000": {
+      "nav_tasks": 177,
+      "search": 118,
+      "paginate": 40,
+      "nav_board": 12520,
+      "board_cards": 5000,
+      "nav_calendar": 384,
+      "nav_dashboard": 154,
+      "create_task": 462,
+      "heapMB": 163,
+      "failures": [],
+      "errors": []
+    }
+  }
+}

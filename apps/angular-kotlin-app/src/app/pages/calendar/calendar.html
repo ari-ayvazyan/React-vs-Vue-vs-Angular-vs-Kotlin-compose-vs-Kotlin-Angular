@@ -1,0 +1,74 @@
+<header class="page-header">
+  <div>
+    <h1>{{ grid()?.title ?? 'Calendar' }}</h1>
+    <p class="muted">Tasks on their due date.</p>
+  </div>
+  <div class="cal-toolbar">
+  <div class="field-inline">
+    <label for="cal-assignee">Assignee</label>
+    <select id="cal-assignee" data-testid="calendar-assignee-filter" (change)="assigneeFilter.set($any($event.target).value)">
+      <option value="">Anyone</option>
+      <option [value]="UNASSIGNED">Unassigned</option>
+      @for (m of store.members(); track m.id) {
+        <option [value]="m.id">{{ m.name }}</option>
+      }
+    </select>
+  </div>
+  <div class="cal-nav" role="group" aria-label="Month navigation">
+    <button type="button" class="icon-btn" aria-label="Previous month" (click)="shift(-1)"><app-icon name="chevronLeft" /></button>
+    <button type="button" class="btn btn-sm" (click)="goToday()">Today</button>
+    <button type="button" class="icon-btn" aria-label="Next month" (click)="shift(1)"><app-icon name="chevronRight" /></button>
+  </div>
+  </div>
+</header>
+
+@if (store.ready() && grid(); as g) {
+  <div class="calendar" data-testid="calendar-grid" role="grid" [attr.aria-label]="g.title">
+    <div class="cal-row cal-head" role="row">
+      @for (w of weekdays; track w) {
+        <div class="cal-weekday" role="columnheader">{{ w }}</div>
+      }
+    </div>
+    <div class="cal-body">
+      @for (day of g.days; track day.date) {
+        <div
+          class="cal-day"
+          role="gridcell"
+          [class.out]="!day.inMonth"
+          [class.today]="day.isToday"
+          [class.weekend]="day.isWeekend"
+          [attr.aria-label]="fmt.long(day.date) + (day.tasks.length ? ', ' + day.tasks.length + ' tasks' : '')"
+          [attr.aria-current]="day.isToday ? 'date' : null"
+        >
+          <div class="cal-day-head">
+            <span class="cal-num">{{ day.dayOfMonth }}</span>
+            <button type="button" class="icon-btn icon-btn-xs cal-add" [attr.aria-label]="'Add task on ' + fmt.long(day.date)" (click)="ui.openTaskModal(null, { dueDate: day.date })">
+              <app-icon name="plus" [size]="12" />
+            </button>
+          </div>
+          <ul class="cal-tasks">
+            @for (t of visibleTasks(day); track t.id) {
+              <li>
+                <a
+                  class="cal-task"
+                  [routerLink]="['/tasks', t.id]"
+                  [attr.data-priority]="t.priority"
+                  [class.done]="t.isDone"
+                  [class.overdue]="overdue(t)"
+                  [title]="t.title + ' (' + priorityLabel(t.priority) + ')'"
+                >{{ t.title }}</a>
+              </li>
+            }
+          </ul>
+          @if (day.tasks.length > maxVisible) {
+            <button type="button" class="cal-more" [attr.aria-expanded]="expanded().has(day.date)" (click)="toggleExpanded(day.date)">
+              {{ expanded().has(day.date) ? 'Show less' : '+' + (day.tasks.length - maxVisible) + ' more' }}
+            </button>
+          }
+        </div>
+      }
+    </div>
+  </div>
+} @else {
+  <app-skeleton [rows]="8" />
+}

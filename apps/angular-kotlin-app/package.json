@@ -1,0 +1,49 @@
+{
+  "name": "angular-kotlin-app",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "./scripts/ng.sh",
+    "core:build": "cd core && ./gradlew buildForAngular --console=plain --quiet",
+    "core:test": "cd core && ./gradlew jsTest --console=plain",
+    "core:lint": "cd core && ./gradlew ktlintCheck --console=plain --quiet",
+    "build": "bun run core:build && ./scripts/ng.sh build",
+    "start": "bun run core:build && ./scripts/ng.sh serve",
+    "start:prod": "node dist/angular-kotlin-app/server/server.mjs",
+    "lint": "bun run core:lint && bun run core:build && tsc -p tsconfig.app.json --noEmit && ./scripts/ng.sh lint",
+    "test": "bun run core:test",
+    "watch": "bun run core:build && ./scripts/ng.sh build --watch --configuration development"
+  },
+  "private": true,
+  "packageManager": "bun@1.4.2",
+  "dependencies": {
+    "@angular/common": "^22.2.0",
+    "@angular/compiler": "^22.2.0",
+    "@angular/core": "^22.2.0",
+    "@angular/forms": "^22.2.0",
+    "@angular/platform-browser": "^22.2.0",
+    "@angular/platform-server": "^22.2.0",
+    "@angular/router": "^22.2.0",
+    "@angular/ssr": "^22.2.3",
+    "express": "^5.1.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular-eslint/builder": "22.6.0",
+    "@angular/build": "^22.2.3",
+    "@angular/cli": "^22.2.3",
+    "@angular/compiler-cli": "^22.2.0",
+    "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.12.0",
+    "angular-eslint": "22.6.0",
+    "eslint": "^10.12.0",
+    "node": "24.22.0",
+    "prettier": "^3.8.1",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "8.71.0"
+  },
+  "trustedDependencies": [
+    "node"
+  ]
+}

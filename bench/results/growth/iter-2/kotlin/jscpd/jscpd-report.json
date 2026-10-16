@@ -1,0 +1,1093 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-16T11:38:27.106Z",
+    "formats": {
+      "kotlin": {
+        "sources": {
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/ui/TaskForm.kt": {
+            "lines": 256,
+            "tokens": 2940,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 116,
+            "percentage": 3.52,
+            "percentageTokens": 3.95,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/ui/Icons.kt": {
+            "lines": 85,
+            "tokens": 881,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/ui/Components.kt": {
+            "lines": 322,
+            "tokens": 3195,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt": {
+            "lines": 463,
+            "tokens": 5336,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 292,
+            "percentage": 5.4,
+            "percentageTokens": 5.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt": {
+            "lines": 370,
+            "tokens": 3804,
+            "sources": 1,
+            "clones": 9,
+            "duplicatedLines": 75,
+            "duplicatedTokens": 897,
+            "percentage": 20.27,
+            "percentageTokens": 23.58,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskCollab.kt": {
+            "lines": 510,
+            "tokens": 5182,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/SettingsPage.kt": {
+            "lines": 268,
+            "tokens": 2753,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 99,
+            "percentage": 3.36,
+            "percentageTokens": 3.6,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/ProjectsPage.kt": {
+            "lines": 280,
+            "tokens": 2991,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 32,
+            "duplicatedTokens": 369,
+            "percentage": 11.43,
+            "percentageTokens": 12.34,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/NotFoundPage.kt": {
+            "lines": 26,
+            "tokens": 237,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/MembersSection.kt": {
+            "lines": 209,
+            "tokens": 2202,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 39,
+            "duplicatedTokens": 461,
+            "percentage": 18.66,
+            "percentageTokens": 20.94,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/DashboardPage.kt": {
+            "lines": 173,
+            "tokens": 2007,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 88,
+            "percentage": 3.47,
+            "percentageTokens": 4.38,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/Charts.kt": {
+            "lines": 313,
+            "tokens": 3646,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 69,
+            "percentage": 2.24,
+            "percentageTokens": 1.89,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/CalendarPage.kt": {
+            "lines": 154,
+            "tokens": 1674,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 71,
+            "percentage": 4.55,
+            "percentageTokens": 4.24,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt": {
+            "lines": 350,
+            "tokens": 4113,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 71,
+            "percentage": 2.29,
+            "percentageTokens": 1.73,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/ActivityPage.kt": {
+            "lines": 114,
+            "tokens": 1296,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 75,
+            "percentage": 5.26,
+            "percentageTokens": 5.79,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Theme.kt": {
+            "lines": 26,
+            "tokens": 274,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Store.kt": {
+            "lines": 437,
+            "tokens": 4819,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Shell.kt": {
+            "lines": 413,
+            "tokens": 4363,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 5,
+            "duplicatedTokens": 82,
+            "percentage": 1.21,
+            "percentageTokens": 1.88,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Router.kt": {
+            "lines": 123,
+            "tokens": 1284,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Pomodoro.kt": {
+            "lines": 118,
+            "tokens": 1153,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Platform.kt": {
+            "lines": 63,
+            "tokens": 607,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Main.kt": {
+            "lines": 28,
+            "tokens": 319,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/server/src/main/kotlin/taskpilot/server/Server.kt": {
+            "lines": 101,
+            "tokens": 1124,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Validation.kt": {
+            "lines": 94,
+            "tokens": 1012,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Stats.kt": {
+            "lines": 118,
+            "tokens": 1644,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Recurrence.kt": {
+            "lines": 52,
+            "tokens": 614,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Query.kt": {
+            "lines": 186,
+            "tokens": 2333,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Model.kt": {
+            "lines": 158,
+            "tokens": 1214,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Members.kt": {
+            "lines": 46,
+            "tokens": 644,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/ImportExport.kt": {
+            "lines": 289,
+            "tokens": 4107,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Ids.kt": {
+            "lines": 10,
+            "tokens": 85,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/History.kt": {
+            "lines": 34,
+            "tokens": 387,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Dependencies.kt": {
+            "lines": 109,
+            "tokens": 1403,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/DemoData.kt": {
+            "lines": 132,
+            "tokens": 1520,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Dates.kt": {
+            "lines": 139,
+            "tokens": 1979,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Comments.kt": {
+            "lines": 96,
+            "tokens": 1219,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/CalendarGrid.kt": {
+            "lines": 27,
+            "tokens": 499,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Board.kt": {
+            "lines": 44,
+            "tokens": 747,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.rR1xnlGY6L/shared/src/commonMain/kotlin/taskpilot/Activity.kt": {
+            "lines": 238,
+            "tokens": 3091,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 6974,
+          "tokens": 78698,
+          "sources": 39,
+          "clones": 14,
+          "duplicatedLines": 114,
+          "duplicatedTokens": 1345,
+          "percentage": 1.63,
+          "percentageTokens": 1.71,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/resources/styles.css": {
+            "lines": 729,
+            "tokens": 16151,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 729,
+          "tokens": 16151,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/resources/index.html": {
+            "lines": 16,
+            "tokens": 190,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 16,
+          "tokens": 190,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "/tmp/tmp.rR1xnlGY6L/web/src/jsMain/resources/index.html": {
+            "lines": 31,
+            "tokens": 378,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 31,
+          "tokens": 378,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 7750,
+      "tokens": 95417,
+      "sources": 42,
+      "clones": 14,
+      "duplicatedLines": 114,
+      "duplicatedTokens": 1345,
+      "percentage": 1.47,
+      "percentageTokens": 1.41,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "kotlin",
+      "lines": 10,
+      "fragment": "import androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport org.jetbrains.compose.web.attributes.InputType\nimport org.jetbrains.compose.web.attributes.forId\nimport org.jetbrains.compose.web.attributes.onSubmit\nimport org.jetbrains.compose.web.attributes.placeholder\nimport org.jetbrains.compose.web.dom",
+      "tokens": 116,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 3,
+        "end": 12,
+        "startLoc": {
+          "line": 3,
+          "column": 1,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 37,
+          "position": 125
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/ui/TaskForm.kt",
+        "start": 3,
+        "end": 12,
+        "startLoc": {
+          "line": 3,
+          "column": 1,
+          "position": 9
+        },
+        "endLoc": {
+          "line": 12,
+          "column": 44,
+          "position": 125
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 7,
+      "fragment": "import taskpilot.web.Router\nimport taskpilot.web.Store\nimport taskpilot.web.ui.Avatar\nimport taskpilot.web.ui.BlockedBadge\nimport taskpilot.web.ui.EmptyState\nimport taskpilot.web.ui.Icon\nimport taskpilot.web.ui.IconButton",
+      "tokens": 64,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 40,
+        "end": 46,
+        "startLoc": {
+          "line": 40,
+          "column": 1,
+          "position": 445
+        },
+        "endLoc": {
+          "line": 46,
+          "column": 35,
+          "position": 509
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+        "start": 46,
+        "end": 52,
+        "startLoc": {
+          "line": 46,
+          "column": 1,
+          "position": 461
+        },
+        "endLoc": {
+          "line": 52,
+          "column": 33,
+          "position": 525
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 10,
+      "fragment": "package taskpilot.web.pages\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport org.jetbrains.compose.web.attributes.InputType\nimport org.jetbrains.compose.web.attributes.forId\nimport org.jetbrains.compose.web.attributes.name",
+      "tokens": 99,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/SettingsPage.kt",
+        "start": 1,
+        "end": 10,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 10,
+          "column": 49,
+          "position": 99
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 1,
+        "end": 10,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 10,
+          "column": 53,
+          "position": 99
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 13,
+      "fragment": "package taskpilot.web.pages\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport org.jetbrains.compose.web.attributes.InputType\nimport org.jetbrains.compose.web.attributes.forId\nimport org.jetbrains.compose.web.attributes.onSubmit\nimport org.jetbrains.compose.web.attributes.placeholder\nimport org.jetbrains.compose.web.dom.Button\nimport org.jetbrains.compose.web.dom.Div",
+      "tokens": 141,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/ProjectsPage.kt",
+        "start": 1,
+        "end": 13,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 13,
+          "column": 41,
+          "position": 141
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 1,
+        "end": 13,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 13,
+          "column": 51,
+          "position": 141
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 7,
+      "fragment": "import org.jetbrains.compose.web.dom.Div\nimport org.jetbrains.compose.web.dom.Form\nimport org.jetbrains.compose.web.dom.H1\nimport org.jetbrains.compose.web.dom.H2\nimport org.jetbrains.compose.web.dom.Input\nimport org.jetbrains.compose.web.dom.Label\nimport org.jetbrains.compose.web.dom.P",
+      "tokens": 96,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/ProjectsPage.kt",
+        "start": 13,
+        "end": 19,
+        "startLoc": {
+          "line": 13,
+          "column": 1,
+          "position": 129
+        },
+        "endLoc": {
+          "line": 19,
+          "column": 39,
+          "position": 225
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 17,
+        "end": 23,
+        "startLoc": {
+          "line": 17,
+          "column": 1,
+          "position": 185
+        },
+        "endLoc": {
+          "line": 23,
+          "column": 40,
+          "position": 281
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 15,
+      "fragment": "package taskpilot.web.pages\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport org.jetbrains.compose.web.attributes.InputType\nimport org.jetbrains.compose.web.attributes.forId\nimport org.jetbrains.compose.web.attributes.onSubmit\nimport org.jetbrains.compose.web.attributes.placeholder\nimport org.jetbrains.compose.web.dom.Button\nimport org.jetbrains.compose.web.dom.Div\nimport org.jetbrains.compose.web.dom.Form\nimport org.jetbrains.compose.web.dom.H2",
+      "tokens": 169,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/MembersSection.kt",
+        "start": 1,
+        "end": 15,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 40,
+          "position": 169
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 1,
+        "end": 15,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 15,
+          "column": 40,
+          "position": 169
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 6,
+      "fragment": "import org.jetbrains.compose.web.dom.P\nimport org.jetbrains.compose.web.dom.Section\nimport org.jetbrains.compose.web.dom.Span\nimport org.jetbrains.compose.web.dom.Text\nimport org.jetbrains.compose.web.dom.Ul\nimport taskpilot",
+      "tokens": 72,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/MembersSection.kt",
+        "start": 19,
+        "end": 24,
+        "startLoc": {
+          "line": 19,
+          "column": 1,
+          "position": 213
+        },
+        "endLoc": {
+          "line": 24,
+          "column": 17,
+          "position": 285
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 25,
+        "end": 30,
+        "startLoc": {
+          "line": 25,
+          "column": 1,
+          "position": 297
+        },
+        "endLoc": {
+          "line": 30,
+          "column": 11,
+          "position": 369
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 15,
+      "fragment": "}\n                    onKeyDown { if (it.key == \"Escape\") editing = false }\n                }\n                Button({\n                    classes(\"btn\", \"btn-sm\", \"btn-primary\")\n                    attr(\"type\", \"submit\")\n                }) { Text(\"Save\") }\n                Button({\n                    classes(\"btn\", \"btn-sm\", \"btn-ghost\")\n                    attr(\"type\", \"button\")\n                    onClick { editing = false }\n                }) { Text(\"Cancel\") }\n            }\n        } else {\n            Span",
+      "tokens": 132,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/MembersSection.kt",
+        "start": 165,
+        "end": 179,
+        "startLoc": {
+          "line": 165,
+          "column": 21,
+          "position": 1689
+        },
+        "endLoc": {
+          "line": 179,
+          "column": 17,
+          "position": 1821
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/ProjectsPage.kt",
+        "start": 185,
+        "end": 199,
+        "startLoc": {
+          "line": 185,
+          "column": 51,
+          "position": 2035
+        },
+        "endLoc": {
+          "line": 199,
+          "column": 19,
+          "position": 2167
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 7,
+      "fragment": "import org.jetbrains.compose.web.dom.Li\nimport org.jetbrains.compose.web.dom.P\nimport org.jetbrains.compose.web.dom.Section\nimport org.jetbrains.compose.web.dom.Span\nimport org.jetbrains.compose.web.dom.Text\nimport org.jetbrains.compose.web.dom.Ul\nimport taskpilot.Dates",
+      "tokens": 88,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/DashboardPage.kt",
+        "start": 8,
+        "end": 14,
+        "startLoc": {
+          "line": 8,
+          "column": 1,
+          "position": 71
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 23,
+          "position": 159
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/MembersSection.kt",
+        "start": 18,
+        "end": 24,
+        "startLoc": {
+          "line": 18,
+          "column": 1,
+          "position": 199
+        },
+        "endLoc": {
+          "line": 24,
+          "column": 22,
+          "position": 287
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 8,
+      "fragment": "package taskpilot.web.pages\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport org.jetbrains.compose.web.dom",
+      "tokens": 69,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/Charts.kt",
+        "start": 1,
+        "end": 8,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 8,
+          "column": 37,
+          "position": 69
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 1,
+        "end": 8,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 8,
+          "column": 44,
+          "position": 69
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 8,
+      "fragment": "package taskpilot.web.pages\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport org.jetbrains.compose.web.attributes.forId",
+      "tokens": 71,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/CalendarPage.kt",
+        "start": 1,
+        "end": 8,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 8,
+          "column": 50,
+          "position": 71
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        "start": 1,
+        "end": 8,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 8,
+          "column": 54,
+          "position": 71
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 9,
+      "fragment": "package taskpilot.web.pages\n\nimport androidx.compose.runtime.Composable\nimport androidx.compose.runtime.LaunchedEffect\nimport androidx.compose.runtime.getValue\nimport androidx.compose.runtime.mutableStateOf\nimport androidx.compose.runtime.remember\nimport androidx.compose.runtime.setValue\nimport androidx",
+      "tokens": 71,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt",
+        "start": 1,
+        "end": 9,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 9,
+          "column": 16,
+          "position": 71
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+        "start": 1,
+        "end": 9,
+        "startLoc": {
+          "line": 1,
+          "column": 1,
+          "position": 0
+        },
+        "endLoc": {
+          "line": 9,
+          "column": 15,
+          "position": 71
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 7,
+      "fragment": "+ 1\n            Text(\"Page ${page.page} of ${page.pageCount} · $from–${from + page.items.size - 1} of ${page.total}\")\n        }\n        Button({\n            classes(\"btn\", \"btn-ghost\")\n            attr(\"type\", \"button\")\n            attr(\"data-testid\", \"activity-next\"",
+      "tokens": 75,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/ActivityPage.kt",
+        "start": 100,
+        "end": 106,
+        "startLoc": {
+          "line": 100,
+          "column": 66,
+          "position": 1139
+        },
+        "endLoc": {
+          "line": 106,
+          "column": 48,
+          "position": 1214
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+        "start": 175,
+        "end": 181,
+        "startLoc": {
+          "line": 175,
+          "column": 51,
+          "position": 1877
+        },
+        "endLoc": {
+          "line": 181,
+          "column": 50,
+          "position": 1952
+        }
+      }
+    },
+    {
+      "format": "kotlin",
+      "lines": 6,
+      "fragment": "import org.jetbrains.compose.web.dom.Span\nimport org.jetbrains.compose.web.dom.Table\nimport org.jetbrains.compose.web.dom.Tbody\nimport org.jetbrains.compose.web.dom.Td\nimport org.jetbrains.compose.web.dom.Text\nimport org.jetbrains.compose.web.dom.Tr",
+      "tokens": 82,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/Shell.kt",
+        "start": 24,
+        "end": 29,
+        "startLoc": {
+          "line": 24,
+          "column": 1,
+          "position": 255
+        },
+        "endLoc": {
+          "line": 29,
+          "column": 40,
+          "position": 337
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.rR1xnlGY6L/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+        "start": 23,
+        "end": 28,
+        "startLoc": {
+          "line": 23,
+          "column": 1,
+          "position": 259
+        },
+        "endLoc": {
+          "line": 28,
+          "column": 40,
+          "position": 341
+        }
+      }
+    }
+  ]
+}

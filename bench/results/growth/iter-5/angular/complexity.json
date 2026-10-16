@@ -1,0 +1,37 @@
+{
+ "functions": 645,
+ "avg_ccn": 2.36,
+ "max_ccn": 61,
+ "fn_ccn_gt10": 18,
+ "fn_ccn_gt15": 8,
+ "fn_ccn_gt20": 6,
+ "avg_fn_nloc": 5.1,
+ "fn_over_50_lines": 5,
+ "top": [
+  [
+   61,
+   "matchesDue",
+   "src/app/core/filters.ts"
+  ],
+  [
+   34,
+   "validateTask",
+   "src/app/core/validation.ts"
+  ],
+  [
+   34,
+   "buildTimeline",
+   "src/app/core/timeline.ts"
+  ],
+  [
+   28,
+   "formatValue",
+   "src/app/core/activity.ts"
+  ],
+  [
+   22,
+   "(anonymous)",
+   "src/app/components/task-form.ts"
+  ]
+ ]
+}

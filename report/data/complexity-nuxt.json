@@ -1,0 +1,8 @@
+{
+ "functions": 368,
+ "avg_ccn": 2.46,
+ "max_ccn": 31,
+ "fn_ccn_gt10": 8,
+ "fn_ccn_gt15": 3,
+ "avg_fn_nloc": 4.8
+}

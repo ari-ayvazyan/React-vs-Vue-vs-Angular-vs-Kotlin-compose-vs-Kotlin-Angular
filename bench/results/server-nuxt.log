@@ -1,0 +1,3 @@
+$ node .output/server/index.mjs
+Listening on http://0.0.0.0:3001
+error: script "start:prod" was terminated by signal SIGKILL (Forced quit)

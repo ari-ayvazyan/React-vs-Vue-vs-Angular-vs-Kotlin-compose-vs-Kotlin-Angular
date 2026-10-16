@@ -1,0 +1,155 @@
+<form class="form" (submit)="submit($event)" novalidate>
+  <div class="field">
+    <label [for]="id + '-title'">Title <span class="req" aria-hidden="true">*</span></label>
+    <input
+      [id]="id + '-title'"
+      name="title"
+      data-testid="task-title-input"
+      data-autofocus
+      autocomplete="off"
+      [ngModel]="title()"
+      (ngModelChange)="title.set($event)"
+      [attr.aria-invalid]="error('title') ? 'true' : null"
+      [attr.aria-describedby]="error('title') ? id + '-title-err' : null"
+      placeholder="What needs to be done?"
+    />
+    <div class="field-foot">
+      @if (error('title')) {
+        <p class="field-error" [id]="id + '-title-err'">{{ error('title') }}</p>
+      }
+      <span class="counter" [class.over]="title().trim().length > limits.TITLE_MAX">{{ title().trim().length }}/{{ limits.TITLE_MAX }}</span>
+    </div>
+  </div>
+
+  <div class="field">
+    <label [for]="id + '-desc'">Description</label>
+    <textarea
+      [id]="id + '-desc'"
+      name="description"
+      rows="4"
+      [ngModel]="description()"
+      (ngModelChange)="description.set($event)"
+      [attr.aria-invalid]="error('description') ? 'true' : null"
+      [attr.aria-describedby]="error('description') ? id + '-desc-err' : null"
+      placeholder="Optional details"
+    ></textarea>
+    <div class="field-foot">
+      @if (error('description')) {
+        <p class="field-error" [id]="id + '-desc-err'">{{ error('description') }}</p>
+      }
+      <span class="counter" [class.over]="description().length > limits.DESCRIPTION_MAX">{{ description().length }}/{{ limits.DESCRIPTION_MAX }}</span>
+    </div>
+  </div>
+
+  <div class="form-grid">
+    <div class="field">
+      <label [for]="id + '-status'">Status</label>
+      <select [id]="id + '-status'" name="status" [ngModel]="status()" (ngModelChange)="status.set($event)">
+        @for (s of statusOptions(); track s.id) {
+          <option [value]="s.id" [selected]="status() === s.id">{{ s.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-priority'">Priority</label>
+      <select [id]="id + '-priority'" name="priority" [ngModel]="priority()" (ngModelChange)="priority.set($event)">
+        @for (p of priorities; track p) {
+          <option [value]="p">{{ priorityLabel(p) }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-project'">Project</label>
+      <select [id]="id + '-project'" name="project" [ngModel]="projectId()" (ngModelChange)="onProjectChange($event)">
+        <option value="">No project</option>
+        @for (p of store.projectOptions(); track p.id) {
+          <option [value]="p.id">{{ p.label }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-assignee'">Assignee</label>
+      <select [id]="id + '-assignee'" name="assignee" data-testid="task-assignee-select" [ngModel]="assigneeId()" (ngModelChange)="assigneeId.set($event)">
+        <option value="">Unassigned</option>
+        @for (m of store.members(); track m.id) {
+          <option [value]="m.id">{{ m.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-recurrence'">Repeats</label>
+      <select [id]="id + '-recurrence'" name="recurrence" data-testid="task-recurrence-select" [ngModel]="recurrence()" (ngModelChange)="recurrence.set($event)" [attr.aria-describedby]="id + '-rec-hint'">
+        @for (r of recurrences; track r) {
+          <option [value]="r">{{ recurrenceLabel(r) }}</option>
+        }
+      </select>
+      <p class="hint" [id]="id + '-rec-hint'">
+        @if (nextHint()) {
+          When completed, the next one is due {{ nextHint() }}.
+        }
+      </p>
+    </div>
+    <div class="field">
+      <label [for]="id + '-due'">Due date</label>
+      <input
+        [id]="id + '-due'"
+        type="date"
+        name="dueDate"
+        [ngModel]="dueDate()"
+        (ngModelChange)="dueDate.set($event ?? '')"
+        [attr.aria-invalid]="error('dueDate') ? 'true' : null"
+        [attr.aria-describedby]="error('dueDate') ? id + '-due-err' : null"
+      />
+      @if (error('dueDate')) {
+        <p class="field-error" [id]="id + '-due-err'">{{ error('dueDate') }}</p>
+      }
+    </div>
+    <div class="field">
+      <label [for]="id + '-est'">Estimate (minutes)</label>
+      <input
+        [id]="id + '-est'"
+        name="estimate"
+        inputmode="numeric"
+        autocomplete="off"
+        [ngModel]="estimate()"
+        (ngModelChange)="estimate.set($event)"
+        [attr.aria-invalid]="error('estimate') ? 'true' : null"
+        [attr.aria-describedby]="error('estimate') ? id + '-est-err' : null"
+        placeholder="e.g. 60"
+      />
+      @if (error('estimate')) {
+        <p class="field-error" [id]="id + '-est-err'">{{ error('estimate') }}</p>
+      }
+    </div>
+    <div class="field">
+      <label [for]="id + '-tags'">Tags</label>
+      <input
+        [id]="id + '-tags'"
+        name="tags"
+        autocomplete="off"
+        [ngModel]="tagsText()"
+        (ngModelChange)="tagsText.set($event)"
+        [attr.aria-invalid]="error('tags') ? 'true' : null"
+        [attr.aria-describedby]="id + '-tags-hint'"
+        placeholder="bug, frontend"
+      />
+      <p class="hint" [id]="id + '-tags-hint'">
+        @if (error('tags')) {
+          <span class="field-error">{{ error('tags') }}</span>
+        } @else {
+          Comma separated, max {{ limits.TAGS_MAX }}.
+          @for (t of tagPreview(); track t) {
+            <span class="tag">#{{ t }}</span>
+          }
+        }
+      </p>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    @if (showCancel()) {
+      <button type="button" class="btn btn-ghost" (click)="cancelled.emit()">Cancel</button>
+    }
+    <button type="submit" class="btn btn-primary" data-testid="task-save-button">{{ submitLabel() }}</button>
+  </div>
+</form>

@@ -1,0 +1,69 @@
+{
+  "name": "growth-angular-kotlin",
+  "load": {
+    "/dashboard": {
+      "ttfb": 16.8,
+      "fcp": 88,
+      "lcp": 88,
+      "dcl": 157.8,
+      "load": 161.8,
+      "heapMB": 6.5,
+      "transferKB": 557.1,
+      "jsKB": 503.7,
+      "requests": 7,
+      "errors": []
+    },
+    "/tasks": {
+      "ttfb": 24.4,
+      "fcp": 112,
+      "lcp": 112,
+      "dcl": 173.6,
+      "load": 176.1,
+      "heapMB": 6.1,
+      "transferKB": 567.9,
+      "jsKB": 509.5,
+      "requests": 8,
+      "errors": []
+    },
+    "/board": {
+      "ttfb": 21.4,
+      "fcp": 96,
+      "lcp": 96,
+      "dcl": 146,
+      "load": 148.2,
+      "heapMB": 8.3,
+      "transferKB": 555.2,
+      "jsKB": 501,
+      "requests": 8,
+      "errors": []
+    }
+  },
+  "interactions": {
+    "300": {
+      "nav_tasks": 119,
+      "search": 30,
+      "paginate": 136,
+      "nav_board": 323,
+      "board_cards": 300,
+      "nav_calendar": 94,
+      "nav_dashboard": 69,
+      "create_task": 529,
+      "heapMB": 13.5,
+      "failures": [],
+      "errors": []
+    },
+    "5000": {
+      "nav_tasks": 167,
+      "search": 58,
+      "paginate": 3554,
+      "nav_board": 2174,
+      "board_cards": 5000,
+      "nav_calendar": 312,
+      "nav_dashboard": 91,
+      "create_task": 495,
+      "heapMB": 65.4,
+      "failures": [],
+      "errors": []
+    }
+  }
+}

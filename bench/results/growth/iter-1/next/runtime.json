@@ -1,0 +1,69 @@
+{
+  "name": "growth-next",
+  "load": {
+    "/dashboard": {
+      "ttfb": 4.3,
+      "fcp": 80,
+      "lcp": 224,
+      "dcl": 50.7,
+      "load": 116.5,
+      "heapMB": 6,
+      "transferKB": 248.3,
+      "jsKB": 197.9,
+      "requests": 35,
+      "errors": []
+    },
+    "/tasks": {
+      "ttfb": 4.5,
+      "fcp": 76,
+      "lcp": 228,
+      "dcl": 23.5,
+      "load": 114,
+      "heapMB": 5.5,
+      "transferKB": 248.3,
+      "jsKB": 197.9,
+      "requests": 36,
+      "errors": []
+    },
+    "/board": {
+      "ttfb": 6.9,
+      "fcp": 80,
+      "lcp": 272,
+      "dcl": 26.4,
+      "load": 112.9,
+      "heapMB": 8,
+      "transferKB": 237.9,
+      "jsKB": 192,
+      "requests": 30,
+      "errors": []
+    }
+  },
+  "interactions": {
+    "300": {
+      "nav_tasks": 92,
+      "search": 28,
+      "paginate": 42,
+      "nav_board": 218,
+      "board_cards": 300,
+      "nav_calendar": 120,
+      "nav_dashboard": 101,
+      "create_task": 408,
+      "heapMB": 15.3,
+      "failures": [],
+      "errors": []
+    },
+    "5000": {
+      "nav_tasks": 175,
+      "search": 41,
+      "paginate": 41,
+      "nav_board": 1137,
+      "board_cards": 5000,
+      "nav_calendar": 477,
+      "nav_dashboard": 453,
+      "create_task": 708,
+      "heapMB": 59.9,
+      "failures": [],
+      "errors": []
+    }
+  }
+}

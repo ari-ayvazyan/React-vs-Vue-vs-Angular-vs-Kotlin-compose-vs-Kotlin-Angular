@@ -1,0 +1,37 @@
+{
+ "functions": 488,
+ "avg_ccn": 2.55,
+ "max_ccn": 28,
+ "fn_ccn_gt10": 9,
+ "fn_ccn_gt15": 1,
+ "fn_ccn_gt20": 1,
+ "avg_fn_nloc": 10.4,
+ "fn_over_50_lines": 16,
+ "top": [
+  [
+   28,
+   "(anonymous)",
+   "web/src/jsMain/kotlin/taskpilot/web/Shell.kt"
+  ],
+  [
+   15,
+   "App",
+   "web/src/jsMain/kotlin/taskpilot/web/Shell.kt"
+  ],
+  [
+   13,
+   "parse",
+   "web/src/jsMain/kotlin/taskpilot/web/Router.kt"
+  ],
+  [
+   13,
+   "TaskRow",
+   "web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt"
+  ],
+  [
+   13,
+   "PomodoroCard",
+   "web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt"
+  ]
+ ]
+}

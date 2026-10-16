@@ -1,0 +1,249 @@
+.createForm {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.createBtn {
+  margin-top: 25px;
+}
+
+.tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Sub-projects: indented by depth, with a connector to the parent column. */
+.child {
+  margin-left: calc(var(--depth) * 28px);
+}
+
+/* the connector is drawn outside the card (.card sets overflow: hidden later in this file) */
+.card.child {
+  overflow: visible;
+}
+
+.child::after {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: -12px;
+  width: 12px;
+  height: 34px;
+  border-left: 2px solid var(--border-strong);
+  border-bottom: 2px solid var(--border-strong);
+  border-bottom-left-radius: 8px;
+}
+
+.subCount {
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-subtle);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parentLabel {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.parentSelect {
+  height: 32px;
+  font-size: 13px;
+}
+
+.workflowSection {
+  border-top: 1px solid var(--border);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workflowToggle {
+  align-self: flex-start;
+  display: inline-flex;
+  gap: 6px;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.workflowToggle:hover {
+  color: var(--text);
+}
+
+.choiceLegend {
+  margin-bottom: 6px;
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-subtle);
+}
+
+.card {
+  position: relative;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--project);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+}
+
+.name {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 650;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  gap: 2px;
+}
+
+.renameForm {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.stats strong {
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.created {
+  font-size: 12px;
+  color: var(--text-subtle);
+}
+
+.choices {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.choice:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.choice input {
+  margin-top: 3px;
+  accent-color: var(--accent);
+}
+
+.choice > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .child {
+    margin-left: calc(var(--depth) * 14px);
+  }
+  .child::after {
+    left: -10px;
+    width: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .createBtn {
+    margin-top: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,229 @@
+<a class="back-link" routerLink="/tasks"><app-icon name="arrowLeft" [size]="16" /> All tasks</a>
+
+@if (!store.ready()) {
+  <app-skeleton [rows]="8" />
+} @else {
+  @if (task(); as t) {
+    <header class="page-header detail-header">
+      <div>
+        <h1 class="detail-title">{{ t.title }}</h1>
+        <p class="detail-meta">
+          <app-status-pill [task]="t" />
+          <span class="prio-badge" [attr.data-priority]="t.priority">{{ priorityLabel(t.priority) }}</span>
+          @if (project(); as p) {
+            <span class="project-chip"><span class="swatch" [style.background]="p.color"></span>{{ p.name }}</span>
+          }
+          @if (assignee(); as m) {
+            <span class="assignee-chip" data-testid="detail-assignee"><app-avatar [member]="m" size="sm" /> {{ m.name }}</span>
+          } @else {
+            <span class="assignee-chip muted" data-testid="detail-assignee"><app-avatar [showEmpty]="true" size="sm" /> Unassigned</span>
+          }
+          @if (openBlockerCount() > 0) {
+            <span class="blocked-badge" data-testid="blocked-indicator"><app-icon name="lock" [size]="12" /> Blocked by {{ openBlockerCount() }}</span>
+          }
+          @if (t.isRecurring) {
+            <span class="recur-badge recur-badge-text" data-testid="recurrence-icon"><app-icon name="repeat" [size]="12" /> {{ recurrenceLabel(t.recurrence) }}</span>
+          }
+          @if (t.dueDate) {
+            <span class="due" [class.danger]="overdue()">
+              @if (overdue()) {
+                <app-icon name="flag" [size]="13" /> Overdue ·
+              }
+              Due {{ fmt.long(t.dueDate) }}
+            </span>
+          }
+        </p>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="btn" (click)="store.toggleDone(t.id)">
+          <app-icon name="check" [size]="16" /> {{ t.isDone ? 'Reopen' : 'Mark done' }}
+        </button>
+        <button type="button" class="btn btn-danger" (click)="remove()"><app-icon name="trash" [size]="16" /> Delete</button>
+      </div>
+    </header>
+
+    <div class="detail-grid">
+      <div class="detail-main">
+      <section class="card" aria-labelledby="edit-title">
+        <h2 id="edit-title">Details</h2>
+        <app-task-form [task]="t" submitLabel="Save changes" [showCancel]="false" (saved)="save($event)" />
+      </section>
+
+      <section class="card detail-main-extra" aria-labelledby="comments-title" data-testid="comments-section">
+        <header class="card-header">
+          <h2 id="comments-title">Comments</h2>
+          <span class="muted small">{{ t.comments.length }}</span>
+        </header>
+        <ol class="comments">
+          @for (c of t.comments; track c.id) {
+            <li class="comment" data-testid="comment">
+              <app-avatar [member]="store.member(c.authorId)" [showEmpty]="true" size="sm" />
+              <div class="comment-main">
+                <p class="comment-meta">
+                  <strong>{{ store.member(c.authorId)?.name ?? 'Unknown user' }}</strong>
+                  <time class="muted small" [attr.datetime]="c.createdAt">{{ fmt.dateTime(c.createdAt) }}</time>
+                </p>
+                <app-comment-body [body]="c.body" />
+              </div>
+            </li>
+          } @empty {
+            <li class="muted small">No comments yet.</li>
+          }
+        </ol>
+        <app-comment-box [taskId]="t.id" />
+      </section>
+
+      <section class="card detail-main-extra" aria-labelledby="activity-title" data-testid="task-activity">
+        <header class="card-header">
+          <h2 id="activity-title">Activity</h2>
+          <a class="link small" routerLink="/activity">All activity</a>
+        </header>
+        <app-activity-list [entries]="timeline()" label="Task activity" />
+      </section>
+
+      </div>
+
+      <div class="detail-side">
+        <section class="card pomodoro" aria-labelledby="pomo-title">
+          <h2 id="pomo-title">Pomodoro</h2>
+          @if (timerHere()) {
+            <div class="pomo-ring" [style.--p]="pomodoro.taskId() === t.id ? pomodoro.progress() : 0">
+              <span class="pomo-time mono" aria-live="off">{{ pomodoro.taskId() === t.id ? pomodoro.display() : fmt.clock(store.settings().pomodoroMinutes * 60) }}</span>
+              <span class="muted small">
+                @if (pomodoro.taskId() === t.id && pomodoro.finished()) {
+                  Finished!
+                } @else if (pomodoro.running()) {
+                  Focus time
+                } @else if (pomodoro.taskId() === t.id) {
+                  Paused
+                } @else {
+                  {{ store.settings().pomodoroMinutes }} min session
+                }
+              </span>
+            </div>
+            <div class="pomo-actions">
+              <button type="button" class="btn btn-primary" (click)="timerToggle()" [disabled]="pomodoro.taskId() === t.id && pomodoro.finished()">
+                <app-icon [name]="pomodoro.running() ? 'pause' : 'play'" [size]="16" />
+                {{ pomodoro.running() ? 'Pause' : pomodoro.taskId() === t.id ? 'Resume' : 'Start' }}
+              </button>
+              <button type="button" class="btn" (click)="pomodoro.reset()" [disabled]="pomodoro.taskId() !== t.id">
+                <app-icon name="reset" [size]="16" /> Reset
+              </button>
+            </div>
+          } @else {
+            <p class="muted">A pomodoro is running for “{{ pomodoro.taskTitle() }}”.</p>
+            <a class="btn" [routerLink]="['/tasks', pomodoro.taskId()]">Go to that task</a>
+          }
+          <dl class="stats-list">
+            <div><dt>Time spent</dt><dd>{{ fmt.duration(t.timeSpentMinutes) }}</dd></div>
+            <div><dt>Estimate</dt><dd>{{ t.estimateMinutes ? fmt.duration(t.estimateMinutes) : '—' }}</dd></div>
+          </dl>
+        </section>
+
+        <section class="card" aria-labelledby="sub-title">
+          <header class="card-header">
+            <h2 id="sub-title">Subtasks</h2>
+            <span class="muted small">{{ t.subtasksDone }}/{{ t.subtasks.length }}</span>
+          </header>
+          @if (t.subtasks.length) {
+            <div class="progress" role="progressbar" aria-label="Subtask progress" aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="subtaskProgress()">
+              <div class="progress-fill" [style.width.%]="subtaskProgress()"></div>
+            </div>
+          }
+          <ul class="subtasks">
+            @for (s of t.subtasks; track s.id) {
+              <li class="subtask" [class.done]="s.done">
+                <input type="checkbox" [id]="'sub-' + s.id" [checked]="s.done" (change)="store.toggleSubtask(t.id, s.id)" />
+                @if (editingSubtask() === s.id) {
+                  <label class="sr-only" [for]="'sub-edit-' + s.id">Subtask title</label>
+                  <input
+                    class="subtask-edit"
+                    [id]="'sub-edit-' + s.id"
+                    [value]="s.title"
+                    appAutofocus
+                    (keydown.enter)="renameSubtask(s.id, $any($event.target).value)"
+                    (keydown.escape)="$event.stopPropagation(); editingSubtask.set(null)"
+                    (blur)="renameSubtask(s.id, $any($event.target).value)"
+                  />
+                } @else {
+                  <label [for]="'sub-' + s.id">{{ s.title }}</label>
+                  <button type="button" class="icon-btn icon-btn-sm" [attr.aria-label]="'Rename subtask ' + s.title" (click)="editingSubtask.set(s.id)">
+                    <app-icon name="edit" [size]="14" />
+                  </button>
+                }
+                <button type="button" class="icon-btn icon-btn-sm" [attr.aria-label]="'Delete subtask ' + s.title" (click)="store.removeSubtask(t.id, s.id)">
+                  <app-icon name="trash" [size]="14" />
+                </button>
+              </li>
+            } @empty {
+              <li class="muted small">No subtasks yet.</li>
+            }
+          </ul>
+          <form class="inline-form" (submit)="addSubtask($event)">
+            <label class="sr-only" for="new-subtask">New subtask</label>
+            <input
+              id="new-subtask"
+              placeholder="Add a subtask…"
+              autocomplete="off"
+              [value]="newSubtask()"
+              (input)="newSubtask.set($any($event.target).value)"
+              [attr.aria-invalid]="subtaskError() ? 'true' : null"
+              [attr.aria-describedby]="subtaskError() ? 'new-subtask-err' : null"
+            />
+            <button type="submit" class="btn btn-sm"><app-icon name="plus" [size]="14" /> Add</button>
+          </form>
+          @if (subtaskError()) {
+            <p class="field-error" id="new-subtask-err">{{ subtaskError() }}</p>
+          }
+        </section>
+
+        <section class="card" aria-labelledby="deps-title" data-testid="dependencies-section">
+          <header class="card-header">
+            <h2 id="deps-title">Blocked by</h2>
+            <span class="muted small">{{ openBlockerCount() }} open</span>
+          </header>
+          <ul class="dep-list">
+            @for (b of blockers(); track b.id) {
+              <li class="dep-item" data-testid="blocker-item" [class.done]="b.isDone">
+                <span class="status-dot" [style.--status-color]="store.statusOf(b).color" aria-hidden="true"></span>
+                <a [routerLink]="['/tasks', b.id]" class="dep-title">{{ b.title }}</a>
+                <span class="muted small">{{ store.statusOf(b).name }}</span>
+                <button type="button" class="icon-btn icon-btn-sm" [attr.aria-label]="'Remove blocker ' + b.title" (click)="store.removeBlocker(t.id, b.id)">
+                  <app-icon name="close" [size]="14" />
+                </button>
+              </li>
+            } @empty {
+              <li class="muted small">No blockers.</li>
+            }
+          </ul>
+          <app-blocker-picker [taskId]="t.id" />
+          @if (blocking().length) {
+            <h3 class="dep-subtitle">Blocking</h3>
+            <ul class="dep-list">
+              @for (b of blocking(); track b.id) {
+                <li class="dep-item">
+                  <span class="status-dot" [style.--status-color]="store.statusOf(b).color" aria-hidden="true"></span>
+                  <a [routerLink]="['/tasks', b.id]" class="dep-title">{{ b.title }}</a>
+                  <span class="muted small">{{ store.statusOf(b).name }}</span>
+                </li>
+              }
+            </ul>
+          }
+        </section>
+
+        <section class="card small">
+          <dl class="stats-list">
+            <div><dt>Created</dt><dd>{{ fmt.long(fmt.localDate(t.createdAt)) }}</dd></div>
+            <div><dt>Completed</dt><dd>{{ t.completedAt ? fmt.long(fmt.localDate(t.completedAt)) : '—' }}</dd></div>
+          </dl>
+        </section>
+      </div>
+    </div>
+  } @else {
+    <section class="empty-page">
+      <h1>Task not found</h1>
+      <p class="muted">It may have been deleted.</p>
+      <a class="btn btn-primary" routerLink="/tasks">Back to tasks</a>
+    </section>
+  }
+}

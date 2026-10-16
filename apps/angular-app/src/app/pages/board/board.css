@@ -1,0 +1,208 @@
+.filter-select {
+  width: auto;
+  min-width: 180px;
+}
+.board {
+  display: grid;
+  /* one column per status: 3 by default, more for custom workflows (scrolls sideways) */
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 1fr);
+  gap: 16px;
+  align-items: start;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x proximity;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  scroll-snap-align: start;
+}
+.col-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 12px 8px 14px;
+}
+.col-head h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+.col-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.col-count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+}
+.add {
+  margin-left: auto;
+}
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 4px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 120px;
+  max-height: calc(100dvh - 230px);
+  overflow-y: auto;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  transition: background 0.12s;
+}
+.cards.drag-over {
+  background: var(--primary-soft);
+}
+.card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  cursor: grab;
+  transition:
+    box-shadow 0.12s,
+    border-color 0.12s,
+    opacity 0.12s;
+}
+.card-item:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+}
+.card-item:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+.card-item.dragging {
+  opacity: 0.4;
+}
+.card-item.overdue {
+  border-left: 3px solid var(--danger);
+}
+.card-top,
+.card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+.card-title {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 550;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.card-title:hover {
+  color: var(--primary);
+}
+.due {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.due.late {
+  color: var(--danger);
+  font-weight: 600;
+}
+.subs {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.subs.complete {
+  color: var(--success);
+}
+.placeholder {
+  height: 56px;
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius);
+  background: var(--surface);
+  opacity: 0.7;
+}
+.col-empty {
+  padding: 24px 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+}
+@media (max-width: 767px) {
+  .board {
+    grid-auto-columns: 82vw;
+    margin: 0 -16px;
+    padding: 0 16px 8px;
+    scroll-padding: 0 16px;
+  }
+  .cards {
+    max-height: none;
+  }
+  .filter-select {
+    width: 100%;
+  }
+  .page-actions {
+    width: 100%;
+  }
+}
+.card-top {
+  justify-content: flex-start;
+}
+.card-top > .due {
+  margin-left: auto;
+}
+.recur {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+}
+.foot-end {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.filter-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: -6px 0 14px;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+.view-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary-strong);
+}
+/* the drop target must stay the list itself: these items are swapped while dragging over an
+   (empty) column, and a dragover on a removed element would cancel the drop */
+.col-empty,
+.placeholder {
+  pointer-events: none;
+}

@@ -1,0 +1,37 @@
+{
+ "functions": 593,
+ "avg_ccn": 2.04,
+ "max_ccn": 18,
+ "fn_ccn_gt10": 7,
+ "fn_ccn_gt15": 2,
+ "fn_ccn_gt20": 0,
+ "avg_fn_nloc": 5.2,
+ "fn_over_50_lines": 2,
+ "top": [
+  [
+   18,
+   "handle",
+   "core/src/jsMain/kotlin/taskpilot/Shortcuts.kt"
+  ],
+  [
+   16,
+   "changeNotifications",
+   "core/src/jsMain/kotlin/taskpilot/Notifications.kt"
+  ],
+  [
+   14,
+   "validateTaskDraft",
+   "core/src/jsMain/kotlin/taskpilot/Validation.kt"
+  ],
+  [
+   13,
+   "ticks",
+   "core/src/jsMain/kotlin/taskpilot/Timeline.kt"
+  ],
+  [
+   13,
+   "describeQuery",
+   "core/src/jsMain/kotlin/taskpilot/Views.kt"
+  ]
+ ]
+}

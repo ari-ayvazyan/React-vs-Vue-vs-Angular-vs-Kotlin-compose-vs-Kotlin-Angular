@@ -1,0 +1,214 @@
+<form class="task-form" [class.inline]="inline()" (submit)="submit($event)" novalidate>
+  <div class="field">
+    <label [for]="id + '-title'">Title <span class="req" aria-hidden="true">*</span></label>
+    <input
+      [id]="id + '-title'"
+      class="input"
+      type="text"
+      [attr.data-testid]="inline() ? null : 'task-title-input'"
+      data-autofocus
+      autocomplete="off"
+      placeholder="What needs to be done?"
+      [value]="draft().title"
+      (input)="patch({ title: value($event) })"
+      [attr.aria-invalid]="!!shownErrors().title"
+      [attr.aria-describedby]="shownErrors().title ? id + '-title-err' : null"
+    />
+    <div class="field-foot">
+      @if (shownErrors().title; as err) {
+        <p class="error" [id]="id + '-title-err'" role="alert">{{ err }}</p>
+      }
+      <span class="counter" [class.over]="draft().title.length > limits.title"
+        >{{ draft().title.length }}/{{ limits.title }}</span
+      >
+    </div>
+  </div>
+
+  <div class="field">
+    <label [for]="id + '-description'">Description</label>
+    <textarea
+      [id]="id + '-description'"
+      class="input"
+      rows="4"
+      placeholder="Add details, links, acceptance criteria…"
+      [value]="draft().description"
+      (input)="patch({ description: value($event) })"
+      [attr.aria-invalid]="!!shownErrors().description"
+      [attr.aria-describedby]="shownErrors().description ? id + '-description-err' : null"
+    ></textarea>
+    <div class="field-foot">
+      @if (shownErrors().description; as err) {
+        <p class="error" [id]="id + '-description-err'" role="alert">{{ err }}</p>
+      }
+      <span class="counter" [class.over]="draft().description.length > limits.description"
+        >{{ draft().description.length }}/{{ limits.description }}</span
+      >
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="field">
+      <label [for]="id + '-status'">Status</label>
+      <select
+        [id]="id + '-status'"
+        class="input"
+        data-testid="task-status-select"
+        (change)="setStatusId(value($event))"
+        [attr.aria-invalid]="!!shownErrors().status"
+        [attr.aria-describedby]="shownErrors().status ? id + '-status-err' : null"
+      >
+        @for (s of statusOptions(); track s.id) {
+          <option [value]="s.id" [selected]="selectedStatusId() === s.id">{{ s.name }}</option>
+        }
+      </select>
+      @if (shownErrors().status; as err) {
+        <p class="error" [id]="id + '-status-err'" role="alert">{{ err }}</p>
+      }
+    </div>
+    <div class="field">
+      <label [for]="id + '-priority'">Priority</label>
+      <select
+        [id]="id + '-priority'"
+        class="input"
+        (change)="patch({ priority: $any(value($event)) })"
+      >
+        @for (p of priorities; track p) {
+          <option [value]="p" [selected]="draft().priority === p">{{ priorityLabels[p] }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-project'">Project</label>
+      <select [id]="id + '-project'" class="input" (change)="setProject(value($event) || null)">
+        <option value="" [selected]="draft().projectId === null">No project</option>
+        @for (p of store.projectOptions(); track p.id) {
+          <option [value]="p.id" [selected]="draft().projectId === p.id">{{ p.label }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-assignee'">Assignee</label>
+      <select
+        [id]="id + '-assignee'"
+        class="input"
+        data-testid="task-assignee-select"
+        (change)="patch({ assigneeId: value($event) || null })"
+      >
+        <option value="" [selected]="draft().assigneeId === null">Unassigned</option>
+        @for (m of members(); track m.id) {
+          <option [value]="m.id" [selected]="draft().assigneeId === m.id">{{ m.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-recurrence'">Repeat</label>
+      <select
+        [id]="id + '-recurrence'"
+        class="input"
+        data-testid="task-recurrence-select"
+        (change)="patch({ recurrence: $any(value($event)) })"
+      >
+        @for (r of recurrences; track r) {
+          <option [value]="r" [selected]="draft().recurrence === r">
+            {{ recurrenceLabels[r] }}
+          </option>
+        }
+      </select>
+    </div>
+    <div class="field">
+      <label [for]="id + '-dueDate'">Due date</label>
+      <input
+        [id]="id + '-dueDate'"
+        class="input"
+        type="date"
+        [value]="draft().dueDate ?? ''"
+        (change)="patch({ dueDate: value($event) || null })"
+      />
+      @if (shownErrors().dueDate; as err) {
+        <p class="error" role="alert">{{ err }}</p>
+      }
+    </div>
+    <div class="field">
+      <label [for]="id + '-estimate'">Estimate (minutes)</label>
+      <input
+        [id]="id + '-estimate'"
+        class="input"
+        type="text"
+        inputmode="numeric"
+        placeholder="e.g. 60"
+        [value]="draft().estimate"
+        (input)="patch({ estimate: value($event) })"
+        [attr.aria-invalid]="!!shownErrors().estimate"
+        [attr.aria-describedby]="shownErrors().estimate ? id + '-estimate-err' : null"
+      />
+      @if (shownErrors().estimate; as err) {
+        <p class="error" [id]="id + '-estimate-err'" role="alert">{{ err }}</p>
+      }
+    </div>
+  </div>
+
+  <div class="field">
+    <label [for]="id + '-tags'"
+      >Tags
+      <span class="hint"
+        >({{ draft().tags.length }}/{{ limits.tags }}, Enter or comma to add)</span
+      ></label
+    >
+    <div class="tag-input input" [class.invalid]="!!shownErrors().tags">
+      @for (tag of draft().tags; track tag) {
+        <span class="chip">
+          #{{ tag }}
+          <button
+            type="button"
+            class="chip-x"
+            (click)="removeTag(tag)"
+            [attr.aria-label]="'Remove tag ' + tag"
+          >
+            <app-icon name="close" [size]="12" />
+          </button>
+        </span>
+      }
+      <input
+        [id]="id + '-tags'"
+        type="text"
+        autocomplete="off"
+        [attr.list]="id + '-taglist'"
+        placeholder="add tag…"
+        [value]="tagInput()"
+        (input)="tagInput.set(value($event))"
+        (keydown)="onTagKey($event)"
+        (blur)="commitTags()"
+        [attr.aria-invalid]="!!shownErrors().tags"
+        [attr.aria-describedby]="shownErrors().tags ? id + '-tags-err' : null"
+      />
+      <datalist [id]="id + '-taglist'">
+        @for (t of allTags(); track t) {
+          <option [value]="t"></option>
+        }
+      </datalist>
+    </div>
+    @if (shownErrors().tags; as err) {
+      <p class="error" [id]="id + '-tags-err'" role="alert">{{ err }}</p>
+    }
+  </div>
+
+  <div class="actions">
+    <button
+      type="button"
+      class="btn btn-ghost"
+      (click)="cancel()"
+      [disabled]="inline() && !dirty()"
+    >
+      {{ inline() ? 'Discard changes' : 'Cancel' }}
+    </button>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [attr.data-testid]="inline() ? null : 'task-save-button'"
+      [disabled]="task() !== null && !dirty()"
+    >
+      <app-icon name="check" [size]="16" />
+      {{ task() ? 'Save changes' : 'Create task' }}
+    </button>
+  </div>
+</form>

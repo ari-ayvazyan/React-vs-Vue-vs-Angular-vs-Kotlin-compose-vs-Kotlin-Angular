@@ -1,0 +1,182 @@
+<header class="page-header">
+  <div>
+    <h1>Board</h1>
+    <p>Drag cards between columns, or focus a card and use <kbd>Shift</kbd> + arrow keys.</p>
+  </div>
+  <div class="page-actions">
+    <label for="board-project" class="sr-only">Filter by project</label>
+    <select
+      id="board-project"
+      class="input filter-select"
+      (change)="setFilter('project', $any($event.target).value)"
+    >
+      <option value="" [selected]="!projectFilter()">All projects</option>
+      <option value="none" [selected]="projectFilter() === 'none'">No project</option>
+      @for (p of store.projectOptions(); track p.id) {
+        <option [value]="p.id" [selected]="projectFilter() === p.id">{{ p.label }}</option>
+      }
+    </select>
+    <label for="board-assignee" class="sr-only">Filter by assignee</label>
+    <select
+      id="board-assignee"
+      class="input filter-select"
+      data-testid="board-filter-assignee"
+      (change)="setFilter('assignee', $any($event.target).value)"
+    >
+      <option value="" [selected]="!assigneeFilter()">All assignees</option>
+      <option value="none" [selected]="assigneeFilter() === 'none'">Unassigned</option>
+      @for (m of store.members(); track m.id) {
+        <option [value]="m.id" [selected]="assigneeFilter() === m.id">{{ m.name }}</option>
+      }
+    </select>
+  </div>
+</header>
+
+@if (activeView() || extraFilters().length) {
+  <div class="filter-note" data-testid="board-view-filters">
+    @if (activeView(); as v) {
+      <span class="view-pill"
+        ><app-icon name="bookmark" [size]="14" /> View: <strong>{{ v.name }}</strong></span
+      >
+    }
+    @if (extraFilters().length) {
+      <span>Also filtered by {{ extraFilters().join(' · ') }}</span>
+      <button type="button" class="btn btn-sm btn-ghost" (click)="clearExtraFilters()">
+        Clear these
+      </button>
+    }
+    <a class="btn btn-sm btn-ghost" routerLink="/tasks" [queryParams]="listParams()"
+      >Open in list</a
+    >
+  </div>
+}
+
+<p class="sr-only" aria-live="assertive">{{ announcement() }}</p>
+
+<div class="board">
+  @for (col of columns(); track col.key) {
+    <section
+      class="column"
+      [attr.data-testid]="'board-column-' + col.key"
+      [attr.aria-labelledby]="'col-' + col.key"
+    >
+      <header class="col-head">
+        <span class="col-dot" [style.background]="col.color"></span>
+        <h2 [id]="'col-' + col.key">{{ col.label }}</h2>
+        <span class="col-count">{{ store.ready() ? col.tasks.length : '–' }}</span>
+        <button
+          type="button"
+          class="icon-btn sm add"
+          [attr.aria-label]="'Add task to ' + col.label"
+          (click)="addTask(col.key)"
+        >
+          <app-icon name="plus" [size]="16" />
+        </button>
+      </header>
+      <ul
+        class="cards"
+        [class.drag-over]="placeholderAt(col.key) >= 0"
+        (dragover)="onDragOver($event, col.key)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event, col.key)"
+      >
+        @if (store.ready()) {
+          @for (t of col.tasks; track t.id; let i = $index) {
+            @if (
+              placeholderAt(col.key) === indexWithoutDragged(col.tasks, i) && t.id !== dragId()
+            ) {
+              <li class="placeholder" aria-hidden="true"></li>
+            }
+            <li
+              class="card-item"
+              data-testid="board-card"
+              [attr.data-card-id]="t.id"
+              [class.dragging]="dragId() === t.id"
+              [class.overdue]="overdue(t)"
+              draggable="true"
+              tabindex="0"
+              [attr.aria-label]="
+                t.title +
+                ', ' +
+                priorityLabels[t.priority] +
+                ' priority. Press Enter to open, Shift plus arrow keys to move.'
+              "
+              (dragstart)="onDragStart($event, t)"
+              (dragend)="onDragEnd()"
+              (keydown)="onCardKey($event, t)"
+            >
+              <div class="card-top">
+                <span class="badge" [class]="'badge badge-' + t.priority">{{
+                  priorityLabels[t.priority]
+                }}</span>
+                @if (store.blockedIds().has(t.id)) {
+                  <span
+                    class="badge badge-blocked"
+                    data-testid="blocked-indicator"
+                    [title]="blockedTitle(t)"
+                    ><app-icon name="lock" [size]="11" /> Blocked</span
+                  >
+                }
+                @if (t.recurrence !== 'none') {
+                  <span
+                    class="recur"
+                    data-testid="recurrence-icon"
+                    role="img"
+                    [attr.aria-label]="'Repeats ' + recurrenceLabels[t.recurrence].toLowerCase()"
+                    [title]="'Repeats ' + recurrenceLabels[t.recurrence].toLowerCase()"
+                    ><app-icon name="repeat" [size]="13"
+                  /></span>
+                }
+                @if (t.dueDate) {
+                  <span class="due" [class.late]="overdue(t)"
+                    ><app-icon name="clock" [size]="12" /> {{ due(t) }}</span
+                  >
+                }
+              </div>
+              <a
+                class="card-title"
+                [routerLink]="['/tasks', t.id]"
+                tabindex="-1"
+                draggable="false"
+                >{{ t.title }}</a
+              >
+              <div class="card-foot">
+                @if (projectOf(t.projectId); as p) {
+                  <span class="project-pill"
+                    ><span class="dot" [style.background]="p.color"></span>{{ p.name }}</span
+                  >
+                } @else {
+                  <span class="project-pill muted">No project</span>
+                }
+                <span class="foot-end">
+                  @if (t.subtasks.length) {
+                    <span
+                      class="subs"
+                      [class.complete]="subDone(t) === t.subtasks.length"
+                      [attr.aria-label]="subDone(t) + ' of ' + t.subtasks.length + ' subtasks done'"
+                    >
+                      <app-icon name="check" [size]="12" /> {{ subDone(t) }}/{{ t.subtasks.length }}
+                    </span>
+                  }
+                  @if (memberOf(t.assigneeId); as m) {
+                    <app-avatar [member]="m" [size]="22" data-testid="assignee-avatar" />
+                  }
+                </span>
+              </div>
+            </li>
+          }
+          @if (showEndPlaceholder(col.key, col.tasks)) {
+            <li class="placeholder" aria-hidden="true"></li>
+          }
+          @if (!col.tasks.length && placeholderAt(col.key) < 0) {
+            <li class="col-empty">No tasks</li>
+          }
+        } @else {
+          @for (i of [1, 2, 3]; track i) {
+            <li class="skeleton" style="height: 92px" aria-hidden="true"></li>
+          }
+        }
+      </ul>
+    </section>
+  }
+</div>

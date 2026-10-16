@@ -1,0 +1,77 @@
+<header class="page-header">
+  <div>
+    <h1>Activity</h1>
+    <p>{{ store.ready() ? rangeLabel() : 'Loading…' }}</p>
+  </div>
+  <div class="page-actions">
+    <label for="activity-actor" class="sr-only">Filter by member</label>
+    <select
+      id="activity-actor"
+      class="input filter-select"
+      data-testid="activity-filter-member"
+      (change)="setActor(value($event))"
+    >
+      <option value="" [selected]="!query().actor">All members</option>
+      @for (m of store.members(); track m.id) {
+        <option [value]="m.id" [selected]="query().actor === m.id">{{ m.name }}</option>
+      }
+      <option value="none" [selected]="query().actor === 'none'">No current user</option>
+    </select>
+    <label for="activity-type" class="sr-only">Filter by type</label>
+    <select
+      id="activity-type"
+      class="input filter-select"
+      data-testid="activity-filter-type"
+      (change)="setType(value($event))"
+    >
+      <option value="" [selected]="!query().type">All types</option>
+      @for (t of types; track t) {
+        <option [value]="t" [selected]="query().type === t">{{ typeLabels[t] }}</option>
+      }
+    </select>
+  </div>
+</header>
+
+@if (store.ready()) {
+  <section class="card card-pad" aria-label="Activity log" data-testid="activity-log">
+    <app-activity-list
+      [entries]="pageData().items"
+      [showTask]="true"
+      [emptyText]="
+        store.activity().length
+          ? 'No entries match these filters.'
+          : 'No activity yet. Changes to tasks will show up here.'
+      "
+    />
+  </section>
+  @if (pageData().pages > 1) {
+    <nav class="pagination" aria-label="Pagination">
+      <span class="muted">{{ rangeLabel() }}</span>
+      <div class="pager">
+        <button
+          type="button"
+          class="btn btn-sm"
+          data-testid="activity-prev"
+          [disabled]="pageData().page <= 1"
+          (click)="goPage(pageData().page - 1)"
+        >
+          <app-icon name="chevronLeft" [size]="15" /> Prev
+        </button>
+        <span class="page-num" aria-live="polite"
+          >Page {{ pageData().page }} of {{ pageData().pages }}</span
+        >
+        <button
+          type="button"
+          class="btn btn-sm"
+          data-testid="activity-next"
+          [disabled]="pageData().page >= pageData().pages"
+          (click)="goPage(pageData().page + 1)"
+        >
+          Next <app-icon name="chevronRight" [size]="15" />
+        </button>
+      </div>
+    </nav>
+  }
+} @else {
+  <div class="skeleton" style="height: 420px" aria-hidden="true"></div>
+}

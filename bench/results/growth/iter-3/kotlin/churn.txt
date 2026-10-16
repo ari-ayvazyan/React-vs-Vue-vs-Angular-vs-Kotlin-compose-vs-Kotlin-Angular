@@ -1,0 +1,14 @@
+16	1	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/ImportExport.kt
+1	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/Model.kt
+56	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/SavedViews.kt
+126	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/Timeline.kt
+136	0	apps/kotlin-app/shared/src/commonTest/kotlin/taskpilot/ViewsTimelineTest.kt
+4	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/Router.kt
+8	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/Shell.kt
+40	3	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/Store.kt
+31	21	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt
+291	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/SavedViewsUi.kt
+16	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt
+516	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/TimelinePage.kt
+4	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/ui/Icons.kt
+101	0	apps/kotlin-app/web/src/jsMain/resources/styles.css

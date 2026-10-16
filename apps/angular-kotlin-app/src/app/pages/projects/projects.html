@@ -1,0 +1,169 @@
+<header class="page-header">
+  <div>
+    <h1>Projects</h1>
+    <p class="muted">Organise tasks in projects and sub-projects. Counts and progress include sub-projects.</p>
+  </div>
+</header>
+
+<section class="card" aria-labelledby="new-project-title">
+  <h2 id="new-project-title">New project</h2>
+  <form class="project-form" (submit)="create($event)" novalidate>
+    <div class="field grow">
+      <label for="np-name">Name</label>
+      <input
+        id="np-name"
+        autocomplete="off"
+        [attr.maxlength]="maxName"
+        [value]="newName()"
+        (input)="newName.set($any($event.target).value)"
+        [attr.aria-invalid]="createError() ? 'true' : null"
+        [attr.aria-describedby]="createError() ? 'np-err' : null"
+        placeholder="e.g. Q4 Launch"
+      />
+    </div>
+    <div class="field">
+      <label for="np-parent">Parent</label>
+      <select id="np-parent" data-testid="new-project-parent" (change)="newParent.set($any($event.target).value)">
+        <option value="" [selected]="newParent() === ''">Top level</option>
+        @for (o of store.projectOptions(); track o.id) {
+          <option [value]="o.id" [selected]="newParent() === o.id">{{ o.label }}</option>
+        }
+      </select>
+    </div>
+    <fieldset class="field">
+      <legend>Colour</legend>
+      <div class="swatches">
+        @for (c of palette; track c) {
+          <button type="button" class="swatch-btn" [style.background]="c" [attr.aria-label]="'Colour ' + c" [attr.aria-pressed]="newColor() === c" (click)="newColor.set(c)"></button>
+        }
+        <label class="sr-only" for="np-color">Custom colour</label>
+        <input id="np-color" type="color" class="color-input" [value]="newColor()" (input)="newColor.set($any($event.target).value)" />
+      </div>
+    </fieldset>
+    <button type="submit" class="btn btn-primary"><app-icon name="plus" [size]="16" /> Create</button>
+  </form>
+  @if (createError()) {
+    <p class="field-error" id="np-err">{{ createError() }}</p>
+  }
+</section>
+
+@if (store.ready()) {
+  <ul class="project-tree" aria-label="Projects">
+    @for (row of rows(); track row.node.project.id) {
+      @let p = row.node.project;
+      <li class="card project-node" data-testid="project-node" [style.--depth]="row.node.depth">
+        @if (editingId() === p.id) {
+          <form class="project-edit" (submit)="saveEdit($event)" novalidate>
+            <div class="project-edit-row">
+              <div class="field grow">
+                <label [for]="'edit-' + p.id">Project name</label>
+                <input
+                  [id]="'edit-' + p.id"
+                  appAutofocus
+                  [attr.maxlength]="maxName"
+                  [value]="editName()"
+                  (input)="editName.set($any($event.target).value)"
+                  (keydown.escape)="$event.stopPropagation(); editingId.set(null)"
+                  [attr.aria-invalid]="editError() ? 'true' : null"
+                />
+              </div>
+              <div class="field">
+                <label [for]="'edit-parent-' + p.id">Parent</label>
+                <select [id]="'edit-parent-' + p.id" data-testid="edit-project-parent" (change)="editParent.set($any($event.target).value)">
+                  <option value="" [selected]="editParent() === ''">Top level</option>
+                  @for (o of store.projectOptions(); track o.id) {
+                    @if (o.id !== p.id) {
+                      <option [value]="o.id" [selected]="editParent() === o.id">{{ o.label }}</option>
+                    }
+                  }
+                </select>
+              </div>
+            </div>
+            <div class="swatches">
+              @for (c of palette; track c) {
+                <button type="button" class="swatch-btn sm" [style.background]="c" [attr.aria-label]="'Colour ' + c" [attr.aria-pressed]="editColor() === c" (click)="editColor.set(c)"></button>
+              }
+              <label class="sr-only" [for]="'edit-color-' + p.id">Custom colour</label>
+              <input [id]="'edit-color-' + p.id" type="color" class="color-input" [value]="editColor()" (input)="editColor.set($any($event.target).value)" />
+            </div>
+            @if (editError()) {
+              <p class="field-error" role="alert">{{ editError() }}</p>
+            }
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost btn-sm" (click)="editingId.set(null)">Cancel</button>
+              <button type="submit" class="btn btn-primary btn-sm">Save</button>
+            </div>
+          </form>
+        } @else {
+          <div class="project-head">
+            @if (row.node.depth > 0) {
+              <span class="tree-elbow" aria-hidden="true">↳</span>
+              <span class="sr-only">Sub-project: {{ row.node.path }}</span>
+            }
+            <span class="swatch lg" [style.background]="p.color" aria-hidden="true"></span>
+            <h2 class="project-name"><a [routerLink]="['/tasks']" [queryParams]="{ project: p.id }">{{ p.name }}</a></h2>
+            @if (row.node.childCount) {
+              <span class="badge-soft" [title]="row.node.childCount + ' sub-projects'">{{ row.node.childCount }} sub</span>
+            }
+            <button type="button" class="btn btn-ghost btn-sm" [attr.aria-expanded]="workflowOpen() === p.id" [attr.aria-controls]="'wf-' + p.id" data-testid="workflow-toggle" (click)="toggleWorkflow(p.id)">
+              Workflow
+            </button>
+            <button type="button" class="icon-btn icon-btn-sm" [attr.aria-label]="'Edit project ' + p.name" (click)="startEdit(p)"><app-icon name="edit" [size]="16" /></button>
+            <button type="button" class="icon-btn icon-btn-sm" [attr.aria-label]="'Delete project ' + p.name" (click)="askDelete(p)"><app-icon name="trash" [size]="16" /></button>
+          </div>
+          <div class="project-stats">
+            <p class="muted small">
+              {{ row.progress.total }} {{ row.progress.total === 1 ? 'task' : 'tasks' }} · {{ row.progress.done }} done
+              @if (row.node.childCount) {
+                <span>(incl. sub-projects)</span>
+              }
+              · <span data-testid="workflow-source">{{ p.workflow ? 'Custom workflow' : row.node.workflowSource ? 'Workflow of ' + row.node.workflowSource : 'Default workflow' }}</span>
+            </p>
+            <div class="progress" role="progressbar" [attr.aria-label]="p.name + ' progress'" aria-valuemin="0" aria-valuemax="100" [attr.aria-valuenow]="row.progress.percent">
+              <div class="progress-fill" [style.width.%]="row.progress.percent" [style.background]="p.color"></div>
+            </div>
+            <p class="progress-label">{{ row.progress.percent }}% complete</p>
+          </div>
+          @if (workflowOpen() === p.id) {
+            <app-workflow-editor [id]="'wf-' + p.id" [projectId]="p.id" />
+          }
+        }
+      </li>
+    } @empty {
+      <li class="empty-state">No projects yet. Create one above.</li>
+    }
+  </ul>
+  @if (unassigned() > 0) {
+    <p class="muted small"><a [routerLink]="['/tasks']" [queryParams]="{ project: 'none' }">{{ unassigned() }} tasks</a> have no project.</p>
+  }
+} @else {
+  <app-skeleton [rows]="4" />
+}
+
+@if (deleting(); as p) {
+  <app-dialog labelId="delete-project-title" (closed)="deleting.set(null)">
+    <header class="dialog-header">
+      <h2 id="delete-project-title">Delete “{{ p.name }}”?</h2>
+    </header>
+    @if (deletingChildren() > 0) {
+      <fieldset class="radio-group" data-testid="delete-subprojects-choice">
+        <legend>It has {{ deletingChildren() }} {{ deletingChildren() === 1 ? 'sub-project' : 'sub-projects' }}. What should happen to them?</legend>
+        <label class="radio"><input type="radio" name="submode" value="up" [checked]="subMode() === 'up'" (change)="subMode.set('up')" /> Move them up one level</label>
+        <label class="radio"><input type="radio" name="submode" value="delete" [checked]="subMode() === 'delete'" (change)="subMode.set('delete')" /> Delete them too</label>
+      </fieldset>
+    }
+    @if (deletingCount() > 0) {
+      <fieldset class="radio-group">
+        <legend>This project has {{ deletingCount() }} {{ deletingCount() === 1 ? 'task' : 'tasks' }}{{ subMode() === 'delete' && deletingChildren() ? ' (incl. sub-projects)' : '' }}. What should happen to them?</legend>
+        <label class="radio"><input type="radio" name="delmode" value="move" [checked]="deleteMode() === 'move'" (change)="deleteMode.set('move')" /> Move them to “No project”</label>
+        <label class="radio"><input type="radio" name="delmode" value="delete" [checked]="deleteMode() === 'delete'" (change)="deleteMode.set('delete')" /> Delete them too</label>
+      </fieldset>
+    } @else {
+      <p class="muted">This project has no tasks.</p>
+    }
+    <div class="form-actions">
+      <button type="button" class="btn btn-ghost" (click)="deleting.set(null)">Cancel</button>
+      <button type="button" class="btn btn-danger" (click)="confirmDelete()">Delete project</button>
+    </div>
+  </app-dialog>
+}

@@ -1,0 +1,292 @@
+$ nuxt build
+Building Nuxt for production...
+• Loading Nuxt config
+• Nuxt 4.6.1 (with Nitro 2.13.4, Vite 8.3.4 and Vue 3.5.44)
+• Setting up modules
+• Preparing app
+• Nitro preset: node-server
+• Generating types
+• Bundling client
+i Building client...
+i vite v8.3.4 building client environment for production...
+transforming...
+✓ 302 modules transformed.
+rendering chunks...
+computing gzip size...
+i .nuxt/dist/client/manifest.json                      8.61 kB │ gzip:  1.28 kB
+.nuxt/dist/client/_nuxt/AppIcon.DC0DNCgU.css         0.04 kB │ gzip:  0.06 kB
+.nuxt/dist/client/_nuxt/PriorityBadge.Chi1R6E-.css   0.08 kB │ gzip:  0.10 kB
+.nuxt/dist/client/_nuxt/PageLoading.P_tyLSjd.css     0.14 kB │ gzip:  0.11 kB
+.nuxt/dist/client/_nuxt/DueLabel.Z9PfwVA2.css        0.40 kB │ gzip:  0.22 kB
+.nuxt/dist/client/_nuxt/_...Bfothvbm.css             0.66 kB │ gzip:  0.38 kB
+.nuxt/dist/client/_nuxt/TaskForm.C8pBrEyL.css        1.13 kB │ gzip:  0.51 kB
+.nuxt/dist/client/_nuxt/BaseModal.rDK10Ztk.css       1.40 kB │ gzip:  0.56 kB
+.nuxt/dist/client/_nuxt/settings.CedSWlZ0.css        1.73 kB │ gzip:  0.61 kB
+.nuxt/dist/client/_nuxt/error-500.CmR4p1fc.css       1.95 kB │ gzip:  0.72 kB
+.nuxt/dist/client/_nuxt/error-404.DpKY_dMl.css       2.70 kB │ gzip:  0.92 kB
+.nuxt/dist/client/_nuxt/projects.CWRCskZE.css        3.06 kB │ gzip:  0.95 kB
+.nuxt/dist/client/_nuxt/board.WrNRthYY.css           3.15 kB │ gzip:  1.02 kB
+.nuxt/dist/client/_nuxt/calendar.DOTbElrd.css        3.76 kB │ gzip:  1.07 kB
+.nuxt/dist/client/_nuxt/_id_.C4N-Ub8P.css            3.94 kB │ gzip:  1.14 kB
+.nuxt/dist/client/_nuxt/dashboard.DwVRL8Y8.css       5.13 kB │ gzip:  1.46 kB
+.nuxt/dist/client/_nuxt/tasks.BdbMJagO.css           6.30 kB │ gzip:  1.75 kB
+.nuxt/dist/client/_nuxt/entry.DLWTsz6w.css           6.98 kB │ gzip:  2.52 kB
+.nuxt/dist/client/_nuxt/default.DJibPixJ.css         7.78 kB │ gzip:  2.10 kB
+.nuxt/dist/client/_nuxt/CbVP4dgY.js                  0.13 kB │ gzip:  0.13 kB
+.nuxt/dist/client/_nuxt/BYR1G9ag.js                  0.47 kB │ gzip:  0.32 kB
+.nuxt/dist/client/_nuxt/Db7EjDAl.js                  0.57 kB │ gzip:  0.39 kB
+.nuxt/dist/client/_nuxt/BkM7Cz_J.js                  0.78 kB │ gzip:  0.48 kB
+.nuxt/dist/client/_nuxt/BDB1DMes.js                  0.89 kB │ gzip:  0.54 kB
+.nuxt/dist/client/_nuxt/QVFLbKS1.js                  1.66 kB │ gzip:  0.79 kB
+.nuxt/dist/client/_nuxt/gBw2nv4u.js                  2.57 kB │ gzip:  1.27 kB
+.nuxt/dist/client/_nuxt/DKf95D1e.js                  2.68 kB │ gzip:  1.18 kB
+.nuxt/dist/client/_nuxt/v6BcQ-lx.js                  2.85 kB │ gzip:  1.23 kB
+.nuxt/dist/client/_nuxt/D88g8zY8.js                  3.57 kB │ gzip:  1.62 kB
+.nuxt/dist/client/_nuxt/CfzRHPH-.js                  4.06 kB │ gzip:  1.73 kB
+.nuxt/dist/client/_nuxt/DCrpWWHv.js                  5.61 kB │ gzip:  2.37 kB
+.nuxt/dist/client/_nuxt/D4PvyX_g.js                  6.66 kB │ gzip:  2.87 kB
+.nuxt/dist/client/_nuxt/D5WJRura.js                  6.86 kB │ gzip:  2.92 kB
+.nuxt/dist/client/_nuxt/B2BQ1BWa.js                  7.00 kB │ gzip:  2.61 kB
+.nuxt/dist/client/_nuxt/BoIu3G_m.js                  7.96 kB │ gzip:  3.11 kB
+.nuxt/dist/client/_nuxt/DazEJg_G.js                  9.54 kB │ gzip:  3.82 kB
+.nuxt/dist/client/_nuxt/Dgf9ZEPq.js                 11.99 kB │ gzip:  4.45 kB
+.nuxt/dist/client/_nuxt/ciYcn6ft.js                 12.28 kB │ gzip:  4.70 kB
+.nuxt/dist/client/_nuxt/WcfYHvBY.js                 12.50 kB │ gzip:  4.40 kB
+.nuxt/dist/client/_nuxt/DOsXUWu8.js                 15.61 kB │ gzip:  6.63 kB
+.nuxt/dist/client/_nuxt/CY1Jlq03.js                 18.76 kB │ gzip:  7.60 kB
+.nuxt/dist/client/_nuxt/C52VUTaa.js                 25.37 kB │ gzip:  9.81 kB
+.nuxt/dist/client/_nuxt/ppslikpJ.js                 80.39 kB │ gzip: 29.80 kB
+.nuxt/dist/client/_nuxt/D2ksmAPJ.js                 87.93 kB │ gzip: 34.06 kB
+
+i ✓ built in 1.93s
+√ Client built in 1957ms
+• Bundling server
+i Building server...
+i vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 234 modules transformed.
+rendering chunks...
+i .nuxt/dist/server/_nuxt/PomodoroTimer-styles.FxdDDF6o.mjs        0.08 kB
+.nuxt/dist/server/_nuxt/board-styles.lryo4mAZ.mjs                0.08 kB
+.nuxt/dist/server/_nuxt/AppIcon-styles.B_JGmpnX.mjs              0.08 kB
+.nuxt/dist/server/_nuxt/AppSidebar-styles.rG4y7vnj.mjs           0.08 kB
+.nuxt/dist/server/_nuxt/AppTopbar-styles.Ctw6f2Y7.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/PomodoroMini-styles.wkKrkEqV.mjs         0.08 kB
+.nuxt/dist/server/_nuxt/ProjectChip-styles.By68F0rU.mjs          0.08 kB
+.nuxt/dist/server/_nuxt/ShortcutHelp-styles.D1Jbxbn8.mjs         0.08 kB
+.nuxt/dist/server/_nuxt/ToastHost-styles.CknkC0og.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/DueLabel-styles.C2oqDJJr.mjs             0.08 kB
+.nuxt/dist/server/_nuxt/TaskForm-styles.CjxF8fH8.mjs             0.08 kB
+.nuxt/dist/server/_nuxt/calendar-styles.CbpPvMzJ.mjs             0.08 kB
+.nuxt/dist/server/_nuxt/projects-styles.CA4IDCbk.mjs             0.08 kB
+.nuxt/dist/server/_nuxt/settings-styles.DQNog-Hn.mjs             0.08 kB
+.nuxt/dist/server/_nuxt/BarChart-styles.DgC-HSfT.mjs             0.08 kB
+.nuxt/dist/server/_nuxt/BaseModal-styles.CdXI9xyJ.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/DonutChart-styles.DK_WmTVN.mjs           0.08 kB
+.nuxt/dist/server/_nuxt/LineChart-styles.CnpvAyb-.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/_...slug_-styles.W6zjs2hE.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/error-404-styles.CHxEGj4-.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/error-500-styles.DJa0zt3_.mjs            0.08 kB
+.nuxt/dist/server/_nuxt/PageLoading-styles.DqobADAc.mjs          0.09 kB
+.nuxt/dist/server/_nuxt/PriorityBadge-styles.BAtK-EWa.mjs        0.09 kB
+.nuxt/dist/server/_nuxt/_id_-styles.BtpofkMd.mjs                 0.14 kB
+.nuxt/dist/server/_nuxt/index-styles.Cjy6u2kG.mjs                0.15 kB
+.nuxt/dist/server/_nuxt/dashboard-styles.DB2mbJ2p.mjs            0.30 kB
+.nuxt/dist/server/_nuxt/default-styles.3ZEiw5tT.mjs              0.43 kB
+.nuxt/dist/server/styles.mjs                                     2.97 kB
+.nuxt/dist/server/_nuxt/AppIcon-styles-1.mjs-hAO2jE1T.js         0.40 kB │ map:   0.84 kB
+.nuxt/dist/server/_nuxt/PriorityBadge-styles-1.mjs-CSWuStKZ.js   0.46 kB │ map:   0.64 kB
+.nuxt/dist/server/_nuxt/PageLoading-styles-1.mjs-BdkHN0oA.js     0.50 kB │ map:   0.72 kB
+.nuxt/dist/server/_nuxt/index-2-styles-1.mjs-CBGbSNoA.js         0.65 kB │ map:   0.53 kB
+.nuxt/dist/server/_nuxt/DueLabel-styles-1.mjs-FopgHLlu.js        0.75 kB │ map:   1.41 kB
+.nuxt/dist/server/_nuxt/default-styles-6.mjs-DcguvnOV.js         0.77 kB │ map:   1.03 kB
+.nuxt/dist/server/_nuxt/default-styles-4.mjs-CprgNM-u.js         0.91 kB │ map:   0.81 kB
+.nuxt/dist/server/_nuxt/dashboard-styles-3.mjs-Bz4h-U_H.js       0.99 kB │ map:   0.85 kB
+.nuxt/dist/server/_nuxt/pages-BG0BfRHZ.js                        1.01 kB │ map:   2.18 kB
+.nuxt/dist/server/_nuxt/_...slug_-styles-1.mjs-CuYL8-M4.js       1.02 kB │ map:   1.73 kB
+.nuxt/dist/server/_nuxt/default-styles-2.mjs-XfvgrenQ.js         1.24 kB │ map:   1.15 kB
+.nuxt/dist/server/_nuxt/_id_-styles-1.mjs-DjjlBiEb.js            1.33 kB │ map:   1.23 kB
+.nuxt/dist/server/_nuxt/dashboard-styles-1.mjs-DrxX0dpq.js       1.37 kB │ map:   1.34 kB
+.nuxt/dist/server/_nuxt/ui-BynKmd1y.js                           1.40 kB │ map:   3.03 kB
+.nuxt/dist/server/_nuxt/dashboard-styles-2.mjs-D3CpuIZo.js       1.42 kB │ map:   1.37 kB
+.nuxt/dist/server/_nuxt/TaskForm-styles-1.mjs-ZIo2td3I.js        1.48 kB │ map:  10.61 kB
+.nuxt/dist/server/_nuxt/PriorityBadge-B8ePqwWv.js                1.60 kB │ map:   1.36 kB
+.nuxt/dist/server/_nuxt/default-styles-5.mjs-Cw8e4P07.js         1.66 kB │ map:   1.68 kB
+.nuxt/dist/server/_nuxt/PageLoading-BYe-qoz2.js                  1.74 kB │ map:   1.55 kB
+.nuxt/dist/server/_nuxt/BaseModal-styles-1.mjs-Dz8QvIZl.js       1.76 kB │ map:   5.47 kB
+.nuxt/dist/server/_nuxt/default-styles-3.mjs-AIU6xh6J.js         1.82 kB │ map:   1.80 kB
+.nuxt/dist/server/_nuxt/settings-styles-1.mjs-DQBcNQmK.js        2.08 kB │ map:  11.17 kB
+.nuxt/dist/server/_nuxt/DueLabel-CsnOIBYR.js                     2.33 kB │ map:   3.41 kB
+.nuxt/dist/server/_nuxt/error-500-styles-1.mjs-DYZXaKE8.js       2.34 kB │ map:   4.42 kB
+.nuxt/dist/server/_nuxt/_...slug_-B0kxO4Di.js                    2.56 kB │ map:   3.89 kB
+.nuxt/dist/server/_nuxt/dashboard-styles-4.mjs-Ces-EIQU.js       2.80 kB │ map:   9.42 kB
+.nuxt/dist/server/_nuxt/error-404-styles-1.mjs-CCOADo3_.js       3.09 kB │ map:   6.25 kB
+.nuxt/dist/server/_nuxt/_id_-styles-2.mjs-C46OjLjx.js            3.31 kB │ map:  12.77 kB
+.nuxt/dist/server/_nuxt/BaseModal-DSSVESOz.js                    3.38 kB │ map:  11.55 kB
+.nuxt/dist/server/_nuxt/projects-styles-1.mjs-CwPx69bR.js        3.41 kB │ map:  13.17 kB
+.nuxt/dist/server/_nuxt/stats-FhXg2Zo2.js                        3.44 kB │ map:   6.78 kB
+.nuxt/dist/server/_nuxt/board-styles-1.mjs-CderUO0R.js           3.49 kB │ map:  13.97 kB
+.nuxt/dist/server/_nuxt/default-styles-1.mjs-h5rVE0C7.js         3.52 kB │ map:   3.76 kB
+.nuxt/dist/server/_nuxt/error-500-fhSPd_N3.js                    3.62 kB │ map:   4.78 kB
+.nuxt/dist/server/_nuxt/calendar-styles-1.mjs-D9hBZFU7.js        4.11 kB │ map:  11.23 kB
+.nuxt/dist/server/_nuxt/filters-tNfa4Bai.js                      5.26 kB │ map:  10.83 kB
+.nuxt/dist/server/_nuxt/error-404-C7P1NSyr.js                    5.34 kB │ map:   6.93 kB
+.nuxt/dist/server/_nuxt/index-2-styles-2.mjs-ZcSp_oDl.js         6.37 kB │ map:  22.81 kB
+.nuxt/dist/server/_nuxt/board-C2_yG4xu.js                        8.74 kB │ map:  31.59 kB
+.nuxt/dist/server/_nuxt/settings-CJurFz2S.js                     9.71 kB │ map:  25.12 kB
+.nuxt/dist/server/_nuxt/calendar-Cd-BPsum.js                    10.54 kB │ map:  28.71 kB
+.nuxt/dist/server/_nuxt/projects-BnPjJH7N.js                    13.78 kB │ map:  31.49 kB
+.nuxt/dist/server/_nuxt/TaskForm-Bx_AmD8t.js                    14.03 kB │ map:  33.07 kB
+.nuxt/dist/server/_nuxt/_id_-D8PBOG_4.js                        15.86 kB │ map:  39.11 kB
+.nuxt/dist/server/_nuxt/tasks-B8EdzWHu.js                       19.25 kB │ map:  54.76 kB
+.nuxt/dist/server/_nuxt/dashboard-BxAdHOEY.js                   24.08 kB │ map:  54.41 kB
+.nuxt/dist/server/_nuxt/default-C1F_MMiz.js                     25.14 kB │ map:  56.66 kB
+.nuxt/dist/server/_nuxt/tasks-DkxfIJxH.js                       27.15 kB │ map:  51.58 kB
+.nuxt/dist/server/server.mjs                                    64.88 kB │ map: 235.94 kB
+
+i ✓ built in 1.54s
+√ Server built in 1567ms
+• Building Nitro server
+[nitro] √ Generated public .output/public
+[nitro] i Building Nuxt Nitro server (preset: node-server, compatibility date: 2025-07-15)
+.nuxt/dist/server/server.mjs (192:0): A comment
+
+"/* @__NO_SIDE_EFFECTS__ */"
+
+in ".nuxt/dist/server/server.mjs" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+• Bundling Nitro server (5.00s · 10.2s)
+[nitro] √ Nuxt Nitro server built
+  ├─ .output/server/chunks/_/error-template.mjs (4.36 kB) (1.7 kB gzip)
+  ├─ .output/server/chunks/_/error-template.mjs.map (183 B) (151 B gzip)
+  ├─ .output/server/chunks/build/_...slug_-B0kxO4Di.mjs (3.06 kB) (1.14 kB gzip)
+  ├─ .output/server/chunks/build/_...slug_-B0kxO4Di.mjs.map (929 B) (450 B gzip)
+  ├─ .output/server/chunks/build/_...slug_-styles.W6zjs2hE.mjs (978 B) (532 B gzip)
+  ├─ .output/server/chunks/build/_...slug_-styles.W6zjs2hE.mjs.map (196 B) (156 B gzip)
+  ├─ .output/server/chunks/build/_id_-D8PBOG_4.mjs (17.1 kB) (4.19 kB gzip)
+  ├─ .output/server/chunks/build/_id_-D8PBOG_4.mjs.map (8.66 kB) (2.19 kB gzip)
+  ├─ .output/server/chunks/build/_id_-styles-1.mjs-DjjlBiEb.mjs (1.22 kB) (565 B gzip)
+  ├─ .output/server/chunks/build/_id_-styles-1.mjs-DjjlBiEb.mjs.map (93 B) (104 B gzip)
+  ├─ .output/server/chunks/build/_id_-styles.BtpofkMd.mjs (3.49 kB) (1.07 kB gzip)
+  ├─ .output/server/chunks/build/_id_-styles.BtpofkMd.mjs.map (215 B) (165 B gzip)
+  ├─ .output/server/chunks/build/AppIcon-styles.B_JGmpnX.mjs (348 B) (216 B gzip)
+  ├─ .output/server/chunks/build/AppIcon-styles.B_JGmpnX.mjs.map (192 B) (154 B gzip)
+  ├─ .output/server/chunks/build/AppSidebar-styles.rG4y7vnj.mjs (366 B) (222 B gzip)
+  ├─ .output/server/chunks/build/AppSidebar-styles.rG4y7vnj.mjs.map (198 B) (156 B gzip)
+  ├─ .output/server/chunks/build/AppTopbar-styles.Ctw6f2Y7.mjs (361 B) (221 B gzip)
+  ├─ .output/server/chunks/build/AppTopbar-styles.Ctw6f2Y7.mjs.map (196 B) (156 B gzip)
+  ├─ .output/server/chunks/build/BarChart-styles.DgC-HSfT.mjs (356 B) (223 B gzip)
+  ├─ .output/server/chunks/build/BarChart-styles.DgC-HSfT.mjs.map (194 B) (155 B gzip)
+  ├─ .output/server/chunks/build/BaseModal-DSSVESOz.mjs (3.22 kB) (1.16 kB gzip)
+  ├─ .output/server/chunks/build/BaseModal-DSSVESOz.mjs.map (1.14 kB) (495 B gzip)
+  ├─ .output/server/chunks/build/BaseModal-styles.CdXI9xyJ.mjs (1.71 kB) (704 B gzip)
+  ├─ .output/server/chunks/build/BaseModal-styles.CdXI9xyJ.mjs.map (196 B) (156 B gzip)
+  ├─ .output/server/chunks/build/board-C2_yG4xu.mjs (9.59 kB) (2.83 kB gzip)
+  ├─ .output/server/chunks/build/board-C2_yG4xu.mjs.map (6.03 kB) (1.63 kB gzip)
+  ├─ .output/server/chunks/build/board-styles.lryo4mAZ.mjs (3.44 kB) (1.16 kB gzip)
+  ├─ .output/server/chunks/build/board-styles.lryo4mAZ.mjs.map (188 B) (151 B gzip)
+  ├─ .output/server/chunks/build/calendar-Cd-BPsum.mjs (11.9 kB) (3.33 kB gzip)
+  ├─ .output/server/chunks/build/calendar-Cd-BPsum.mjs.map (8.25 kB) (2.1 kB gzip)
+  ├─ .output/server/chunks/build/calendar-styles.CbpPvMzJ.mjs (4.07 kB) (1.21 kB gzip)
+  ├─ .output/server/chunks/build/calendar-styles.CbpPvMzJ.mjs.map (194 B) (155 B gzip)
+  ├─ .output/server/chunks/build/dashboard-BxAdHOEY.mjs (25.5 kB) (5.87 kB gzip)
+  ├─ .output/server/chunks/build/dashboard-BxAdHOEY.mjs.map (17 kB) (3.62 kB gzip)
+  ├─ .output/server/chunks/build/dashboard-styles-1.mjs-DrxX0dpq.mjs (1.25 kB) (591 B gzip)
+  ├─ .output/server/chunks/build/dashboard-styles-1.mjs-DrxX0dpq.mjs.map (98 B) (106 B gzip)
+  ├─ .output/server/chunks/build/dashboard-styles-2.mjs-D3CpuIZo.mjs (1.3 kB) (585 B gzip)
+  ├─ .output/server/chunks/build/dashboard-styles-2.mjs-D3CpuIZo.mjs.map (98 B) (107 B gzip)
+  ├─ .output/server/chunks/build/dashboard-styles-3.mjs-Bz4h-U_H.mjs (871 B) (430 B gzip)
+  ├─ .output/server/chunks/build/dashboard-styles-3.mjs-Bz4h-U_H.mjs.map (98 B) (108 B gzip)
+  ├─ .output/server/chunks/build/dashboard-styles.DB2mbJ2p.mjs (3.42 kB) (1.07 kB gzip)
+  ├─ .output/server/chunks/build/dashboard-styles.DB2mbJ2p.mjs.map (281 B) (186 B gzip)
+  ├─ .output/server/chunks/build/default-C1F_MMiz.mjs (26.7 kB) (5.33 kB gzip)
+  ├─ .output/server/chunks/build/default-C1F_MMiz.mjs.map (13.6 kB) (3.25 kB gzip)
+  ├─ .output/server/chunks/build/default-styles-1.mjs-h5rVE0C7.mjs (3.41 kB) (1.11 kB gzip)
+  ├─ .output/server/chunks/build/default-styles-1.mjs-h5rVE0C7.mjs.map (96 B) (107 B gzip)
+  ├─ .output/server/chunks/build/default-styles-2.mjs-XfvgrenQ.mjs (1.12 kB) (556 B gzip)
+  ├─ .output/server/chunks/build/default-styles-2.mjs-XfvgrenQ.mjs.map (96 B) (105 B gzip)
+  ├─ .output/server/chunks/build/default-styles-3.mjs-AIU6xh6J.mjs (1.71 kB) (685 B gzip)
+  ├─ .output/server/chunks/build/default-styles-3.mjs-AIU6xh6J.mjs.map (96 B) (107 B gzip)
+  ├─ .output/server/chunks/build/default-styles-4.mjs-CprgNM-u.mjs (800 B) (410 B gzip)
+  ├─ .output/server/chunks/build/default-styles-4.mjs-CprgNM-u.mjs.map (96 B) (105 B gzip)
+  ├─ .output/server/chunks/build/default-styles-5.mjs-Cw8e4P07.mjs (1.55 kB) (679 B gzip)
+  ├─ .output/server/chunks/build/default-styles-5.mjs-Cw8e4P07.mjs.map (96 B) (107 B gzip)
+  ├─ .output/server/chunks/build/default-styles.3ZEiw5tT.mjs (1.83 kB) (590 B gzip)
+  ├─ .output/server/chunks/build/default-styles.3ZEiw5tT.mjs.map (333 B) (191 B gzip)
+  ├─ .output/server/chunks/build/DonutChart-styles.DK_WmTVN.mjs (368 B) (225 B gzip)
+  ├─ .output/server/chunks/build/DonutChart-styles.DK_WmTVN.mjs.map (198 B) (158 B gzip)
+  ├─ .output/server/chunks/build/DueLabel-CsnOIBYR.mjs (2.31 kB) (918 B gzip)
+  ├─ .output/server/chunks/build/DueLabel-CsnOIBYR.mjs.map (1.11 kB) (446 B gzip)
+  ├─ .output/server/chunks/build/DueLabel-styles.C2oqDJJr.mjs (707 B) (361 B gzip)
+  ├─ .output/server/chunks/build/DueLabel-styles.C2oqDJJr.mjs.map (194 B) (155 B gzip)
+  ├─ .output/server/chunks/build/error-404-C7P1NSyr.mjs (5.92 kB) (2.3 kB gzip)
+  ├─ .output/server/chunks/build/error-404-C7P1NSyr.mjs.map (290 B) (228 B gzip)
+  ├─ .output/server/chunks/build/error-404-styles.CHxEGj4-.mjs (3.02 kB) (1.07 kB gzip)
+  ├─ .output/server/chunks/build/error-404-styles.CHxEGj4-.mjs.map (196 B) (154 B gzip)
+  ├─ .output/server/chunks/build/error-500-fhSPd_N3.mjs (4.13 kB) (1.66 kB gzip)
+  ├─ .output/server/chunks/build/error-500-fhSPd_N3.mjs.map (223 B) (185 B gzip)
+  ├─ .output/server/chunks/build/error-500-styles.DJa0zt3_.mjs (2.27 kB) (871 B gzip)
+  ├─ .output/server/chunks/build/error-500-styles.DJa0zt3_.mjs.map (196 B) (156 B gzip)
+  ├─ .output/server/chunks/build/filters-tNfa4Bai.mjs (5.11 kB) (1.76 kB gzip)
+  ├─ .output/server/chunks/build/filters-tNfa4Bai.mjs.map (6.68 kB) (1.61 kB gzip)
+  ├─ .output/server/chunks/build/index-2-styles-1.mjs-CBGbSNoA.mjs (532 B) (328 B gzip)
+  ├─ .output/server/chunks/build/index-2-styles-1.mjs-CBGbSNoA.mjs.map (96 B) (107 B gzip)
+  ├─ .output/server/chunks/build/index-styles.Cjy6u2kG.mjs (6.54 kB) (1.89 kB gzip)
+  ├─ .output/server/chunks/build/index-styles.Cjy6u2kG.mjs.map (217 B) (168 B gzip)
+  ├─ .output/server/chunks/build/LineChart-styles.CnpvAyb-.mjs (363 B) (222 B gzip)
+  ├─ .output/server/chunks/build/LineChart-styles.CnpvAyb-.mjs.map (196 B) (154 B gzip)
+  ├─ .output/server/chunks/build/PageLoading-BYe-qoz2.mjs (1.66 kB) (727 B gzip)
+  ├─ .output/server/chunks/build/PageLoading-BYe-qoz2.mjs.map (404 B) (240 B gzip)
+  ├─ .output/server/chunks/build/PageLoading-styles.DqobADAc.mjs (460 B) (261 B gzip)
+  ├─ .output/server/chunks/build/PageLoading-styles.DqobADAc.mjs.map (200 B) (156 B gzip)
+  ├─ .output/server/chunks/build/pages-BG0BfRHZ.mjs (877 B) (427 B gzip)
+  ├─ .output/server/chunks/build/pages-BG0BfRHZ.mjs.map (99 B) (95 B gzip)
+  ├─ .output/server/chunks/build/PomodoroMini-styles.wkKrkEqV.mjs (376 B) (222 B gzip)
+  ├─ .output/server/chunks/build/PomodoroMini-styles.wkKrkEqV.mjs.map (202 B) (159 B gzip)
+  ├─ .output/server/chunks/build/PomodoroTimer-styles.FxdDDF6o.mjs (378 B) (223 B gzip)
+  ├─ .output/server/chunks/build/PomodoroTimer-styles.FxdDDF6o.mjs.map (204 B) (159 B gzip)
+  ├─ .output/server/chunks/build/PriorityBadge-B8ePqwWv.mjs (1.48 kB) (670 B gzip)
+  ├─ .output/server/chunks/build/PriorityBadge-B8ePqwWv.mjs.map (335 B) (217 B gzip)
+  ├─ .output/server/chunks/build/PriorityBadge-styles.BAtK-EWa.mjs (415 B) (254 B gzip)
+  ├─ .output/server/chunks/build/PriorityBadge-styles.BAtK-EWa.mjs.map (204 B) (159 B gzip)
+  ├─ .output/server/chunks/build/ProjectChip-styles.By68F0rU.mjs (371 B) (222 B gzip)
+  ├─ .output/server/chunks/build/ProjectChip-styles.By68F0rU.mjs.map (200 B) (158 B gzip)
+  ├─ .output/server/chunks/build/projects-BnPjJH7N.mjs (15.2 kB) (3.75 kB gzip)
+  ├─ .output/server/chunks/build/projects-BnPjJH7N.mjs.map (8.87 kB) (2.29 kB gzip)
+  ├─ .output/server/chunks/build/projects-styles.CA4IDCbk.mjs (3.37 kB) (1.1 kB gzip)
+  ├─ .output/server/chunks/build/projects-styles.CA4IDCbk.mjs.map (194 B) (154 B gzip)
+  ├─ .output/server/chunks/build/settings-CJurFz2S.mjs (10.6 kB) (3.01 kB gzip)
+  ├─ .output/server/chunks/build/settings-CJurFz2S.mjs.map (4.87 kB) (1.4 kB gzip)
+  ├─ .output/server/chunks/build/settings-styles.DQNog-Hn.mjs (2.04 kB) (759 B gzip)
+  ├─ .output/server/chunks/build/settings-styles.DQNog-Hn.mjs.map (194 B) (154 B gzip)
+  ├─ .output/server/chunks/build/ShortcutHelp-styles.D1Jbxbn8.mjs (376 B) (224 B gzip)
+  ├─ .output/server/chunks/build/ShortcutHelp-styles.D1Jbxbn8.mjs.map (202 B) (159 B gzip)
+  ├─ .output/server/chunks/build/stats-FhXg2Zo2.mjs (3.41 kB) (1.22 kB gzip)
+  ├─ .output/server/chunks/build/stats-FhXg2Zo2.mjs.map (4.33 kB) (1.18 kB gzip)
+  ├─ .output/server/chunks/build/TaskForm-Bx_AmD8t.mjs (13.8 kB) (3.56 kB gzip)
+  ├─ .output/server/chunks/build/TaskForm-Bx_AmD8t.mjs.map (381 B) (259 B gzip)
+  ├─ .output/server/chunks/build/TaskForm-styles.CjxF8fH8.mjs (1.44 kB) (655 B gzip)
+  ├─ .output/server/chunks/build/TaskForm-styles.CjxF8fH8.mjs.map (194 B) (155 B gzip)
+  ├─ .output/server/chunks/build/tasks-B8EdzWHu.mjs (20.5 kB) (4.56 kB gzip)
+  ├─ .output/server/chunks/build/tasks-B8EdzWHu.mjs.map (11.7 kB) (2.7 kB gzip)
+  ├─ .output/server/chunks/build/tasks-DkxfIJxH.mjs (26.3 kB) (8.22 kB gzip)
+  ├─ .output/server/chunks/build/tasks-DkxfIJxH.mjs.map (30.1 kB) (6.2 kB gzip)
+  ├─ .output/server/chunks/build/ToastHost-styles.CknkC0og.mjs (361 B) (218 B gzip)
+  ├─ .output/server/chunks/build/ToastHost-styles.CknkC0og.mjs.map (196 B) (154 B gzip)
+  ├─ .output/server/chunks/build/ui-BynKmd1y.mjs (1.48 kB) (610 B gzip)
+  ├─ .output/server/chunks/build/ui-BynKmd1y.mjs.map (1.8 kB) (614 B gzip)
+  ├─ .output/server/chunks/nitro/nitro.mjs (201 kB) (49.9 kB gzip)
+  ├─ .output/server/chunks/nitro/nitro.mjs.map (3.56 kB) (856 B gzip)
+  ├─ .output/server/chunks/routes/renderer.mjs (22.7 kB) (7.66 kB gzip)
+  ├─ .output/server/chunks/routes/renderer.mjs.map (1.25 kB) (293 B gzip)
+  ├─ .output/server/chunks/virtual/entry.mjs (72.5 kB) (19.4 kB gzip)
+  ├─ .output/server/chunks/virtual/entry.mjs.map (4.53 kB) (1.3 kB gzip)
+  ├─ .output/server/chunks/virtual/precomputed.mjs (25.7 kB) (2.78 kB gzip)
+  ├─ .output/server/chunks/virtual/precomputed.mjs.map (26.9 kB) (1.34 kB gzip)
+  ├─ .output/server/chunks/virtual/styles.mjs (4.59 kB) (1.13 kB gzip)
+  ├─ .output/server/chunks/virtual/styles.mjs.map (2.08 kB) (380 B gzip)
+  ├─ .output/server/index.mjs (460 B) (238 B gzip)
+  └─ .output/server/package.json (818 B) (361 B gzip)
+Σ Total size: 2.64 MB (673 kB gzip)
+[nitro] √ You can preview this build using node .output/server/index.mjs
+config 317ms · modules 112ms · app 446ms · types 544ms · client 2.24s · server 1.56s · nitro 6.46s
+* ✨ Build complete in 11.6s!

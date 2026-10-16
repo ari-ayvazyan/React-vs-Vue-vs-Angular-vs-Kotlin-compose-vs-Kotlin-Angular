@@ -1,0 +1,1110 @@
+{
+  "nuxt": {
+    "1": [
+      {
+        "category": "tooling_env",
+        "summary": "nuxt typecheck skips tests/*.ts; needed ad-hoc tsconfig to type-check tests"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "Generator uses local time; fingerprint test needed TZ=UTC pinned"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "/opt/pw-browsers/chromium is a symlink to the binary, not a directory"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Member changes not persisted: save watcher omitted new members field",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Unit test wrongly expected white text on #a855f7; WCAG says dark"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Scripted Python re-indent produced broken markup '</div      </div>'"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Lint no-dynamic-delete on computed-key delete in board filter"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E title search '#1' matched #10-#199 substrings"
+      }
+    ],
+    "2": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Vue router updates URL before re-render; Playwright reads after waitForURL flaky"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Old store test fixtures lacked blockedBy/comments; diffTasks crashed"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Duplicate type import flagged by import/no-duplicates"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Awkward activity sentences like 'created the task on Fix'",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E dragTo off-screen column header silently did nothing"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E changed two filters without waiting for first navigation"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Request-1 E2E getByText matched new Current user select option too"
+      }
+    ],
+    "3": [
+      {
+        "category": "app_bug",
+        "summary": "Drag timing measured in E2E revealed slow timeline drag (same as mistake 1)",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Week zoom month label disappeared after scrolling past the 1st",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Timeline drag re-rendered all ~850 rows, ~130 ms per frame",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Registered onBeforeUnmount inside onMounted; Vue rejects, lint/typecheck missed it"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Lost hatch-pattern styles when moving bar styles to new component",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Old store test fixtures missing new views field; caught by ad-hoc tsc"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E getBBox results did not serialize through page.evaluate"
+      }
+    ],
+    "4": [
+      {
+        "category": "regression_from_data_model",
+        "summary": "Older store tests lacked notifications field; 8 tests crashed (repeat)"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Unit test forgot 'tomorrow' on the 16th is the 17th"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Notification panel focused 'Mark all as read' instead of first item",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Workload chart values wrapped due to fixed 40px value column",
+        "found_by": "screenshot",
+        "preexisting": false
+      }
+    ],
+    "5": [
+      {
+        "category": "compile_lint",
+        "summary": "Type checker drove the status refactor; removed old board helpers",
+        "design_note": true
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Browser tests from requests 1-4 read old v1 storage key"
+      },
+      {
+        "category": "app_bug",
+        "summary": "setWorkflow draft mutated projects outside the commit (unlogged, unguarded remaps)",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Two unused imports left after store rewrite, caught by lint"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Older tests set only status; statusId now source of truth"
+      },
+      {
+        "category": "test_bug",
+        "summary": "New v1-migration fixture wrongly contained assigneeId"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E search 'docs landing' matched unrelated demo tasks"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Board with four statuses overflowed at 1360px, last column cut",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Workflow editor on phones put counts and actions on stray rows",
+        "found_by": "screenshot",
+        "preexisting": false
+      }
+    ]
+  },
+  "next": {
+    "1": [
+      {
+        "category": "tooling_env",
+        "summary": "No existing E2E harness; wrote standalone Playwright script"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "Chromium path is a symlink to the binary; guessed wrong path"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "ps still showed PID briefly after kill"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E search 'Test landing page #1' matched #114, toggled wrong task"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E legacy-data check overwritten by app's pagehide flush"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Dashboard bars overlapped value labels on mobile due to width transition",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Settings showed redundant colour square next to same-coloured avatar",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Lint no-unused-vars from _a/_r destructuring placeholders in test"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Leftover odd maxLength on rename input bypassed validation message",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "completedMessage exported from wrong layer (TasksView); moved to lib"
+      }
+    ],
+    "2": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Combobox mouse pick needs onMouseDown+preventDefault before input blur"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Activity component keeps hidden routes mounted; needed :visible selectors"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "ss not installed; port check printed PORT_FREE falsely"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Mention insertion broke with fast typing: rAF caret restore",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Repeated no-unused-vars from _ignored placeholder in test"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Fingerprint test hashed settings, broke when currentUserId added"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Pointless re-exports left in TaskCollab.tsx, removed on review"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E 'Blocking' check ignored CSS uppercase innerText"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E startsWith name failed; avatar initials come first in innerText"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E read page-2 row count before re-render (flaky)"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Confusing cycle error message repeating 'is blocked by'",
+        "found_by": "self_review",
+        "preexisting": false
+      }
+    ],
+    "3": [
+      {
+        "category": "framework_gotcha",
+        "summary": "content-visibility:auto makes each row its own stacking context"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Sticky inside overflow:hidden box does not stick"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "Chromium background Google requests refused by sandbox proxy"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Junk TimelineView draft: nonsensical drop-date expression, stray export, O(n) find",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Dependency arrows and today line drawn over sticky task names",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Month header label cut off ('ctober 2026') on mobile",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Label column width hard-coded twice; would misalign on mobile",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Hand-written Data literals in tests needed views: [] (third time)"
+      }
+    ],
+    "4": [
+      {
+        "category": "test_bug",
+        "summary": "Demo data relative to now; small seeded tests lack due dates"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Escape stopped closing panel after 'Mark all as read' (focus lost)",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Test passed whole state to burndown(); tsc not run before vitest"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Due-reminder test seeded only 30 tasks, nothing due for m1"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Export CSV button made task list header overflow 375px",
+        "found_by": "e2e",
+        "preexisting": false
+      }
+    ],
+    "5": [
+      {
+        "category": "compile_lint",
+        "summary": "Compiler-guided rename touched almost every module",
+        "design_note": true
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Earlier Playwright suites read taskpilot:v1 and task.status"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Refused completion still returned new state, pushing empty undo step",
+        "found_by": "unit_test",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Junk in drafts: convoluted comparison, inline import type, meaningless ternary"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Sub-project tree connector clashed with ::before stripe and overflow:hidden",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "toEqual(base()) on fixture with numbered titles never equal"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Test expected curly apostrophe; code uses straight one"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Browser script expected 4 statuses after redo legitimately left 3"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "[role=alert] selector matched Next's route announcer (repeated)"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Request-4 CSV check failed after planned status column change"
+      }
+    ]
+  },
+  "angular": {
+    "1": [
+      {
+        "category": "app_bug",
+        "summary": "Chart text stretched by preserveAspectRatio; new chart measures its width",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Interpreting 'generator output unchanged' when Task gains fields",
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Mid-luminance member colours: dark initials win WCAG contrast",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Recurrence toast kept info-only to avoid double undo",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "test_bug",
+        "summary": "Contrast unit test wrongly expected white text on #a855f7"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Unassigned avatar matched global .empty rule: dashed oval on mobile",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Assignee chart labels truncated at desktop width",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Add-member colour swatches misaligned by over-broad min-height override",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E read SVG text with innerText (empty)"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E hasText '#1' matched '#13', toggled wrong task"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Unused StoreService.assignTasks method added, removed before build"
+      }
+    ],
+    "2": [
+      {
+        "category": "regression_from_data_model",
+        "summary": "Placing comments on task and log in undo snapshot",
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Bulk done with blocked tasks: skip blocked, one error toast",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Form edit with blocked status drops only status change",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Template a11y lint flags click on combobox options"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Activity log capped at 5000 entries to bound localStorage",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Scripted insertion left stray </div>, sections outside left column"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Angular template whitespace inside @if doubled spaces around mentions"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Confusing cycle message with ambiguous 'it'",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Lint: 4 a11y errors and 2 no-useless-escape"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E startsWith name failed; avatar initials come first"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E pressed Shift+Right twice without waiting for refocus"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "PID still listed right after kill; server still shutting down"
+      }
+    ],
+    "3": [
+      {
+        "category": "app_bug",
+        "summary": "Virtualized timeline up front for 1000 tasks",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Sticky label column inside absolutely positioned rows",
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Demo tasks due before creation; bar start = min(created, due)",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "View counts active on board only if it sets a board filter",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Keyboard edit on timeline bar re-sorted row and dropped focus",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Unused map import copied from board page"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E expected 6 group rows but groups are virtualized"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E scrollIntoViewIfNeeded left handle under sticky column"
+      },
+      {
+        "category": "test_bug",
+        "summary": "E2E pressed Enter before Save view input was focused"
+      }
+    ],
+    "4": [
+      {
+        "category": "app_bug",
+        "summary": "Notify affected member, no self-suppression with current-user switch",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Notifications kept out of undo snapshot",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Defining 'within 24 hours' for date-only due dates",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Debounced save dropped on fast reload; settings lost",
+        "found_by": "e2e",
+        "preexisting": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Esc stopped closing panel after mark-as-read (focus to body)",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Notification panel off-screen on phones (x = -82px)",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "sr-only tables in charts caused horizontal overflow on mobile reports",
+        "found_by": "e2e",
+        "preexisting": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Line chart axis text stretched by fixed viewBox",
+        "found_by": "screenshot",
+        "preexisting": true
+      },
+      {
+        "category": "test_bug",
+        "summary": "Burndown unit test expected 4 open tasks instead of 3"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Leftover no-op 'void done' in unblocked logic draft"
+      }
+    ],
+    "5": [
+      {
+        "category": "regression_from_data_model",
+        "summary": "statusId authoritative, status kept as cached category",
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Rule for status vs statusId write precedence",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Workflow status ids shared between parent and customised copy",
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "Done-guard bypass: refused completion left patch.statusId",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Board hard-coded 3 columns; fourth wrapped below fold, drag failed",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Drop into empty column failed: 'No tasks' item replaced under pointer",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Earlier e2e 'drag refused' check could never detect broken drag"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Lint: role=treeitem requires aria-selected"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Scripted replacements mismatched Prettier-formatted code; build error"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Python patch failed to parse due to quotes in triple-quoted string"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Store test expected wrong status reorder order"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Earlier e2e suites read taskpilot:v1 and crashed on new key"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Angular drops whitespace between spans in meta line"
+      }
+    ]
+  },
+  "angular-kotlin": {
+    "1": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Own 'object Math' conceptually shadowed kotlin.js.Math; renamed IntMath"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Playwright innerText empty for SVG text; needed textContent"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Demo task #1 now weekly; old drag check count assertion failed"
+      },
+      {
+        "category": "app_bug",
+        "summary": "lastSpawned not reset on commit; toast would re-announce spawn",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Used kotlin.math.pow(a, b); it is extension a.pow(b)"
+      },
+      {
+        "category": "app_bug",
+        "summary": "sr-only spans escaped board, page 393px too wide on mobile",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Assignee chart tiny text and half-empty dashboard row",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Chart label check used allInnerTexts on SVG"
+      }
+    ],
+    "2": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Kotlin/JS lacks RegexOption.DOT_MATCHES_ALL"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "angular-eslint a11y rules flag click on listbox options"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "grep '^e:' on Gradle output hid compiler errors again"
+      },
+      {
+        "category": "app_bug",
+        "summary": "dropDanglingBlockers O(n^2) on every mutation",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "DOT_MATCHES_ALL in test caused compile error on Kotlin/JS"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Lint click-events-have-key-events on blocker picker"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Playwright check picked already-done task as blocker"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Assertions matched titles by substring (#1 vs #119)"
+      }
+    ],
+    "3": [
+      {
+        "category": "app_bug",
+        "summary": "Demo tasks due before creation drawn dashed due-to-created",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Two-axis sticky scrolling with mobile label width via CSS variable",
+        "design_note": true
+      },
+      {
+        "category": "app_bug",
+        "summary": "activeView compared raw query strings; non-canonical views never matched",
+        "found_by": "unit_test",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Timeline grid width hard-coded 260; 110px dead space on phones",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Undo test dragged wrong bar via nth(5) during re-render; misdiagnosed"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Assertions read DOM synchronously right after click"
+      }
+    ],
+    "4": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Kotlin/JS prints whole Doubles without fraction (2.0 -> '2')"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Self-notification enabled since actor is always current user",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Expected round1(2.0).toString() == '2.0'; failing Kotlin/JS test"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Escape handler on host; lost after Mark all read disabled itself",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Notification panel stuck out 86px left on 375px screen",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Screenshot captured mid fade-in looked semi-transparent; not a bug"
+      }
+    ],
+    "5": [
+      {
+        "category": "regression_from_data_model",
+        "summary": "Status compared to three constants in ~60 places; derived category",
+        "design_note": true
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Changed exported signatures rippled into tests and Angular services"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Board fixed repeat(3) grid wrapped custom workflows",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "moveTaskToColumnIn rewrite stopped renumbering source column",
+        "found_by": "unit_test",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Test wrongly assumed customised sub-project lacks parent's new status"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Test moved a card right from the last column"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Duplicate KDoc above createProject, ktlint error"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Workflow editor over-counted status usage via array references",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "compile_lint",
+        "summary": "role=tree without aria-selected flagged by angular-eslint"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Rejected rename kept typed text; unchanged state, Angular did not re-render"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Board laid out 5 columns as 3 + 2 rows",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Regression scripts needed v2 key, CSV category, legacy precedence"
+      }
+    ]
+  },
+  "kotlin": {
+    "1": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Compose HTML lacks SVG text-centering helpers"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Async recomposition and in-memory undo lost on reload"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Demo task #1 now weekly; old drag check broke"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "Wrong relative path to styles.css when appending CSS (twice)"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Used kotlin.math.pow(a, b) as function; it is an extension"
+      },
+      {
+        "category": "app_bug",
+        "summary": "<p> error placed inside <ul> member list (invalid HTML)",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Browser check tested undo after page.goto reload"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Substring search '#1' matched #10-#199"
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Did not anticipate old drag check change from recurrence"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Add-member input squeezed to ~90px at 375px",
+        "found_by": "screenshot",
+        "preexisting": false
+      }
+    ],
+    "2": [
+      {
+        "category": "app_bug",
+        "summary": "enforceBlockers partial rejection vs board order renumbering",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Compose HTML caret autocomplete needs element ref and setTimeout"
+      },
+      {
+        "category": "tooling_env",
+        "summary": "Wrong relative path to styles.css again (third time)"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Test reversed documented cycle path order"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Bulk toast 'Marked 1 as done' shown even when completion rejected",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Deleted blockers shown as 'deleted task' in activity log",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "hasText '#3' matched #32, Playwright strict mode crash"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Pagination check assumed one bulk delete gives >50 entries"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Mention dropdown anchored below whole composer",
+        "found_by": "self_review",
+        "preexisting": false
+      }
+    ],
+    "3": [
+      {
+        "category": "framework_gotcha",
+        "summary": "Compose HTML 1.7.3 DSL lacks pointer-event listeners"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Manual virtualisation of timeline rows for 1000 tasks",
+        "found_by": "self_review",
+        "preexisting": false,
+        "design_note": true
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Label width shared between CSS and Kotlin via --label-w",
+        "design_note": true
+      },
+      {
+        "category": "test_bug",
+        "summary": "Wrong arithmetic in visibleRows test expectations"
+      },
+      {
+        "category": "test_bug",
+        "summary": "Browser check assumed all groups and arrows in DOM despite virtualisation"
+      },
+      {
+        "category": "app_bug",
+        "summary": "boardIgnoredParts implemented but not shown in UI",
+        "found_by": "screenshot",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Group labels truncated to 'W...' on phones",
+        "found_by": "screenshot",
+        "preexisting": false
+      }
+    ],
+    "4": [
+      {
+        "category": "tooling_env",
+        "summary": "Usage-limit interruption during the request"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Recurring copy looked like fresh assignment (same as mistake 1)",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "app_bug",
+        "summary": "Spurious 'assigned you' notification for recurring copies",
+        "found_by": "e2e",
+        "preexisting": false
+      },
+      {
+        "category": "test_bug",
+        "summary": "Wrong expectation: next-day reminders are 4, not 3"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Qualified svg.Title resolved to file's private builder val"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Python patch used pre-ktlintFormat text; left call half-patched"
+      }
+    ],
+    "5": [
+      {
+        "category": "regression_from_data_model",
+        "summary": "Many places assumed three fixed statuses; normalisation choke point",
+        "design_note": true
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Kotlin copy() does not recompute default-derived statusId"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Scripted edit left extra brace in filterTasks"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Import cycle detection missed project in its own ancestors",
+        "found_by": "unit_test",
+        "preexisting": false
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Activity diff logged 'todo -> todo' from stale statusId; existing test failed"
+      },
+      {
+        "category": "compile_lint",
+        "summary": "Scripted range replacement deleted Store.updateProject; compile errors"
+      },
+      {
+        "category": "framework_gotcha",
+        "summary": "Unqualified call in deleteWorkflowStatus could resolve to member and recurse"
+      },
+      {
+        "category": "app_bug",
+        "summary": "Unkeyed workflow rows kept stale input text after reorder",
+        "found_by": "self_review",
+        "preexisting": false
+      },
+      {
+        "category": "regression_from_data_model",
+        "summary": "Browser scripts read taskpilot:v1; legacy check no longer tested migration"
+      },
+      {
+        "category": "app_bug",
+        "summary": "'1 tasks' pluralisation on project cards",
+        "found_by": "screenshot",
+        "preexisting": false
+      }
+    ]
+  }
+}

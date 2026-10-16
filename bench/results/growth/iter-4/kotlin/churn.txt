@@ -1,0 +1,14 @@
+1	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/ImportExport.kt
+1	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/Model.kt
+162	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/Notifications.kt
+121	0	apps/kotlin-app/shared/src/commonMain/kotlin/taskpilot/Reports.kt
+163	0	apps/kotlin-app/shared/src/commonTest/kotlin/taskpilot/NotificationsReportsTest.kt
+4	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/Router.kt
+8	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/Shell.kt
+64	2	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/Store.kt
+24	4	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/Charts.kt
+251	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/ReportsPage.kt
+18	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt
+2	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/ui/Icons.kt
+171	0	apps/kotlin-app/web/src/jsMain/kotlin/taskpilot/web/ui/NotificationsBell.kt
+47	0	apps/kotlin-app/web/src/jsMain/resources/styles.css

@@ -1,0 +1,37 @@
+{
+ "functions": 288,
+ "avg_ccn": 1.96,
+ "max_ccn": 55,
+ "fn_ccn_gt10": 3,
+ "fn_ccn_gt15": 2,
+ "fn_ccn_gt20": 1,
+ "avg_fn_nloc": 4.2,
+ "fn_over_50_lines": 2,
+ "top": [
+  [
+   55,
+   "matchesDue",
+   "src/app/core/filters.ts"
+  ],
+  [
+   19,
+   "validateTask",
+   "src/app/core/validation.ts"
+  ],
+  [
+   11,
+   "validateTaskDraft",
+   "src/app/core/validation.ts"
+  ],
+  [
+   10,
+   "validateSettings",
+   "src/app/core/validation.ts"
+  ],
+  [
+   9,
+   "draftFrom",
+   "src/app/components/task-form.ts"
+  ]
+ ]
+}

@@ -1,0 +1,263 @@
+.chartWrap {
+  position: relative;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  border-radius: var(--radius-sm);
+}
+
+.svg:focus-visible {
+  outline-offset: 4px;
+}
+
+.grid {
+  stroke: var(--chart-grid);
+  stroke-width: 1;
+}
+
+.axisLabel {
+  fill: var(--text-subtle);
+  font-size: 11px;
+}
+
+.line {
+  fill: none;
+  stroke: var(--chart-1);
+  stroke-width: 2.25;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.cursor {
+  stroke: var(--border-strong);
+  stroke-dasharray: 3 3;
+}
+
+.point {
+  fill: var(--surface);
+  stroke: var(--chart-1);
+  stroke-width: 2.5;
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+}
+
+.tooltip strong {
+  font-size: 14px;
+}
+
+.tooltip span {
+  opacity: 0.7;
+}
+
+/* Donut */
+.donutWrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.donut {
+  width: 170px;
+  height: 170px;
+  flex: none;
+}
+
+.donutTrack {
+  fill: none;
+  stroke: var(--surface-2);
+  stroke-width: 18;
+}
+
+.donutSeg {
+  transition: stroke-width 0.15s;
+  cursor: default;
+}
+
+.donutValue {
+  fill: var(--text);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.donutLabel {
+  fill: var(--text-subtle);
+  font-size: 11px;
+}
+
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 170px;
+  flex: 1;
+}
+
+.legendItem {
+  display: grid;
+  grid-template-columns: auto 1fr auto 44px;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.legendActive {
+  background: var(--surface-2);
+}
+
+.legendName {
+  font-weight: 500;
+}
+
+.legendValue {
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.legendPct {
+  text-align: right;
+  color: var(--text-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Bars */
+.bars {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 130px 1fr 92px;
+  align-items: center;
+  gap: 12px;
+}
+
+.barName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  min-width: 0;
+}
+
+.barName span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barName:hover span:last-child {
+  text-decoration: underline;
+}
+
+.barTrack {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.4s var(--ease);
+}
+
+.barValue {
+  text-align: right;
+  font-weight: 650;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .barRow {
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+  }
+  .barTrack {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* Assignee bars (SVG) */
+.abRow {
+  cursor: pointer;
+  outline: none;
+}
+
+.abHit {
+  fill: transparent;
+}
+
+.abActive .abHit {
+  fill: var(--surface-2);
+}
+
+.abRow:focus-visible .abHit {
+  stroke: var(--focus);
+  stroke-width: 2;
+}
+
+.abInitials {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.abNobody {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 2.5;
+}
+
+.abName {
+  fill: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.abMuted {
+  fill: var(--text-subtle);
+  font-style: italic;
+}
+
+.abTrack {
+  fill: var(--surface-2);
+}
+
+.abValue {
+  fill: var(--text);
+  font-size: 13px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}

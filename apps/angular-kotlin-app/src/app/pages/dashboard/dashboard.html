@@ -1,0 +1,107 @@
+<header class="page-header">
+  <div>
+    <h1>Dashboard</h1>
+    <p class="muted">Your workload at a glance.</p>
+  </div>
+</header>
+
+@if (store.ready()) {
+  @let s = stats();
+  <section class="kpis" aria-label="Key figures">
+    <div class="kpi" data-testid="kpi-total">
+      <span class="kpi-label">Total tasks</span>
+      <span class="kpi-value">{{ s.total }}</span>
+    </div>
+    <div class="kpi" data-testid="kpi-open">
+      <span class="kpi-label">Open</span>
+      <span class="kpi-value">{{ s.open }}</span>
+    </div>
+    <div class="kpi" [class.kpi-alert]="s.overdue > 0" data-testid="kpi-overdue">
+      <span class="kpi-label">Overdue</span>
+      <span class="kpi-value">{{ s.overdue }}</span>
+    </div>
+    <div class="kpi" data-testid="kpi-completed-7d">
+      <span class="kpi-label">Done · last 7 days</span>
+      <span class="kpi-value">{{ s.completedLast7Days }}</span>
+    </div>
+    <div class="kpi" data-testid="kpi-completion-rate">
+      <span class="kpi-label">Completion rate</span>
+      <span class="kpi-value">{{ s.completionRate }}%</span>
+    </div>
+    <div class="kpi" data-testid="kpi-hours">
+      <span class="kpi-label">Hours tracked</span>
+      <span class="kpi-value">{{ s.hoursTracked }}h</span>
+    </div>
+  </section>
+
+  <div class="dash-grid">
+    <section class="card card-span-2" data-testid="chart-completed" aria-labelledby="chart-completed-title">
+      <header class="card-header">
+        <h2 id="chart-completed-title">Completed per day</h2>
+        <span class="streak" [class.streak-on]="s.streak > 0" title="Consecutive days with at least one completed task">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 22c4 0 7-3 7-7 0-5-5-7-5-12-3 2-5 5-5 8-1-1-2-2-2-4-2 2-2 5-2 8 0 4 3 7 7 7z" fill="currentColor" /></svg>
+          {{ s.streak }}-day streak
+        </span>
+      </header>
+      <p class="muted small">Last 30 days</p>
+      <app-line-chart [series]="s.completedPerDay" />
+    </section>
+
+    <section class="card" data-testid="chart-priority" aria-labelledby="chart-priority-title">
+      <header class="card-header"><h2 id="chart-priority-title">Open by priority</h2></header>
+      <app-donut-chart [slices]="s.openByPriority" />
+    </section>
+
+    <section class="card" data-testid="chart-projects" aria-labelledby="chart-projects-title">
+      <header class="card-header"><h2 id="chart-projects-title">Project completion</h2></header>
+      <app-project-bars [projects]="s.projectProgress" />
+    </section>
+
+    <section class="card card-span-2" data-testid="chart-assignees" aria-labelledby="chart-assignees-title">
+      <header class="card-header"><h2 id="chart-assignees-title">Open tasks per assignee</h2></header>
+      <app-assignee-bars [loads]="s.openByAssignee" />
+    </section>
+
+    <section class="card" aria-labelledby="upcoming-title">
+      <header class="card-header">
+        <h2 id="upcoming-title">Upcoming deadlines</h2>
+        <a class="link small" routerLink="/tasks" [queryParams]="{ due: 'week' }">View all</a>
+      </header>
+      <ul class="mini-list">
+        @for (t of s.upcoming; track t.id) {
+          <li>
+            <a [routerLink]="['/tasks', t.id]" class="mini-item">
+              <span class="prio-dot" [attr.data-priority]="t.priority" [attr.title]="priorityLabel(t.priority) + ' priority'"></span>
+              <span class="mini-title">{{ t.title }}</span>
+              <span class="mini-meta">{{ fmt.relative(t.dueDate, store.today()) }}</span>
+            </a>
+          </li>
+        } @empty {
+          <li class="muted small">Nothing due in the next 7 days.</li>
+        }
+      </ul>
+    </section>
+
+    <section class="card card-span-2-xl" aria-labelledby="overdue-title">
+      <header class="card-header">
+        <h2 id="overdue-title">Overdue <span class="badge badge-danger">{{ s.overdueTotal }}</span></h2>
+        <a class="link small" routerLink="/tasks" [queryParams]="{ due: 'overdue' }">View all</a>
+      </header>
+      <ul class="mini-list">
+        @for (t of s.overdueTasks; track t.id) {
+          <li>
+            <a [routerLink]="['/tasks', t.id]" class="mini-item">
+              <span class="prio-dot" [attr.data-priority]="t.priority" [attr.title]="priorityLabel(t.priority) + ' priority'"></span>
+              <span class="mini-title">{{ t.title }}</span>
+              <span class="mini-meta danger">{{ fmt.relative(t.dueDate, store.today()) }}</span>
+            </a>
+          </li>
+        } @empty {
+          <li class="muted small">No overdue tasks. Nice!</li>
+        }
+      </ul>
+    </section>
+  </div>
+} @else {
+  <app-skeleton [rows]="8" />
+}

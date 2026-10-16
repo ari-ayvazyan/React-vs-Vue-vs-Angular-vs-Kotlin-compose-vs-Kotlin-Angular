@@ -1,0 +1,50 @@
+{
+ "nuxt dashboard": {
+  "n": 3,
+  "perf": 97,
+  "FCP": 1854,
+  "LCP": 2274,
+  "TBT": 64,
+  "SI": 1854
+ },
+ "nuxt tasks": {
+  "n": 3,
+  "perf": 97,
+  "FCP": 1818,
+  "LCP": 1963,
+  "TBT": 119,
+  "SI": 1818
+ },
+ "next dashboard": {
+  "n": 3,
+  "perf": 98,
+  "FCP": 915,
+  "LCP": 2285,
+  "TBT": 108,
+  "SI": 915
+ },
+ "next tasks": {
+  "n": 3,
+  "perf": 94,
+  "FCP": 916,
+  "LCP": 2335,
+  "TBT": 222,
+  "SI": 916
+ },
+ "angular dashboard": {
+  "n": 3,
+  "perf": 99,
+  "FCP": 1692,
+  "LCP": 1692,
+  "TBT": 83,
+  "SI": 1692
+ },
+ "angular tasks": {
+  "n": 3,
+  "perf": 99,
+  "FCP": 1523,
+  "LCP": 1673,
+  "TBT": 87,
+  "SI": 1523
+ }
+}

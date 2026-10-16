@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" data-booting>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TaskPilot – tasks, board, calendar and focus timer.">
+  <meta name="color-scheme" content="light dark">
+  <title>TaskPilot</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script>
+    // Resolve the persisted theme before first paint to avoid a flash of the wrong theme.
+    (function () {
+      var mode = 'system';
+      try {
+        var raw = localStorage.getItem('taskpilot:v2') || localStorage.getItem('taskpilot:v1');
+        if (raw) { var s = JSON.parse(raw).settings; if (s && s.theme) mode = s.theme; }
+      } catch (e) {}
+      var dark = mode === 'dark' || (mode !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var root = document.documentElement;
+      root.setAttribute('data-theme', dark ? 'dark' : 'light');
+      root.style.colorScheme = dark ? 'dark' : 'light';
+    })();
+  </script>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="root"><div class="boot" aria-busy="true" aria-label="Loading TaskPilot"></div></div>
+  <noscript>TaskPilot needs JavaScript enabled.</noscript>
+</body>
+</html>

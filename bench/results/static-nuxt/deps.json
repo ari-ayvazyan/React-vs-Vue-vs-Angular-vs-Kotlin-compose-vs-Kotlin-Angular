@@ -1,0 +1,1 @@
+{"deps":["@pinia/nuxt","nuxt","pinia","vue","vue-router"],"devDeps":["@nuxt/eslint","@vue/test-utils","eslint","happy-dom","typescript","vitest","vue-tsc"]}

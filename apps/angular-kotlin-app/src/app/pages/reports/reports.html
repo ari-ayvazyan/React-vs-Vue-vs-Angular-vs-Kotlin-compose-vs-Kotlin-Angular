@@ -1,0 +1,42 @@
+<header class="page-header">
+  <div>
+    <h1>Reports</h1>
+    <p class="muted">Progress, workload and cycle time.</p>
+  </div>
+</header>
+
+@if (store.ready()) {
+  <div class="reports-grid">
+    <section class="card card-wide" data-testid="chart-burndown" aria-labelledby="burndown-title">
+      <header class="card-header">
+        <h2 id="burndown-title">Burndown · last 30 days</h2>
+        <div class="field-inline">
+          <label for="burndown-project">Project</label>
+          <select id="burndown-project" data-testid="burndown-project" (change)="selected.set($any($event.target).value)">
+            @for (p of store.projectOptions(); track p.id) {
+              <option [value]="p.id" [selected]="projectId() === p.id">{{ p.label }}</option>
+            }
+            <option [value]="NO_PROJECT" [selected]="projectId() === NO_PROJECT">No project</option>
+            <option [value]="ALL" [selected]="projectId() === ALL">All projects</option>
+          </select>
+        </div>
+      </header>
+      <p class="muted small">Open tasks at the end of each day: {{ burndown().start }} → {{ burndown().end }}</p>
+      <app-burndown-chart [data]="burndown()" />
+    </section>
+
+    <section class="card" data-testid="chart-workload" aria-labelledby="workload-title">
+      <header class="card-header"><h2 id="workload-title">Workload per assignee</h2></header>
+      <p class="muted small">Sum of estimates of open tasks, in hours.</p>
+      <app-hbar-chart [data]="workload()" description="Workload per assignee" />
+    </section>
+
+    <section class="card" data-testid="chart-cycle-time" aria-labelledby="cycle-title">
+      <header class="card-header"><h2 id="cycle-title">Average cycle time by priority</h2></header>
+      <p class="muted small">Days from creation to completion (number of completed tasks in brackets).</p>
+      <app-hbar-chart [data]="cycle()" description="Average cycle time by priority" />
+    </section>
+  </div>
+} @else {
+  <app-skeleton [rows]="8" />
+}

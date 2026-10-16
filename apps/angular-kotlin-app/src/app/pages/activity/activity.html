@@ -1,0 +1,56 @@
+<header class="page-header">
+  <div>
+    <h1>Activity</h1>
+    <p class="muted">Every change to every task, newest first.</p>
+  </div>
+</header>
+
+@let q = query();
+<section class="filters card" aria-label="Activity filters">
+  <div class="filter-row">
+    <div class="field-inline">
+      <label for="act-member">Member</label>
+      <select id="act-member" data-testid="activity-member-filter" (change)="apply(q.withActor($any($event.target).value))">
+        <option value="" [selected]="q.actor === ''">Everyone</option>
+        @for (m of store.members(); track m.id) {
+          <option [value]="m.id" [selected]="q.actor === m.id">{{ m.name }}</option>
+        }
+      </select>
+    </div>
+    <div class="field-inline">
+      <label for="act-type">Type</label>
+      <select id="act-type" data-testid="activity-type-filter" (change)="apply(q.withType($any($event.target).value))">
+        <option value="" [selected]="q.type === ''">All types</option>
+        @for (t of types; track t) {
+          <option [value]="t" [selected]="q.type === t">{{ typeLabel(t) }}</option>
+        }
+      </select>
+    </div>
+    @if (q.isFiltered) {
+      <button type="button" class="btn btn-ghost btn-sm" (click)="apply(q.withActor('').withType(''))">Clear filters</button>
+    }
+  </div>
+</section>
+
+@if (store.ready()) {
+  @let r = result();
+  <p class="muted small" aria-live="polite">{{ r.total }} {{ r.total === 1 ? 'entry' : 'entries' }}</p>
+  <section class="card">
+    <app-activity-list [entries]="r.items" [showTask]="true" label="All activity" />
+  </section>
+  @if (r.pageCount > 1) {
+    <nav class="pagination" aria-label="Activity pagination">
+      <span class="muted small">Page {{ r.page }} of {{ r.pageCount }}</span>
+      <div class="pager">
+        <button type="button" class="btn btn-sm" [disabled]="r.page <= 1" (click)="apply(q.withPage(r.page - 1))" data-testid="activity-prev">
+          <app-icon name="chevronLeft" [size]="14" /> Newer
+        </button>
+        <button type="button" class="btn btn-sm" [disabled]="r.page >= r.pageCount" (click)="apply(q.withPage(r.page + 1))" data-testid="activity-next">
+          Older <app-icon name="chevronRight" [size]="14" />
+        </button>
+      </div>
+    </nav>
+  }
+} @else {
+  <app-skeleton [rows]="8" />
+}

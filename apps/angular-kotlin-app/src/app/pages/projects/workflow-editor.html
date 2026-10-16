@@ -1,0 +1,77 @@
+<section class="workflow-editor" aria-label="Workflow" data-testid="workflow-editor">
+  <header class="wf-head">
+    <h3>Workflow</h3>
+    <p class="muted small">
+      @if (inherited()) {
+        {{ hasParent() ? 'Inherited from the parent project.' : 'Default workflow.' }} Editing creates a custom workflow for this project{{ hasParent() ? '' : ' and its sub-projects' }}.
+      } @else {
+        Custom workflow{{ hasParent() ? '' : '' }} – sub-projects without their own workflow use it too.
+        <button type="button" class="btn btn-ghost btn-sm" data-testid="workflow-reset" (click)="reset()">{{ hasParent() ? 'Inherit from parent' : 'Reset to default' }}</button>
+      }
+    </p>
+  </header>
+  <ol class="wf-list">
+    @for (s of statuses(); track s.id; let i = $index; let last = $last) {
+      <li class="wf-row" data-testid="workflow-status">
+        <label class="sr-only" [for]="'wf-color-' + projectId() + s.id">Colour of {{ s.name }}</label>
+        <input [id]="'wf-color-' + projectId() + s.id" type="color" class="color-input" [value]="s.color" (change)="recolor(s, $any($event.target).value)" />
+        <label class="sr-only" [for]="'wf-name-' + projectId() + s.id">Name of status {{ s.name }}</label>
+        <input
+          class="wf-name"
+          [id]="'wf-name-' + projectId() + s.id"
+          maxlength="30"
+          [value]="s.name"
+          data-testid="workflow-status-name"
+          (change)="rename(s, $any($event.target))"
+          (keydown.enter)="$any($event.target).blur()"
+        />
+        <label class="sr-only" [for]="'wf-cat-' + projectId() + s.id">Category of {{ s.name }}</label>
+        <select class="select-sm" [id]="'wf-cat-' + projectId() + s.id" (change)="recategorize(s, $any($event.target).value)">
+          @for (c of categories; track c) {
+            <option [value]="c" [selected]="s.category === c">{{ categoryLabel(c) }}</option>
+          }
+        </select>
+        <span class="muted small wf-count" [title]="(usage().get(s.id) ?? 0) + ' tasks'">{{ usage().get(s.id) ?? 0 }}</span>
+        <button type="button" class="icon-btn icon-btn-xs" [disabled]="i === 0" [attr.aria-label]="'Move ' + s.name + ' up'" (click)="move(s, -1)">
+          <app-icon name="chevronLeft" [size]="13" class="rot90" />
+        </button>
+        <button type="button" class="icon-btn icon-btn-xs" [disabled]="last" [attr.aria-label]="'Move ' + s.name + ' down'" (click)="move(s, 1)">
+          <app-icon name="chevronRight" [size]="13" class="rot90" />
+        </button>
+        <button type="button" class="icon-btn icon-btn-xs" [attr.aria-label]="'Delete status ' + s.name" (click)="askDelete(s)">
+          <app-icon name="trash" [size]="13" />
+        </button>
+        @if (deletingId() === s.id) {
+          <div class="wf-delete" role="group" [attr.aria-label]="'Delete status ' + s.name">
+            <label [for]="'wf-target-' + projectId()">Move its tasks to</label>
+            <select class="select-sm" [id]="'wf-target-' + projectId()" data-testid="workflow-delete-target" (change)="moveTarget.set($any($event.target).value)">
+              @for (t of statuses(); track t.id) {
+                @if (t.id !== s.id) {
+                  <option [value]="t.id" [selected]="moveTarget() === t.id">{{ t.name }}</option>
+                }
+              }
+            </select>
+            <button type="button" class="btn btn-danger btn-sm" data-testid="workflow-delete-confirm" (click)="confirmDelete(s)">Delete</button>
+            <button type="button" class="btn btn-ghost btn-sm" (click)="deletingId.set(null)">Cancel</button>
+          </div>
+        }
+      </li>
+    }
+  </ol>
+  @if (error()) {
+    <p class="field-error" role="alert" data-testid="workflow-error">{{ error() }}</p>
+  }
+  <form class="wf-add" (submit)="add($event)" novalidate>
+    <label class="sr-only" [for]="'wf-new-' + projectId()">New status name</label>
+    <input [id]="'wf-new-' + projectId()" data-testid="workflow-new-name" maxlength="30" placeholder="New status, e.g. Review" [value]="newName()" (input)="newName.set($any($event.target).value)" />
+    <label class="sr-only" [for]="'wf-new-cat-' + projectId()">Category</label>
+    <select class="select-sm" [id]="'wf-new-cat-' + projectId()" data-testid="workflow-new-category" (change)="newCategory.set($any($event.target).value)">
+      @for (c of categories; track c) {
+        <option [value]="c" [selected]="newCategory() === c">{{ categoryLabel(c) }}</option>
+      }
+    </select>
+    <label class="sr-only" [for]="'wf-new-color-' + projectId()">Colour</label>
+    <input [id]="'wf-new-color-' + projectId()" type="color" class="color-input" [value]="newColor()" (input)="newColor.set($any($event.target).value)" />
+    <button type="submit" class="btn btn-sm" data-testid="workflow-add"><app-icon name="plus" [size]="14" /> Add status</button>
+  </form>
+</section>

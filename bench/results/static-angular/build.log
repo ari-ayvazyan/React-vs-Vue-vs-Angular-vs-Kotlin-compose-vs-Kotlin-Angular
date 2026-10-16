@@ -1,0 +1,61 @@
+$ bun run ng build
+$ node_modules/node/bin/node node_modules/@angular/cli/bin/ng.js build
+❯ Building...
+✔ Building...
+Browser bundles     
+Initial chunk files  | Names            |  Raw size | Estimated transfer size
+chunk-CYq6J6Uy.js    | -                | 175.69 kB |                52.01 kB
+main-3NTI4P6U.js     | main             | 162.49 kB |                42.97 kB
+styles-Z43F37YI.css  | styles           |   8.23 kB |                 2.37 kB
+
+                     | Initial total    | 346.41 kB |                97.34 kB
+
+Lazy chunk files     | Names            |  Raw size | Estimated transfer size
+chunk-D03nBxN3.js    | tasks            |  25.51 kB |                 6.31 kB
+chunk-DYQE-40y.js    | dashboard        |  21.27 kB |                 6.19 kB
+chunk-CXk4eW4i.js    | task-detail      |  14.93 kB |                 4.51 kB
+chunk-CWPOpUWw.js    | projects         |  14.80 kB |                 4.18 kB
+chunk-W3yEHB4_.js    | board            |  12.59 kB |                 4.23 kB
+chunk-BaRNZFZL.js    | settings         |  10.51 kB |                 3.33 kB
+chunk-a74EOcz8.js    | calendar         |   8.96 kB |                 3.07 kB
+chunk-oWZc0PBy.js    | -                |   2.58 kB |                 1.07 kB
+chunk-Cpt5wsGA.js    | -                |   1.81 kB |               802 bytes
+chunk-CTkOZAYD.js    | not-found        |   1.22 kB |               626 bytes
+
+
+Server bundles      
+Initial chunk files  | Names            |  Raw size
+server.mjs           | server           | 937.92 kB |                        
+main.server.mjs      | main.server      | 305.70 kB |                        
+polyfills.server.mjs | polyfills.server | 235.58 kB |                        
+chunk-H6QP25RQ.mjs   | -                | 174.88 kB |                        
+chunk-O6XRFULY.mjs   | -                | 104.28 kB |                        
+chunk-IVKK4VY4.mjs   | -                |  17.23 kB |                        
+chunk-OGFL222E.mjs   | -                |  12.64 kB |                        
+chunk-2M7BWSF4.mjs   | -                |   4.03 kB |                        
+chunk-C2KJ4ATU.mjs   | -                |   1.54 kB |                        
+chunk-KYQQYI4M.mjs   | -                |   1.01 kB |                        
+chunk-V3DZ25RB.mjs   | -                | 965 bytes |                        
+chunk-SBH6ETEW.mjs   | -                | 862 bytes |                        
+chunk-SV4HNCCH.mjs   | -                | 686 bytes |                        
+chunk-EXGTQPCR.mjs   | -                | 517 bytes |                        
+
+Lazy chunk files     | Names            |  Raw size
+chunk-G523WZJK.mjs   | tasks            |  25.20 kB |                        
+chunk-UMKETSDD.mjs   | dashboard        |  20.92 kB |                        
+chunk-6JZ5N2QF.mjs   | task-detail      |  14.71 kB |                        
+chunk-L2V6MWCP.mjs   | projects         |  14.60 kB |                        
+chunk-PEWQMJ5J.mjs   | board            |  12.51 kB |                        
+chunk-RBXOAK24.mjs   | xhr2             |  12.17 kB |                        
+chunk-XDZ7ZLR6.mjs   | xhr2             |  12.08 kB |                        
+chunk-J6ODZ346.mjs   | settings         |  10.47 kB |                        
+chunk-UPY4HT4S.mjs   | calendar         |   8.95 kB |                        
+chunk-VVJKWCI3.mjs   | -                |   2.59 kB |                        
+chunk-4IIOGZJE.mjs   | -                |   1.82 kB |                        
+chunk-ZHWYPZQI.mjs   | not-found        |   1.27 kB |                        
+
+Prerendered 0 static routes.
+Application bundle generation complete. [7.149 seconds] - 2026-10-16T07:14:51.187Z
+
+Output location: /home/user/aa_empty_claude_agent/apps/angular-app/dist/angular-app
+

@@ -1,0 +1,81 @@
+<header class="page-header">
+  <div>
+    <h1>Reports</h1>
+    <p>How work flows through your projects and team.</p>
+  </div>
+</header>
+
+@if (store.ready()) {
+  <section class="card card-pad" data-testid="report-burndown" aria-labelledby="h-burndown">
+    <div class="card-head">
+      <div>
+        <h2 class="card-title" id="h-burndown">Burndown · {{ projectName() }}</h2>
+        <p class="muted small">
+          Open tasks at the end of each day, last 30 days:
+          <strong>{{ burnSummary().first }}</strong> → <strong>{{ burnSummary().last }}</strong> ({{
+            burnSummary().delta > 0 ? '+' : ''
+          }}{{ burnSummary().delta }})
+        </p>
+      </div>
+      <label class="sr-only" for="burndown-project">Project</label>
+      <select
+        id="burndown-project"
+        class="input project-select"
+        data-testid="burndown-project"
+        (change)="setProject(value($event))"
+      >
+        <option value="" [selected]="!project()">All projects</option>
+        @for (p of store.projectOptions(); track p.id) {
+          <option [value]="p.id" [selected]="project() === p.id">{{ p.label }}</option>
+        }
+        <option value="none" [selected]="project() === 'none'">No project</option>
+      </select>
+    </div>
+    <app-line-chart
+      [data]="burndown()"
+      valueLabel="open"
+      [ariaLabel]="'Open tasks per day over the last 30 days, ' + projectName()"
+    />
+  </section>
+
+  <div class="grid two">
+    <section class="card card-pad" data-testid="report-workload" aria-labelledby="h-workload">
+      <div class="card-head">
+        <h2 class="card-title" id="h-workload">Workload per assignee</h2>
+        <span class="muted small">Estimated hours of open tasks</span>
+      </div>
+      <app-hbar-chart
+        [data]="workloadBars()"
+        ariaLabel="Estimated hours of open tasks per assignee"
+        unit="hours estimated"
+      />
+      @if (unestimated()) {
+        <p class="muted small note">
+          {{ unestimated() }} open task{{ unestimated() === 1 ? ' has' : 's have' }} no estimate and
+          {{ unestimated() === 1 ? 'is' : 'are' }} not counted.
+        </p>
+      }
+    </section>
+    <section class="card card-pad" data-testid="report-cycle-time" aria-labelledby="h-cycle">
+      <div class="card-head">
+        <h2 class="card-title" id="h-cycle">Average cycle time by priority</h2>
+        <span class="muted small">Days from created to completed</span>
+      </div>
+      <app-hbar-chart
+        [data]="cycleBars()"
+        ariaLabel="Average days from creation to completion per priority"
+        unit="days on average"
+      />
+      <p class="muted small note">
+        Number of completed tasks in brackets. See them in the
+        <a routerLink="/tasks" [queryParams]="{ status: 'done' }">task list</a>.
+      </p>
+    </section>
+  </div>
+} @else {
+  <div class="skeleton" style="height: 340px; margin-bottom: 20px" aria-hidden="true"></div>
+  <div class="grid two" aria-hidden="true">
+    <div class="skeleton" style="height: 280px"></div>
+    <div class="skeleton" style="height: 280px"></div>
+  </div>
+}

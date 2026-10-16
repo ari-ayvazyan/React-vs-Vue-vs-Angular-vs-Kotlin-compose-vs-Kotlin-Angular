@@ -1,0 +1,1693 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-16T10:53:19.008Z",
+    "formats": {
+      "javascript": {
+        "sources": {
+          "/tmp/tmp.dcFE5G8scp/app/tasks/[id]/page.tsx": {
+            "lines": 1,
+            "tokens": 18,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/WorkflowEditor.tsx": {
+            "lines": 252,
+            "tokens": 3192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TimelineView.tsx": {
+            "lines": 283,
+            "tokens": 4363,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx": {
+            "lines": 546,
+            "tokens": 7193,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 23,
+            "duplicatedTokens": 314,
+            "percentage": 4.21,
+            "percentageTokens": 4.37,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TaskDetailView.tsx": {
+            "lines": 295,
+            "tokens": 3955,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TaskCollab.tsx": {
+            "lines": 501,
+            "tokens": 6155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/SettingsView.tsx": {
+            "lines": 174,
+            "tokens": 2049,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/ReportsView.tsx": {
+            "lines": 89,
+            "tokens": 1261,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/ProjectsView.tsx": {
+            "lines": 376,
+            "tokens": 4736,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/MembersSection.tsx": {
+            "lines": 179,
+            "tokens": 2069,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/DashboardView.tsx": {
+            "lines": 163,
+            "tokens": 2272,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/CalendarView.tsx": {
+            "lines": 125,
+            "tokens": 1644,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/BoardView.tsx": {
+            "lines": 351,
+            "tokens": 5121,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/ActivityView.tsx": {
+            "lines": 92,
+            "tokens": 1062,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 23,
+            "duplicatedTokens": 314,
+            "percentage": 25,
+            "percentageTokens": 29.57,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/tasks/page.tsx": {
+            "lines": 1,
+            "tokens": 12,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/board/page.tsx": {
+            "lines": 1,
+            "tokens": 18,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/activity/page.tsx": {
+            "lines": 1,
+            "tokens": 12,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/ui.tsx": {
+            "lines": 78,
+            "tokens": 1073,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/toast.tsx": {
+            "lines": 23,
+            "tokens": 299,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/pomodoro.tsx": {
+            "lines": 1,
+            "tokens": 3,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/icons.tsx": {
+            "lines": 198,
+            "tokens": 2192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/charts.tsx": {
+            "lines": 406,
+            "tokens": 6256,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/bits.tsx": {
+            "lines": 91,
+            "tokens": 1216,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/ViewDialog.tsx": {
+            "lines": 39,
+            "tokens": 378,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/TaskForm.tsx": {
+            "lines": 205,
+            "tokens": 2041,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/Notifications.tsx": {
+            "lines": 121,
+            "tokens": 1453,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/Modal.tsx": {
+            "lines": 28,
+            "tokens": 274,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/ColorSwatch.tsx": {
+            "lines": 40,
+            "tokens": 476,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/AppShell.tsx": {
+            "lines": 379,
+            "tokens": 4104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/not-found.tsx": {
+            "lines": 5,
+            "tokens": 130,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/layout.tsx": {
+            "lines": 1,
+            "tokens": 9,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 5045,
+          "tokens": 65036,
+          "sources": 31,
+          "clones": 1,
+          "duplicatedLines": 23,
+          "duplicatedTokens": 314,
+          "percentage": 0.46,
+          "percentageTokens": 0.48,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "tsx": {
+        "sources": {
+          "/tmp/tmp.dcFE5G8scp/app/tasks/[id]/page.tsx": {
+            "lines": 15,
+            "tokens": 138,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/WorkflowEditor.tsx": {
+            "lines": 293,
+            "tokens": 3714,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TimelineView.tsx": {
+            "lines": 378,
+            "tokens": 5547,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 78,
+            "percentage": 2.12,
+            "percentageTokens": 1.41,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx": {
+            "lines": 621,
+            "tokens": 8050,
+            "sources": 1,
+            "clones": 4,
+            "duplicatedLines": 33,
+            "duplicatedTokens": 506,
+            "percentage": 5.31,
+            "percentageTokens": 6.29,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TaskDetailView.tsx": {
+            "lines": 346,
+            "tokens": 4654,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/TaskCollab.tsx": {
+            "lines": 534,
+            "tokens": 6586,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/SettingsView.tsx": {
+            "lines": 268,
+            "tokens": 3127,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/ReportsView.tsx": {
+            "lines": 121,
+            "tokens": 1729,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/ProjectsView.tsx": {
+            "lines": 424,
+            "tokens": 5385,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/MembersSection.tsx": {
+            "lines": 234,
+            "tokens": 2720,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/DashboardView.tsx": {
+            "lines": 193,
+            "tokens": 2593,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/CalendarView.tsx": {
+            "lines": 177,
+            "tokens": 2305,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/BoardView.tsx": {
+            "lines": 412,
+            "tokens": 5803,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 14,
+            "duplicatedTokens": 250,
+            "percentage": 3.4,
+            "percentageTokens": 4.31,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/ActivityView.tsx": {
+            "lines": 132,
+            "tokens": 1633,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 11,
+            "duplicatedTokens": 178,
+            "percentage": 8.33,
+            "percentageTokens": 10.9,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/timeline/page.tsx": {
+            "lines": 8,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/tasks/page.tsx": {
+            "lines": 16,
+            "tokens": 135,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/settings/page.tsx": {
+            "lines": 8,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/reports/page.tsx": {
+            "lines": 8,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/projects/page.tsx": {
+            "lines": 8,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/dashboard/page.tsx": {
+            "lines": 8,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/calendar/page.tsx": {
+            "lines": 8,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/board/page.tsx": {
+            "lines": 15,
+            "tokens": 138,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/activity/page.tsx": {
+            "lines": 15,
+            "tokens": 132,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/ui.tsx": {
+            "lines": 175,
+            "tokens": 2203,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/toast.tsx": {
+            "lines": 99,
+            "tokens": 1126,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/pomodoro.tsx": {
+            "lines": 161,
+            "tokens": 1941,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/icons.tsx": {
+            "lines": 244,
+            "tokens": 2612,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/charts.tsx": {
+            "lines": 457,
+            "tokens": 6886,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 282,
+            "percentage": 3.5,
+            "percentageTokens": 4.1,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/bits.tsx": {
+            "lines": 106,
+            "tokens": 1382,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/ViewDialog.tsx": {
+            "lines": 88,
+            "tokens": 791,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/TaskForm.tsx": {
+            "lines": 277,
+            "tokens": 3111,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/Providers.tsx": {
+            "lines": 16,
+            "tokens": 124,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/Notifications.tsx": {
+            "lines": 198,
+            "tokens": 2295,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/Modal.tsx": {
+            "lines": 105,
+            "tokens": 1108,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/ColorSwatch.tsx": {
+            "lines": 81,
+            "tokens": 780,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/AppShell.tsx": {
+            "lines": 466,
+            "tokens": 5027,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/not-found.tsx": {
+            "lines": 17,
+            "tokens": 229,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/layout.tsx": {
+            "lines": 40,
+            "tokens": 297,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 6772,
+          "tokens": 84733,
+          "sources": 38,
+          "clones": 5,
+          "duplicatedLines": 41,
+          "duplicatedTokens": 647,
+          "percentage": 0.61,
+          "percentageTokens": 0.76,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "/tmp/tmp.dcFE5G8scp/components/views/workflow.module.css": {
+            "lines": 109,
+            "tokens": 629,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/timeline.module.css": {
+            "lines": 455,
+            "tokens": 2779,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/tasks.module.css": {
+            "lines": 549,
+            "tokens": 3211,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 124,
+            "percentage": 4.55,
+            "percentageTokens": 3.86,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/settings.module.css": {
+            "lines": 265,
+            "tokens": 1430,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/reports.module.css": {
+            "lines": 40,
+            "tokens": 228,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/projects.module.css": {
+            "lines": 249,
+            "tokens": 1444,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/detail.module.css": {
+            "lines": 218,
+            "tokens": 1194,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/dashboard.module.css": {
+            "lines": 218,
+            "tokens": 1337,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/collab.module.css": {
+            "lines": 308,
+            "tokens": 1740,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/calendar.module.css": {
+            "lines": 202,
+            "tokens": 1208,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/board.module.css": {
+            "lines": 205,
+            "tokens": 1367,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/views/activity.module.css": {
+            "lines": 66,
+            "tokens": 350,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 25,
+            "duplicatedTokens": 124,
+            "percentage": 37.88,
+            "percentageTokens": 35.43,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/toast.module.css": {
+            "lines": 119,
+            "tokens": 720,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/task-form.module.css": {
+            "lines": 63,
+            "tokens": 395,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/shortcuts.module.css": {
+            "lines": 26,
+            "tokens": 144,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/shell.module.css": {
+            "lines": 443,
+            "tokens": 2724,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/notifications.module.css": {
+            "lines": 198,
+            "tokens": 1210,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/modal.module.css": {
+            "lines": 88,
+            "tokens": 549,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/color-swatch.module.css": {
+            "lines": 95,
+            "tokens": 604,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/charts.module.css": {
+            "lines": 263,
+            "tokens": 1401,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/bits.module.css": {
+            "lines": 103,
+            "tokens": 609,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/app/globals.css": {
+            "lines": 561,
+            "tokens": 3448,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 4843,
+          "tokens": 28721,
+          "sources": 22,
+          "clones": 1,
+          "duplicatedLines": 25,
+          "duplicatedTokens": 124,
+          "percentage": 0.52,
+          "percentageTokens": 0.43,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "/tmp/tmp.dcFE5G8scp/lib/workflow.ts": {
+            "lines": 200,
+            "tokens": 2517,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/views.ts": {
+            "lines": 63,
+            "tokens": 889,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/validation.ts": {
+            "lines": 397,
+            "tokens": 6674,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/types.ts": {
+            "lines": 223,
+            "tokens": 1541,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/timeline.ts": {
+            "lines": 171,
+            "tokens": 2466,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/store.ts": {
+            "lines": 242,
+            "tokens": 2775,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/stats.ts": {
+            "lines": 160,
+            "tokens": 2165,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/reports.ts": {
+            "lines": 113,
+            "tokens": 1653,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/reducer.ts": {
+            "lines": 294,
+            "tokens": 5198,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/recurrence.ts": {
+            "lines": 92,
+            "tokens": 1145,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/notifications.ts": {
+            "lines": 135,
+            "tokens": 1982,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/mentions.ts": {
+            "lines": 102,
+            "tokens": 1325,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/members.ts": {
+            "lines": 54,
+            "tokens": 747,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/history.ts": {
+            "lines": 31,
+            "tokens": 441,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/filters.ts": {
+            "lines": 194,
+            "tokens": 2618,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/dependencies.ts": {
+            "lines": 129,
+            "tokens": 1603,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/demo.ts": {
+            "lines": 95,
+            "tokens": 1644,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/dates.ts": {
+            "lines": 110,
+            "tokens": 1502,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/csv.ts": {
+            "lines": 73,
+            "tokens": 699,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/lib/activity.ts": {
+            "lines": 294,
+            "tokens": 3909,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/store-hooks.ts": {
+            "lines": 66,
+            "tokens": 611,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.dcFE5G8scp/components/completion.ts": {
+            "lines": 26,
+            "tokens": 243,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 3264,
+          "tokens": 44347,
+          "sources": 22,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 19924,
+      "tokens": 222837,
+      "sources": 113,
+      "clones": 7,
+      "duplicatedLines": 89,
+      "duplicatedTokens": 1085,
+      "percentage": 0.45,
+      "percentageTokens": 0.49,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "css",
+      "lines": 26,
+      "fragment": ";\n}\n\n.pagination {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  flex-wrap: wrap;\n  margin-top: 14px;\n  font-size: 13px;\n}\n\n.pageButtons {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n}\n\n.pageInfo {\n  font-weight: 550;\n  font-variant-numeric: tabular-nums;\n  padding: 0 4px;\n}\n\n@media",
+      "tokens": 124,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/activity.module.css",
+        "start": 36,
+        "end": 61,
+        "startLoc": {
+          "line": 36,
+          "column": 19,
+          "position": 185
+        },
+        "endLoc": {
+          "line": 61,
+          "column": 7,
+          "position": 309
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/tasks.module.css",
+        "start": 379,
+        "end": 404,
+        "startLoc": {
+          "line": 379,
+          "column": 27,
+          "position": 2206
+        },
+        "endLoc": {
+          "line": 404,
+          "column": 70,
+          "position": 2330
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 9,
+      "fragment": "((s) => {\n        const n = new Set(s);\n        if (n.has(id)) n.delete(id);\n        else n.add(id);\n        return n;\n      }),\n    [],\n  );\n  const guardDone",
+      "tokens": 78,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx",
+        "start": 213,
+        "end": 221,
+        "startLoc": {
+          "line": 213,
+          "column": 18,
+          "position": 2743
+        },
+        "endLoc": {
+          "line": 221,
+          "column": 18,
+          "position": 2821
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/TimelineView.tsx",
+        "start": 202,
+        "end": 211,
+        "startLoc": {
+          "line": 202,
+          "column": 19,
+          "position": 3011
+        },
+        "endLoc": {
+          "line": 211,
+          "column": 22,
+          "position": 3090
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 6,
+      "fragment": ";\n  const members = state?.members;\n  const projectMap = useMemo(() => new Map((projects ?? []).map((p) => [p.id, p])), [projects]);\n  const memberMap = useMemo(() => new Map((members ?? []).map((m) => [m.id, m])), [members]);\n  const byId = useMemo(() => taskMap(tasks ?? []), [tasks]);\n  const guardDone",
+      "tokens": 158,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/BoardView.tsx",
+        "start": 115,
+        "end": 120,
+        "startLoc": {
+          "line": 115,
+          "column": 35,
+          "position": 1451
+        },
+        "endLoc": {
+          "line": 120,
+          "column": 18,
+          "position": 1609
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx",
+        "start": 191,
+        "end": 197,
+        "startLoc": {
+          "line": 191,
+          "column": 50,
+          "position": 2298
+        },
+        "endLoc": {
+          "line": 197,
+          "column": 19,
+          "position": 2457
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 10,
+      "fragment": ">\n            <option value=\"\">All assignees</option>\n            <option value={NO_ASSIGNEE}>Unassigned</option>\n            {members!.map((m) => (\n              <option key={m.id} value={m.id}>\n                {m.name}\n              </option>\n            ))}\n          </select>\n        </",
+      "tokens": 92,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/BoardView.tsx",
+        "start": 288,
+        "end": 297,
+        "startLoc": {
+          "line": 288,
+          "column": 11,
+          "position": 4390
+        },
+        "endLoc": {
+          "line": 297,
+          "column": 11,
+          "position": 4482
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx",
+        "start": 457,
+        "end": 466,
+        "startLoc": {
+          "line": 457,
+          "column": 13,
+          "position": 6166
+        },
+        "endLoc": {
+          "line": 466,
+          "column": 14,
+          "position": 6258
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 24,
+      "fragment": "} />\n            <strong>{filtering ? 'No matching activity' : 'No activity yet'}</strong>\n            <span>{filtering ? 'Try another member or type.' : 'Changes to tasks will be listed here, newest first.'}</span>\n          </div>\n        )}\n      </div>\n\n      <nav className={styles.pagination} aria-label=\"Pagination\">\n        <span className=\"muted\">{page.total ? `Showing ${first}–${last} of ${page.total}` : 'No results'}</span>\n        <div className={styles.pageButtons}>\n          <button type=\"button\" className=\"btn btn-sm\" onClick={() => navigate({ ...query, page: page.page - 1 })} disabled={page.page <= 1}>\n            <IconChevronLeft size={15} /> Prev\n          </button>\n          <span className={styles.pageInfo}>\n            Page {page.page} of {page.pageCount}\n          </span>\n          <button\n            type=\"button\"\n            className=\"btn btn-sm\"\n            onClick={() => navigate({ ...query, page: page.page + 1 })}\n            disabled={page.page >= page.pageCount}\n            data-testid=\"activity-next\"\n          >\n            Next <IconChevronRight size={15}",
+      "tokens": 314,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/ActivityView.tsx",
+        "start": 103,
+        "end": 126,
+        "startLoc": {
+          "line": 103,
+          "column": 35,
+          "position": 1291
+        },
+        "endLoc": {
+          "line": 126,
+          "column": 45,
+          "position": 1605
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx",
+        "start": 585,
+        "end": 615,
+        "startLoc": {
+          "line": 585,
+          "column": 31,
+          "position": 7675
+        },
+        "endLoc": {
+          "line": 615,
+          "column": 45,
+          "position": 8022
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 12,
+      "fragment": "</span>\n          </div>\n        )}\n      </div>\n\n      <nav className={styles.pagination} aria-label=\"Pagination\">\n        <span className=\"muted\">{page.total ? `Showing ${first}–${last} of ${page.total}` : 'No results'}</span>\n        <div className={styles.pageButtons}>\n          <button type=\"button\" className=\"btn btn-sm\" onClick={() => navigate({ ...query, page: page.page - 1 })} disabled={page.page <= 1}>\n            <IconChevronLeft size={15} /> Prev\n          </button>\n          <span className={styles.pageInfo}>",
+      "tokens": 178,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/ActivityView.tsx",
+        "start": 105,
+        "end": 116,
+        "startLoc": {
+          "line": 105,
+          "column": 118,
+          "position": 1329
+        },
+        "endLoc": {
+          "line": 116,
+          "column": 45,
+          "position": 1507
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/views/TasksView.tsx",
+        "start": 592,
+        "end": 605,
+        "startLoc": {
+          "line": 592,
+          "column": 56,
+          "position": 7736
+        },
+        "endLoc": {
+          "line": 605,
+          "column": 45,
+          "position": 7918
+        }
+      }
+    },
+    {
+      "format": "tsx",
+      "lines": 9,
+      "fragment": "{ticks.map((t) => (\n          <g key={t}>\n            <line x1={pad.left} x2={W - pad.right} y1={y(t)} y2={y(t)} className={styles.grid} />\n            <text x={pad.left - 8} y={y(t)} className={styles.axisLabel} textAnchor=\"end\" dominantBaseline=\"middle\">\n              {t}\n            </text>\n          </g>\n        ))}\n        <",
+      "tokens": 141,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/charts.tsx",
+        "start": 417,
+        "end": 425,
+        "startLoc": {
+          "line": 417,
+          "column": 9,
+          "position": 6273
+        },
+        "endLoc": {
+          "line": 425,
+          "column": 10,
+          "position": 6414
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.dcFE5G8scp/components/charts.tsx",
+        "start": 106,
+        "end": 114,
+        "startLoc": {
+          "line": 106,
+          "column": 9,
+          "position": 1702
+        },
+        "endLoc": {
+          "line": 114,
+          "column": 10,
+          "position": 1844
+        }
+      }
+    }
+  ]
+}

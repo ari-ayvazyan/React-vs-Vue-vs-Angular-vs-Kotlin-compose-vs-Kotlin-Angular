@@ -1,0 +1,37 @@
+{
+ "functions": 800,
+ "avg_ccn": 2.87,
+ "max_ccn": 85,
+ "fn_ccn_gt10": 22,
+ "fn_ccn_gt15": 11,
+ "fn_ccn_gt20": 7,
+ "avg_fn_nloc": 8.3,
+ "fn_over_50_lines": 19,
+ "top": [
+  [
+   85,
+   "dataReducer",
+   "lib/reducer.ts"
+  ],
+  [
+   33,
+   "TaskDetailView",
+   "components/views/TaskDetailView.tsx"
+  ],
+  [
+   27,
+   "show",
+   "lib/activity.ts"
+  ],
+  [
+   27,
+   "onKey",
+   "components/AppShell.tsx"
+  ],
+  [
+   27,
+   "ProjectsView",
+   "components/views/ProjectsView.tsx"
+  ]
+ ]
+}

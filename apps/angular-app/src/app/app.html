@@ -1,0 +1,198 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="shell" [class.collapsed]="ui.sidebarCollapsed()" [class.drawer-open]="ui.drawerOpen()">
+  <aside class="sidebar" id="sidebar" aria-label="Primary">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path
+            d="M4 13l5 5L20 6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+      <span class="brand-name">TaskPilot</span>
+      <button
+        type="button"
+        class="icon-btn drawer-close"
+        (click)="ui.drawerOpen.set(false)"
+        aria-label="Close navigation"
+      >
+        <app-icon name="close" />
+      </button>
+    </div>
+    <nav>
+      <ul class="nav-list">
+        @for (item of nav; track item.path) {
+          <li>
+            <a
+              class="nav-link"
+              [routerLink]="item.path"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              [attr.data-testid]="item.testId"
+              [attr.title]="ui.sidebarCollapsed() ? item.label : null"
+            >
+              <app-icon [name]="item.icon" [size]="19" />
+              <span class="nav-label">{{ item.label }}</span>
+              @if (item.path === '/tasks' && store.ready()) {
+                <span class="nav-count">{{ openCount() }}</span>
+              }
+            </a>
+          </li>
+        }
+      </ul>
+      <div class="views" data-testid="sidebar-views">
+        <h2 class="views-title" id="views-title">Views</h2>
+        <ul class="nav-list" aria-labelledby="views-title">
+          @for (v of store.views(); track v.id) {
+            <li>
+              <a
+                class="nav-link view-link"
+                routerLink="/tasks"
+                [queryParams]="v.params"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="viewActiveOptions"
+                ariaCurrentWhenActive="page"
+                data-testid="nav-view"
+                [attr.title]="v.name"
+              >
+                <app-icon name="bookmark" [size]="17" />
+                <span class="nav-label">{{ v.name }}</span>
+              </a>
+            </li>
+          } @empty {
+            @if (store.ready()) {
+              <li class="views-empty">Save filters from the task list to see them here.</li>
+            }
+          }
+        </ul>
+      </div>
+    </nav>
+    <div class="sidebar-foot">
+      <button
+        type="button"
+        class="nav-link"
+        (click)="ui.helpOpen.set(true)"
+        [attr.title]="ui.sidebarCollapsed() ? 'Keyboard shortcuts' : null"
+      >
+        <app-icon name="keyboard" [size]="19" />
+        <span class="nav-label">Shortcuts <kbd>?</kbd></span>
+      </button>
+      <button
+        type="button"
+        class="nav-link collapse-btn"
+        (click)="toggleSidebar()"
+        [attr.aria-expanded]="!ui.sidebarCollapsed()"
+        aria-controls="sidebar"
+        [attr.aria-label]="ui.sidebarCollapsed() ? 'Expand sidebar' : 'Collapse sidebar'"
+      >
+        <app-icon name="chevronsLeft" [size]="19" />
+        <span class="nav-label">Collapse</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" (click)="ui.drawerOpen.set(false)" aria-hidden="true"></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button
+        type="button"
+        class="icon-btn menu-btn"
+        (click)="ui.drawerOpen.set(true)"
+        aria-label="Open navigation"
+        aria-controls="sidebar"
+        [attr.aria-expanded]="ui.drawerOpen()"
+      >
+        <app-icon name="menu" />
+      </button>
+      <form class="search" role="search" (submit)="$event.preventDefault(); goSearch()">
+        <app-icon name="search" [size]="16" />
+        <label for="global-search" class="sr-only">Search tasks</label>
+        <input
+          #globalSearch
+          id="global-search"
+          type="search"
+          placeholder="Search tasks…"
+          autocomplete="off"
+          data-testid="global-search"
+          [value]="search()"
+          (input)="onSearchInput($any($event.target).value)"
+        />
+        <kbd class="search-kbd" aria-hidden="true">/</kbd>
+      </form>
+
+      <div class="topbar-actions">
+        @if (pomodoro.taskId(); as tid) {
+          <a
+            class="mini-timer"
+            [class.paused]="!pomodoro.running()"
+            [routerLink]="['/tasks', tid]"
+            [attr.aria-label]="
+              'Pomodoro ' +
+              (pomodoro.running() ? 'running' : 'paused') +
+              ', ' +
+              pomodoro.label() +
+              ' left'
+            "
+          >
+            <app-icon [name]="pomodoro.running() ? 'timer' : 'pause'" [size]="16" />
+            <span class="mono">{{ pomodoro.label() }}</span>
+          </a>
+        }
+        <button
+          type="button"
+          class="icon-btn hide-sm"
+          (click)="undo()"
+          [disabled]="!store.canUndo()"
+          aria-label="Undo (Ctrl+Z)"
+          title="Undo (Ctrl+Z)"
+        >
+          <app-icon name="undo" />
+        </button>
+        <button
+          type="button"
+          class="icon-btn hide-sm"
+          (click)="redo()"
+          [disabled]="!store.canRedo()"
+          aria-label="Redo (Ctrl+Shift+Z)"
+          title="Redo (Ctrl+Shift+Z)"
+        >
+          <app-icon name="redo" />
+        </button>
+        <app-notification-bell />
+        <button
+          type="button"
+          class="icon-btn"
+          data-testid="theme-toggle"
+          (click)="theme.cycle()"
+          [attr.aria-label]="themeLabel()"
+          [attr.title]="themeLabel()"
+        >
+          <app-icon [name]="themeIcon()" />
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-testid="new-task-button"
+          aria-label="New task"
+          (click)="ui.openNewTask()"
+        >
+          <app-icon name="plus" [size]="16" />
+          <span class="hide-xs">New task</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <router-outlet />
+    </main>
+  </div>
+</div>
+
+<app-task-modal />
+<app-help-modal />
+<app-toasts />

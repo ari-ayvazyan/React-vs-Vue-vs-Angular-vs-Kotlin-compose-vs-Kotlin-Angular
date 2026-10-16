@@ -1,0 +1,122 @@
+<header class="page-header">
+  <div>
+    <h1>Board</h1>
+    <p class="muted">Drag cards between columns, or focus a card and press <kbd>Shift</kbd> + arrow keys.</p>
+  </div>
+  <div class="board-filters">
+  <div class="field-inline">
+    <label for="board-assignee">Assignee</label>
+    <select id="board-assignee" data-testid="board-assignee-filter" (change)="apply(query().withAssignee($any($event.target).value))">
+      <option value="" [selected]="query().assignee === ''">Anyone</option>
+      <option [value]="UNASSIGNED" [selected]="query().assignee === UNASSIGNED">Unassigned</option>
+      @for (m of store.members(); track m.id) {
+        <option [value]="m.id" [selected]="query().assignee === m.id">{{ m.name }}</option>
+      }
+    </select>
+  </div>
+  <div class="field-inline">
+    <label for="board-project">Project</label>
+    <select id="board-project" data-testid="board-project-filter" (change)="apply(query().withProject($any($event.target).value))">
+      <option value="" [selected]="query().projectId === ''">All projects</option>
+      <option [value]="NO_PROJECT" [selected]="query().projectId === NO_PROJECT">No project</option>
+      @for (p of store.projectOptions(); track p.id) {
+        <option [value]="p.id" [selected]="query().projectId === p.id">{{ p.label }}</option>
+      }
+    </select>
+  </div>
+  </div>
+</header>
+
+<p class="sr-only" aria-live="assertive">{{ announcement() }}</p>
+
+@if (extraFilters()) {
+  <div class="filter-note" role="status" data-testid="board-filter-note">
+    <app-icon name="bookmark" [size]="14" />
+    <span>Also filtered by: <strong>{{ extraFilters() }}</strong></span>
+    <button type="button" class="btn btn-ghost btn-sm" (click)="clearExtraFilters()">Clear</button>
+  </div>
+}
+
+@if (store.ready()) {
+  <div class="board">
+    @for (col of columns(); track col.id) {
+      <section
+        class="board-column"
+        [class.drop-active]="dropTarget()?.status === col.id"
+        [attr.data-testid]="'board-column-' + col.id"
+        [attr.aria-labelledby]="'col-' + col.id"
+        (dragover)="onDragOver($event, col.id)"
+        (dragleave)="onDragLeave($event)"
+        (drop)="onDrop($event, col.id)"
+      >
+        <header class="column-header">
+          <span class="status-dot" [style.--status-color]="col.color" aria-hidden="true"></span>
+          <h2 [id]="'col-' + col.id">{{ col.name }}</h2>
+          <span class="count">{{ col.tasks.length }}</span>
+          <button type="button" class="icon-btn icon-btn-sm" [attr.aria-label]="'Add task to ' + col.name" (click)="ui.openTaskModal(null, addDefaults(col.id))">
+            <app-icon name="plus" [size]="16" />
+          </button>
+        </header>
+        <ul class="board-cards" role="list">
+          @for (t of col.tasks; track t.id) {
+            @if (dropTarget()?.status === col.id && dropTarget()?.beforeId === t.id) {
+              <li class="drop-indicator" aria-hidden="true"></li>
+            }
+            <li
+              class="board-card"
+              data-testid="board-card"
+              [attr.data-card-id]="t.id"
+              [class.dragging]="dragging() === t.id"
+              [class.is-overdue]="overdue(t)"
+              draggable="true"
+              tabindex="0"
+              [attr.aria-label]="t.title + ', ' + priorityLabel(t.priority) + ' priority. Shift plus arrow keys to move, Enter to open.'"
+              (dragstart)="onDragStart($event, t)"
+              (dragend)="onDragEnd()"
+              (keydown)="onCardKeydown($event, t)"
+            >
+              <div class="card-top">
+                <span class="prio-badge" [attr.data-priority]="t.priority">{{ priorityLabel(t.priority) }}</span>
+                @if (project(t.projectId); as p) {
+                  <span class="project-chip small"><span class="swatch" [style.background]="p.color"></span>{{ p.name }}</span>
+                }
+              </div>
+              <a class="card-title" [routerLink]="['/tasks', t.id]" tabindex="-1" draggable="false">{{ t.title }}</a>
+              <div class="card-meta">
+                @if (t.dueDate) {
+                  <span class="due" [class.danger]="overdue(t)">
+                    <app-icon name="calendar" [size]="13" /> {{ fmt.short(t.dueDate) }}
+                  </span>
+                }
+                @if (blocked(t)) {
+                  <span class="blocked-badge" data-testid="blocked-indicator" title="Blocked by open tasks">
+                    <app-icon name="lock" [size]="12" /> Blocked
+                  </span>
+                }
+                @if (t.isRecurring) {
+                  <span class="recur-badge" data-testid="recurrence-icon" [title]="'Repeats: ' + recurrenceLabel(t.recurrence)">
+                    <app-icon name="repeat" [size]="12" /><span class="sr-only">Repeats {{ recurrenceLabel(t.recurrence) }}</span>
+                  </span>
+                }
+                @if (t.subtasks.length) {
+                  <span class="subtask-progress" [title]="t.subtasksDone + ' of ' + t.subtasks.length + ' subtasks done'">
+                    <app-icon name="check" [size]="13" /> {{ t.subtasksDone }}/{{ t.subtasks.length }}
+                  </span>
+                }
+                <app-avatar class="card-avatar" [member]="store.member(t.assigneeId)" size="sm" />
+              </div>
+            </li>
+          }
+          @if (dropTarget()?.status === col.id && dropTarget()?.beforeId === null) {
+            <li class="drop-indicator" aria-hidden="true"></li>
+          }
+          @if (col.tasks.length === 0) {
+            <li class="column-empty muted small">Drop tasks here</li>
+          }
+        </ul>
+      </section>
+    }
+  </div>
+} @else {
+  <app-skeleton [rows]="6" />
+}

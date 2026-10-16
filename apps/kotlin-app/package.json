@@ -1,0 +1,13 @@
+{
+  "name": "taskpilot-kotlin",
+  "private": true,
+  "description": "TaskPilot built with Kotlin/JS + Compose HTML, served by Ktor",
+  "scripts": {
+    "build": "./gradlew --console=plain :server:installDist",
+    "start:prod": "./server/build/install/server/bin/server",
+    "start": "./server/build/install/server/bin/server",
+    "lint": "./gradlew --console=plain ktlintCheck",
+    "lint:fix": "./gradlew --console=plain ktlintFormat",
+    "test": "./gradlew --console=plain :shared:allTests :server:test"
+  }
+}

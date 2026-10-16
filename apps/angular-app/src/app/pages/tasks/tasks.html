@@ -1,0 +1,432 @@
+<header class="page-header">
+  <div>
+    <h1>
+      Tasks
+      @if (activeView(); as v) {
+        <span class="view-name" data-testid="active-view-name">· {{ v.name }}</span>
+      }
+    </h1>
+    <p>{{ store.ready() ? rangeLabel() : 'Loading tasks…' }}</p>
+  </div>
+  <div class="page-actions">
+    @if (store.ready()) {
+      @if (activeView(); as v) {
+        <div class="view-actions" role="group" [attr.aria-label]="'Saved view ' + v.name">
+          <a
+            class="btn btn-sm"
+            routerLink="/board"
+            [queryParams]="activeViewBoardParams()"
+            data-testid="view-open-board"
+            ><app-icon name="board" [size]="15" /> Open on board</a
+          >
+          <button
+            type="button"
+            class="btn btn-sm"
+            data-testid="view-rename"
+            (click)="openRenameView(v)"
+          >
+            <app-icon name="edit" [size]="15" /> Rename
+          </button>
+          <button
+            type="button"
+            class="btn btn-sm btn-ghost danger-text"
+            data-testid="view-delete"
+            (click)="deleteView(v)"
+          >
+            <app-icon name="trash" [size]="15" /> Delete view
+          </button>
+        </div>
+      } @else {
+        <button type="button" class="btn" data-testid="save-view-button" (click)="openSaveView()">
+          <app-icon name="bookmark" [size]="16" /> Save view
+        </button>
+      }
+    }
+    @if (store.ready()) {
+      <button
+        type="button"
+        class="btn"
+        data-testid="export-csv"
+        [disabled]="!filtered().length"
+        (click)="exportCsv()"
+      >
+        <app-icon name="download" [size]="16" /> Export CSV
+      </button>
+    }
+    <button type="button" class="btn btn-primary" (click)="ui.openNewTask()">
+      <app-icon name="plus" [size]="16" /> New task
+    </button>
+  </div>
+</header>
+
+<section class="toolbar card" aria-label="Search and filters">
+  <div class="toolbar-row">
+    <div class="search-box">
+      <app-icon name="search" [size]="16" />
+      <label for="task-search" class="sr-only">Search tasks</label>
+      <input
+        id="task-search"
+        type="search"
+        placeholder="Search title, description, #tags…"
+        data-testid="task-list-search"
+        autocomplete="off"
+        [value]="searchText()"
+        (input)="onSearch(value($event))"
+      />
+    </div>
+    <div class="sort">
+      <label for="sort-field" class="sr-only">Sort by</label>
+      <select id="sort-field" class="input" (change)="setSort(value($event))">
+        @for (o of sortOptions; track o.value) {
+          <option [value]="o.value" [selected]="query().sort === o.value">
+            Sort: {{ o.label }}
+          </option>
+        }
+      </select>
+      <button
+        type="button"
+        class="btn dir-btn"
+        (click)="toggleDir()"
+        [attr.aria-label]="
+          'Sort direction: ' + (query().dir === 'asc' ? 'ascending' : 'descending')
+        "
+        [title]="query().dir === 'asc' ? 'Ascending' : 'Descending'"
+      >
+        {{ query().dir === 'asc' ? '↑ Asc' : '↓ Desc' }}
+      </button>
+    </div>
+    <button
+      type="button"
+      class="btn filters-toggle"
+      (click)="filtersOpen.set(!filtersOpen())"
+      [attr.aria-expanded]="filtersOpen()"
+      aria-controls="filter-panel"
+    >
+      Filters
+      @if (activeFilterCount()) {
+        <span class="count">{{ activeFilterCount() }}</span>
+      }
+    </button>
+  </div>
+
+  <div class="filters" id="filter-panel" [class.open]="filtersOpen()">
+    <fieldset class="chip-group">
+      <legend>Status</legend>
+      @for (s of statuses; track s) {
+        <button
+          type="button"
+          class="filter-chip"
+          [attr.aria-pressed]="query().status.includes(s)"
+          (click)="toggleStatus(s)"
+        >
+          {{ statusLabels[s] }}
+        </button>
+      }
+    </fieldset>
+    <fieldset class="chip-group">
+      <legend>Priority</legend>
+      @for (p of priorities; track p) {
+        <button
+          type="button"
+          class="filter-chip"
+          [attr.aria-pressed]="query().priority.includes(p)"
+          (click)="togglePriority(p)"
+        >
+          <span class="pdot" [class]="'pdot p-' + p"></span>{{ priorityLabels[p] }}
+        </button>
+      }
+    </fieldset>
+    <div class="selects">
+      <label class="sr-only" for="f-project">Project</label>
+      <select id="f-project" class="input" (change)="setProject(value($event))">
+        <option value="" [selected]="!query().project">All projects</option>
+        <option value="none" [selected]="query().project === 'none'">No project</option>
+        @for (p of store.projectOptions(); track p.id) {
+          <option [value]="p.id" [selected]="query().project === p.id">{{ p.label }}</option>
+        }
+      </select>
+      <label class="sr-only" for="f-assignee">Assignee</label>
+      <select
+        id="f-assignee"
+        class="input"
+        data-testid="filter-assignee"
+        (change)="setAssignee(value($event))"
+      >
+        <option value="" [selected]="!query().assignee">All assignees</option>
+        <option value="none" [selected]="query().assignee === 'none'">Unassigned</option>
+        @for (m of store.members(); track m.id) {
+          <option [value]="m.id" [selected]="query().assignee === m.id">{{ m.name }}</option>
+        }
+      </select>
+      <label class="sr-only" for="f-tag">Tag</label>
+      <select id="f-tag" class="input" (change)="setTag(value($event))">
+        <option value="" [selected]="!query().tag">All tags</option>
+        @for (t of store.allTags(); track t) {
+          <option [value]="t" [selected]="query().tag === t">#{{ t }}</option>
+        }
+        @if (query().tag && !store.allTags().includes(query().tag)) {
+          <option [value]="query().tag" selected>#{{ query().tag }}</option>
+        }
+      </select>
+      <label class="sr-only" for="f-due">Due</label>
+      <select id="f-due" class="input" (change)="setDue(value($event))">
+        @for (d of dueOptions; track d.value) {
+          <option [value]="d.value" [selected]="query().due === d.value">{{ d.label }}</option>
+        }
+      </select>
+      @if (activeFilterCount() || query().q) {
+        <button type="button" class="btn btn-ghost" (click)="clearFilters()">Clear all</button>
+      }
+    </div>
+  </div>
+</section>
+
+@if (selected().size) {
+  <div class="bulk-bar" role="region" aria-label="Bulk actions">
+    <strong>{{ selected().size }} selected</strong>
+    <button type="button" class="btn btn-sm" (click)="bulkDone()">
+      <app-icon name="check" [size]="15" /> Mark done
+    </button>
+    <label class="sr-only" for="bulk-project">Move selected to project</label>
+    <select
+      id="bulk-project"
+      class="input input-sm"
+      [value]="bulkProject()"
+      (change)="bulkMove(value($event))"
+    >
+      <option value="">Move to project…</option>
+      <option value="none">No project</option>
+      @for (p of store.projectOptions(); track p.id) {
+        <option [value]="p.id">{{ p.label }}</option>
+      }
+    </select>
+    <button type="button" class="btn btn-sm btn-danger" (click)="bulkDelete()">
+      <app-icon name="trash" [size]="15" /> Delete
+    </button>
+    <button type="button" class="btn btn-sm btn-ghost" (click)="clearSelection()">Clear</button>
+  </div>
+}
+
+@if (store.ready()) {
+  @if (pageData().items.length) {
+    <div class="table-wrap card">
+      <table class="task-table">
+        <thead>
+          <tr>
+            <th scope="col" class="c-check">
+              <input
+                type="checkbox"
+                aria-label="Select all tasks on this page"
+                [checked]="allOnPageSelected()"
+                [indeterminate]="someOnPageSelected()"
+                (change)="toggleSelectPage()"
+              />
+            </th>
+            <th scope="col" class="c-done"><span class="sr-only">Done</span></th>
+            <th scope="col">Task</th>
+            <th scope="col" class="c-status">Status</th>
+            <th scope="col" class="c-priority">Priority</th>
+            <th scope="col" class="c-project">Project</th>
+            <th scope="col" class="c-assignee"><span class="sr-only">Assignee</span></th>
+            <th scope="col" class="c-due">Due</th>
+            <th scope="col" class="c-actions"><span class="sr-only">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (t of pageData().items; track t.id) {
+            <tr
+              data-testid="task-row"
+              [class.overdue]="overdue(t)"
+              [class.done]="t.status === 'done'"
+              [class.selected]="isSelected(t.id)"
+            >
+              <td class="c-check">
+                <input
+                  type="checkbox"
+                  [attr.aria-label]="'Select ' + t.title"
+                  [checked]="isSelected(t.id)"
+                  (change)="toggleSelect(t.id)"
+                />
+              </td>
+              <td class="c-done">
+                <button
+                  type="button"
+                  class="done-toggle"
+                  [class.on]="t.status === 'done'"
+                  [attr.aria-pressed]="t.status === 'done'"
+                  [attr.aria-label]="
+                    (t.status === 'done' ? 'Mark not done: ' : 'Mark done: ') + t.title
+                  "
+                  (click)="store.toggleDone(t.id)"
+                >
+                  <app-icon name="check" [size]="13" />
+                </button>
+              </td>
+              <td class="c-title">
+                <a [routerLink]="['/tasks', t.id]" class="title-link">{{ t.title }}</a>
+                <div class="meta">
+                  @if (store.blockedIds().has(t.id)) {
+                    <span
+                      class="badge badge-blocked"
+                      data-testid="blocked-indicator"
+                      [title]="blockedTitle(t)"
+                      ><app-icon name="lock" [size]="11" /> Blocked</span
+                    >
+                  }
+                  @if (t.recurrence !== 'none') {
+                    <span
+                      class="recur"
+                      data-testid="recurrence-icon"
+                      role="img"
+                      [attr.aria-label]="'Repeats ' + recurrenceLabels[t.recurrence].toLowerCase()"
+                      [title]="'Repeats ' + recurrenceLabels[t.recurrence].toLowerCase()"
+                      ><app-icon name="repeat" [size]="12"
+                    /></span>
+                  }
+                  @for (tag of t.tags; track tag) {
+                    <span class="chip">#{{ tag }}</span>
+                  }
+                  @if (subtaskLabel(t)) {
+                    <span class="sub"
+                      ><app-icon name="tasks" [size]="12" /> {{ subtaskLabel(t) }}</span
+                    >
+                  }
+                </div>
+              </td>
+              <td class="c-status">
+                <span
+                  class="badge"
+                  [class]="'badge badge-' + t.status"
+                  [attr.title]="'Category: ' + statusLabels[t.status]"
+                  >{{ statusName(t) }}</span
+                >
+              </td>
+              <td class="c-priority">
+                <span class="badge" [class]="'badge badge-' + t.priority">{{
+                  priorityLabels[t.priority]
+                }}</span>
+              </td>
+              <td class="c-project">
+                @if (projectOf(t.projectId); as p) {
+                  <span class="project-pill"
+                    ><span class="dot" [style.background]="p.color"></span>{{ p.name }}</span
+                  >
+                } @else {
+                  <span class="muted">—</span>
+                }
+              </td>
+              <td class="c-assignee">
+                <app-avatar [member]="memberOf(t.assigneeId)" data-testid="assignee-avatar" />
+              </td>
+              <td class="c-due">
+                <span [class.due-overdue]="overdue(t)">
+                  @if (overdue(t)) {
+                    <app-icon name="alert" [size]="13" />
+                  }
+                  {{ due(t) }}
+                </span>
+              </td>
+              <td class="c-actions">
+                <button
+                  type="button"
+                  class="icon-btn sm"
+                  [attr.aria-label]="'Edit ' + t.title"
+                  (click)="ui.openEditTask(t.id)"
+                >
+                  <app-icon name="edit" [size]="15" />
+                </button>
+                <button
+                  type="button"
+                  class="icon-btn sm danger"
+                  [attr.aria-label]="'Delete ' + t.title"
+                  (click)="deleteOne(t)"
+                >
+                  <app-icon name="trash" [size]="15" />
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <nav class="pagination" aria-label="Pagination">
+      <span class="muted">{{ rangeLabel() }}</span>
+      <div class="pager">
+        <button
+          type="button"
+          class="btn btn-sm"
+          [disabled]="pageData().page <= 1"
+          (click)="goPage(pageData().page - 1)"
+          data-testid="pagination-prev"
+        >
+          <app-icon name="chevronLeft" [size]="15" /> Prev
+        </button>
+        <span class="page-num" aria-live="polite"
+          >Page {{ pageData().page }} of {{ pageData().pages }}</span
+        >
+        <button
+          type="button"
+          class="btn btn-sm"
+          [disabled]="pageData().page >= pageData().pages"
+          (click)="goPage(pageData().page + 1)"
+          data-testid="pagination-next"
+        >
+          Next <app-icon name="chevronRight" [size]="15" />
+        </button>
+      </div>
+    </nav>
+  } @else {
+    <div class="card empty">
+      <app-icon name="inbox" [size]="36" />
+      <h2>No tasks match</h2>
+      <p>Try a different search or clear the filters.</p>
+      <button type="button" class="btn" (click)="clearFilters()">Clear filters</button>
+    </div>
+  }
+} @else {
+  <div class="card" aria-hidden="true">
+    @for (i of [1, 2, 3, 4, 5, 6, 7, 8]; track i) {
+      <div class="skeleton-row"><div class="skeleton" style="height: 18px"></div></div>
+    }
+  </div>
+}
+
+@if (viewDialog(); as d) {
+  <app-modal
+    [heading]="d.mode === 'create' ? 'Save view' : 'Rename view'"
+    testId="view-dialog"
+    (closed)="viewDialog.set(null)"
+  >
+    <form (submit)="submitView($event)" novalidate>
+      @if (d.mode === 'create') {
+        <p class="muted dialog-hint">
+          Saves the current filters, search and sort. Saved views appear in the sidebar.
+        </p>
+      }
+      <div class="field">
+        <label for="view-name">Name</label>
+        <input
+          id="view-name"
+          class="input"
+          autocomplete="off"
+          data-autofocus
+          data-testid="view-name-input"
+          [value]="d.name"
+          (input)="setViewName(value($event))"
+          [attr.aria-invalid]="!!d.error"
+          [attr.aria-describedby]="d.error ? 'view-name-err' : null"
+        />
+        @if (d.error) {
+          <p class="error" id="view-name-err" role="alert">{{ d.error }}</p>
+        }
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" (click)="viewDialog.set(null)">Cancel</button>
+        <button type="submit" class="btn btn-primary" data-testid="view-save">
+          {{ d.mode === 'create' ? 'Save view' : 'Rename' }}
+        </button>
+      </div>
+    </form>
+  </app-modal>
+}

@@ -1,0 +1,7 @@
+$ next start -p ${PORT:-3002}
+▲ Next.js 16.4.2
+- Local:         http://localhost:3002
+- Network:       http://192.0.2.2:3002
+✓ Ready in 187ms
+✓ Running next.config.ts took 42ms
+error: script "start:prod" was terminated by signal SIGKILL (Forced quit)

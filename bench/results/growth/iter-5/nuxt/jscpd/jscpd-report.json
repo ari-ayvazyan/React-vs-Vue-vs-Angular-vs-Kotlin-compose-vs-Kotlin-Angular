@@ -1,0 +1,2497 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-16T10:52:54.873Z",
+    "formats": {
+      "css": {
+        "sources": {
+          "/tmp/tmp.xs992FELMK/app/pages/tasks/index.vue": {
+            "lines": 628,
+            "tokens": 4411,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 34,
+            "duplicatedTokens": 162,
+            "percentage": 5.41,
+            "percentageTokens": 3.67,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/tasks/[id].vue": {
+            "lines": 346,
+            "tokens": 2613,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/LineChart.vue": {
+            "lines": 74,
+            "tokens": 404,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/DonutChart.vue": {
+            "lines": 92,
+            "tokens": 457,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/ColumnChart.vue": {
+            "lines": 46,
+            "tokens": 181,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/BarChart.vue": {
+            "lines": 50,
+            "tokens": 207,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/assets/css/main.css": {
+            "lines": 490,
+            "tokens": 3060,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/timeline.vue": {
+            "lines": 403,
+            "tokens": 2977,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/settings.vue": {
+            "lines": 118,
+            "tokens": 564,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/reports.vue": {
+            "lines": 55,
+            "tokens": 253,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/projects.vue": {
+            "lines": 441,
+            "tokens": 3978,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 59,
+            "duplicatedTokens": 271,
+            "percentage": 13.38,
+            "percentageTokens": 6.81,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/dashboard.vue": {
+            "lines": 188,
+            "tokens": 856,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/calendar.vue": {
+            "lines": 310,
+            "tokens": 1801,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 60,
+            "percentage": 3.23,
+            "percentageTokens": 3.33,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/board.vue": {
+            "lines": 341,
+            "tokens": 2204,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/activity.vue": {
+            "lines": 76,
+            "tokens": 358,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 24,
+            "duplicatedTokens": 102,
+            "percentage": 31.58,
+            "percentageTokens": 28.49,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/[...slug].vue": {
+            "lines": 44,
+            "tokens": 219,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/layouts/default.vue": {
+            "lines": 37,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/WorkflowEditor.vue": {
+            "lines": 287,
+            "tokens": 2508,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ToastHost.vue": {
+            "lines": 95,
+            "tokens": 459,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TimelineBar.vue": {
+            "lines": 73,
+            "tokens": 371,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TeamSettings.vue": {
+            "lines": 177,
+            "tokens": 1179,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 59,
+            "duplicatedTokens": 271,
+            "percentage": 33.33,
+            "percentageTokens": 22.99,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskViewBar.vue": {
+            "lines": 55,
+            "tokens": 227,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskForm.vue": {
+            "lines": 78,
+            "tokens": 381,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskDependencies.vue": {
+            "lines": 141,
+            "tokens": 653,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 57,
+            "percentage": 5.67,
+            "percentageTokens": 8.73,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskComments.vue": {
+            "lines": 99,
+            "tokens": 440,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 57,
+            "percentage": 8.08,
+            "percentageTokens": 12.95,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskActivity.vue": {
+            "lines": 37,
+            "tokens": 149,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ShortcutHelp.vue": {
+            "lines": 45,
+            "tokens": 192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/RecurrenceIcon.vue": {
+            "lines": 14,
+            "tokens": 56,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ProjectChip.vue": {
+            "lines": 28,
+            "tokens": 165,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PriorityBadge.vue": {
+            "lines": 8,
+            "tokens": 31,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PomodoroTimer.vue": {
+            "lines": 71,
+            "tokens": 310,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PomodoroMini.vue": {
+            "lines": 62,
+            "tokens": 274,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PageLoading.vue": {
+            "lines": 19,
+            "tokens": 80,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/NotificationBell.vue": {
+            "lines": 192,
+            "tokens": 978,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/MemberAvatar.vue": {
+            "lines": 24,
+            "tokens": 184,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/DueLabel.vue": {
+            "lines": 29,
+            "tokens": 124,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/CommentBody.vue": {
+            "lines": 25,
+            "tokens": 117,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/BlockedBadge.vue": {
+            "lines": 18,
+            "tokens": 92,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/BaseModal.vue": {
+            "lines": 99,
+            "tokens": 450,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppTopbar.vue": {
+            "lines": 100,
+            "tokens": 490,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppSidebar.vue": {
+            "lines": 279,
+            "tokens": 1527,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppIcon.vue": {
+            "lines": 6,
+            "tokens": 16,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ActivityItem.vue": {
+            "lines": 108,
+            "tokens": 464,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 5908,
+          "tokens": 36615,
+          "sources": 43,
+          "clones": 6,
+          "duplicatedLines": 101,
+          "duplicatedTokens": 490,
+          "percentage": 1.71,
+          "percentageTokens": 1.34,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "/tmp/tmp.xs992FELMK/app/pages/tasks/index.vue": {
+            "lines": 174,
+            "tokens": 2094,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/tasks/[id].vue": {
+            "lines": 99,
+            "tokens": 1196,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/LineChart.vue": {
+            "lines": 106,
+            "tokens": 1594,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 5,
+            "duplicatedTokens": 59,
+            "percentage": 4.72,
+            "percentageTokens": 3.7,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/DonutChart.vue": {
+            "lines": 30,
+            "tokens": 411,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/ColumnChart.vue": {
+            "lines": 40,
+            "tokens": 731,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 5,
+            "duplicatedTokens": 59,
+            "percentage": 12.5,
+            "percentageTokens": 8.07,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/BarChart.vue": {
+            "lines": 5,
+            "tokens": 46,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/timeline.vue": {
+            "lines": 135,
+            "tokens": 1819,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/settings.vue": {
+            "lines": 106,
+            "tokens": 1065,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/reports.vue": {
+            "lines": 78,
+            "tokens": 1044,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/projects.vue": {
+            "lines": 138,
+            "tokens": 1677,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/index.vue": {
+            "lines": 5,
+            "tokens": 32,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/dashboard.vue": {
+            "lines": 67,
+            "tokens": 1023,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/calendar.vue": {
+            "lines": 71,
+            "tokens": 1062,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/board.vue": {
+            "lines": 187,
+            "tokens": 2528,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/activity.vue": {
+            "lines": 60,
+            "tokens": 750,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/[...slug].vue": {
+            "lines": 8,
+            "tokens": 62,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/layouts/default.vue": {
+            "lines": 3,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/WorkflowEditor.vue": {
+            "lines": 97,
+            "tokens": 1415,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ToastHost.vue": {
+            "lines": 11,
+            "tokens": 64,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TimelineBar.vue": {
+            "lines": 76,
+            "tokens": 653,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TeamSettings.vue": {
+            "lines": 84,
+            "tokens": 872,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskViewBar.vue": {
+            "lines": 59,
+            "tokens": 743,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskModal.vue": {
+            "lines": 27,
+            "tokens": 265,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskForm.vue": {
+            "lines": 161,
+            "tokens": 1452,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskDependencies.vue": {
+            "lines": 84,
+            "tokens": 998,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 66,
+            "percentage": 10.71,
+            "percentageTokens": 6.61,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskComments.vue": {
+            "lines": 86,
+            "tokens": 865,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 9,
+            "duplicatedTokens": 66,
+            "percentage": 10.47,
+            "percentageTokens": 7.63,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskActivity.vue": {
+            "lines": 24,
+            "tokens": 201,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ShortcutHelp.vue": {
+            "lines": 37,
+            "tokens": 337,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/RecurrenceIcon.vue": {
+            "lines": 6,
+            "tokens": 75,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ProjectChip.vue": {
+            "lines": 7,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PriorityBadge.vue": {
+            "lines": 6,
+            "tokens": 35,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PomodoroTimer.vue": {
+            "lines": 23,
+            "tokens": 276,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PomodoroMini.vue": {
+            "lines": 8,
+            "tokens": 73,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PageLoading.vue": {
+            "lines": 3,
+            "tokens": 25,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/NotificationBell.vue": {
+            "lines": 73,
+            "tokens": 807,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/MemberAvatar.vue": {
+            "lines": 23,
+            "tokens": 222,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/DueLabel.vue": {
+            "lines": 10,
+            "tokens": 121,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/CommentBody.vue": {
+            "lines": 8,
+            "tokens": 70,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/BlockedBadge.vue": {
+            "lines": 12,
+            "tokens": 139,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/BaseModal.vue": {
+            "lines": 74,
+            "tokens": 654,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppTopbar.vue": {
+            "lines": 56,
+            "tokens": 625,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppSidebar.vue": {
+            "lines": 39,
+            "tokens": 478,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppIcon.vue": {
+            "lines": 9,
+            "tokens": 77,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ActivityItem.vue": {
+            "lines": 16,
+            "tokens": 281,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2431,
+          "tokens": 29034,
+          "sources": 44,
+          "clones": 2,
+          "duplicatedLines": 14,
+          "duplicatedTokens": 125,
+          "percentage": 0.58,
+          "percentageTokens": 0.43,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "/tmp/tmp.xs992FELMK/app/pages/tasks/index.vue": {
+            "lines": 875,
+            "tokens": 7347,
+            "sources": 1,
+            "clones": 5,
+            "duplicatedLines": 106,
+            "duplicatedTokens": 737,
+            "percentage": 12.11,
+            "percentageTokens": 10.03,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/tasks/[id].vue": {
+            "lines": 471,
+            "tokens": 4150,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/LineChart.vue": {
+            "lines": 223,
+            "tokens": 2519,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/DonutChart.vue": {
+            "lines": 156,
+            "tokens": 1211,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/ColumnChart.vue": {
+            "lines": 121,
+            "tokens": 1414,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/charts/BarChart.vue": {
+            "lines": 83,
+            "tokens": 631,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/timeline.vue": {
+            "lines": 579,
+            "tokens": 5298,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/settings.vue": {
+            "lines": 348,
+            "tokens": 3288,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/reports.vue": {
+            "lines": 197,
+            "tokens": 2186,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/projects.vue": {
+            "lines": 613,
+            "tokens": 6050,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/index.vue": {
+            "lines": 9,
+            "tokens": 61,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/dashboard.vue": {
+            "lines": 368,
+            "tokens": 3167,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 236,
+            "percentage": 5.43,
+            "percentageTokens": 7.45,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/calendar.vue": {
+            "lines": 442,
+            "tokens": 3669,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/board.vue": {
+            "lines": 571,
+            "tokens": 5368,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 88,
+            "percentage": 1.05,
+            "percentageTokens": 1.64,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/activity.vue": {
+            "lines": 204,
+            "tokens": 2062,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 90,
+            "duplicatedTokens": 521,
+            "percentage": 44.12,
+            "percentageTokens": 25.27,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/pages/[...slug].vue": {
+            "lines": 69,
+            "tokens": 501,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/layouts/default.vue": {
+            "lines": 57,
+            "tokens": 315,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/WorkflowEditor.vue": {
+            "lines": 393,
+            "tokens": 4077,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ToastHost.vue": {
+            "lines": 122,
+            "tokens": 798,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TimelineBar.vue": {
+            "lines": 161,
+            "tokens": 1141,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TeamSettings.vue": {
+            "lines": 339,
+            "tokens": 3139,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskViewBar.vue": {
+            "lines": 174,
+            "tokens": 1802,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskModal.vue": {
+            "lines": 47,
+            "tokens": 460,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskForm.vue": {
+            "lines": 367,
+            "tokens": 3515,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskDependencies.vue": {
+            "lines": 301,
+            "tokens": 2569,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskComments.vue": {
+            "lines": 272,
+            "tokens": 2290,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/TaskActivity.vue": {
+            "lines": 82,
+            "tokens": 642,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ShortcutHelp.vue": {
+            "lines": 103,
+            "tokens": 797,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/RecurrenceIcon.vue": {
+            "lines": 28,
+            "tokens": 263,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ProjectChip.vue": {
+            "lines": 38,
+            "tokens": 295,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PriorityBadge.vue": {
+            "lines": 22,
+            "tokens": 147,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PomodoroTimer.vue": {
+            "lines": 142,
+            "tokens": 1209,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PomodoroMini.vue": {
+            "lines": 86,
+            "tokens": 492,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/PageLoading.vue": {
+            "lines": 27,
+            "tokens": 206,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/NotificationBell.vue": {
+            "lines": 323,
+            "tokens": 2550,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/MemberAvatar.vue": {
+            "lines": 49,
+            "tokens": 447,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/DueLabel.vue": {
+            "lines": 48,
+            "tokens": 388,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/CommentBody.vue": {
+            "lines": 43,
+            "tokens": 320,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/BlockedBadge.vue": {
+            "lines": 38,
+            "tokens": 350,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/BaseModal.vue": {
+            "lines": 209,
+            "tokens": 1457,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppTopbar.vue": {
+            "lines": 214,
+            "tokens": 1664,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppSidebar.vue": {
+            "lines": 375,
+            "tokens": 2660,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/AppIcon.vue": {
+            "lines": 34,
+            "tokens": 216,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/components/ActivityItem.vue": {
+            "lines": 150,
+            "tokens": 1150,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/app.vue": {
+            "lines": 6,
+            "tokens": 28,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 9579,
+          "tokens": 84309,
+          "sources": 45,
+          "clones": 5,
+          "duplicatedLines": 111,
+          "duplicatedTokens": 791,
+          "percentage": 1.16,
+          "percentageTokens": 0.94,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "/tmp/tmp.xs992FELMK/server/plugins/compression.ts": {
+            "lines": 14,
+            "tokens": 271,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/stores/ui.ts": {
+            "lines": 63,
+            "tokens": 816,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/stores/tasks.ts": {
+            "lines": 581,
+            "tokens": 7531,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/stores/pomodoro.ts": {
+            "lines": 109,
+            "tokens": 1256,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/plugins/app-state.client.ts": {
+            "lines": 65,
+            "tokens": 795,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/workflows.ts": {
+            "lines": 145,
+            "tokens": 2213,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/views.ts": {
+            "lines": 91,
+            "tokens": 1536,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/validation.ts": {
+            "lines": 347,
+            "tokens": 6504,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/types.ts": {
+            "lines": 211,
+            "tokens": 1454,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/timeline.ts": {
+            "lines": 185,
+            "tokens": 2552,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/taskOps.ts": {
+            "lines": 40,
+            "tokens": 646,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/stats.ts": {
+            "lines": 241,
+            "tokens": 3245,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/recurrence.ts": {
+            "lines": 61,
+            "tokens": 662,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/projects.ts": {
+            "lines": 151,
+            "tokens": 2128,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/notifications.ts": {
+            "lines": 127,
+            "tokens": 2024,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/mentions.ts": {
+            "lines": 111,
+            "tokens": 1566,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/members.ts": {
+            "lines": 54,
+            "tokens": 813,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/icons.ts": {
+            "lines": 54,
+            "tokens": 370,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/history.ts": {
+            "lines": 31,
+            "tokens": 499,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/filters.ts": {
+            "lines": 206,
+            "tokens": 2896,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/dependencies.ts": {
+            "lines": 122,
+            "tokens": 1729,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/demo.ts": {
+            "lines": 110,
+            "tokens": 1806,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/dates.ts": {
+            "lines": 104,
+            "tokens": 1537,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/csv.ts": {
+            "lines": 74,
+            "tokens": 796,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/chartTypes.ts": {
+            "lines": 31,
+            "tokens": 173,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/calendar.ts": {
+            "lines": 46,
+            "tokens": 625,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/board.ts": {
+            "lines": 62,
+            "tokens": 843,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/lib/activity.ts": {
+            "lines": 262,
+            "tokens": 3450,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/composables/useShortcuts.ts": {
+            "lines": 84,
+            "tokens": 1005,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.xs992FELMK/app/composables/useActivityLookups.ts": {
+            "lines": 31,
+            "tokens": 418,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 3813,
+          "tokens": 52159,
+          "sources": 30,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 21731,
+      "tokens": 202117,
+      "sources": 162,
+      "clones": 13,
+      "duplicatedLines": 226,
+      "duplicatedTokens": 1406,
+      "percentage": 1.04,
+      "percentageTokens": 0.7,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "markup",
+      "lines": 6,
+      "fragment": "</option>\n          <option value=\"none\">No project</option>\n          <option v-for=\"p in store.projectOptions\" :key=\"p.id\" :value=\"p.id\">{{ p.label }}</option>\n        </select>\n      </div>\n      <button",
+      "tokens": 64,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 315,
+        "end": 320,
+        "startLoc": {
+          "line": 315,
+          "column": 53,
+          "position": 3907
+        },
+        "endLoc": {
+          "line": 320,
+          "column": 14,
+          "position": 3971
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 271,
+        "end": 276,
+        "startLoc": {
+          "line": 271,
+          "column": 42,
+          "position": 3182
+        },
+        "endLoc": {
+          "line": 276,
+          "column": 13,
+          "position": 3246
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 6,
+      "fragment": ";\nconst wrap = ref<HTMLElement | null>(null);\nlet ro: ResizeObserver | null = null;\nonMounted(() => {\n  if (!wrap.value) return;\n  W.value = Math.max(220",
+      "tokens": 59,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/charts/ColumnChart.vue",
+        "start": 9,
+        "end": 14,
+        "startLoc": {
+          "line": 9,
+          "column": 56,
+          "position": 117
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 25,
+          "position": 176
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/charts/LineChart.vue",
+        "start": 22,
+        "end": 27,
+        "startLoc": {
+          "line": 22,
+          "column": 40,
+          "position": 185
+        },
+        "endLoc": {
+          "line": 27,
+          "column": 25,
+          "position": 244
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 11,
+      "fragment": "\" :key=\"t.id\">\n              <NuxtLink :to=\"`/tasks/${t.id}`\" class=\"titem\">\n                <span class=\"tname\">{{ t.title }}</span>\n                <span class=\"tmeta\">\n                  <PriorityBadge :priority=\"t.priority\" />\n                  <DueLabel :due=\"t.dueDate\" :status=\"t.status\" />\n                </span>\n              </NuxtLink>\n            </li>\n          </ul>\n          <p v-else class=\"empty\">No",
+      "tokens": 118,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/dashboard.vue",
+        "start": 164,
+        "end": 174,
+        "startLoc": {
+          "line": 164,
+          "column": 36,
+          "position": 2147
+        },
+        "endLoc": {
+          "line": 174,
+          "column": 37,
+          "position": 2265
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/dashboard.vue",
+        "start": 145,
+        "end": 155,
+        "startLoc": {
+          "line": 145,
+          "column": 37,
+          "position": 1906
+        },
+        "endLoc": {
+          "line": 155,
+          "column": 42,
+          "position": 2024
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 11,
+      "fragment": "px;\n  font-size: 12px;\n  font-weight: 650;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  color: var(--text-subtle);\n  background: var(--surface-2);\n  border-bottom: 1px solid var(--border);\n}\n\n.cell",
+      "tokens": 60,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/calendar.vue",
+        "start": 200,
+        "end": 210,
+        "startLoc": {
+          "line": 200,
+          "column": 19,
+          "position": 2490
+        },
+        "endLoc": {
+          "line": 210,
+          "column": 6,
+          "position": 2550
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 597,
+        "end": 607,
+        "startLoc": {
+          "line": 597,
+          "column": 13,
+          "position": 6152
+        },
+        "endLoc": {
+          "line": 607,
+          "column": 6,
+          "position": 6212
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "'project', $event)\">\n            <option value=\"\">All projects</option>\n            <option value=\"none\">No project</option>\n            <option v-for=\"p in store.projectOptions\" :key=\"p.id\" :value=\"p.id\">{{ p.label }}</option>\n          </select>\n        </div>\n        <div class=\"field filter",
+      "tokens": 88,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/board.vue",
+        "start": 199,
+        "end": 205,
+        "startLoc": {
+          "line": 199,
+          "column": 95,
+          "position": 2706
+        },
+        "endLoc": {
+          "line": 205,
+          "column": 33,
+          "position": 2794
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 270,
+        "end": 276,
+        "startLoc": {
+          "line": 270,
+          "column": 90,
+          "position": 3163
+        },
+        "endLoc": {
+          "line": 276,
+          "column": 38,
+          "position": 3251
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 25,
+      "fragment": ";\n}\n\n.pager {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  flex-wrap: wrap;\n  padding: 12px 16px;\n}\n\n.pager-btns {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.page-no {\n  font-variant-numeric: tabular-nums;\n  font-size: 13px;\n  color: var(--text-muted);\n}\n\n@media (max-width: 767",
+      "tokens": 102,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/activity.vue",
+        "start": 170,
+        "end": 194,
+        "startLoc": {
+          "line": 170,
+          "column": 12,
+          "position": 1914
+        },
+        "endLoc": {
+          "line": 194,
+          "column": 23,
+          "position": 2016
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 744,
+        "end": 768,
+        "startLoc": {
+          "line": 744,
+          "column": 15,
+          "position": 6839
+        },
+        "endLoc": {
+          "line": 768,
+          "column": 24,
+          "position": 6941
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 6,
+      "fragment": "\" @click=\"goPage(paged.page - 1)\">\n            <AppIcon name=\"chevronLeft\" :size=\"14\" />\n            Prev\n          </button>\n          <span class=\"page-no\" aria-current=\"page\">Page {{ paged.page }} / {{ paged.pageCount }}</span>\n          <button type=\"button\" class=\"btn btn-sm\" :disabled=\"paged.page >= paged.pageCount\" data-testid=\"activity-next",
+      "tokens": 95,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/activity.vue",
+        "start": 114,
+        "end": 119,
+        "startLoc": {
+          "line": 114,
+          "column": 106,
+          "position": 1540
+        },
+        "endLoc": {
+          "line": 119,
+          "column": 120,
+          "position": 1635
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 405,
+        "end": 410,
+        "startLoc": {
+          "line": 405,
+          "column": 108,
+          "position": 5144
+        },
+        "endLoc": {
+          "line": 410,
+          "column": 122,
+          "position": 5239
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 86,
+      "fragment": "\" @click=\"goPage(paged.page + 1)\">\n            Next\n            <AppIcon name=\"chevronRight\" :size=\"14\" />\n          </button>\n        </div>\n      </nav>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n.narrow {\n  max-width: 900px;\n  margin-left: 0;\n}\n\n.filters {\n  display: flex;\n  gap: 10px;\n  flex-wrap: wrap;\n}\n\n.filters .field {\n  width: 180px;\n}\n\n.day {\n  padding: 4px 16px 12px;\n  border-bottom: 1px solid var(--border);\n}\n\n.day-h {\n  position: sticky;\n  top: var(--topbar-h);\n  z-index: 1;\n  margin: 0 -16px 8px;\n  padding: 10px 16px 8px;\n  font-size: 12px;\n  font-weight: 650;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  color: var(--text-subtle);\n  background: var(--surface);\n}\n\n.entries {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  display: flex;\n  flex-direction: column;\n  gap: 14px;\n}\n\n.pager {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n  flex-wrap: wrap;\n  padding: 12px 16px;\n}\n\n.pager-btns {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.page-no {\n  font-variant-numeric: tabular-nums;\n  font-size: 13px;\n  color: var(--text-muted);\n}\n\n@media (max-width: 767px) {\n  .filters {\n    width: 100%;\n  }\n\n  .filters .field {\n    flex: 1 1 140px;\n    width: auto;\n  }\n}\n</style>",
+      "tokens": 426,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/activity.vue",
+        "start": 119,
+        "end": 204,
+        "startLoc": {
+          "line": 119,
+          "column": 120,
+          "position": 1636
+        },
+        "endLoc": {
+          "line": 204,
+          "column": 9,
+          "position": 2062
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/tasks/index.vue",
+        "start": 410,
+        "end": 875,
+        "startLoc": {
+          "line": 410,
+          "column": 122,
+          "position": 5240
+        },
+        "endLoc": {
+          "line": 875,
+          "column": 9,
+          "position": 7347
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 15,
+      "fragment": ";\n}\n\n.color-input {\n  position: absolute;\n  inset: 0;\n  width: 100%;\n  height: 100%;\n  opacity: 0;\n  cursor: pointer;\n  border: 0;\n  padding: 0;\n}\n\n.who",
+      "tokens": 56,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TeamSettings.vue",
+        "start": 229,
+        "end": 243,
+        "startLoc": {
+          "line": 229,
+          "column": 22,
+          "position": 2640
+        },
+        "endLoc": {
+          "line": 243,
+          "column": 5,
+          "position": 2696
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/projects.vue",
+        "start": 386,
+        "end": 400,
+        "startLoc": {
+          "line": 386,
+          "column": 42,
+          "position": 4986
+        },
+        "endLoc": {
+          "line": 400,
+          "column": 6,
+          "position": 5042
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 23,
+      "fragment": ";\n}\n\n.colors {\n  border: 0;\n  margin: 0;\n  padding: 0;\n}\n\n.colors legend {\n  padding: 0;\n  margin-bottom: 6px;\n}\n\n.swatches {\n  display: flex;\n  gap: 6px;\n  flex-wrap: wrap;\n}\n\n.swatch {\n  position: relative;\n  width: 26",
+      "tokens": 82,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TeamSettings.vue",
+        "start": 293,
+        "end": 315,
+        "startLoc": {
+          "line": 293,
+          "column": 18,
+          "position": 2913
+        },
+        "endLoc": {
+          "line": 315,
+          "column": 12,
+          "position": 2995
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/projects.vue",
+        "start": 342,
+        "end": 364,
+        "startLoc": {
+          "line": 342,
+          "column": 19,
+          "position": 4766
+        },
+        "endLoc": {
+          "line": 364,
+          "column": 12,
+          "position": 4848
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 24,
+      "fragment": "px;\n  border-radius: 50%;\n  cursor: pointer;\n  display: grid;\n  place-items: center;\n  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);\n}\n\n.swatch.on {\n  outline: 2px solid var(--text);\n  outline-offset: 2px;\n}\n\n.swatch:focus-within {\n  outline: 2px solid var(--focus);\n  outline-offset: 2px;\n}\n\n.custom {\n  background: var(--surface-2);\n  color: var(--text-muted);\n  border: 1px dashed var(--border-strong);\n}\n",
+      "tokens": 133,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TeamSettings.vue",
+        "start": 316,
+        "end": 339,
+        "startLoc": {
+          "line": 316,
+          "column": 13,
+          "position": 3003
+        },
+        "endLoc": {
+          "line": 339,
+          "column": 1,
+          "position": 3136
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/pages/projects.vue",
+        "start": 365,
+        "end": 389,
+        "startLoc": {
+          "line": 365,
+          "column": 13,
+          "position": 4856
+        },
+        "endLoc": {
+          "line": 389,
+          "column": 1,
+          "position": 4989
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 9,
+      "fragment": ";\n  margin: 0;\n  padding: 4px;\n  list-style: none;\n  background: var(--surface);\n  border: 1px solid var(--border-strong);\n  border-radius: var(--radius-sm);\n  box-shadow: var(--shadow-lg);\n",
+      "tokens": 57,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TaskComments.vue",
+        "start": 243,
+        "end": 251,
+        "startLoc": {
+          "line": 243,
+          "column": 19,
+          "position": 2141
+        },
+        "endLoc": {
+          "line": 251,
+          "column": 1,
+          "position": 2198
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TaskDependencies.vue",
+        "start": 256,
+        "end": 264,
+        "startLoc": {
+          "line": 256,
+          "column": 24,
+          "position": 2349
+        },
+        "endLoc": {
+          "line": 264,
+          "column": 3,
+          "position": 2406
+        }
+      }
+    },
+    {
+      "format": "javascript",
+      "lines": 10,
+      "fragment": ";\nimport { useTaskStore } from '~/stores/tasks';\nimport { useUiStore } from '~/stores/ui';\n\nconst props = defineProps<{ task: Task }>();\nconst store = useTaskStore();\nconst ui = useUiStore();\nconst uidBase = useId();\n\nconst",
+      "tokens": 66,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TaskComments.vue",
+        "start": 5,
+        "end": 14,
+        "startLoc": {
+          "line": 5,
+          "column": 65,
+          "position": 67
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 6,
+          "position": 133
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.xs992FELMK/app/components/TaskDependencies.vue",
+        "start": 5,
+        "end": 14,
+        "startLoc": {
+          "line": 5,
+          "column": 56,
+          "position": 56
+        },
+        "endLoc": {
+          "line": 14,
+          "column": 69,
+          "position": 122
+        }
+      }
+    }
+  ]
+}

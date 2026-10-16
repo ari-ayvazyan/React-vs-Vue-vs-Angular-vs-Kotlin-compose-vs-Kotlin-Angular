@@ -1,0 +1,1309 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-16T09:46:56.121Z",
+    "formats": {
+      "typescript": {
+        "sources": {
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.ts": {
+            "lines": 308,
+            "tokens": 3653,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/task-detail/task-detail.ts": {
+            "lines": 154,
+            "tokens": 1886,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/settings/settings.ts": {
+            "lines": 199,
+            "tokens": 2619,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/projects/projects.ts": {
+            "lines": 117,
+            "tokens": 1471,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/not-found/not-found.ts": {
+            "lines": 50,
+            "tokens": 84,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/dashboard/dashboard.ts": {
+            "lines": 102,
+            "tokens": 1313,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/calendar/calendar.ts": {
+            "lines": 178,
+            "tokens": 2235,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 81,
+            "percentage": 3.93,
+            "percentageTokens": 3.62,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/board/board.ts": {
+            "lines": 278,
+            "tokens": 3441,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 7,
+            "duplicatedTokens": 81,
+            "percentage": 2.52,
+            "percentageTokens": 2.35,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/activity/activity.ts": {
+            "lines": 78,
+            "tokens": 970,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/services/ui.service.ts": {
+            "lines": 37,
+            "tokens": 324,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/services/toast.service.ts": {
+            "lines": 42,
+            "tokens": 468,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/services/theme.service.ts": {
+            "lines": 41,
+            "tokens": 523,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/services/store.service.ts": {
+            "lines": 529,
+            "tokens": 6354,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/services/pomodoro.service.ts": {
+            "lines": 99,
+            "tokens": 1260,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/validation.ts": {
+            "lines": 344,
+            "tokens": 4516,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/task-ops.ts": {
+            "lines": 47,
+            "tokens": 690,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/stats.ts": {
+            "lines": 159,
+            "tokens": 2075,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 150,
+            "percentage": 6.29,
+            "percentageTokens": 7.23,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/recurrence.ts": {
+            "lines": 73,
+            "tokens": 857,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/models.ts": {
+            "lines": 179,
+            "tokens": 1322,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/mentions.ts": {
+            "lines": 101,
+            "tokens": 1327,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/members.ts": {
+            "lines": 56,
+            "tokens": 663,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/history.ts": {
+            "lines": 44,
+            "tokens": 397,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/filters.ts": {
+            "lines": 176,
+            "tokens": 2456,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/dependencies.ts": {
+            "lines": 124,
+            "tokens": 1455,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/demo-data.ts": {
+            "lines": 152,
+            "tokens": 1768,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/dates.ts": {
+            "lines": 77,
+            "tokens": 880,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/chart-scale.ts": {
+            "lines": 10,
+            "tokens": 243,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/core/activity.ts": {
+            "lines": 249,
+            "tokens": 2540,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/toasts.ts": {
+            "lines": 111,
+            "tokens": 116,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/task-modal.ts": {
+            "lines": 56,
+            "tokens": 453,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/task-form.ts": {
+            "lines": 206,
+            "tokens": 2158,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/modal.ts": {
+            "lines": 117,
+            "tokens": 1000,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/line-chart.ts": {
+            "lines": 213,
+            "tokens": 1214,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/icon.ts": {
+            "lines": 84,
+            "tokens": 471,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/help-modal.ts": {
+            "lines": 80,
+            "tokens": 459,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/hbar-chart.ts": {
+            "lines": 283,
+            "tokens": 1173,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/donut-chart.ts": {
+            "lines": 147,
+            "tokens": 529,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/dependency-picker.ts": {
+            "lines": 319,
+            "tokens": 1244,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/confirm-dialog.ts": {
+            "lines": 46,
+            "tokens": 177,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/comment-thread.ts": {
+            "lines": 341,
+            "tokens": 1544,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/bar-chart.ts": {
+            "lines": 75,
+            "tokens": 144,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/avatar.ts": {
+            "lines": 60,
+            "tokens": 416,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/activity-list.ts": {
+            "lines": 157,
+            "tokens": 598,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/app.ts": {
+            "lines": 219,
+            "tokens": 2467,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/app.routes.ts": {
+            "lines": 50,
+            "tokens": 492,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/app.routes.server.ts": {
+            "lines": 19,
+            "tokens": 231,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/app.config.server.ts": {
+            "lines": 10,
+            "tokens": 104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/server.ts": {
+            "lines": 70,
+            "tokens": 356,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/main.ts": {
+            "lines": 5,
+            "tokens": 63,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/main.server.ts": {
+            "lines": 7,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 6678,
+          "tokens": 63275,
+          "sources": 50,
+          "clones": 2,
+          "duplicatedLines": 12,
+          "duplicatedTokens": 156,
+          "percentage": 0.18,
+          "percentageTokens": 0.25,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "css": {
+        "sources": {
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.html": {
+            "lines": 1,
+            "tokens": 8,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.css": {
+            "lines": 425,
+            "tokens": 2705,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/task-detail/task-detail.html": {
+            "lines": 7,
+            "tokens": 91,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/task-detail/task-detail.css": {
+            "lines": 213,
+            "tokens": 1340,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/settings/settings.css": {
+            "lines": 214,
+            "tokens": 1359,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/projects/projects.html": {
+            "lines": 1,
+            "tokens": 8,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/projects/projects.css": {
+            "lines": 172,
+            "tokens": 1103,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/dashboard/dashboard.html": {
+            "lines": 6,
+            "tokens": 79,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/dashboard/dashboard.css": {
+            "lines": 180,
+            "tokens": 1210,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/calendar/calendar.html": {
+            "lines": 1,
+            "tokens": 14,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/calendar/calendar.css": {
+            "lines": 173,
+            "tokens": 1186,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/board/board.html": {
+            "lines": 1,
+            "tokens": 8,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/board/board.css": {
+            "lines": 194,
+            "tokens": 1298,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/activity/activity.html": {
+            "lines": 1,
+            "tokens": 8,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/activity/activity.css": {
+            "lines": 30,
+            "tokens": 174,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/task-form.css": {
+            "lines": 81,
+            "tokens": 513,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/modal.css": {
+            "lines": 65,
+            "tokens": 439,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/app.css": {
+            "lines": 323,
+            "tokens": 2152,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/styles.css": {
+            "lines": 525,
+            "tokens": 3729,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2613,
+          "tokens": 17424,
+          "sources": 19,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.html": {
+            "lines": 341,
+            "tokens": 3306,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 22,
+            "duplicatedTokens": 211,
+            "percentage": 6.45,
+            "percentageTokens": 6.38,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/task-detail/task-detail.html": {
+            "lines": 252,
+            "tokens": 2657,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/settings/settings.html": {
+            "lines": 307,
+            "tokens": 2706,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/projects/projects.html": {
+            "lines": 240,
+            "tokens": 2039,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/dashboard/dashboard.html": {
+            "lines": 177,
+            "tokens": 2119,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 18,
+            "duplicatedTokens": 208,
+            "percentage": 10.17,
+            "percentageTokens": 9.82,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/calendar/calendar.html": {
+            "lines": 101,
+            "tokens": 945,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 8,
+            "duplicatedTokens": 99,
+            "percentage": 7.92,
+            "percentageTokens": 10.48,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/board/board.html": {
+            "lines": 163,
+            "tokens": 1459,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 14,
+            "duplicatedTokens": 166,
+            "percentage": 8.59,
+            "percentageTokens": 11.38,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/pages/activity/activity.html": {
+            "lines": 77,
+            "tokens": 680,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 144,
+            "percentage": 20.78,
+            "percentageTokens": 21.18,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/components/task-form.html": {
+            "lines": 217,
+            "tokens": 1914,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/app/app.html": {
+            "lines": 171,
+            "tokens": 1294,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.thhEXs0h8T/src/index.html": {
+            "lines": 28,
+            "tokens": 284,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2074,
+          "tokens": 19403,
+          "sources": 11,
+          "clones": 5,
+          "duplicatedLines": 39,
+          "duplicatedTokens": 414,
+          "percentage": 1.88,
+          "percentageTokens": 2.13,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "/tmp/tmp.thhEXs0h8T/src/index.html": {
+            "lines": 13,
+            "tokens": 122,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 13,
+          "tokens": 122,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 11378,
+      "tokens": 100224,
+      "sources": 81,
+      "clones": 7,
+      "duplicatedLines": 51,
+      "duplicatedTokens": 570,
+      "percentage": 0.45,
+      "percentageTokens": 0.57,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "markup",
+      "lines": 10,
+      "fragment": "track t.id) {\n          <li>\n            <a [routerLink]=\"['/tasks', t.id]\">\n              <span\n                class=\"dot\"\n                [style.background]=\"projectOf(t.projectId)?.color ?? 'var(--border-strong)'\"\n              ></span>\n              <span class=\"title\">{{ t.title }}</span>\n              <span class=\"badge\" [class]=\"'badge badge-' + t.priority\">{{ t.priority }}</span>\n              <span class=\"when danger",
+      "tokens": 104,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/dashboard/dashboard.html",
+        "start": 149,
+        "end": 158,
+        "startLoc": {
+          "line": 149,
+          "column": 31,
+          "position": 1800
+        },
+        "endLoc": {
+          "line": 158,
+          "column": 39,
+          "position": 1904
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/dashboard/dashboard.html",
+        "start": 122,
+        "end": 131,
+        "startLoc": {
+          "line": 122,
+          "column": 32,
+          "position": 1496
+        },
+        "endLoc": {
+          "line": 131,
+          "column": 32,
+          "position": 1600
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 8,
+      "fragment": ",\n    },\n  );\n  /** '' = anyone, 'none' = unassigned, else member id (`?assignee=`). */\n  protected readonly assigneeFilter = toSignal(\n    this.route.queryParamMap.pipe(map((p) => p.get('assignee') ?? '')),\n    {\n      initialValue: this.route.snapshot.queryParamMap.get('assignee') ?? '',",
+      "tokens": 81,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/board/board.ts",
+        "start": 55,
+        "end": 62,
+        "startLoc": {
+          "line": 55,
+          "column": 75,
+          "position": 504
+        },
+        "endLoc": {
+          "line": 62,
+          "column": 77,
+          "position": 585
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/calendar/calendar.ts",
+        "start": 44,
+        "end": 50,
+        "startLoc": {
+          "line": 44,
+          "column": 67,
+          "position": 470
+        },
+        "endLoc": {
+          "line": 50,
+          "column": 78,
+          "position": 551
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 9,
+      "fragment": "\"\n    >\n      <option value=\"\" [selected]=\"!assigneeFilter()\">All assignees</option>\n      <option value=\"none\" [selected]=\"assigneeFilter() === 'none'\">Unassigned</option>\n      @for (m of store.members(); track m.id) {\n        <option [value]=\"m.id\" [selected]=\"assigneeFilter() === m.id\">{{ m.name }}</option>\n      }\n    </select>\n  </",
+      "tokens": 99,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/board/board.html",
+        "start": 24,
+        "end": 32,
+        "startLoc": {
+          "line": 24,
+          "column": 65,
+          "position": 285
+        },
+        "endLoc": {
+          "line": 32,
+          "column": 5,
+          "position": 384
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/calendar/calendar.html",
+        "start": 12,
+        "end": 20,
+        "startLoc": {
+          "line": 12,
+          "column": 55,
+          "position": 136
+        },
+        "endLoc": {
+          "line": 20,
+          "column": 6,
+          "position": 235
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "\">\n                @if (projectOf(t.projectId); as p) {\n                  <span class=\"project-pill\"\n                    ><span class=\"dot\" [style.background]=\"p.color\"></span>{{ p.name }}</span\n                  >\n                } @else {\n                  <span class=\"project-pill muted",
+      "tokens": 67,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/board/board.html",
+        "start": 124,
+        "end": 130,
+        "startLoc": {
+          "line": 124,
+          "column": 36,
+          "position": 1095
+        },
+        "endLoc": {
+          "line": 130,
+          "column": 50,
+          "position": 1162
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.html",
+        "start": 257,
+        "end": 263,
+        "startLoc": {
+          "line": 257,
+          "column": 35,
+          "position": 2550
+        },
+        "endLoc": {
+          "line": 263,
+          "column": 37,
+          "position": 2617
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "<nav class=\"pagination\" aria-label=\"Pagination\">\n      <span class=\"muted\">{{ rangeLabel() }}</span>\n      <div class=\"pager\">\n        <button\n          type=\"button\"\n          class=\"btn btn-sm\"\n          data-testid",
+      "tokens": 62,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/activity/activity.html",
+        "start": 48,
+        "end": 54,
+        "startLoc": {
+          "line": 48,
+          "column": 5,
+          "position": 427
+        },
+        "endLoc": {
+          "line": 54,
+          "column": 22,
+          "position": 489
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.html",
+        "start": 301,
+        "end": 307,
+        "startLoc": {
+          "line": 301,
+          "column": 5,
+          "position": 2887
+        },
+        "endLoc": {
+          "line": 307,
+          "column": 21,
+          "position": 2949
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 11,
+      "fragment": "\"\n        >\n          <app-icon name=\"chevronLeft\" [size]=\"15\" /> Prev\n        </button>\n        <span class=\"page-num\" aria-live=\"polite\"\n          >Page {{ pageData().page }} of {{ pageData().pages }}</span\n        >\n        <button\n          type=\"button\"\n          class=\"btn btn-sm\"\n          data-testid",
+      "tokens": 82,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/activity/activity.html",
+        "start": 56,
+        "end": 66,
+        "startLoc": {
+          "line": 56,
+          "column": 47,
+          "position": 505
+        },
+        "endLoc": {
+          "line": 66,
+          "column": 22,
+          "position": 587
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/pages/tasks/tasks.html",
+        "start": 309,
+        "end": 319,
+        "startLoc": {
+          "line": 309,
+          "column": 39,
+          "position": 2965
+        },
+        "endLoc": {
+          "line": 319,
+          "column": 21,
+          "position": 3047
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 6,
+      "fragment": ")\n    .sort((a, b) => (a.dueDate! < b.dueDate! ? -1 : a.dueDate! > b.dueDate! ? 1 : 0))\n    .slice(0, max);\n}\n\nexport function isSameDayKey",
+      "tokens": 75,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/core/stats.ts",
+        "start": 152,
+        "end": 157,
+        "startLoc": {
+          "line": 152,
+          "column": 39,
+          "position": 1968
+        },
+        "endLoc": {
+          "line": 157,
+          "column": 29,
+          "position": 2043
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.thhEXs0h8T/src/app/core/stats.ts",
+        "start": 144,
+        "end": 149,
+        "startLoc": {
+          "line": 144,
+          "column": 5,
+          "position": 1826
+        },
+        "endLoc": {
+          "line": 149,
+          "column": 29,
+          "position": 1901
+        }
+      }
+    }
+  ]
+}

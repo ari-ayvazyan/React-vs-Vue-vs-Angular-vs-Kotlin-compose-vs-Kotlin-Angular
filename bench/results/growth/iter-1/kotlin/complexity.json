@@ -1,0 +1,37 @@
+{
+ "functions": 319,
+ "avg_ccn": 2.56,
+ "max_ccn": 31,
+ "fn_ccn_gt10": 8,
+ "fn_ccn_gt15": 2,
+ "fn_ccn_gt20": 2,
+ "avg_fn_nloc": 10.4,
+ "fn_over_50_lines": 10,
+ "top": [
+  [
+   31,
+   "(anonymous)",
+   "shared/src/commonMain/kotlin/taskpilot/ImportExport.kt"
+  ],
+  [
+   24,
+   "(anonymous)",
+   "web/src/jsMain/kotlin/taskpilot/web/Shell.kt"
+  ],
+  [
+   13,
+   "PomodoroCard",
+   "web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt"
+  ],
+  [
+   12,
+   "filterTasks",
+   "shared/src/commonMain/kotlin/taskpilot/Query.kt"
+  ],
+  [
+   12,
+   "TaskRow",
+   "web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt"
+  ]
+ ]
+}

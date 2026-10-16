@@ -1,0 +1,151 @@
+{
+  "name": "nuxt",
+  "files": 72,
+  "codeFiles": 71,
+  "totalLoc": 10881,
+  "fileLoc": {
+    "avg": 151.13,
+    "p90": 375,
+    "max": 740,
+    "over300": 12,
+    "over500": 2
+  },
+  "largestFiles": [
+    {
+      "file": "app/pages/tasks/index.vue",
+      "loc": 740
+    },
+    {
+      "file": "app/pages/timeline.vue",
+      "loc": 506
+    },
+    {
+      "file": "app/pages/board.vue",
+      "loc": 458
+    },
+    {
+      "file": "app/assets/css/main.css",
+      "loc": 417
+    },
+    {
+      "file": "app/pages/tasks/[id].vue",
+      "loc": 404
+    }
+  ],
+  "fileList": [
+    "app/app.vue",
+    "app/assets/css/main.css",
+    "app/components/ActivityItem.vue",
+    "app/components/AppIcon.vue",
+    "app/components/AppSidebar.vue",
+    "app/components/AppTopbar.vue",
+    "app/components/BaseModal.vue",
+    "app/components/BlockedBadge.vue",
+    "app/components/CommentBody.vue",
+    "app/components/DueLabel.vue",
+    "app/components/MemberAvatar.vue",
+    "app/components/NotificationBell.vue",
+    "app/components/PageLoading.vue",
+    "app/components/PomodoroMini.vue",
+    "app/components/PomodoroTimer.vue",
+    "app/components/PriorityBadge.vue",
+    "app/components/ProjectChip.vue",
+    "app/components/RecurrenceIcon.vue",
+    "app/components/ShortcutHelp.vue",
+    "app/components/TaskActivity.vue",
+    "app/components/TaskComments.vue",
+    "app/components/TaskDependencies.vue",
+    "app/components/TaskForm.vue",
+    "app/components/TaskModal.vue",
+    "app/components/TaskViewBar.vue",
+    "app/components/TeamSettings.vue",
+    "app/components/TimelineBar.vue",
+    "app/components/ToastHost.vue",
+    "app/components/charts/BarChart.vue",
+    "app/components/charts/ColumnChart.vue",
+    "app/components/charts/DonutChart.vue",
+    "app/components/charts/LineChart.vue",
+    "app/composables/useActivityLookups.ts",
+    "app/composables/useShortcuts.ts",
+    "app/layouts/default.vue",
+    "app/lib/activity.ts",
+    "app/lib/calendar.ts",
+    "app/lib/chartTypes.ts",
+    "app/lib/csv.ts",
+    "app/lib/dates.ts",
+    "app/lib/demo.ts",
+    "app/lib/dependencies.ts",
+    "app/lib/filters.ts",
+    "app/lib/history.ts",
+    "app/lib/icons.ts",
+    "app/lib/members.ts",
+    "app/lib/mentions.ts",
+    "app/lib/notifications.ts",
+    "app/lib/recurrence.ts",
+    "app/lib/stats.ts",
+    "app/lib/taskOps.ts",
+    "app/lib/timeline.ts",
+    "app/lib/types.ts",
+    "app/lib/validation.ts",
+    "app/lib/views.ts",
+    "app/pages/[...slug].vue",
+    "app/pages/activity.vue",
+    "app/pages/board.vue",
+    "app/pages/calendar.vue",
+    "app/pages/dashboard.vue",
+    "app/pages/index.vue",
+    "app/pages/projects.vue",
+    "app/pages/reports.vue",
+    "app/pages/settings.vue",
+    "app/pages/tasks/[id].vue",
+    "app/pages/tasks/index.vue",
+    "app/pages/timeline.vue",
+    "app/plugins/app-state.client.ts",
+    "app/stores/pomodoro.ts",
+    "app/stores/tasks.ts",
+    "app/stores/ui.ts",
+    "server/plugins/compression.ts"
+  ],
+  "imports": {
+    "edges": 278,
+    "edgesPerFile": 3.92,
+    "maxFanOut": 19,
+    "maxFanIn": 42,
+    "topFanOut": [
+      [
+        "app/pages/tasks/[id].vue",
+        19
+      ],
+      [
+        "app/pages/tasks/index.vue",
+        14
+      ],
+      [
+        "app/stores/tasks.ts",
+        14
+      ]
+    ],
+    "topFanIn": [
+      [
+        "app/lib/types.ts",
+        42
+      ],
+      [
+        "app/stores/tasks.ts",
+        32
+      ],
+      [
+        "app/components/AppIcon.vue",
+        24
+      ]
+    ],
+    "cycles": 0,
+    "filesInCycles": 0,
+    "largestCycle": 0,
+    "nuxtAutoImportEdges": {
+      "components": 87,
+      "functions": 4
+    },
+    "kotlinEdges": 0
+  }
+}

@@ -1,0 +1,177 @@
+<header class="page-header">
+  <div>
+    <h1>{{ store.ready() ? greeting() : 'Dashboard' }}</h1>
+    <p>
+      {{
+        store.ready()
+          ? dateLabel() + ' · here is how your work is going.'
+          : 'Loading your workspace…'
+      }}
+    </p>
+  </div>
+  <div class="page-actions">
+    <a class="btn" routerLink="/board"><app-icon name="board" [size]="16" /> Open board</a>
+  </div>
+</header>
+
+@if (store.ready()) {
+  <section class="kpis" aria-label="Key metrics">
+    <div class="kpi card" data-testid="kpi-total">
+      <span class="kpi-label">Total tasks</span>
+      <span class="kpi-value">{{ kpis().total }}</span>
+      <span class="kpi-sub">across {{ store.projects().length }} projects</span>
+    </div>
+    <div class="kpi card" data-testid="kpi-open">
+      <span class="kpi-label">Open tasks</span>
+      <span class="kpi-value">{{ kpis().open }}</span>
+      <span class="kpi-sub">to do &amp; in progress</span>
+    </div>
+    <a
+      class="kpi card link"
+      data-testid="kpi-overdue"
+      routerLink="/tasks"
+      [queryParams]="{ due: 'overdue' }"
+    >
+      <span class="kpi-label">Overdue</span>
+      <span class="kpi-value" [class.danger]="kpis().overdue > 0">{{ kpis().overdue }}</span>
+      <span class="kpi-sub">view overdue →</span>
+    </a>
+    <div class="kpi card" data-testid="kpi-completed-7d">
+      <span class="kpi-label">Completed · 7 days</span>
+      <span class="kpi-value">{{ kpis().completed7d }}</span>
+      <span class="kpi-sub">{{ completed30() }} in last 30 days</span>
+    </div>
+    <div class="kpi card" data-testid="kpi-completion-rate">
+      <span class="kpi-label">Completion rate</span>
+      <span class="kpi-value">{{ kpis().completionRate }}%</span>
+      <span class="progress"><span [style.width.%]="kpis().completionRate"></span></span>
+    </div>
+    <div class="kpi card" data-testid="kpi-hours">
+      <span class="kpi-label">Hours tracked</span>
+      <span class="kpi-value">{{ kpis().hoursTracked }}h</span>
+      <span class="kpi-sub">via Pomodoro &amp; logs</span>
+    </div>
+  </section>
+
+  <div class="grid two">
+    <section class="card card-pad" data-testid="chart-completed" aria-labelledby="h-completed">
+      <div class="card-head">
+        <h2 class="card-title" id="h-completed">Tasks completed per day</h2>
+        <span class="muted small">Last 30 days</span>
+      </div>
+      <app-line-chart [data]="perDay()" ariaLabel="Tasks completed per day over the last 30 days" />
+    </section>
+    <section class="card card-pad" data-testid="chart-priority" aria-labelledby="h-priority">
+      <div class="card-head">
+        <h2 class="card-title" id="h-priority">Open tasks by priority</h2>
+      </div>
+      <app-donut-chart
+        [segments]="prioritySegments()"
+        ariaLabel="Open tasks by priority"
+        centerLabel="open tasks"
+      />
+    </section>
+  </div>
+
+  <div class="grid three">
+    <section class="card card-pad" data-testid="chart-projects" aria-labelledby="h-projects">
+      <div class="card-head">
+        <h2 class="card-title" id="h-projects">Completion by project</h2>
+        <a routerLink="/projects" class="small">Manage</a>
+      </div>
+      <app-bar-chart [data]="projectBars()" ariaLabel="Completion percentage per project" />
+    </section>
+    <section class="card card-pad" data-testid="chart-assignees" aria-labelledby="h-assignees">
+      <div class="card-head">
+        <h2 class="card-title" id="h-assignees">Open tasks per assignee</h2>
+        <a routerLink="/settings" fragment="team" class="small">Team</a>
+      </div>
+      <app-hbar-chart
+        [data]="assigneeBars()"
+        ariaLabel="Open tasks per assignee"
+        unit="open tasks"
+      />
+    </section>
+    <section class="card card-pad streak" aria-labelledby="h-streak">
+      <h2 class="card-title" id="h-streak">Productivity streak</h2>
+      <div class="streak-body">
+        <span class="flame" [class.off]="streak() === 0"><app-icon name="fire" [size]="30" /></span>
+        <div>
+          <div class="streak-value">
+            {{ streak() }} <span>{{ streak() === 1 ? 'day' : 'days' }}</span>
+          </div>
+          <p class="muted">
+            {{
+              streak() > 0
+                ? 'Consecutive days with at least one completed task. Keep it going!'
+                : 'Complete a task today to start a streak.'
+            }}
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="grid two">
+    <section class="card card-pad" aria-labelledby="h-upcoming">
+      <div class="card-head">
+        <h2 class="card-title" id="h-upcoming">Upcoming deadlines</h2>
+        <span class="muted small">Next 7 days</span>
+      </div>
+      <ul class="task-list">
+        @for (t of upcoming(); track t.id) {
+          <li>
+            <a [routerLink]="['/tasks', t.id]">
+              <span
+                class="dot"
+                [style.background]="projectOf(t.projectId)?.color ?? 'var(--border-strong)'"
+              ></span>
+              <span class="title">{{ t.title }}</span>
+              <span class="badge" [class]="'badge badge-' + t.priority">{{ t.priority }}</span>
+              <span class="when">{{ due(t.dueDate!) }}</span>
+            </a>
+          </li>
+        } @empty {
+          <li class="empty-row">Nothing due in the next 7 days 🎉</li>
+        }
+      </ul>
+    </section>
+    <section class="card card-pad" aria-labelledby="h-overdue">
+      <div class="card-head">
+        <h2 class="card-title" id="h-overdue">Overdue</h2>
+        @if (kpis().overdue > overdue().length) {
+          <a routerLink="/tasks" [queryParams]="{ due: 'overdue' }" class="small"
+            >View all {{ kpis().overdue }}</a
+          >
+        }
+      </div>
+      <ul class="task-list">
+        @for (t of overdue(); track t.id) {
+          <li>
+            <a [routerLink]="['/tasks', t.id]">
+              <span
+                class="dot"
+                [style.background]="projectOf(t.projectId)?.color ?? 'var(--border-strong)'"
+              ></span>
+              <span class="title">{{ t.title }}</span>
+              <span class="badge" [class]="'badge badge-' + t.priority">{{ t.priority }}</span>
+              <span class="when danger">{{ due(t.dueDate!) }}</span>
+            </a>
+          </li>
+        } @empty {
+          <li class="empty-row">No overdue tasks. Nice!</li>
+        }
+      </ul>
+    </section>
+  </div>
+} @else {
+  <div class="kpis" aria-hidden="true">
+    @for (i of [1, 2, 3, 4, 5, 6]; track i) {
+      <div class="skeleton" style="height: 104px"></div>
+    }
+  </div>
+  <div class="grid two" aria-hidden="true">
+    <div class="skeleton" style="height: 320px"></div>
+    <div class="skeleton" style="height: 320px"></div>
+  </div>
+}

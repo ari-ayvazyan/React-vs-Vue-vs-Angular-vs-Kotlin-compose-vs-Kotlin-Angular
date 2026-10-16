@@ -1,0 +1,142 @@
+{
+  "name": "angular",
+  "files": 64,
+  "codeFiles": 43,
+  "totalLoc": 8823,
+  "fileLoc": {
+    "avg": 137.86,
+    "p90": 267,
+    "max": 498,
+    "over300": 5,
+    "over500": 0
+  },
+  "largestFiles": [
+    {
+      "file": "src/styles.css",
+      "loc": 498
+    },
+    {
+      "file": "src/app/pages/tasks/tasks.css",
+      "loc": 421
+    },
+    {
+      "file": "src/app/services/store.service.ts",
+      "loc": 333
+    },
+    {
+      "file": "src/app/pages/tasks/tasks.html",
+      "loc": 328
+    },
+    {
+      "file": "src/app/app.css",
+      "loc": 317
+    }
+  ],
+  "fileList": [
+    "src/app/app.config.server.ts",
+    "src/app/app.css",
+    "src/app/app.html",
+    "src/app/app.routes.server.ts",
+    "src/app/app.routes.ts",
+    "src/app/app.ts",
+    "src/app/components/avatar.ts",
+    "src/app/components/bar-chart.ts",
+    "src/app/components/confirm-dialog.ts",
+    "src/app/components/donut-chart.ts",
+    "src/app/components/hbar-chart.ts",
+    "src/app/components/help-modal.ts",
+    "src/app/components/icon.ts",
+    "src/app/components/line-chart.ts",
+    "src/app/components/modal.css",
+    "src/app/components/modal.ts",
+    "src/app/components/task-form.css",
+    "src/app/components/task-form.html",
+    "src/app/components/task-form.ts",
+    "src/app/components/task-modal.ts",
+    "src/app/components/toasts.ts",
+    "src/app/core/chart-scale.ts",
+    "src/app/core/dates.ts",
+    "src/app/core/demo-data.ts",
+    "src/app/core/filters.ts",
+    "src/app/core/history.ts",
+    "src/app/core/members.ts",
+    "src/app/core/models.ts",
+    "src/app/core/recurrence.ts",
+    "src/app/core/stats.ts",
+    "src/app/core/task-ops.ts",
+    "src/app/core/validation.ts",
+    "src/app/pages/board/board.css",
+    "src/app/pages/board/board.html",
+    "src/app/pages/board/board.ts",
+    "src/app/pages/calendar/calendar.css",
+    "src/app/pages/calendar/calendar.html",
+    "src/app/pages/calendar/calendar.ts",
+    "src/app/pages/dashboard/dashboard.css",
+    "src/app/pages/dashboard/dashboard.html",
+    "src/app/pages/dashboard/dashboard.ts",
+    "src/app/pages/not-found/not-found.ts",
+    "src/app/pages/projects/projects.css",
+    "src/app/pages/projects/projects.html",
+    "src/app/pages/projects/projects.ts",
+    "src/app/pages/settings/settings.css",
+    "src/app/pages/settings/settings.html",
+    "src/app/pages/settings/settings.ts",
+    "src/app/pages/task-detail/task-detail.css",
+    "src/app/pages/task-detail/task-detail.html",
+    "src/app/pages/task-detail/task-detail.ts",
+    "src/app/pages/tasks/tasks.css",
+    "src/app/pages/tasks/tasks.html",
+    "src/app/pages/tasks/tasks.ts",
+    "src/app/services/pomodoro.service.ts",
+    "src/app/services/store.service.ts",
+    "src/app/services/theme.service.ts",
+    "src/app/services/toast.service.ts",
+    "src/app/services/ui.service.ts",
+    "src/index.html",
+    "src/main.server.ts",
+    "src/main.ts",
+    "src/server.ts",
+    "src/styles.css"
+  ],
+  "imports": {
+    "edges": 128,
+    "edgesPerFile": 2.98,
+    "maxFanOut": 11,
+    "maxFanIn": 20,
+    "topFanOut": [
+      [
+        "src/app/pages/dashboard/dashboard.ts",
+        11
+      ],
+      [
+        "src/app/pages/settings/settings.ts",
+        10
+      ],
+      [
+        "src/app/app.ts",
+        9
+      ]
+    ],
+    "topFanIn": [
+      [
+        "src/app/core/models.ts",
+        20
+      ],
+      [
+        "src/app/core/dates.ts",
+        13
+      ],
+      [
+        "src/app/services/store.service.ts",
+        12
+      ]
+    ],
+    "cycles": 0,
+    "filesInCycles": 0,
+    "largestCycle": 0,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+ "functions": 560,
+ "avg_ccn": 2.87,
+ "max_ccn": 51,
+ "fn_ccn_gt10": 18,
+ "fn_ccn_gt15": 8,
+ "fn_ccn_gt20": 6,
+ "avg_fn_nloc": 8.8,
+ "fn_over_50_lines": 16,
+ "top": [
+  [
+   51,
+   "dataReducer",
+   "lib/reducer.ts"
+  ],
+  [
+   38,
+   "validateTask",
+   "lib/validation.ts"
+  ],
+  [
+   27,
+   "onKey",
+   "components/AppShell.tsx"
+  ],
+  [
+   27,
+   "TaskDetailView",
+   "components/views/TaskDetailView.tsx"
+  ],
+  [
+   25,
+   "show",
+   "lib/activity.ts"
+  ]
+ ]
+}

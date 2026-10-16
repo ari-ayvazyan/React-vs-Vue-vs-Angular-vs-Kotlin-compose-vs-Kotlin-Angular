@@ -1,0 +1,225 @@
+<header class="page-header">
+  <div>
+    <h1>Timeline</h1>
+    <p>
+      {{
+        store.ready()
+          ? datedCount() + ' scheduled tasks · drag the end of a bar to change its due date'
+          : 'Loading…'
+      }}
+    </p>
+  </div>
+  <div class="page-actions">
+    <div class="segmented" role="group" aria-label="Zoom" data-testid="timeline-zoom">
+      @for (z of zooms; track z) {
+        <button type="button" [attr.aria-pressed]="zoom() === z" (click)="setZoom(z)">
+          {{ zoomLabels[z] }}
+        </button>
+      }
+    </div>
+    <button type="button" class="btn" (click)="goToday()">Today</button>
+  </div>
+</header>
+
+<div class="toolbar">
+  <label class="check">
+    <input
+      type="checkbox"
+      [checked]="hideDone()"
+      (change)="toggleHideDone()"
+      data-testid="timeline-hide-done"
+    />
+    Hide completed
+  </label>
+  <button type="button" class="btn btn-sm btn-ghost" (click)="setAllCollapsed(true)">
+    Collapse all
+  </button>
+  <button type="button" class="btn btn-sm btn-ghost" (click)="setAllCollapsed(false)">
+    Expand all
+  </button>
+  <span class="legend muted">
+    <span class="legend-arrow" aria-hidden="true"></span> blocker → blocked
+  </span>
+</div>
+
+@if (store.ready()) {
+  <div
+    class="tl-scroll card"
+    #scroller
+    data-testid="timeline-chart"
+    (scroll)="onScroll($event)"
+    [class.dragging]="drag() !== null"
+  >
+    <div
+      class="tl-canvas"
+      [style.width.px]="labelW() + chartW()"
+      [style.height.px]="canvasH()"
+      [style.--label-w.px]="labelW()"
+    >
+      <div class="tl-header" [style.height.px]="headerH">
+        <div class="corner">Task</div>
+        @for (t of ticks(); track t.key) {
+          <span class="tick" [class.major]="t.major" [style.left.px]="labelW() + t.offset * px()">{{
+            t.label
+          }}</span>
+        }
+      </div>
+
+      <div class="gridlines" aria-hidden="true">
+        @for (t of ticks(); track t.key) {
+          <span
+            class="gridline"
+            [class.major]="t.major"
+            [style.left.px]="labelW() + t.offset * px()"
+          ></span>
+        }
+        <span class="today-line" [style.left.px]="todayX()" data-testid="timeline-today"></span>
+      </div>
+
+      @for (
+        w of windowRows();
+        track w.row.kind === 'group' ? 'g:' + w.row.group.id : w.row.item.task.id
+      ) {
+        @if (w.row.kind === 'group') {
+          <div
+            class="row group-row"
+            [style.top.px]="headerH + w.index * rowH"
+            data-testid="timeline-group"
+          >
+            <button
+              type="button"
+              class="group-toggle"
+              [attr.aria-expanded]="!w.row.collapsed"
+              (click)="toggleGroup(w.row.group.id)"
+            >
+              <app-icon [name]="w.row.collapsed ? 'chevronRight' : 'chevronDown'" [size]="15" />
+              <span
+                class="dot"
+                [style.background]="w.row.group.color ?? 'var(--border-strong)'"
+              ></span>
+              <span class="group-name">{{ w.row.group.name }}</span>
+              <span class="count">{{ w.row.group.items.length }}</span>
+            </button>
+          </div>
+        } @else {
+          @let item = w.row.item;
+          @let b = bar(item);
+          <div
+            class="row task-row"
+            [class.done]="item.task.status === 'done'"
+            [style.top.px]="headerH + w.index * rowH"
+            data-testid="timeline-row"
+            [attr.data-task-id]="item.task.id"
+          >
+            <div class="label">
+              <span
+                class="sdot"
+                [class]="'sdot s-' + item.task.status"
+                [title]="statusLabels[item.task.status]"
+              ></span>
+              <a [routerLink]="['/tasks', item.task.id]" [title]="item.task.title">{{
+                item.task.title
+              }}</a>
+            </div>
+            <div
+              class="bar"
+              data-testid="timeline-bar"
+              [class.active]="drag()?.taskId === item.task.id"
+              [style.left.px]="b.left"
+              [style.width.px]="b.width"
+              [style.--c]="color(item)"
+              [title]="barLabel(item)"
+            >
+              <button
+                type="button"
+                class="handle"
+                data-testid="timeline-handle"
+                [attr.aria-label]="
+                  'Due date of ' +
+                  item.task.title +
+                  ': ' +
+                  b.end +
+                  '. Use left and right arrow keys to change it.'
+                "
+                (pointerdown)="onHandleDown($event, item)"
+                (pointermove)="onHandleMove($event)"
+                (pointerup)="onHandleUp($event)"
+                (pointercancel)="onHandleCancel()"
+                (keydown)="onHandleKey($event, item)"
+              ></button>
+              @if (drag()?.taskId === item.task.id) {
+                <span class="drag-tip" data-testid="timeline-drag-tip">{{ b.end }}</span>
+              }
+            </div>
+          </div>
+        }
+      }
+
+      <svg
+        class="arrows"
+        aria-hidden="true"
+        [attr.width]="labelW() + chartW()"
+        [attr.height]="canvasH()"
+      >
+        <defs>
+          <marker
+            id="tl-arrow"
+            viewBox="0 0 8 8"
+            refX="7"
+            refY="4"
+            markerWidth="7"
+            markerHeight="7"
+            orient="auto-start-reverse"
+          >
+            <path d="M0,0 L8,4 L0,8 Z" class="arrow-head" />
+          </marker>
+          <marker
+            id="tl-arrow-open"
+            viewBox="0 0 8 8"
+            refX="7"
+            refY="4"
+            markerWidth="7"
+            markerHeight="7"
+            orient="auto-start-reverse"
+          >
+            <path d="M0,0 L8,4 L0,8 Z" class="arrow-head open" />
+          </marker>
+        </defs>
+        @for (a of arrows(); track a.id) {
+          <path
+            class="arrow"
+            [class.open]="a.open"
+            [attr.d]="a.d"
+            [attr.marker-end]="a.open ? 'url(#tl-arrow-open)' : 'url(#tl-arrow)'"
+            data-testid="timeline-arrow"
+          />
+        }
+      </svg>
+    </div>
+  </div>
+
+  <details class="undated card" data-testid="timeline-undated">
+    <summary>
+      <strong>No due date</strong>
+      <span class="count">{{ data().undated.length }}</span>
+      <span class="muted">These tasks cannot be placed on the timeline.</span>
+    </summary>
+    <ul>
+      @for (t of data().undated.slice(0, undatedLimit); track t.id) {
+        <li>
+          <span class="sdot" [class]="'sdot s-' + t.status" [title]="statusLabels[t.status]"></span>
+          <a [routerLink]="['/tasks', t.id]">{{ t.title }}</a>
+        </li>
+      } @empty {
+        <li class="muted">Every task has a due date.</li>
+      }
+    </ul>
+    @if (data().undated.length > undatedLimit) {
+      <a routerLink="/tasks" [queryParams]="{ due: 'none' }" class="more"
+        >Show all {{ data().undated.length }} in the task list</a
+      >
+    }
+  </details>
+} @else {
+  <div class="skeleton" style="height: 520px" aria-hidden="true"></div>
+}

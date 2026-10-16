@@ -1,0 +1,37 @@
+{
+ "functions": 368,
+ "avg_ccn": 2.46,
+ "max_ccn": 31,
+ "fn_ccn_gt10": 8,
+ "fn_ccn_gt15": 3,
+ "fn_ccn_gt20": 2,
+ "avg_fn_nloc": 4.8,
+ "fn_over_50_lines": 1,
+ "top": [
+  [
+   31,
+   "onKeydown",
+   "app/composables/useShortcuts.ts"
+  ],
+  [
+   31,
+   "checkTask",
+   "app/lib/validation.ts"
+  ],
+  [
+   19,
+   "initialDraft",
+   "app/components/TaskForm.vue.ts"
+  ],
+  [
+   13,
+   "validateImport",
+   "app/lib/validation.ts"
+  ],
+  [
+   12,
+   "onCardKey",
+   "app/pages/board.vue.ts"
+  ]
+ ]
+}

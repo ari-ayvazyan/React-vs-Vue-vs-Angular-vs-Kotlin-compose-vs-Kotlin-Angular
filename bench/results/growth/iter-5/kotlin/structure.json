@@ -1,0 +1,130 @@
+{
+  "name": "kotlin",
+  "files": 51,
+  "codeFiles": 49,
+  "totalLoc": 9761,
+  "fileLoc": {
+    "avg": 191.39,
+    "p90": 415,
+    "max": 847,
+    "over300": 13,
+    "over500": 1
+  },
+  "largestFiles": [
+    {
+      "file": "web/src/jsMain/resources/styles.css",
+      "loc": 847
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+      "loc": 486
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/pages/TimelinePage.kt",
+      "loc": 486
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+      "loc": 479
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/pages/TaskCollab.kt",
+      "loc": 479
+    }
+  ],
+  "fileList": [
+    "server/src/main/kotlin/taskpilot/server/Server.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Activity.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Board.kt",
+    "shared/src/commonMain/kotlin/taskpilot/CalendarGrid.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Comments.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Dates.kt",
+    "shared/src/commonMain/kotlin/taskpilot/DemoData.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Dependencies.kt",
+    "shared/src/commonMain/kotlin/taskpilot/History.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Ids.kt",
+    "shared/src/commonMain/kotlin/taskpilot/ImportExport.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Members.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Model.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Notifications.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Query.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Recurrence.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Reports.kt",
+    "shared/src/commonMain/kotlin/taskpilot/SavedViews.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Stats.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Timeline.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Validation.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Workflows.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Main.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Platform.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Pomodoro.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Router.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Shell.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Theme.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/ActivityPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/CalendarPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/Charts.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/DashboardPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/MembersSection.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/NotFoundPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/ProjectsPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/ReportsPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/SavedViewsUi.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/SettingsPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/TaskCollab.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/TimelinePage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/WorkflowEditor.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/Components.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/Icons.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/NotificationsBell.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/TaskForm.kt",
+    "web/src/jsMain/resources/index.html",
+    "web/src/jsMain/resources/styles.css"
+  ],
+  "imports": {
+    "edges": 252,
+    "edgesPerFile": 5.14,
+    "maxFanOut": 22,
+    "maxFanIn": 35,
+    "topFanOut": [
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/Shell.kt",
+        22
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+        20
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt",
+        12
+      ]
+    ],
+    "topFanIn": [
+      [
+        "shared/src/commonMain/kotlin/taskpilot/Model.kt",
+        35
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+        20
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/ui/Components.kt",
+        19
+      ]
+    ],
+    "cycles": 1,
+    "filesInCycles": 46,
+    "largestCycle": 46,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    },
+    "kotlinEdges": 252
+  }
+}

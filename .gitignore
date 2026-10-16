@@ -1,0 +1,12 @@
+node_modules/
+.nuxt/
+.output/
+.next/
+dist/
+.angular/
+out/
+coverage/
+.gradle/
+**/build/
+.kotlin/
+apps/angular-kotlin-app/src/generated/

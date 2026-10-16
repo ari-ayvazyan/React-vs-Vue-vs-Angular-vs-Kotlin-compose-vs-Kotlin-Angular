@@ -1,0 +1,236 @@
+.create {
+  margin-bottom: 24px;
+}
+.create-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+}
+.grow {
+  flex: 1 1 220px;
+}
+.parent-field {
+  flex: 0 1 220px;
+}
+.swatches-field {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.swatches-field legend {
+  margin-bottom: 6px;
+}
+
+/* ---------- tree ---------- */
+.tree {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+.node {
+  --depth: 0;
+  border-top: 1px solid var(--border);
+}
+.node:first-child {
+  border-top: 0;
+}
+.node-main {
+  display: grid;
+  grid-template-columns: 28px 22px minmax(0, 1fr) minmax(180px, 260px) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px 10px calc(14px + var(--depth) * 26px);
+  position: relative;
+}
+.node-main::before {
+  /* colour accent on the left edge, indented with the level */
+  content: '';
+  position: absolute;
+  left: calc(4px + var(--depth) * 26px);
+  top: 10px;
+  bottom: 10px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--pc, transparent);
+  opacity: 0.8;
+}
+.twisty-space {
+  width: 28px;
+}
+.color-wrap {
+  position: relative;
+}
+.color-btn {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.color-btn.none {
+  background: var(--surface-2);
+  border: 2px dashed var(--border-strong);
+  cursor: default;
+}
+.color-pop {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(5, 22px);
+  gap: 8px;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.custom input {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.name-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.name {
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.name:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.meta {
+  display: flex;
+  gap: 4px;
+  min-width: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.input-inline {
+  min-height: 32px;
+  padding: 4px 8px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 4px 10px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.stats .num {
+  grid-column: 1 / -1;
+}
+.stats strong {
+  color: var(--text);
+}
+.pct {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text);
+}
+.progress {
+  height: 6px;
+}
+.actions {
+  display: flex;
+  gap: 2px;
+}
+.icon-btn.danger:hover {
+  color: var(--danger);
+  background: var(--danger-soft);
+}
+.unassigned .node-main::before {
+  display: none;
+}
+.empty-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 16px;
+  color: var(--text-muted);
+}
+.hint {
+  margin: 6px 0 0;
+  font-size: 0.82rem;
+}
+.field + .modal-actions {
+  margin-top: 18px;
+}
+
+/* ---------- dialogs ---------- */
+.choices {
+  border: 0;
+  margin: 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.choice-legend {
+  margin-bottom: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+.choice {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  line-height: 1.4;
+}
+.choice:has(input:checked) {
+  border-color: var(--primary);
+  background: var(--primary-soft);
+}
+.choice input {
+  margin-top: 3px;
+  accent-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .node-main {
+    grid-template-columns: 28px 22px minmax(0, 1fr) auto;
+    padding-left: calc(10px + min(var(--depth), 4) * 16px);
+  }
+  .node-main::before {
+    left: calc(2px + min(var(--depth), 4) * 16px);
+  }
+  .stats {
+    grid-column: 3 / -1;
+    grid-row: 2;
+  }
+  .actions {
+    grid-column: 4;
+    grid-row: 1;
+  }
+}
+@media (max-width: 600px) {
+  .actions {
+    grid-column: 3 / -1;
+    grid-row: 3;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}

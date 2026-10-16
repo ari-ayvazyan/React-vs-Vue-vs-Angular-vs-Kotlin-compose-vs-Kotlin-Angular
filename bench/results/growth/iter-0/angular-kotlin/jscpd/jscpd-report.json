@@ -1,0 +1,841 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-16T10:58:42.578Z",
+    "formats": {
+      "kotlin": {
+        "sources": {
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Validation.kt": {
+            "lines": 133,
+            "tokens": 1292,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Store.kt": {
+            "lines": 477,
+            "tokens": 5132,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 12,
+            "duplicatedTokens": 186,
+            "percentage": 2.52,
+            "percentageTokens": 3.62,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Stats.kt": {
+            "lines": 158,
+            "tokens": 1555,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Shortcuts.kt": {
+            "lines": 109,
+            "tokens": 936,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Serialization.kt": {
+            "lines": 307,
+            "tokens": 3365,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Query.kt": {
+            "lines": 338,
+            "tokens": 3772,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/PomodoroTimer.kt": {
+            "lines": 108,
+            "tokens": 893,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Model.kt": {
+            "lines": 190,
+            "tokens": 1584,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/DemoData.kt": {
+            "lines": 128,
+            "tokens": 1367,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Dates.kt": {
+            "lines": 216,
+            "tokens": 2629,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Charts.kt": {
+            "lines": 203,
+            "tokens": 2091,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Calendar.kt": {
+            "lines": 101,
+            "tokens": 921,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Board.kt": {
+            "lines": 67,
+            "tokens": 773,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 2535,
+          "tokens": 26310,
+          "sources": 13,
+          "clones": 1,
+          "duplicatedLines": 6,
+          "duplicatedTokens": 93,
+          "percentage": 0.24,
+          "percentageTokens": 0.35,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/tasks/tasks.ts": {
+            "lines": 152,
+            "tokens": 1971,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/task-detail/task-detail.ts": {
+            "lines": 87,
+            "tokens": 1158,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/settings/settings.ts": {
+            "lines": 81,
+            "tokens": 958,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/projects/projects.ts": {
+            "lines": 89,
+            "tokens": 1157,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/not-found/not-found.ts": {
+            "lines": 22,
+            "tokens": 133,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/dashboard/dashboard.ts": {
+            "lines": 22,
+            "tokens": 331,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/calendar/calendar.ts": {
+            "lines": 58,
+            "tokens": 738,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/board/board.ts": {
+            "lines": 130,
+            "tokens": 1671,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/shared/task-form.ts": {
+            "lines": 79,
+            "tokens": 1075,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/shared/skeleton.ts": {
+            "lines": 20,
+            "tokens": 125,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/shared/icon.ts": {
+            "lines": 63,
+            "tokens": 386,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/shared/dialog.ts": {
+            "lines": 95,
+            "tokens": 776,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/shared/autofocus.ts": {
+            "lines": 13,
+            "tokens": 109,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/layout/toasts.ts": {
+            "lines": 32,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/layout/task-modal.ts": {
+            "lines": 60,
+            "tokens": 488,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/layout/help-modal.ts": {
+            "lines": 40,
+            "tokens": 154,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/url-query.ts": {
+            "lines": 17,
+            "tokens": 208,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/ui.service.ts": {
+            "lines": 73,
+            "tokens": 751,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/theme.service.ts": {
+            "lines": 35,
+            "tokens": 434,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/store.service.ts": {
+            "lines": 118,
+            "tokens": 1614,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/shortcuts.service.ts": {
+            "lines": 68,
+            "tokens": 852,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/pomodoro.service.ts": {
+            "lines": 91,
+            "tokens": 1146,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/core/kt.ts": {
+            "lines": 70,
+            "tokens": 493,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/charts/project-bars.ts": {
+            "lines": 36,
+            "tokens": 115,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/charts/line-chart.ts": {
+            "lines": 75,
+            "tokens": 553,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/charts/donut-chart.ts": {
+            "lines": 39,
+            "tokens": 199,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/app.ts": {
+            "lines": 145,
+            "tokens": 1710,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/app.routes.ts": {
+            "lines": 45,
+            "tokens": 443,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/app.routes.server.ts": {
+            "lines": 12,
+            "tokens": 58,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/app.config.server.ts": {
+            "lines": 10,
+            "tokens": 104,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/server.ts": {
+            "lines": 66,
+            "tokens": 334,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/main.ts": {
+            "lines": 5,
+            "tokens": 63,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/main.server.ts": {
+            "lines": 7,
+            "tokens": 76,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1955,
+          "tokens": 20538,
+          "sources": 33,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/tasks/tasks.html": {
+            "lines": 210,
+            "tokens": 2777,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/task-detail/task-detail.html": {
+            "lines": 149,
+            "tokens": 1885,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/settings/settings.html": {
+            "lines": 94,
+            "tokens": 1195,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/projects/projects.html": {
+            "lines": 117,
+            "tokens": 1708,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/dashboard/dashboard.html": {
+            "lines": 102,
+            "tokens": 1340,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 174,
+            "percentage": 9.8,
+            "percentageTokens": 12.99,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/calendar/calendar.html": {
+            "lines": 62,
+            "tokens": 714,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/pages/board/board.html": {
+            "lines": 91,
+            "tokens": 1000,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/shared/task-form.html": {
+            "lines": 133,
+            "tokens": 1384,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/app/app.html": {
+            "lines": 113,
+            "tokens": 1252,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.maUXO3CPyC/src/index.html": {
+            "lines": 28,
+            "tokens": 291,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1099,
+          "tokens": 13546,
+          "sources": 10,
+          "clones": 1,
+          "duplicatedLines": 5,
+          "duplicatedTokens": 87,
+          "percentage": 0.45,
+          "percentageTokens": 0.64,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "/tmp/tmp.maUXO3CPyC/src/index.html": {
+            "lines": 13,
+            "tokens": 129,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 13,
+          "tokens": 129,
+          "sources": 1,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 5602,
+      "tokens": 60523,
+      "sources": 57,
+      "clones": 2,
+      "duplicatedLines": 11,
+      "duplicatedTokens": 180,
+      "percentage": 0.2,
+      "percentageTokens": 0.3,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "kotlin",
+      "lines": 7,
+      "fragment": ",\n                    priority = draft.priority,\n                    projectId = draft.projectId.ifEmpty { null }?.takeIf { s.findProject(it) != null },\n                    tags = parseTags(draft.tagsText),\n                    dueDate = draft.dueDate.ifEmpty { null },\n                    estimateMinutes = parseEstimate(draft.estimateText),\n                    order",
+      "tokens": 93,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Store.kt",
+        "start": 156,
+        "end": 162,
+        "startLoc": {
+          "line": 156,
+          "column": 52,
+          "position": 1429
+        },
+        "endLoc": {
+          "line": 162,
+          "column": 26,
+          "position": 1522
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.maUXO3CPyC/core/src/jsMain/kotlin/taskpilot/Store.kt",
+        "start": 128,
+        "end": 134,
+        "startLoc": {
+          "line": 128,
+          "column": 42,
+          "position": 1095
+        },
+        "endLoc": {
+          "line": 134,
+          "column": 37,
+          "position": 1188
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 6,
+      "fragment": "track t.id) {\n          <li>\n            <a [routerLink]=\"['/tasks', t.id]\" class=\"mini-item\">\n              <span class=\"prio-dot\" [attr.data-priority]=\"t.priority\" [attr.title]=\"priorityLabel(t.priority) + ' priority'\"></span>\n              <span class=\"mini-title\">{{ t.title }}</span>\n              <span class=\"mini-meta danger",
+      "tokens": 87,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.maUXO3CPyC/src/app/pages/dashboard/dashboard.html",
+        "start": 86,
+        "end": 91,
+        "startLoc": {
+          "line": 86,
+          "column": 36,
+          "position": 1165
+        },
+        "endLoc": {
+          "line": 91,
+          "column": 44,
+          "position": 1252
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.maUXO3CPyC/src/app/pages/dashboard/dashboard.html",
+        "start": 66,
+        "end": 71,
+        "startLoc": {
+          "line": 66,
+          "column": 32,
+          "position": 887
+        },
+        "endLoc": {
+          "line": 71,
+          "column": 37,
+          "position": 974
+        }
+      }
+    }
+  ]
+}

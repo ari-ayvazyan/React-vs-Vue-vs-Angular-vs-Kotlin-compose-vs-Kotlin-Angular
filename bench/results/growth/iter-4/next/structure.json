@@ -1,0 +1,158 @@
+{
+  "name": "next",
+  "files": 79,
+  "codeFiles": 58,
+  "totalLoc": 12098,
+  "fileLoc": {
+    "avg": 153.14,
+    "p90": 385,
+    "max": 581,
+    "over300": 12,
+    "over500": 1
+  },
+  "largestFiles": [
+    {
+      "file": "components/views/TasksView.tsx",
+      "loc": 581
+    },
+    {
+      "file": "components/views/TaskCollab.tsx",
+      "loc": 484
+    },
+    {
+      "file": "app/globals.css",
+      "loc": 478
+    },
+    {
+      "file": "components/views/tasks.module.css",
+      "loc": 477
+    },
+    {
+      "file": "components/AppShell.tsx",
+      "loc": 435
+    }
+  ],
+  "fileList": [
+    "app/activity/page.tsx",
+    "app/board/page.tsx",
+    "app/calendar/page.tsx",
+    "app/dashboard/page.tsx",
+    "app/globals.css",
+    "app/layout.tsx",
+    "app/not-found.tsx",
+    "app/projects/page.tsx",
+    "app/reports/page.tsx",
+    "app/settings/page.tsx",
+    "app/tasks/[id]/page.tsx",
+    "app/tasks/page.tsx",
+    "app/timeline/page.tsx",
+    "components/AppShell.tsx",
+    "components/ColorSwatch.tsx",
+    "components/Modal.tsx",
+    "components/Notifications.tsx",
+    "components/Providers.tsx",
+    "components/TaskForm.tsx",
+    "components/ViewDialog.tsx",
+    "components/bits.module.css",
+    "components/bits.tsx",
+    "components/charts.module.css",
+    "components/charts.tsx",
+    "components/color-swatch.module.css",
+    "components/completion.ts",
+    "components/icons.tsx",
+    "components/modal.module.css",
+    "components/notifications.module.css",
+    "components/pomodoro.tsx",
+    "components/shell.module.css",
+    "components/shortcuts.module.css",
+    "components/store-hooks.ts",
+    "components/task-form.module.css",
+    "components/toast.module.css",
+    "components/toast.tsx",
+    "components/ui.tsx",
+    "components/views/ActivityView.tsx",
+    "components/views/BoardView.tsx",
+    "components/views/CalendarView.tsx",
+    "components/views/DashboardView.tsx",
+    "components/views/MembersSection.tsx",
+    "components/views/ProjectsView.tsx",
+    "components/views/ReportsView.tsx",
+    "components/views/SettingsView.tsx",
+    "components/views/TaskCollab.tsx",
+    "components/views/TaskDetailView.tsx",
+    "components/views/TasksView.tsx",
+    "components/views/TimelineView.tsx",
+    "components/views/activity.module.css",
+    "components/views/board.module.css",
+    "components/views/calendar.module.css",
+    "components/views/collab.module.css",
+    "components/views/dashboard.module.css",
+    "components/views/detail.module.css",
+    "components/views/projects.module.css",
+    "components/views/reports.module.css",
+    "components/views/settings.module.css",
+    "components/views/tasks.module.css",
+    "components/views/timeline.module.css",
+    "lib/activity.ts",
+    "lib/csv.ts",
+    "lib/dates.ts",
+    "lib/demo.ts",
+    "lib/dependencies.ts",
+    "lib/filters.ts",
+    "lib/history.ts",
+    "lib/members.ts",
+    "lib/mentions.ts",
+    "lib/notifications.ts",
+    "lib/recurrence.ts",
+    "lib/reducer.ts",
+    "lib/reports.ts",
+    "lib/stats.ts",
+    "lib/store.ts",
+    "lib/timeline.ts",
+    "lib/types.ts",
+    "lib/validation.ts",
+    "lib/views.ts"
+  ],
+  "imports": {
+    "edges": 132,
+    "edgesPerFile": 2.28,
+    "maxFanOut": 9,
+    "maxFanIn": 18,
+    "topFanOut": [
+      [
+        "components/views/TaskDetailView.tsx",
+        9
+      ],
+      [
+        "components/views/ProjectsView.tsx",
+        7
+      ],
+      [
+        "components/views/SettingsView.tsx",
+        7
+      ]
+    ],
+    "topFanIn": [
+      [
+        "components/store-hooks.ts",
+        18
+      ],
+      [
+        "components/icons.tsx",
+        16
+      ],
+      [
+        "lib/types.ts",
+        16
+      ]
+    ],
+    "cycles": 0,
+    "filesInCycles": 0,
+    "largestCycle": 0,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    },
+    "kotlinEdges": 0
+  }
+}

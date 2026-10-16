@@ -1,0 +1,272 @@
+{
+ "iterations": {
+  "1": {
+   "next": {
+    "tokens": 232535,
+    "tool_uses": 64,
+    "duration_s": 781,
+    "start": "2026-10-16T09:10:56Z",
+    "end": "2026-10-16T09:23:13Z",
+    "tests": 44
+   },
+   "nuxt": {
+    "tokens": 230153,
+    "tool_uses": 79,
+    "duration_s": 815,
+    "start": "2026-10-16T09:10:56Z",
+    "end": "2026-10-16T09:24:07Z",
+    "tests": 41
+   },
+   "angular": {
+    "tokens": 243105,
+    "tool_uses": 86,
+    "duration_s": 836,
+    "start": "2026-10-16T09:10:56Z",
+    "end": "2026-10-16T09:24:27Z",
+    "tests": 50
+   },
+   "angular-kotlin": {
+    "tokens_reported": 381062,
+    "tool_uses": 43,
+    "duration_s": 757,
+    "start": "2026-10-16T11:04:21Z",
+    "end": "2026-10-16T11:15:58Z",
+    "tests": 51,
+    "concurrent_agents": 2
+   },
+   "kotlin": {
+    "tokens_reported": 363593,
+    "tool_uses": 35,
+    "duration_s": 813,
+    "start": "2026-10-16T11:04:14Z",
+    "end": "2026-10-16T11:16:41Z",
+    "tests": 41,
+    "concurrent_agents": 2
+   }
+  },
+  "2": {
+   "angular": {
+    "tokens_reported": 339293,
+    "tool_uses": 46,
+    "duration_s": 810,
+    "start": "2026-10-16T09:31:01Z",
+    "end": "2026-10-16T09:43:05Z",
+    "tests": 68
+   },
+   "next": {
+    "tokens_reported": 325571,
+    "tool_uses": 41,
+    "duration_s": 910,
+    "start": "2026-10-16T09:31:31Z",
+    "end": "2026-10-16T09:44:11Z",
+    "tests": 64
+   },
+   "nuxt": {
+    "tokens_reported": 333461,
+    "tool_uses": 50,
+    "duration_s": 972,
+    "start": "2026-10-16T09:31:08Z",
+    "end": "2026-10-16T09:45:42Z",
+    "tests": 59
+   },
+   "angular-kotlin": {
+    "tokens_reported": 448472,
+    "tool_uses": 28,
+    "duration_s": 710,
+    "start": "2026-10-16T11:22:37Z",
+    "end": "2026-10-16T11:33:30Z",
+    "tests": 60,
+    "concurrent_agents": 2
+   },
+   "kotlin": {
+    "tokens_reported": 434823,
+    "tool_uses": 35,
+    "duration_s": 984,
+    "start": "2026-10-16T11:22:49Z",
+    "end": "2026-10-16T11:37:42Z",
+    "tests": 50,
+    "test_runs": 98,
+    "concurrent_agents": 2
+   }
+  },
+  "3": {
+   "next": {
+    "tokens_reported": 401252,
+    "tool_uses": 35,
+    "duration_s": 701,
+    "start": "2026-10-16T09:52:00Z",
+    "end": "2026-10-16T10:02:09Z",
+    "tests": 80
+   },
+   "nuxt": {
+    "tokens_reported": 413520,
+    "tool_uses": 40,
+    "duration_s": 789,
+    "start": "2026-10-16T09:51:51Z",
+    "end": "2026-10-16T10:03:56Z",
+    "tests": 71
+   },
+   "angular": {
+    "tokens_reported": 416680,
+    "tool_uses": 38,
+    "duration_s": 798,
+    "start": "2026-10-16T09:51:51Z",
+    "end": "2026-10-16T10:04:10Z",
+    "tests": 81
+   },
+   "angular-kotlin": {
+    "tokens_reported": 530297,
+    "tool_uses": 40,
+    "duration_s": 1016,
+    "start": "2026-10-16T11:36:38Z",
+    "end": "2026-10-16T11:52:46Z",
+    "tests": 68,
+    "concurrent_agents": 2
+   },
+   "kotlin": {
+    "tokens_reported": 493883,
+    "tool_uses": 23,
+    "duration_s": 787,
+    "start": "2026-10-16T11:42:10Z",
+    "end": "2026-10-16T11:54:06Z",
+    "tests": 58,
+    "concurrent_agents": 2
+   }
+  },
+  "4": {
+   "nuxt": {
+    "tokens_reported": 476642,
+    "tool_uses": 33,
+    "duration_s": 628,
+    "start": "2026-10-16T10:10:25Z",
+    "end": "2026-10-16T10:19:53Z",
+    "tests": 83,
+    "concurrent_agents": 5
+   },
+   "angular": {
+    "tokens_reported": 484934,
+    "tool_uses": 39,
+    "duration_s": 709,
+    "start": "2026-10-16T10:10:34Z",
+    "end": "2026-10-16T10:21:11Z",
+    "tests": 95,
+    "concurrent_agents": 5
+   },
+   "next": {
+    "tokens_reported": 467413,
+    "tool_uses": 34,
+    "duration_s": 784,
+    "start": "2026-10-16T10:10:27Z",
+    "end": "2026-10-16T10:22:06Z",
+    "tests": 94,
+    "concurrent_agents": 5
+   },
+   "note": "perf measured while the two Kotlin builders were running",
+   "angular-kotlin": {
+    "tokens_reported": 577602,
+    "resume_tool_uses": 10,
+    "resume_duration_s": 295,
+    "start": "2026-10-16T11:59:07Z",
+    "end": "2026-10-16T12:23:46Z",
+    "tests": 75,
+    "note": "interrupted by account usage limit; exact stop time unknown. resume part only: duration/tool_uses below; start->end is wall clock incl. gap"
+   },
+   "kotlin": {
+    "tokens_reported": 542248,
+    "resume_tool_uses": 11,
+    "resume_duration_s": 432,
+    "start": "2026-10-16T11:59:07Z",
+    "end": "2026-10-16T12:25:50Z",
+    "tests": 66,
+    "note": "interrupted by account usage limit; exact stop time unknown. resume part only: duration/tool_uses below; start->end is wall clock incl. gap"
+   }
+  },
+  "5": {
+   "nuxt": {
+    "tokens_reported": 610481,
+    "tool_uses": 64,
+    "duration_s": 1337,
+    "start": "2026-10-16T10:30:05Z",
+    "end": "2026-10-16T10:50:03Z",
+    "tests": 98,
+    "concurrent_agents": 5
+   },
+   "next": {
+    "tokens_reported": 619946,
+    "tool_uses": 72,
+    "duration_s": 1411,
+    "start": "2026-10-16T10:29:21Z",
+    "end": "2026-10-16T10:50:45Z",
+    "tests": 114,
+    "concurrent_agents": 5
+   },
+   "angular": {
+    "tokens_reported": 629730,
+    "tool_uses": 65,
+    "duration_s": 1477,
+    "start": "2026-10-16T10:29:37Z",
+    "end": "2026-10-16T10:52:22Z",
+    "tests": 112,
+    "concurrent_agents": 5
+   },
+   "kotlin": {
+    "tokens_reported": 630911,
+    "tool_uses": 38,
+    "duration_s": 1191,
+    "start": "2026-10-16T12:30:58Z",
+    "end": "2026-10-16T12:49:03Z",
+    "tests": 75,
+    "concurrent_agents": 2
+   },
+   "angular-kotlin": {
+    "tokens_reported": 708811,
+    "tool_uses": 58,
+    "duration_s": 1330,
+    "start": "2026-10-16T12:31:23Z",
+    "end": "2026-10-16T12:51:45Z",
+    "tests": 87,
+    "concurrent_agents": 2
+   }
+  },
+  "0": {
+   "angular-kotlin": {
+    "tokens_reported": 298647,
+    "tool_uses": 100,
+    "duration_s": 2178,
+    "start": "2026-10-16T10:17:48Z",
+    "end": "2026-10-16T10:53:35Z",
+    "tests": 40,
+    "concurrent_agents": 5
+   },
+   "kotlin": {
+    "tokens_reported": 301859,
+    "tool_uses": 111,
+    "duration_s": 2358,
+    "start": "2026-10-16T10:17:47Z",
+    "end": "2026-10-16T10:56:40Z",
+    "tests": 29,
+    "test_runs": 60,
+    "concurrent_agents": 5
+   },
+   "nuxt": {
+    "duration_s": 1693,
+    "tool_uses": 117,
+    "tests": 21,
+    "note": "initial build, first experiment (3 builders in parallel)"
+   },
+   "next": {
+    "duration_s": 2378,
+    "tool_uses": null,
+    "tests": 26,
+    "note": "initial build, first experiment; includes a container restart"
+   },
+   "angular": {
+    "duration_s": 1681,
+    "tool_uses": 79,
+    "tests": 31,
+    "note": "initial build, first experiment (3 builders in parallel)"
+   }
+  }
+ },
+ "note": "tokens_reported for resumed rounds appears to include the conversation carried over from earlier rounds"
+}

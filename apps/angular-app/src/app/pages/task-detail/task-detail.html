@@ -1,0 +1,264 @@
+<a routerLink="/tasks" class="back"><app-icon name="arrowLeft" [size]="16" /> All tasks</a>
+
+@if (!store.ready()) {
+  <div
+    class="skeleton"
+    style="height: 42px; width: 60%; margin-bottom: 24px"
+    aria-hidden="true"
+  ></div>
+  <div class="layout" aria-hidden="true">
+    <div class="skeleton" style="height: 480px"></div>
+    <div class="skeleton" style="height: 320px"></div>
+  </div>
+} @else if (task(); as t) {
+  <header class="page-header detail-header">
+    <div class="head-main">
+      <div class="badges">
+        <span
+          class="badge"
+          [class]="'badge badge-' + t.status"
+          [attr.title]="'Category: ' + statusLabels[t.status]"
+          data-testid="task-status"
+          >{{ store.statusOf(t)?.name ?? statusLabels[t.status] }}</span
+        >
+        <span class="badge" [class]="'badge badge-' + t.priority">{{
+          priorityLabels[t.priority]
+        }}</span>
+        @if (project(); as p) {
+          <span class="project-pill"
+            ><span class="dot" [style.background]="p.color"></span>{{ p.name }}</span
+          >
+        }
+        @if (t.recurrence !== 'none') {
+          <span class="badge badge-recur" data-testid="recurrence-icon"
+            ><app-icon name="repeat" [size]="12" /> Repeats
+            {{ recurrenceLabels[t.recurrence].toLowerCase() }}</span
+          >
+        }
+        <span class="assignee-pill" data-testid="task-assignee">
+          <app-avatar [member]="assignee()" [size]="22" data-testid="assignee-avatar" />
+          {{ assignee()?.name ?? 'Unassigned' }}
+        </span>
+        @if (openBlockers().length) {
+          <span class="badge badge-blocked" data-testid="blocked-indicator" [title]="blockedLabel()"
+            ><app-icon name="lock" [size]="12" /> Blocked</span
+          >
+        }
+        @if (overdue()) {
+          <span class="badge badge-overdue"><app-icon name="alert" [size]="12" /> Overdue</span>
+        }
+      </div>
+      <h1 [class.done]="t.status === 'done'">{{ t.title }}</h1>
+    </div>
+    <div class="page-actions">
+      <div class="segmented" role="group" aria-label="Set status">
+        @for (s of workflow(); track s.id) {
+          <button
+            type="button"
+            [attr.aria-pressed]="t.statusId === s.id"
+            [attr.data-category]="s.category"
+            (click)="setStatus(s.id)"
+          >
+            <span class="wf-dot" [style.background]="s.color" aria-hidden="true"></span>
+            {{ s.name }}
+          </button>
+        }
+      </div>
+      <button type="button" class="btn btn-ghost danger-text" (click)="delete()">
+        <app-icon name="trash" [size]="16" /> Delete
+      </button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <div class="col">
+      <section class="card card-pad" aria-labelledby="h-edit">
+        <h2 class="card-title" id="h-edit">Details</h2>
+        <app-task-form [task]="t" [inline]="true" (saved)="onSaved()" />
+      </section>
+
+      <section class="card card-pad" aria-labelledby="h-sub">
+        <div class="sub-head">
+          <h2 class="card-title" id="h-sub">Subtasks</h2>
+          <span class="muted small">{{ subDone() }}/{{ t.subtasks.length }} done</span>
+        </div>
+        @if (t.subtasks.length) {
+          <div class="progress sub-progress">
+            <span [style.width.%]="(subDone() / t.subtasks.length) * 100"></span>
+          </div>
+        }
+        <ul class="subtasks">
+          @for (s of t.subtasks; track s.id) {
+            <li [class.done]="s.done">
+              <input
+                type="checkbox"
+                [id]="'sub-' + s.id"
+                [checked]="s.done"
+                (change)="store.toggleSubtask(t.id, s.id)"
+              />
+              @if (editingSub() === s.id) {
+                <input
+                  class="input input-inline"
+                  [value]="s.title"
+                  aria-label="Subtask title"
+                  data-autofocus
+                  (keydown.enter)="saveSub(s.id, value($event))"
+                  (keydown.escape)="editingSub.set(null)"
+                  (blur)="saveSub(s.id, value($event))"
+                />
+              } @else {
+                <label [for]="'sub-' + s.id">{{ s.title }}</label>
+                <button
+                  type="button"
+                  class="icon-btn sm"
+                  [attr.aria-label]="'Rename subtask ' + s.title"
+                  (click)="editingSub.set(s.id)"
+                >
+                  <app-icon name="edit" [size]="14" />
+                </button>
+              }
+              <button
+                type="button"
+                class="icon-btn sm"
+                [attr.aria-label]="'Delete subtask ' + s.title"
+                (click)="removeSub(s.id)"
+              >
+                <app-icon name="trash" [size]="14" />
+              </button>
+            </li>
+          } @empty {
+            <li class="muted empty-sub">No subtasks yet. Break the work into steps below.</li>
+          }
+        </ul>
+        <form class="add-sub" (submit)="addSubtask($event)">
+          <label for="new-sub" class="sr-only">New subtask</label>
+          <input
+            id="new-sub"
+            class="input"
+            placeholder="Add a subtask…"
+            [value]="newSubtask()"
+            (input)="newSubtask.set(value($event))"
+          />
+          <button type="submit" class="btn" [disabled]="!newSubtask().trim()">
+            <app-icon name="plus" [size]="15" /> Add
+          </button>
+        </form>
+      </section>
+
+      <section class="card card-pad" aria-labelledby="h-deps" data-testid="dependencies">
+        <h2 class="card-title" id="h-deps">Dependencies</h2>
+        <app-dependency-picker [task]="t" />
+      </section>
+
+      <section class="card card-pad" aria-labelledby="h-comments" data-testid="comments">
+        <h2 class="card-title" id="h-comments">
+          Comments <span class="muted small">{{ t.comments.length }}</span>
+        </h2>
+        <app-comment-thread [taskId]="t.id" />
+      </section>
+    </div>
+
+    <aside class="col">
+      <section class="card card-pad pomodoro" aria-labelledby="h-pomo">
+        <h2 class="card-title" id="h-pomo">Pomodoro</h2>
+        <div class="ring" [class.running]="active() && pomodoro.running()">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="54" class="ring-track" />
+            @if (active() && pomodoro.progress() > 0) {
+              <circle
+                cx="60"
+                cy="60"
+                r="54"
+                class="ring-fill"
+                [attr.stroke-dasharray]="ringDash()"
+                transform="rotate(-90 60 60)"
+              />
+            }
+          </svg>
+          <div class="ring-label">
+            <span class="time mono" role="timer" aria-live="off">{{ timerLabel() }}</span>
+            <span class="muted small">{{
+              active() ? (pomodoro.running() ? 'Focus' : 'Paused') : 'Ready'
+            }}</span>
+          </div>
+        </div>
+        <div class="timer-actions">
+          <button type="button" class="btn btn-primary" (click)="toggleTimer()">
+            <app-icon [name]="active() && pomodoro.running() ? 'pause' : 'play'" [size]="16" />
+            {{ active() && pomodoro.running() ? 'Pause' : active() ? 'Resume' : 'Start' }}
+          </button>
+          <button type="button" class="btn" (click)="resetTimer()" [disabled]="!active()">
+            <app-icon name="reset" [size]="16" /> Reset
+          </button>
+        </div>
+        @if (pomodoro.taskId() && !active()) {
+          <p class="muted small center">
+            Another task's timer is active — starting here will stop it.
+          </p>
+        }
+      </section>
+
+      <section class="card card-pad" aria-labelledby="h-info">
+        <h2 class="card-title" id="h-info">Overview</h2>
+        <dl class="info">
+          <div>
+            <dt>Time spent</dt>
+            <dd>{{ fmtMinutes(t.timeSpentMinutes) }}</dd>
+          </div>
+          <div>
+            <dt>Estimate</dt>
+            <dd>{{ t.estimateMinutes ? fmtMinutes(t.estimateMinutes) : '—' }}</dd>
+          </div>
+          @if (t.estimateMinutes) {
+            <div class="full">
+              <div class="progress" [class.over]="t.timeSpentMinutes > t.estimateMinutes">
+                <span
+                  [style.width.%]="Math.min(100, (t.timeSpentMinutes / t.estimateMinutes) * 100)"
+                ></span>
+              </div>
+            </div>
+          }
+          <div>
+            <dt>Assignee</dt>
+            <dd>{{ assignee()?.name ?? '—' }}</dd>
+          </div>
+          <div>
+            <dt>Repeats</dt>
+            <dd>{{ t.recurrence === 'none' ? '—' : recurrenceLabels[t.recurrence] }}</dd>
+          </div>
+          <div>
+            <dt>Due</dt>
+            <dd [class.danger]="overdue()">{{ t.dueDate ? dueLabel(t.dueDate) : '—' }}</dd>
+          </div>
+          <div>
+            <dt>Created</dt>
+            <dd>{{ fmtDate(t.createdAt) }}</dd>
+          </div>
+          @if (t.completedAt) {
+            <div>
+              <dt>Completed</dt>
+              <dd>{{ fmtDate(t.completedAt) }}</dd>
+            </div>
+          }
+        </dl>
+      </section>
+
+      <section class="card card-pad" aria-labelledby="h-activity" data-testid="task-activity">
+        <h2 class="card-title" id="h-activity">Activity</h2>
+        <app-activity-list [entries]="visibleTimeline()" emptyText="No recorded changes yet." />
+        @if (timeline().length > visibleTimeline().length) {
+          <button type="button" class="btn btn-sm btn-ghost" (click)="showAllActivity.set(true)">
+            Show all {{ timeline().length }} entries
+          </button>
+        }
+      </section>
+    </aside>
+  </div>
+} @else {
+  <div class="card empty">
+    <app-icon name="alert" [size]="36" />
+    <h1>Task not found</h1>
+    <p>It may have been deleted. Use <kbd>Ctrl</kbd>+<kbd>Z</kbd> to undo a recent deletion.</p>
+    <a class="btn" routerLink="/tasks">Back to tasks</a>
+  </div>
+}

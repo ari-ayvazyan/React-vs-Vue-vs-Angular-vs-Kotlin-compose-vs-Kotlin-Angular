@@ -1,0 +1,307 @@
+<header class="page-header">
+  <div>
+    <h1>Settings</h1>
+    <p>Preferences are saved in this browser.</p>
+  </div>
+</header>
+
+<div class="sections">
+  <section class="card card-pad" aria-labelledby="h-appearance">
+    <h2 class="card-title" id="h-appearance">Appearance</h2>
+    <fieldset class="theme-picker">
+      <legend class="label">Theme</legend>
+      <div class="options">
+        @for (t of themes; track t.value) {
+          <label class="theme-opt" [class.on]="theme.theme() === t.value">
+            <input
+              type="radio"
+              name="theme"
+              [value]="t.value"
+              [checked]="theme.theme() === t.value"
+              (change)="theme.set(t.value)"
+            />
+            <app-icon [name]="t.icon" [size]="20" />
+            <span>{{ t.label }}</span>
+          </label>
+        }
+      </div>
+    </fieldset>
+  </section>
+
+  <section class="card card-pad" aria-labelledby="h-prefs">
+    <h2 class="card-title" id="h-prefs">Preferences</h2>
+    <div class="row">
+      <div class="field">
+        <label for="pomodoro-min">Pomodoro length (minutes)</label>
+        <input
+          id="pomodoro-min"
+          class="input"
+          type="number"
+          min="1"
+          max="180"
+          step="1"
+          [value]="store.settings().pomodoroMinutes"
+          (change)="setPomodoro(value($event))"
+          [attr.aria-invalid]="!!pomodoroError()"
+          [attr.aria-describedby]="pomodoroError() ? 'pomodoro-err' : null"
+        />
+        @if (pomodoroError()) {
+          <p class="error" id="pomodoro-err" role="alert">{{ pomodoroError() }}</p>
+        }
+      </div>
+      <div class="field">
+        <label for="page-size">Tasks per page</label>
+        <select id="page-size" class="input" (change)="setPageSize(value($event))">
+          @for (s of pageSizes; track s) {
+            <option [value]="s" [selected]="store.settings().pageSize === s">{{ s }}</option>
+          }
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="card card-pad" id="team" aria-labelledby="h-team" data-testid="team-section">
+    <h2 class="card-title" id="h-team">Team members</h2>
+    <p class="muted section-intro">
+      People you can assign tasks to. Removing someone unassigns their tasks.
+    </p>
+
+    <div class="field current-user" id="current-user">
+      <label for="current-user-select">Current user</label>
+      <select
+        id="current-user-select"
+        class="input"
+        data-testid="current-user-select"
+        (change)="setCurrentUser(value($event))"
+      >
+        <option value="" [selected]="!store.currentUser()">Nobody (comments disabled)</option>
+        @for (m of store.members(); track m.id) {
+          <option [value]="m.id" [selected]="store.currentUser()?.id === m.id">{{ m.name }}</option>
+        }
+      </select>
+      <p class="muted hint">Writes comments and is recorded as the author of changes.</p>
+    </div>
+
+    @if (store.ready()) {
+      <ul class="members" data-testid="member-list">
+        @for (m of store.members(); track m.id) {
+          <li class="member" data-testid="member-row">
+            @if (editingMember()?.id === m.id) {
+              <form
+                class="member-edit"
+                (submit)="saveMember($event)"
+                (keydown.escape)="$event.stopPropagation(); cancelEditMember()"
+                novalidate
+              >
+                <app-avatar [member]="editingMember()" [size]="32" labelPrefix="" />
+                <div class="member-edit-fields">
+                  <label class="sr-only" [for]="'member-name-' + m.id">Name</label>
+                  <input
+                    [id]="'member-name-' + m.id"
+                    class="input"
+                    autocomplete="off"
+                    [value]="editingMember()!.name"
+                    (input)="patchEditingMember({ name: value($event) })"
+                    [attr.aria-invalid]="!!editMemberError()"
+                    [attr.aria-describedby]="editMemberError() ? 'member-edit-err' : null"
+                  />
+                  <fieldset class="swatch-set">
+                    <legend class="sr-only">Color for {{ m.name }}</legend>
+                    <div class="swatches">
+                      @for (c of memberColors; track c) {
+                        <button
+                          type="button"
+                          class="swatch sm"
+                          [style.background]="c"
+                          [attr.aria-pressed]="editingMember()!.color === c"
+                          [attr.aria-label]="'Color ' + c"
+                          (click)="patchEditingMember({ color: c })"
+                        ></button>
+                      }
+                      <label class="custom-color">
+                        <span class="sr-only">Custom color</span>
+                        <input
+                          type="color"
+                          [value]="editingMember()!.color"
+                          (input)="patchEditingMember({ color: value($event) })"
+                        />
+                      </label>
+                    </div>
+                  </fieldset>
+                  @if (editMemberError()) {
+                    <p class="error" id="member-edit-err" role="alert">{{ editMemberError() }}</p>
+                  }
+                </div>
+                <div class="member-actions">
+                  <button type="button" class="btn btn-sm btn-ghost" (click)="cancelEditMember()">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-sm btn-primary">Save</button>
+                </div>
+              </form>
+            } @else {
+              <app-avatar [member]="m" [size]="32" labelPrefix="" />
+              <div class="member-info">
+                <span class="member-name">{{ m.name }}</span>
+                <span class="muted member-load"
+                  >{{ memberLoad().get(m.id)?.open ?? 0 }} open ·
+                  {{ memberLoad().get(m.id)?.total ?? 0 }} assigned</span
+                >
+              </div>
+              <div class="member-actions">
+                <button
+                  type="button"
+                  class="icon-btn sm"
+                  [id]="'member-edit-' + m.id"
+                  [attr.aria-label]="'Edit ' + m.name"
+                  (click)="startEditMember(m)"
+                >
+                  <app-icon name="edit" [size]="15" />
+                </button>
+                <button
+                  type="button"
+                  class="icon-btn sm danger"
+                  [attr.aria-label]="'Remove ' + m.name"
+                  (click)="deletingMember.set(m)"
+                >
+                  <app-icon name="trash" [size]="15" />
+                </button>
+              </div>
+            }
+          </li>
+        } @empty {
+          <li class="muted member-empty">No team members yet. Add the first one below.</li>
+        }
+      </ul>
+    }
+
+    <form class="member-add" (submit)="addMember($event)" novalidate aria-label="Add team member">
+      <div class="field grow">
+        <label for="new-member-name">Name</label>
+        <input
+          id="new-member-name"
+          class="input"
+          autocomplete="off"
+          placeholder="e.g. Robin Chen"
+          data-testid="member-name-input"
+          [value]="newMemberName()"
+          (input)="newMemberName.set(value($event)); newMemberError.set('')"
+          [attr.aria-invalid]="!!newMemberError()"
+          [attr.aria-describedby]="newMemberError() ? 'new-member-err' : null"
+        />
+      </div>
+      <fieldset class="field swatch-set">
+        <legend class="label">Color</legend>
+        <div class="swatches">
+          @for (c of memberColors; track c) {
+            <button
+              type="button"
+              class="swatch sm"
+              [style.background]="c"
+              [attr.aria-pressed]="newMemberColor() === c"
+              [attr.aria-label]="'Color ' + c"
+              (click)="newMemberColor.set(c)"
+            ></button>
+          }
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary" data-testid="member-add-button">
+        <app-icon name="plus" [size]="16" /> Add member
+      </button>
+    </form>
+    @if (newMemberError()) {
+      <p class="error" id="new-member-err" role="alert">{{ newMemberError() }}</p>
+    }
+  </section>
+
+  <section class="card card-pad" aria-labelledby="h-data">
+    <h2 class="card-title" id="h-data">Data</h2>
+    <div class="data-row">
+      <div>
+        <h3>Export</h3>
+        <p class="muted">Download all tasks, projects and settings as JSON.</p>
+      </div>
+      <button type="button" class="btn" (click)="exportData()">
+        <app-icon name="download" [size]="16" /> Export JSON
+      </button>
+    </div>
+    <div class="data-row">
+      <div>
+        <h3>Import</h3>
+        <p class="muted">
+          Replace all data with a previously exported JSON file. The file is validated first.
+        </p>
+        @if (importError()) {
+          <p class="error import-msg" role="alert">{{ importError() }}</p>
+        }
+        @if (importInfo()) {
+          <p class="ok import-msg" role="status">{{ importInfo() }}</p>
+        }
+      </div>
+      <label class="btn file-btn">
+        <app-icon name="upload" [size]="16" /> Import JSON
+        <input
+          type="file"
+          accept="application/json,.json"
+          class="sr-only"
+          (change)="importFile($event)"
+          data-testid="import-input"
+        />
+      </label>
+    </div>
+    <div class="data-row">
+      <div>
+        <h3>Reset demo data</h3>
+        <p class="muted">
+          Replace everything with freshly generated, deterministic demo tasks. Settings are kept.
+        </p>
+        <div class="inline-field">
+          <label for="demo-count">Number of tasks</label>
+          <input
+            id="demo-count"
+            class="input"
+            type="number"
+            min="0"
+            max="10000"
+            [value]="demoCount()"
+            (change)="setDemoCount(value($event))"
+          />
+        </div>
+      </div>
+      <button
+        type="button"
+        class="btn btn-danger"
+        (click)="confirmReset.set(true)"
+        data-testid="reset-demo"
+      >
+        <app-icon name="reset" [size]="16" /> Reset demo data
+      </button>
+    </div>
+  </section>
+</div>
+
+@if (deletingMember(); as m) {
+  <app-confirm-dialog
+    [heading]="'Remove ' + m.name + '?'"
+    [message]="deleteMemberMessage(m)"
+    confirmLabel="Remove member"
+    [danger]="true"
+    (confirmed)="confirmDeleteMember()"
+    (cancelled)="deletingMember.set(null)"
+  />
+}
+
+@if (confirmReset()) {
+  <app-confirm-dialog
+    heading="Reset demo data?"
+    [message]="
+      'All current tasks and projects will be replaced by ' +
+      demoCount() +
+      ' generated demo tasks. This cannot be undone.'
+    "
+    confirmLabel="Reset data"
+    [danger]="true"
+    (confirmed)="reset()"
+    (cancelled)="confirmReset.set(false)"
+  />
+}

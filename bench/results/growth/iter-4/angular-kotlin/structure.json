@@ -1,0 +1,159 @@
+{
+  "name": "angular-kotlin",
+  "files": 80,
+  "codeFiles": 66,
+  "totalLoc": 11489,
+  "fileLoc": {
+    "avg": 143.61,
+    "p90": 231,
+    "max": 3013,
+    "over300": 3,
+    "over500": 2
+  },
+  "largestFiles": [
+    {
+      "file": "src/styles.css",
+      "loc": 3013
+    },
+    {
+      "file": "core/src/jsMain/kotlin/taskpilot/Store.kt",
+      "loc": 626
+    },
+    {
+      "file": "core/src/jsMain/kotlin/taskpilot/Serialization.kt",
+      "loc": 473
+    },
+    {
+      "file": "core/src/jsMain/kotlin/taskpilot/Query.kt",
+      "loc": 287
+    },
+    {
+      "file": "core/src/jsMain/kotlin/taskpilot/Timeline.kt",
+      "loc": 273
+    }
+  ],
+  "fileList": [
+    "core/src/jsMain/kotlin/taskpilot/Activity.kt",
+    "core/src/jsMain/kotlin/taskpilot/Board.kt",
+    "core/src/jsMain/kotlin/taskpilot/Calendar.kt",
+    "core/src/jsMain/kotlin/taskpilot/Charts.kt",
+    "core/src/jsMain/kotlin/taskpilot/Comments.kt",
+    "core/src/jsMain/kotlin/taskpilot/Dates.kt",
+    "core/src/jsMain/kotlin/taskpilot/DemoData.kt",
+    "core/src/jsMain/kotlin/taskpilot/Dependencies.kt",
+    "core/src/jsMain/kotlin/taskpilot/Model.kt",
+    "core/src/jsMain/kotlin/taskpilot/Notifications.kt",
+    "core/src/jsMain/kotlin/taskpilot/PomodoroTimer.kt",
+    "core/src/jsMain/kotlin/taskpilot/Query.kt",
+    "core/src/jsMain/kotlin/taskpilot/RecurrenceRules.kt",
+    "core/src/jsMain/kotlin/taskpilot/Reports.kt",
+    "core/src/jsMain/kotlin/taskpilot/Serialization.kt",
+    "core/src/jsMain/kotlin/taskpilot/Shortcuts.kt",
+    "core/src/jsMain/kotlin/taskpilot/Stats.kt",
+    "core/src/jsMain/kotlin/taskpilot/Store.kt",
+    "core/src/jsMain/kotlin/taskpilot/Timeline.kt",
+    "core/src/jsMain/kotlin/taskpilot/Validation.kt",
+    "core/src/jsMain/kotlin/taskpilot/Views.kt",
+    "src/app/app.config.server.ts",
+    "src/app/app.html",
+    "src/app/app.routes.server.ts",
+    "src/app/app.routes.ts",
+    "src/app/app.ts",
+    "src/app/charts/assignee-bars.ts",
+    "src/app/charts/burndown-chart.ts",
+    "src/app/charts/donut-chart.ts",
+    "src/app/charts/hbar-chart.ts",
+    "src/app/charts/line-chart.ts",
+    "src/app/charts/project-bars.ts",
+    "src/app/core/kt.ts",
+    "src/app/core/pomodoro.service.ts",
+    "src/app/core/shortcuts.service.ts",
+    "src/app/core/store.service.ts",
+    "src/app/core/theme.service.ts",
+    "src/app/core/ui.service.ts",
+    "src/app/core/url-query.ts",
+    "src/app/layout/help-modal.ts",
+    "src/app/layout/notifications-bell.ts",
+    "src/app/layout/task-modal.ts",
+    "src/app/layout/toasts.ts",
+    "src/app/pages/activity/activity.html",
+    "src/app/pages/activity/activity.ts",
+    "src/app/pages/board/board.html",
+    "src/app/pages/board/board.ts",
+    "src/app/pages/calendar/calendar.html",
+    "src/app/pages/calendar/calendar.ts",
+    "src/app/pages/dashboard/dashboard.html",
+    "src/app/pages/dashboard/dashboard.ts",
+    "src/app/pages/not-found/not-found.ts",
+    "src/app/pages/projects/projects.html",
+    "src/app/pages/projects/projects.ts",
+    "src/app/pages/reports/reports.html",
+    "src/app/pages/reports/reports.ts",
+    "src/app/pages/settings/settings.html",
+    "src/app/pages/settings/settings.ts",
+    "src/app/pages/task-detail/task-detail.html",
+    "src/app/pages/task-detail/task-detail.ts",
+    "src/app/pages/tasks/tasks.html",
+    "src/app/pages/tasks/tasks.ts",
+    "src/app/pages/timeline/timeline.html",
+    "src/app/pages/timeline/timeline.ts",
+    "src/app/shared/activity-list.ts",
+    "src/app/shared/autofocus.ts",
+    "src/app/shared/avatar.ts",
+    "src/app/shared/blocker-picker.ts",
+    "src/app/shared/comment-body.ts",
+    "src/app/shared/comment-box.ts",
+    "src/app/shared/dialog.ts",
+    "src/app/shared/icon.ts",
+    "src/app/shared/skeleton.ts",
+    "src/app/shared/task-form.html",
+    "src/app/shared/task-form.ts",
+    "src/index.html",
+    "src/main.server.ts",
+    "src/main.ts",
+    "src/server.ts",
+    "src/styles.css"
+  ],
+  "imports": {
+    "edges": 222,
+    "edgesPerFile": 3.36,
+    "maxFanOut": 13,
+    "maxFanIn": 30,
+    "topFanOut": [
+      [
+        "core/src/jsMain/kotlin/taskpilot/Store.kt",
+        13
+      ],
+      [
+        "src/app/pages/task-detail/task-detail.ts",
+        13
+      ],
+      [
+        "src/app/app.ts",
+        12
+      ]
+    ],
+    "topFanIn": [
+      [
+        "src/app/core/kt.ts",
+        30
+      ],
+      [
+        "src/app/core/store.service.ts",
+        21
+      ],
+      [
+        "core/src/jsMain/kotlin/taskpilot/Model.kt",
+        16
+      ]
+    ],
+    "cycles": 1,
+    "filesInCycles": 11,
+    "largestCycle": 11,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    },
+    "kotlinEdges": 78
+  }
+}

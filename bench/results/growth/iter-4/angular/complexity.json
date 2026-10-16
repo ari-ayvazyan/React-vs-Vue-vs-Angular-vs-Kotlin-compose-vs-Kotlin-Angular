@@ -1,0 +1,37 @@
+{
+ "functions": 536,
+ "avg_ccn": 2.33,
+ "max_ccn": 59,
+ "fn_ccn_gt10": 16,
+ "fn_ccn_gt15": 7,
+ "fn_ccn_gt20": 5,
+ "avg_fn_nloc": 5.2,
+ "fn_over_50_lines": 5,
+ "top": [
+  [
+   59,
+   "matchesDue",
+   "src/app/core/filters.ts"
+  ],
+  [
+   34,
+   "buildTimeline",
+   "src/app/core/timeline.ts"
+  ],
+  [
+   32,
+   "validateTask",
+   "src/app/core/validation.ts"
+  ],
+  [
+   28,
+   "formatValue",
+   "src/app/core/activity.ts"
+  ],
+  [
+   21,
+   "notificationsFromChange",
+   "src/app/core/notifications.ts"
+  ]
+ ]
+}

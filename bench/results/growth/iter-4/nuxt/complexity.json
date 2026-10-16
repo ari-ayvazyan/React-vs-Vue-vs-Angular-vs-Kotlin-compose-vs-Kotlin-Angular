@@ -1,0 +1,37 @@
+{
+ "functions": 749,
+ "avg_ccn": 2.54,
+ "max_ccn": 43,
+ "fn_ccn_gt10": 18,
+ "fn_ccn_gt15": 9,
+ "fn_ccn_gt20": 5,
+ "avg_fn_nloc": 4.7,
+ "fn_over_50_lines": 4,
+ "top": [
+  [
+   43,
+   "checkTask",
+   "app/lib/validation.ts"
+  ],
+  [
+   42,
+   "formatActivityValue",
+   "app/lib/activity.ts"
+  ],
+  [
+   31,
+   "onKeydown",
+   "app/composables/useShortcuts.ts"
+  ],
+  [
+   27,
+   "validateImport",
+   "app/lib/validation.ts"
+  ],
+  [
+   24,
+   "initialDraft",
+   "app/components/TaskForm.vue.ts"
+  ]
+ ]
+}

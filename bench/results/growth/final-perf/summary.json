@@ -1,0 +1,237 @@
+{
+ "nuxt": {
+  "lh_runs": 3,
+  "perf": 78,
+  "FCP": 1335,
+  "LCP": 4325,
+  "TBT": 325,
+  "ttd": 1635,
+  "ttd_gzip": 1696,
+  "board": {
+   "boardMs": 3439,
+   "heapMB": 112,
+   "runs": [
+    3369,
+    3531,
+    3156,
+    3439,
+    4116
+   ]
+  },
+  "i5000": {
+   "nav_tasks": 207,
+   "search": 69,
+   "paginate": 53,
+   "nav_board": 3607,
+   "board_cards": 5000,
+   "nav_calendar": 491,
+   "nav_dashboard": 94,
+   "create_task": 456,
+   "heapMB": 148.1,
+   "failures": [],
+   "errors": []
+  },
+  "load": {
+   "ttfb": 10.3,
+   "fcp": 108,
+   "lcp": 276,
+   "dcl": 107.9,
+   "load": 128.6,
+   "heapMB": 5.9,
+   "transferKB": 195.3,
+   "jsKB": 156.2,
+   "requests": 57,
+   "errors": []
+  },
+  "html": "7627",
+  "enc": "content-encoding: br"
+ },
+ "next": {
+  "lh_runs": 3,
+  "perf": 86,
+  "FCP": 1374,
+  "LCP": 3437,
+  "TBT": 243,
+  "ttd": 1660,
+  "ttd_gzip": 1635,
+  "board": {
+   "boardMs": 828,
+   "heapMB": 42,
+   "runs": [
+    921,
+    828,
+    819,
+    839,
+    806
+   ]
+  },
+  "i5000": {
+   "nav_tasks": 185,
+   "search": 44,
+   "paginate": 106,
+   "nav_board": 1046,
+   "board_cards": 5000,
+   "nav_calendar": 352,
+   "nav_dashboard": 393,
+   "create_task": 877,
+   "heapMB": 82.4,
+   "failures": [],
+   "errors": []
+  },
+  "load": {
+   "ttfb": 4.7,
+   "fcp": 96,
+   "lcp": 96,
+   "dcl": 28.4,
+   "load": 114.3,
+   "heapMB": 6.1,
+   "transferKB": 294.4,
+   "jsKB": 231.9,
+   "requests": 45,
+   "errors": []
+  },
+  "html": "4745",
+  "enc": "Content-Encoding: gzip"
+ },
+ "angular": {
+  "lh_runs": 3,
+  "perf": 91,
+  "FCP": 739,
+  "LCP": 739,
+  "TBT": 375,
+  "ttd": 1404,
+  "ttd_gzip": 1350,
+  "board": {
+   "boardMs": 2082,
+   "heapMB": 60,
+   "runs": [
+    2007,
+    2082,
+    2319,
+    2228,
+    1960
+   ]
+  },
+  "i5000": {
+   "nav_tasks": 140,
+   "search": 54,
+   "paginate": 99,
+   "nav_board": 2218,
+   "board_cards": 5000,
+   "nav_calendar": 338,
+   "nav_dashboard": 92,
+   "create_task": 396,
+   "heapMB": 86.2,
+   "failures": [],
+   "errors": []
+  },
+  "load": {
+   "ttfb": 18.2,
+   "fcp": 104,
+   "lcp": 168,
+   "dcl": 139.7,
+   "load": 143.5,
+   "heapMB": 5.4,
+   "transferKB": 147.7,
+   "jsKB": 135.4,
+   "requests": 10,
+   "errors": []
+  },
+  "html": "8292",
+  "enc": "Content-Encoding: br"
+ },
+ "angular-kotlin": {
+  "lh_runs": 3,
+  "perf": 87,
+  "FCP": 755,
+  "LCP": 755,
+  "TBT": 511,
+  "ttd": 3873,
+  "ttd_gzip": 1690,
+  "board": {
+   "boardMs": 2159,
+   "heapMB": 58,
+   "runs": [
+    2147,
+    2059,
+    2159,
+    2301,
+    2454
+   ]
+  },
+  "i5000": {
+   "nav_tasks": 207,
+   "search": 50,
+   "paginate": 74,
+   "nav_board": 2327,
+   "board_cards": 5000,
+   "nav_calendar": 277,
+   "nav_dashboard": 74,
+   "create_task": 528,
+   "heapMB": 71.8,
+   "failures": [],
+   "errors": []
+  },
+  "load": {
+   "ttfb": 14.5,
+   "fcp": 108,
+   "lcp": 108,
+   "dcl": 152.1,
+   "load": 155.4,
+   "heapMB": 7.3,
+   "transferKB": 652.2,
+   "jsKB": 584.9,
+   "requests": 7,
+   "errors": []
+  },
+  "html": "20793",
+  "enc": ""
+ },
+ "kotlin": {
+  "lh_runs": 3,
+  "perf": 70,
+  "FCP": 5017,
+  "LCP": 5017,
+  "TBT": 0,
+  "ttd": 2826,
+  "ttd_gzip": 2857,
+  "board": {
+   "boardMs": 12913,
+   "heapMB": 137,
+   "runs": [
+    12913,
+    12987,
+    12422,
+    13710,
+    12565
+   ]
+  },
+  "i5000": {
+   "nav_tasks": 228,
+   "search": 114,
+   "paginate": 44,
+   "nav_board": 12593,
+   "board_cards": 5000,
+   "nav_calendar": 363,
+   "nav_dashboard": 147,
+   "create_task": 487,
+   "heapMB": 241.6,
+   "failures": [],
+   "errors": []
+  },
+  "load": {
+   "ttfb": 4.5,
+   "fcp": 484,
+   "lcp": 484,
+   "dcl": 417,
+   "load": 437.4,
+   "heapMB": 8.9,
+   "transferKB": 401,
+   "jsKB": 388.2,
+   "requests": 4,
+   "errors": []
+  },
+  "html": "701",
+  "enc": "Content-Encoding: gzip"
+ }
+}

@@ -1,0 +1,125 @@
+<header class="page-header">
+  <div>
+    <h1>Timeline</h1>
+    <p class="muted">Bars run from creation to due date. Drag a bar's right end (or focus it and use ← →) to change the due date.</p>
+  </div>
+  <div class="timeline-toolbar">
+    <div class="segmented-buttons" role="group" aria-label="Zoom">
+      @for (z of zooms; track z) {
+        <button type="button" class="seg-btn" [attr.aria-pressed]="zoom() === z" [attr.data-testid]="'timeline-zoom-' + z" (click)="setZoom(z)">{{ zoomLabel(z) }}</button>
+      }
+    </div>
+    <label class="check-inline"><input type="checkbox" data-testid="timeline-hide-done" [checked]="hideDone()" (change)="hideDone.set($any($event.target).checked)" /> Hide completed</label>
+    <button type="button" class="btn btn-sm" (click)="scrollToToday()">Today</button>
+    <button type="button" class="btn btn-sm btn-ghost" (click)="setAllCollapsed(collapsed().size < groupKeys().length)">
+      {{ collapsed().size < groupKeys().length ? 'Collapse all' : 'Expand all' }}
+    </button>
+  </div>
+</header>
+
+@if (timeline(); as tl) {
+  <div class="timeline-scroller" #scroller data-testid="timeline">
+    <div class="tl-grid" [style.width]="'calc(var(--tl-label) + ' + tl.width + 'px)'">
+      <div class="tl-corner">Task</div>
+      <div class="tl-header" [style.width.px]="tl.width">
+        <svg [attr.width]="tl.width" height="48" aria-hidden="true">
+          @for (t of tl.ticks; track $index) {
+            @if (t.major) {
+              <line class="tick-major" [attr.x1]="t.x" [attr.x2]="t.x" y1="0" y2="48" />
+              <text class="tick-major-label" [attr.x]="t.x + 6" y="17">{{ t.label }}</text>
+            } @else {
+              <text class="tick-label" [attr.x]="t.x + (tl.dayWidth > 20 ? tl.dayWidth / 2 : 3)" y="40" [attr.text-anchor]="tl.dayWidth > 20 ? 'middle' : 'start'">{{ t.label }}</text>
+            }
+          }
+          <rect class="today-marker" [attr.x]="tl.todayX - 3" y="42" width="6" height="6" rx="3" />
+        </svg>
+      </div>
+
+      <ul class="tl-labels" [style.height.px]="tl.height" aria-label="Timeline rows">
+        @for (r of tl.rows; track r.kind + r.key) {
+          @if (r.kind === 'group') {
+            <li class="tl-group-label" [style.height.px]="r.height">
+              <button type="button" class="tl-group-btn" data-testid="timeline-group" [attr.aria-expanded]="!r.collapsed" (click)="toggleGroup(r.key)">
+                <app-icon [name]="r.collapsed ? 'chevronRight' : 'chevronLeft'" [size]="14" class="tl-chevron" [class.open]="!r.collapsed" />
+                <span class="swatch" [style.background]="r.color"></span>
+                <span class="tl-group-name">{{ r.label }}</span>
+                <span class="count">{{ r.count }}</span>
+              </button>
+            </li>
+          } @else {
+            <li class="tl-task-label" [style.height.px]="r.height" data-testid="timeline-row">
+              <a [routerLink]="['/tasks', r.key]" [class.done]="r.task?.isDone">{{ r.label }}</a>
+            </li>
+          }
+        }
+      </ul>
+
+      <svg #chart class="tl-chart" [attr.width]="tl.width" [attr.height]="tl.height" role="img" [attr.aria-label]="'Timeline with ' + tl.bars.length + ' tasks'">
+        <defs>
+          <marker id="tl-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L8,4 L0,8 z" class="arrow-head" />
+          </marker>
+        </defs>
+        @for (t of tl.ticks; track $index) {
+          @if (!t.major) {
+            <line class="grid-minor" [attr.x1]="t.x" [attr.x2]="t.x" y1="0" [attr.y2]="tl.height" />
+          } @else {
+            <line class="grid-major" [attr.x1]="t.x" [attr.x2]="t.x" y1="0" [attr.y2]="tl.height" />
+          }
+        }
+        @for (r of tl.rows; track r.kind + r.key) {
+          @if (r.kind === 'group') {
+            <rect class="group-band" x="0" [attr.y]="r.y" [attr.width]="tl.width" [attr.height]="r.height" />
+          }
+        }
+        <line class="today-line" [attr.x1]="tl.todayX" [attr.x2]="tl.todayX" y1="0" [attr.y2]="tl.height" />
+        @for (a of tl.arrows; track a.fromId + '>' + a.toId) {
+          <path class="dep-arrow" data-testid="timeline-arrow" [class.inactive]="!a.active" [attr.d]="a.path" marker-end="url(#tl-arrow)" />
+        }
+        @for (b of tl.bars; track b.task.id) {
+          @let s = span(b);
+          <g class="tl-bar" data-testid="timeline-bar" [attr.data-task-id]="b.task.id" [class.done]="b.task.isDone" [class.overdue]="b.overdue" [class.blocked]="b.blocked" [class.inverted]="b.inverted" [class.dragging]="drag()?.id === b.task.id">
+            <rect class="bar" [attr.x]="s.x" [attr.y]="b.y" [attr.width]="s.width" [attr.height]="b.height" rx="5" [attr.fill]="store.projectMap().get(b.task.projectId ?? '')?.color ?? '#94a3b8'">
+              <title>{{ b.task.title }} · {{ fmt.short(b.startDate) }} → {{ fmt.short(b.dueDate) }} · {{ store.statusOf(b.task).name }}{{ b.blocked ? ' · blocked' : '' }}{{ b.inverted ? ' · due before creation' : '' }}</title>
+            </rect>
+            <rect
+              class="bar-handle"
+              data-testid="timeline-handle"
+              [attr.data-handle-id]="b.task.id"
+              [attr.x]="s.x + s.width - 8"
+              [attr.y]="b.y"
+              width="10"
+              [attr.height]="b.height"
+              rx="3"
+              tabindex="0"
+              role="slider"
+              [attr.aria-label]="'Due date of ' + b.task.title"
+              [attr.aria-valuetext]="dueLabel(b)"
+              (pointerdown)="onHandleDown($event, b)"
+              (keydown)="onHandleKey($event, b)"
+            />
+            @if (drag()?.id === b.task.id) {
+              <text class="drag-label" [attr.x]="s.x + s.width + 6" [attr.y]="b.y + 13">{{ dueLabel(b) }}</text>
+            }
+          </g>
+        }
+      </svg>
+    </div>
+  </div>
+
+  <section class="card undated" aria-labelledby="undated-title" data-testid="timeline-undated">
+    <header class="card-header">
+      <h2 id="undated-title">No due date</h2>
+      <span class="muted small">{{ tl.undated.length }} tasks</span>
+    </header>
+    <ul class="undated-list">
+      @for (t of tl.undated; track t.id) {
+        <li><a [routerLink]="['/tasks', t.id]" [class.done]="t.isDone">{{ t.title }}</a></li>
+      } @empty {
+        <li class="muted small">Every task has a due date.</li>
+      }
+    </ul>
+  </section>
+} @else {
+  <app-skeleton [rows]="8" />
+}

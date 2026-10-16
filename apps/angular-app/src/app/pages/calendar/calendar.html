@@ -1,0 +1,101 @@
+<header class="page-header">
+  <div>
+    <h1>{{ store.ready() ? title() : 'Calendar' }}</h1>
+    <p>{{ store.ready() ? monthCount() + ' tasks due this month' : 'Loading…' }}</p>
+  </div>
+  <div class="page-actions">
+    <label for="calendar-assignee" class="sr-only">Filter by assignee</label>
+    <select
+      id="calendar-assignee"
+      class="input filter-select"
+      data-testid="calendar-filter-assignee"
+      (change)="setAssignee($any($event.target).value)"
+    >
+      <option value="" [selected]="!assigneeFilter()">All assignees</option>
+      <option value="none" [selected]="assigneeFilter() === 'none'">Unassigned</option>
+      @for (m of store.members(); track m.id) {
+        <option [value]="m.id" [selected]="assigneeFilter() === m.id">{{ m.name }}</option>
+      }
+    </select>
+    <button type="button" class="btn" (click)="today()">Today</button>
+    <div class="nav-group">
+      <button type="button" class="icon-btn" (click)="prev()" aria-label="Previous month">
+        <app-icon name="chevronLeft" />
+      </button>
+      <button type="button" class="icon-btn" (click)="next()" aria-label="Next month">
+        <app-icon name="chevronRight" />
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="calendar card" data-testid="calendar-grid" role="grid" [attr.aria-label]="title()">
+  <div class="row head" role="row">
+    @for (d of weekdays; track d) {
+      <div class="wd" role="columnheader">{{ d }}</div>
+    }
+  </div>
+  @if (store.ready()) {
+    @for (week of weeks(); track week[0].key) {
+      <div class="row" role="row">
+        @for (cell of week; track cell.key) {
+          <div
+            class="cell"
+            role="gridcell"
+            [class.out]="!cell.inMonth"
+            [class.today]="cell.isToday"
+            [class.weekend]="cell.isWeekend"
+            [attr.aria-label]="dayLabel(cell)"
+          >
+            <div class="cell-head">
+              <span class="day" [attr.aria-current]="cell.isToday ? 'date' : null">{{
+                cell.day
+              }}</span>
+              <button
+                type="button"
+                class="add"
+                (click)="addTask(cell.key)"
+                [attr.aria-label]="'Add task due ' + cell.key"
+              >
+                <app-icon name="plus" [size]="13" />
+              </button>
+            </div>
+            @if (store.ready()) {
+              <ul class="events">
+                @for (t of visible(cell); track t.id) {
+                  <li>
+                    <a
+                      [routerLink]="['/tasks', t.id]"
+                      class="event"
+                      [class.done]="t.status === 'done'"
+                      [style.--c]="color(t)"
+                      [title]="t.title"
+                    >
+                      <span class="bar" aria-hidden="true"></span>{{ t.title }}
+                    </a>
+                  </li>
+                }
+              </ul>
+              @if (cell.tasks.length > maxVisible) {
+                <button
+                  type="button"
+                  class="more"
+                  (click)="toggle(cell.key)"
+                  [attr.aria-expanded]="expanded().has(cell.key)"
+                >
+                  {{
+                    expanded().has(cell.key)
+                      ? 'Show less'
+                      : '+' + (cell.tasks.length - maxVisible) + ' more'
+                  }}
+                </button>
+              }
+            }
+          </div>
+        }
+      </div>
+    }
+  } @else {
+    <div class="skeleton" style="height: 560px; border-radius: 0" aria-hidden="true"></div>
+  }
+</div>

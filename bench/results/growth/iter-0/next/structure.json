@@ -1,0 +1,129 @@
+{
+  "name": "next",
+  "files": 51,
+  "codeFiles": 36,
+  "totalLoc": 7141,
+  "fileLoc": {
+    "avg": 140.02,
+    "p90": 310,
+    "max": 478,
+    "over300": 6,
+    "over500": 0
+  },
+  "largestFiles": [
+    {
+      "file": "app/globals.css",
+      "loc": 478
+    },
+    {
+      "file": "components/views/TasksView.tsx",
+      "loc": 442
+    },
+    {
+      "file": "components/views/tasks.module.css",
+      "loc": 427
+    },
+    {
+      "file": "components/AppShell.tsx",
+      "loc": 367
+    },
+    {
+      "file": "components/views/ProjectsView.tsx",
+      "loc": 311
+    }
+  ],
+  "fileList": [
+    "app/board/page.tsx",
+    "app/calendar/page.tsx",
+    "app/dashboard/page.tsx",
+    "app/globals.css",
+    "app/layout.tsx",
+    "app/not-found.tsx",
+    "app/projects/page.tsx",
+    "app/settings/page.tsx",
+    "app/tasks/[id]/page.tsx",
+    "app/tasks/page.tsx",
+    "components/AppShell.tsx",
+    "components/Modal.tsx",
+    "components/Providers.tsx",
+    "components/TaskForm.tsx",
+    "components/bits.module.css",
+    "components/bits.tsx",
+    "components/charts.module.css",
+    "components/charts.tsx",
+    "components/icons.tsx",
+    "components/modal.module.css",
+    "components/pomodoro.tsx",
+    "components/shell.module.css",
+    "components/shortcuts.module.css",
+    "components/store-hooks.ts",
+    "components/task-form.module.css",
+    "components/toast.module.css",
+    "components/toast.tsx",
+    "components/ui.tsx",
+    "components/views/BoardView.tsx",
+    "components/views/CalendarView.tsx",
+    "components/views/DashboardView.tsx",
+    "components/views/ProjectsView.tsx",
+    "components/views/SettingsView.tsx",
+    "components/views/TaskDetailView.tsx",
+    "components/views/TasksView.tsx",
+    "components/views/board.module.css",
+    "components/views/calendar.module.css",
+    "components/views/dashboard.module.css",
+    "components/views/detail.module.css",
+    "components/views/projects.module.css",
+    "components/views/settings.module.css",
+    "components/views/tasks.module.css",
+    "lib/dates.ts",
+    "lib/demo.ts",
+    "lib/filters.ts",
+    "lib/history.ts",
+    "lib/reducer.ts",
+    "lib/stats.ts",
+    "lib/store.ts",
+    "lib/types.ts",
+    "lib/validation.ts"
+  ],
+  "imports": {
+    "edges": 69,
+    "edgesPerFile": 1.92,
+    "maxFanOut": 7,
+    "maxFanIn": 11,
+    "topFanOut": [
+      [
+        "components/views/TaskDetailView.tsx",
+        7
+      ],
+      [
+        "components/views/ProjectsView.tsx",
+        6
+      ],
+      [
+        "components/views/SettingsView.tsx",
+        6
+      ]
+    ],
+    "topFanIn": [
+      [
+        "components/store-hooks.ts",
+        11
+      ],
+      [
+        "components/icons.tsx",
+        10
+      ],
+      [
+        "components/toast.tsx",
+        8
+      ]
+    ],
+    "cycles": 0,
+    "filesInCycles": 0,
+    "largestCycle": 0,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    }
+  }
+}

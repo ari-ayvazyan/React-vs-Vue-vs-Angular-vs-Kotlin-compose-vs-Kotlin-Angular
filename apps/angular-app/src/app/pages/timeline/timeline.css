@@ -1,0 +1,347 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: -6px 0 12px;
+  font-size: 0.86rem;
+}
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+.check input {
+  accent-color: var(--primary);
+}
+.legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  font-size: 0.8rem;
+}
+.legend-arrow {
+  width: 22px;
+  height: 0;
+  border-top: 1.5px solid var(--warning);
+  position: relative;
+}
+.legend-arrow::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: -4.5px;
+  border: 4px solid transparent;
+  border-left: 6px solid var(--warning);
+}
+
+/* ---------- chart ---------- */
+.tl-scroll {
+  position: relative;
+  overflow: auto;
+  height: max(380px, calc(100dvh - 300px));
+  padding: 0;
+  overscroll-behavior: contain;
+}
+.tl-scroll.dragging {
+  cursor: ew-resize;
+  user-select: none;
+}
+.tl-canvas {
+  position: relative;
+}
+.tl-header {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.corner {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: var(--label-w);
+  height: 100%;
+  padding: 0 14px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+.tick {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  border-left: 1px solid var(--border);
+}
+.tick.major {
+  color: var(--text);
+  font-weight: 600;
+  border-left-color: var(--border-strong);
+}
+.gridlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.gridline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px solid var(--chart-grid);
+}
+.gridline.major {
+  border-left-color: var(--border);
+}
+.today-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 2px solid var(--danger);
+  opacity: 0.6;
+  z-index: 3;
+}
+.row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 34px;
+  border-bottom: 1px solid var(--border);
+}
+.task-row:hover {
+  background: var(--hover);
+}
+.group-row {
+  background: var(--surface-2);
+  z-index: 4;
+}
+.group-toggle {
+  position: sticky;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  max-width: 100%;
+  padding: 0 14px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+.group-toggle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+.count {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-muted);
+}
+.label {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: var(--label-w);
+  height: 100%;
+  padding: 0 12px 0 30px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  font-size: 0.84rem;
+}
+.task-row:hover .label {
+  background: var(--hover);
+}
+.label a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text);
+  text-decoration: none;
+}
+.label a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.task-row.done .label a {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+.sdot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+.s-in_progress {
+  background: var(--primary);
+}
+.s-done {
+  background: var(--success);
+}
+.bar {
+  position: absolute;
+  top: 8px;
+  height: 18px;
+  border-radius: 5px;
+  background: color-mix(in srgb, var(--c) 78%, transparent);
+  border: 1px solid var(--c);
+  z-index: 2;
+}
+.task-row.done .bar {
+  opacity: 0.4;
+}
+.bar.active {
+  box-shadow: 0 0 0 3px var(--ring);
+}
+.handle {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  width: 10px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: transparent;
+  cursor: ew-resize;
+  touch-action: none;
+}
+.handle::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 4px;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--surface);
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.bar:hover .handle::after,
+.handle:focus-visible::after,
+.bar.active .handle::after {
+  opacity: 1;
+}
+.handle:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+.drag-tip {
+  position: absolute;
+  right: -4px;
+  bottom: calc(100% + 6px);
+  transform: translateX(50%);
+  padding: 3px 7px;
+  border-radius: 6px;
+  background: var(--toast-bg);
+  color: var(--toast-text);
+  font-size: 0.74rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.arrows {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+}
+.arrow {
+  fill: none;
+  stroke: var(--text-muted);
+  stroke-width: 1.4;
+  opacity: 0.7;
+}
+.arrow.open {
+  stroke: var(--warning);
+  opacity: 0.95;
+}
+.arrow-head {
+  fill: var(--text-muted);
+}
+.arrow-head.open {
+  fill: var(--warning);
+}
+
+/* ---------- undated ---------- */
+.undated {
+  margin-top: 16px;
+  padding: 12px 16px;
+}
+.undated summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.undated summary .muted {
+  font-size: 0.82rem;
+}
+.undated .count {
+  background: var(--surface-2);
+}
+.undated ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  columns: 2 280px;
+  column-gap: 24px;
+}
+.undated li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.86rem;
+  break-inside: avoid;
+}
+.undated li a {
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.84rem;
+}
+@media (max-width: 767px) {
+  .legend {
+    margin-left: 0;
+  }
+  .label {
+    padding-left: 12px;
+  }
+}

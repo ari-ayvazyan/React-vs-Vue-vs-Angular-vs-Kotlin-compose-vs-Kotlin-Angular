@@ -1,0 +1,165 @@
+{
+  "name": "angular",
+  "files": 86,
+  "codeFiles": 59,
+  "totalLoc": 13085,
+  "fileLoc": {
+    "avg": 152.15,
+    "p90": 343,
+    "max": 532,
+    "over300": 12,
+    "over500": 2
+  },
+  "largestFiles": [
+    {
+      "file": "src/styles.css",
+      "loc": 532
+    },
+    {
+      "file": "src/app/services/store.service.ts",
+      "loc": 526
+    },
+    {
+      "file": "src/app/pages/tasks/tasks.css",
+      "loc": 440
+    },
+    {
+      "file": "src/app/pages/tasks/tasks.html",
+      "loc": 423
+    },
+    {
+      "file": "src/app/core/validation.ts",
+      "loc": 379
+    }
+  ],
+  "fileList": [
+    "src/app/app.config.server.ts",
+    "src/app/app.css",
+    "src/app/app.html",
+    "src/app/app.routes.server.ts",
+    "src/app/app.routes.ts",
+    "src/app/app.ts",
+    "src/app/components/activity-list.ts",
+    "src/app/components/avatar.ts",
+    "src/app/components/bar-chart.ts",
+    "src/app/components/comment-thread.ts",
+    "src/app/components/confirm-dialog.ts",
+    "src/app/components/dependency-picker.ts",
+    "src/app/components/donut-chart.ts",
+    "src/app/components/hbar-chart.ts",
+    "src/app/components/help-modal.ts",
+    "src/app/components/icon.ts",
+    "src/app/components/line-chart.ts",
+    "src/app/components/modal.css",
+    "src/app/components/modal.ts",
+    "src/app/components/notification-bell.ts",
+    "src/app/components/task-form.css",
+    "src/app/components/task-form.html",
+    "src/app/components/task-form.ts",
+    "src/app/components/task-modal.ts",
+    "src/app/components/toasts.ts",
+    "src/app/core/activity.ts",
+    "src/app/core/chart-scale.ts",
+    "src/app/core/csv.ts",
+    "src/app/core/dates.ts",
+    "src/app/core/demo-data.ts",
+    "src/app/core/dependencies.ts",
+    "src/app/core/filters.ts",
+    "src/app/core/history.ts",
+    "src/app/core/members.ts",
+    "src/app/core/mentions.ts",
+    "src/app/core/models.ts",
+    "src/app/core/notifications.ts",
+    "src/app/core/recurrence.ts",
+    "src/app/core/reports.ts",
+    "src/app/core/stats.ts",
+    "src/app/core/task-ops.ts",
+    "src/app/core/timeline.ts",
+    "src/app/core/validation.ts",
+    "src/app/core/views.ts",
+    "src/app/pages/activity/activity.css",
+    "src/app/pages/activity/activity.html",
+    "src/app/pages/activity/activity.ts",
+    "src/app/pages/board/board.css",
+    "src/app/pages/board/board.html",
+    "src/app/pages/board/board.ts",
+    "src/app/pages/calendar/calendar.css",
+    "src/app/pages/calendar/calendar.html",
+    "src/app/pages/calendar/calendar.ts",
+    "src/app/pages/dashboard/dashboard.css",
+    "src/app/pages/dashboard/dashboard.html",
+    "src/app/pages/dashboard/dashboard.ts",
+    "src/app/pages/not-found/not-found.ts",
+    "src/app/pages/projects/projects.css",
+    "src/app/pages/projects/projects.html",
+    "src/app/pages/projects/projects.ts",
+    "src/app/pages/reports/reports.css",
+    "src/app/pages/reports/reports.html",
+    "src/app/pages/reports/reports.ts",
+    "src/app/pages/settings/settings.css",
+    "src/app/pages/settings/settings.html",
+    "src/app/pages/settings/settings.ts",
+    "src/app/pages/task-detail/task-detail.css",
+    "src/app/pages/task-detail/task-detail.html",
+    "src/app/pages/task-detail/task-detail.ts",
+    "src/app/pages/tasks/tasks.css",
+    "src/app/pages/tasks/tasks.html",
+    "src/app/pages/tasks/tasks.ts",
+    "src/app/pages/timeline/timeline.css",
+    "src/app/pages/timeline/timeline.html",
+    "src/app/pages/timeline/timeline.ts",
+    "src/app/services/pomodoro.service.ts",
+    "src/app/services/store.service.ts",
+    "src/app/services/theme.service.ts",
+    "src/app/services/toast.service.ts",
+    "src/app/services/ui.service.ts",
+    "src/app/utils/download.ts",
+    "src/index.html",
+    "src/main.server.ts",
+    "src/main.ts",
+    "src/server.ts",
+    "src/styles.css"
+  ],
+  "imports": {
+    "edges": 202,
+    "edgesPerFile": 3.42,
+    "maxFanOut": 13,
+    "maxFanIn": 35,
+    "topFanOut": [
+      [
+        "src/app/pages/task-detail/task-detail.ts",
+        13
+      ],
+      [
+        "src/app/pages/tasks/tasks.ts",
+        13
+      ],
+      [
+        "src/app/services/store.service.ts",
+        12
+      ]
+    ],
+    "topFanIn": [
+      [
+        "src/app/core/models.ts",
+        35
+      ],
+      [
+        "src/app/services/store.service.ts",
+        19
+      ],
+      [
+        "src/app/core/dates.ts",
+        18
+      ]
+    ],
+    "cycles": 0,
+    "filesInCycles": 0,
+    "largestCycle": 0,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    },
+    "kotlinEdges": 0
+  }
+}

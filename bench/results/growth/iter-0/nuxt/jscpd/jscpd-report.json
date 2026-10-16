@@ -1,0 +1,1441 @@
+{
+  "statistics": {
+    "detectionDate": "2026-10-16T09:04:48.789Z",
+    "formats": {
+      "css": {
+        "sources": {
+          "/tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue": {
+            "lines": 593,
+            "tokens": 4029,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 60,
+            "percentage": 1.69,
+            "percentageTokens": 1.49,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/tasks/[id].vue": {
+            "lines": 316,
+            "tokens": 2326,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/LineChart.vue": {
+            "lines": 74,
+            "tokens": 400,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/DonutChart.vue": {
+            "lines": 92,
+            "tokens": 457,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/BarChart.vue": {
+            "lines": 49,
+            "tokens": 202,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/assets/css/main.css": {
+            "lines": 490,
+            "tokens": 3060,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/settings.vue": {
+            "lines": 118,
+            "tokens": 564,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/projects.vue": {
+            "lines": 326,
+            "tokens": 2597,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/dashboard.vue": {
+            "lines": 173,
+            "tokens": 794,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/calendar.vue": {
+            "lines": 297,
+            "tokens": 1728,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 10,
+            "duplicatedTokens": 60,
+            "percentage": 3.37,
+            "percentageTokens": 3.47,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/board.vue": {
+            "lines": 267,
+            "tokens": 1699,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/[...slug].vue": {
+            "lines": 44,
+            "tokens": 219,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/layouts/default.vue": {
+            "lines": 37,
+            "tokens": 155,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ToastHost.vue": {
+            "lines": 95,
+            "tokens": 459,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/TaskForm.vue": {
+            "lines": 78,
+            "tokens": 381,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ShortcutHelp.vue": {
+            "lines": 45,
+            "tokens": 192,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ProjectChip.vue": {
+            "lines": 28,
+            "tokens": 165,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PriorityBadge.vue": {
+            "lines": 8,
+            "tokens": 31,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PomodoroTimer.vue": {
+            "lines": 71,
+            "tokens": 310,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PomodoroMini.vue": {
+            "lines": 62,
+            "tokens": 274,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PageLoading.vue": {
+            "lines": 19,
+            "tokens": 80,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/DueLabel.vue": {
+            "lines": 29,
+            "tokens": 124,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/BaseModal.vue": {
+            "lines": 99,
+            "tokens": 450,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppTopbar.vue": {
+            "lines": 100,
+            "tokens": 490,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppSidebar.vue": {
+            "lines": 235,
+            "tokens": 1272,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppIcon.vue": {
+            "lines": 6,
+            "tokens": 16,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 3751,
+          "tokens": 22474,
+          "sources": 26,
+          "clones": 1,
+          "duplicatedLines": 10,
+          "duplicatedTokens": 60,
+          "percentage": 0.27,
+          "percentageTokens": 0.27,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "javascript": {
+        "sources": {
+          "/tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue": {
+            "lines": 140,
+            "tokens": 1738,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/tasks/[id].vue": {
+            "lines": 88,
+            "tokens": 967,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/LineChart.vue": {
+            "lines": 96,
+            "tokens": 1555,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/DonutChart.vue": {
+            "lines": 30,
+            "tokens": 411,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/BarChart.vue": {
+            "lines": 5,
+            "tokens": 28,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/settings.vue": {
+            "lines": 106,
+            "tokens": 1055,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/projects.vue": {
+            "lines": 85,
+            "tokens": 934,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/index.vue": {
+            "lines": 5,
+            "tokens": 32,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/dashboard.vue": {
+            "lines": 44,
+            "tokens": 737,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/calendar.vue": {
+            "lines": 57,
+            "tokens": 853,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/board.vue": {
+            "lines": 140,
+            "tokens": 1712,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/[...slug].vue": {
+            "lines": 8,
+            "tokens": 62,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/layouts/default.vue": {
+            "lines": 3,
+            "tokens": 5,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ToastHost.vue": {
+            "lines": 11,
+            "tokens": 64,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/TaskModal.vue": {
+            "lines": 26,
+            "tokens": 255,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/TaskForm.vue": {
+            "lines": 140,
+            "tokens": 1221,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ShortcutHelp.vue": {
+            "lines": 35,
+            "tokens": 299,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ProjectChip.vue": {
+            "lines": 7,
+            "tokens": 72,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PriorityBadge.vue": {
+            "lines": 6,
+            "tokens": 35,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PomodoroTimer.vue": {
+            "lines": 23,
+            "tokens": 276,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PomodoroMini.vue": {
+            "lines": 8,
+            "tokens": 73,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PageLoading.vue": {
+            "lines": 3,
+            "tokens": 25,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/DueLabel.vue": {
+            "lines": 10,
+            "tokens": 121,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/BaseModal.vue": {
+            "lines": 74,
+            "tokens": 654,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppTopbar.vue": {
+            "lines": 56,
+            "tokens": 625,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppSidebar.vue": {
+            "lines": 25,
+            "tokens": 297,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppIcon.vue": {
+            "lines": 9,
+            "tokens": 77,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1240,
+          "tokens": 14183,
+          "sources": 27,
+          "clones": 0,
+          "duplicatedLines": 0,
+          "duplicatedTokens": 0,
+          "percentage": 0,
+          "percentageTokens": 0,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "markup": {
+        "sources": {
+          "/tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue": {
+            "lines": 799,
+            "tokens": 6512,
+            "sources": 1,
+            "clones": 3,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 206,
+            "percentage": 2,
+            "percentageTokens": 3.16,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/tasks/[id].vue": {
+            "lines": 430,
+            "tokens": 3634,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/LineChart.vue": {
+            "lines": 213,
+            "tokens": 2476,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/DonutChart.vue": {
+            "lines": 156,
+            "tokens": 1211,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/charts/BarChart.vue": {
+            "lines": 75,
+            "tokens": 597,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/settings.vue": {
+            "lines": 346,
+            "tokens": 3247,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/projects.vue": {
+            "lines": 438,
+            "tokens": 3812,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/index.vue": {
+            "lines": 9,
+            "tokens": 61,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/dashboard.vue": {
+            "lines": 320,
+            "tokens": 2698,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 20,
+            "duplicatedTokens": 236,
+            "percentage": 6.25,
+            "percentageTokens": 8.75,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/calendar.vue": {
+            "lines": 405,
+            "tokens": 3234,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/board.vue": {
+            "lines": 441,
+            "tokens": 3803,
+            "sources": 1,
+            "clones": 1,
+            "duplicatedLines": 6,
+            "duplicatedTokens": 78,
+            "percentage": 1.36,
+            "percentageTokens": 2.05,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/pages/[...slug].vue": {
+            "lines": 69,
+            "tokens": 501,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/layouts/default.vue": {
+            "lines": 57,
+            "tokens": 315,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ToastHost.vue": {
+            "lines": 122,
+            "tokens": 798,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/TaskModal.vue": {
+            "lines": 46,
+            "tokens": 450,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/TaskForm.vue": {
+            "lines": 332,
+            "tokens": 2997,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ShortcutHelp.vue": {
+            "lines": 101,
+            "tokens": 759,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/ProjectChip.vue": {
+            "lines": 38,
+            "tokens": 295,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PriorityBadge.vue": {
+            "lines": 22,
+            "tokens": 147,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PomodoroTimer.vue": {
+            "lines": 142,
+            "tokens": 1209,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PomodoroMini.vue": {
+            "lines": 86,
+            "tokens": 492,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/PageLoading.vue": {
+            "lines": 27,
+            "tokens": 206,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/DueLabel.vue": {
+            "lines": 48,
+            "tokens": 388,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/BaseModal.vue": {
+            "lines": 209,
+            "tokens": 1457,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppTopbar.vue": {
+            "lines": 213,
+            "tokens": 1658,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppSidebar.vue": {
+            "lines": 296,
+            "tokens": 2001,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/components/AppIcon.vue": {
+            "lines": 34,
+            "tokens": 216,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/app.vue": {
+            "lines": 6,
+            "tokens": 28,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 5480,
+          "tokens": 45202,
+          "sources": 28,
+          "clones": 3,
+          "duplicatedLines": 21,
+          "duplicatedTokens": 260,
+          "percentage": 0.38,
+          "percentageTokens": 0.58,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      },
+      "typescript": {
+        "sources": {
+          "/tmp/tmp.ZrwZojRDOX/server/plugins/compression.ts": {
+            "lines": 14,
+            "tokens": 271,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/stores/ui.ts": {
+            "lines": 61,
+            "tokens": 753,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/stores/tasks.ts": {
+            "lines": 256,
+            "tokens": 3099,
+            "sources": 1,
+            "clones": 2,
+            "duplicatedLines": 16,
+            "duplicatedTokens": 152,
+            "percentage": 6.25,
+            "percentageTokens": 4.9,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/stores/pomodoro.ts": {
+            "lines": 109,
+            "tokens": 1256,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/plugins/app-state.client.ts": {
+            "lines": 67,
+            "tokens": 806,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/validation.ts": {
+            "lines": 165,
+            "tokens": 2991,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/types.ts": {
+            "lines": 70,
+            "tokens": 579,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/taskOps.ts": {
+            "lines": 65,
+            "tokens": 1206,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/stats.ts": {
+            "lines": 124,
+            "tokens": 1664,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/icons.ts": {
+            "lines": 44,
+            "tokens": 300,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/history.ts": {
+            "lines": 31,
+            "tokens": 499,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/filters.ts": {
+            "lines": 179,
+            "tokens": 2608,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/demo.ts": {
+            "lines": 81,
+            "tokens": 1440,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/dates.ts": {
+            "lines": 66,
+            "tokens": 871,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/chartTypes.ts": {
+            "lines": 16,
+            "tokens": 92,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/lib/calendar.ts": {
+            "lines": 46,
+            "tokens": 625,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          },
+          "/tmp/tmp.ZrwZojRDOX/app/composables/useShortcuts.ts": {
+            "lines": 84,
+            "tokens": 993,
+            "sources": 1,
+            "clones": 0,
+            "duplicatedLines": 0,
+            "duplicatedTokens": 0,
+            "percentage": 0,
+            "percentageTokens": 0,
+            "newDuplicatedLines": 0,
+            "newClones": 0
+          }
+        },
+        "total": {
+          "lines": 1478,
+          "tokens": 20053,
+          "sources": 17,
+          "clones": 1,
+          "duplicatedLines": 8,
+          "duplicatedTokens": 76,
+          "percentage": 0.54,
+          "percentageTokens": 0.38,
+          "newDuplicatedLines": 0,
+          "newClones": 0
+        }
+      }
+    },
+    "total": {
+      "lines": 11949,
+      "tokens": 101912,
+      "sources": 98,
+      "clones": 5,
+      "duplicatedLines": 39,
+      "duplicatedTokens": 396,
+      "percentage": 0.33,
+      "percentageTokens": 0.39,
+      "newDuplicatedLines": 0,
+      "newClones": 0
+    }
+  },
+  "duplicates": [
+    {
+      "format": "markup",
+      "lines": 6,
+      "fragment": "</option>\n          <option value=\"none\">No project</option>\n          <option v-for=\"p in store.projects\" :key=\"p.id\" :value=\"p.id\">{{ p.name }}</option>\n        </select>\n      </div>\n      <button",
+      "tokens": 64,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue",
+        "start": 265,
+        "end": 270,
+        "startLoc": {
+          "line": 265,
+          "column": 53,
+          "position": 3292
+        },
+        "endLoc": {
+          "line": 270,
+          "column": 14,
+          "position": 3356
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue",
+        "start": 230,
+        "end": 235,
+        "startLoc": {
+          "line": 230,
+          "column": 42,
+          "position": 2729
+        },
+        "endLoc": {
+          "line": 235,
+          "column": 13,
+          "position": 2793
+        }
+      }
+    },
+    {
+      "format": "typescript",
+      "lines": 9,
+      "fragment": "(history.value, snapshot());\n    if (!r) return false;\n    history.value = r.history;\n    tasks.value = r.state.tasks;\n    projects.value = r.state.projects;\n    return true;\n  }\n\n  // ---------- lifecycle ----------",
+      "tokens": 76,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/stores/tasks.ts",
+        "start": 62,
+        "end": 70,
+        "startLoc": {
+          "line": 62,
+          "column": 26,
+          "position": 883
+        },
+        "endLoc": {
+          "line": 70,
+          "column": 37,
+          "position": 959
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/stores/tasks.ts",
+        "start": 53,
+        "end": 61,
+        "startLoc": {
+          "line": 53,
+          "column": 26,
+          "position": 788
+        },
+        "endLoc": {
+          "line": 61,
+          "column": 11,
+          "position": 864
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 11,
+      "fragment": "\" :key=\"t.id\">\n              <NuxtLink :to=\"`/tasks/${t.id}`\" class=\"titem\">\n                <span class=\"tname\">{{ t.title }}</span>\n                <span class=\"tmeta\">\n                  <PriorityBadge :priority=\"t.priority\" />\n                  <DueLabel :due=\"t.dueDate\" :status=\"t.status\" />\n                </span>\n              </NuxtLink>\n            </li>\n          </ul>\n          <p v-else class=\"empty\">No",
+      "tokens": 118,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/dashboard.vue",
+        "start": 131,
+        "end": 141,
+        "startLoc": {
+          "line": 131,
+          "column": 36,
+          "position": 1740
+        },
+        "endLoc": {
+          "line": 141,
+          "column": 37,
+          "position": 1858
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/dashboard.vue",
+        "start": 112,
+        "end": 122,
+        "startLoc": {
+          "line": 112,
+          "column": 37,
+          "position": 1499
+        },
+        "endLoc": {
+          "line": 122,
+          "column": 42,
+          "position": 1617
+        }
+      }
+    },
+    {
+      "format": "css",
+      "lines": 11,
+      "fragment": "px;\n  font-size: 12px;\n  font-weight: 650;\n  text-transform: uppercase;\n  letter-spacing: 0.05em;\n  color: var(--text-subtle);\n  background: var(--surface-2);\n  border-bottom: 1px solid var(--border);\n}\n\n.cell",
+      "tokens": 60,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/calendar.vue",
+        "start": 163,
+        "end": 173,
+        "startLoc": {
+          "line": 163,
+          "column": 19,
+          "position": 2055
+        },
+        "endLoc": {
+          "line": 173,
+          "column": 6,
+          "position": 2115
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue",
+        "start": 537,
+        "end": 547,
+        "startLoc": {
+          "line": 537,
+          "column": 13,
+          "position": 5385
+        },
+        "endLoc": {
+          "line": 547,
+          "column": 6,
+          "position": 5445
+        }
+      }
+    },
+    {
+      "format": "markup",
+      "lines": 7,
+      "fragment": "\">\n          <option value=\"\">All projects</option>\n          <option value=\"none\">No project</option>\n          <option v-for=\"p in store.projects\" :key=\"p.id\" :value=\"p.id\">{{ p.name }}</option>\n        </select>\n      </div>\n    </",
+      "tokens": 78,
+      "firstFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/board.vue",
+        "start": 151,
+        "end": 157,
+        "startLoc": {
+          "line": 151,
+          "column": 93,
+          "position": 1879
+        },
+        "endLoc": {
+          "line": 157,
+          "column": 7,
+          "position": 1957
+        }
+      },
+      "secondFile": {
+        "name": "../../../../tmp/tmp.ZrwZojRDOX/app/pages/tasks/index.vue",
+        "start": 229,
+        "end": 235,
+        "startLoc": {
+          "line": 229,
+          "column": 108,
+          "position": 2714
+        },
+        "endLoc": {
+          "line": 235,
+          "column": 10,
+          "position": 2792
+        }
+      }
+    }
+  ]
+}
