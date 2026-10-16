@@ -1,0 +1,112 @@
+{
+  "name": "kotlin",
+  "files": 33,
+  "codeFiles": 31,
+  "totalLoc": 5139,
+  "fileLoc": {
+    "avg": 155.73,
+    "p90": 344,
+    "max": 593,
+    "over300": 4,
+    "over500": 1
+  },
+  "largestFiles": [
+    {
+      "file": "web/src/jsMain/resources/styles.css",
+      "loc": 593
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+      "loc": 424
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/Shell.kt",
+      "loc": 394
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+      "loc": 344
+    },
+    {
+      "file": "web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt",
+      "loc": 285
+    }
+  ],
+  "fileList": [
+    "server/src/main/kotlin/taskpilot/server/Server.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Board.kt",
+    "shared/src/commonMain/kotlin/taskpilot/CalendarGrid.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Dates.kt",
+    "shared/src/commonMain/kotlin/taskpilot/DemoData.kt",
+    "shared/src/commonMain/kotlin/taskpilot/History.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Ids.kt",
+    "shared/src/commonMain/kotlin/taskpilot/ImportExport.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Model.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Query.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Stats.kt",
+    "shared/src/commonMain/kotlin/taskpilot/Validation.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Main.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Platform.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Pomodoro.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Router.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Shell.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/Theme.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/BoardPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/CalendarPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/Charts.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/DashboardPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/NotFoundPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/ProjectsPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/SettingsPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/pages/TasksPage.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/Components.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/Icons.kt",
+    "web/src/jsMain/kotlin/taskpilot/web/ui/TaskForm.kt",
+    "web/src/jsMain/resources/index.html",
+    "web/src/jsMain/resources/styles.css"
+  ],
+  "imports": {
+    "edges": 126,
+    "edgesPerFile": 4.06,
+    "maxFanOut": 17,
+    "maxFanIn": 22,
+    "topFanOut": [
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/Shell.kt",
+        17
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/pages/TaskDetailPage.kt",
+        11
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+        10
+      ]
+    ],
+    "topFanIn": [
+      [
+        "shared/src/commonMain/kotlin/taskpilot/Model.kt",
+        22
+      ],
+      [
+        "shared/src/commonMain/kotlin/taskpilot/Dates.kt",
+        12
+      ],
+      [
+        "web/src/jsMain/kotlin/taskpilot/web/Store.kt",
+        12
+      ]
+    ],
+    "cycles": 1,
+    "filesInCycles": 2,
+    "largestCycle": 2,
+    "nuxtAutoImportEdges": {
+      "components": 0,
+      "functions": 0
+    },
+    "kotlinEdges": 126
+  }
+}

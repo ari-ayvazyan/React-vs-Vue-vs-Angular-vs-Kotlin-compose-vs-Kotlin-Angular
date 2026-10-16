@@ -1,0 +1,6 @@
+{"visitBoard":false,"cardsInDom":0,"domNodes":411,"create_ms":417,"heapMB":17}
+{"visitBoard":true,"cardsInDom":0,"domNodes":411,"create_ms":252,"heapMB":320}
+{"visitBoard":false,"cardsInDom":0,"domNodes":411,"create_ms":450,"heapMB":16}
+{"visitBoard":true,"cardsInDom":0,"domNodes":411,"create_ms":417,"heapMB":386}
+{"visitBoard":false,"cardsInDom":0,"domNodes":411,"create_ms":414,"heapMB":17}
+{"visitBoard":true,"cardsInDom":0,"domNodes":411,"create_ms":429,"heapMB":218}

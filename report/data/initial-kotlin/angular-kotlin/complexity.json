@@ -1,0 +1,37 @@
+{
+ "functions": 389,
+ "avg_ccn": 1.9,
+ "max_ccn": 18,
+ "fn_ccn_gt10": 2,
+ "fn_ccn_gt15": 1,
+ "fn_ccn_gt20": 0,
+ "avg_fn_nloc": 4.9,
+ "fn_over_50_lines": 1,
+ "top": [
+  [
+   18,
+   "handle",
+   "core/src/jsMain/kotlin/taskpilot/Shortcuts.kt"
+  ],
+  [
+   13,
+   "validateTaskDraft",
+   "core/src/jsMain/kotlin/taskpilot/Validation.kt"
+  ],
+  [
+   10,
+   "toQueryString",
+   "core/src/jsMain/kotlin/taskpilot/Query.kt"
+  ],
+  [
+   10,
+   "onKeydown",
+   "src/app/shared/dialog.ts"
+  ],
+  [
+   10,
+   "copy",
+   "core/src/jsMain/kotlin/taskpilot/Query.kt"
+  ]
+ ]
+}

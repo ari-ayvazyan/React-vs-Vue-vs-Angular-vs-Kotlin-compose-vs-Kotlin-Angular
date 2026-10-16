@@ -1,0 +1,222 @@
+{
+ "nuxt dashboard mobile": {
+  "n": 3,
+  "perf": 86,
+  "a11y": 97,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 2916,
+  "LCP": 3313,
+  "TBT": 115,
+  "CLS": 0,
+  "SI": 2916,
+  "TTI": 3313
+ },
+ "nuxt dashboard desktop": {
+  "n": 3,
+  "perf": 100,
+  "a11y": 97,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 621,
+  "LCP": 648,
+  "TBT": 0,
+  "CLS": 0,
+  "SI": 621,
+  "TTI": 648
+ },
+ "nuxt tasks mobile": {
+  "n": 3,
+  "perf": 89,
+  "a11y": 96,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 2751,
+  "LCP": 3007,
+  "TBT": 131,
+  "CLS": 0,
+  "SI": 2751,
+  "TTI": 3293
+ },
+ "nuxt tasks desktop": {
+  "n": 3,
+  "perf": 100,
+  "a11y": 96,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 624,
+  "LCP": 685,
+  "TBT": 8,
+  "CLS": 0,
+  "SI": 624,
+  "TTI": 750
+ },
+ "next dashboard mobile": {
+  "n": 3,
+  "perf": 98,
+  "a11y": 100,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 907,
+  "LCP": 2274,
+  "TBT": 104,
+  "CLS": 0.007,
+  "SI": 907,
+  "TTI": 2315
+ },
+ "next dashboard desktop": {
+  "n": 3,
+  "perf": 100,
+  "a11y": 96,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 247,
+  "LCP": 537,
+  "TBT": 0,
+  "CLS": 0.026,
+  "SI": 286,
+  "TTI": 537
+ },
+ "next tasks mobile": {
+  "n": 3,
+  "perf": 98,
+  "a11y": 96,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 907,
+  "LCP": 2259,
+  "TBT": 119,
+  "CLS": 0,
+  "SI": 907,
+  "TTI": 2378
+ },
+ "next tasks desktop": {
+  "n": 3,
+  "perf": 100,
+  "a11y": 96,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 246,
+  "LCP": 543,
+  "TBT": 0,
+  "CLS": 0,
+  "SI": 246,
+  "TTI": 543
+ },
+ "angular dashboard mobile": {
+  "n": 3,
+  "perf": 87,
+  "a11y": 100,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 3009,
+  "LCP": 3159,
+  "TBT": 69,
+  "CLS": 0.009,
+  "SI": 3009,
+  "TTI": 3339
+ },
+ "angular dashboard desktop": {
+  "n": 3,
+  "perf": 100,
+  "a11y": 97,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 609,
+  "LCP": 671,
+  "TBT": 0,
+  "CLS": 0,
+  "SI": 609,
+  "TTI": 674
+ },
+ "angular tasks mobile": {
+  "n": 3,
+  "perf": 88,
+  "a11y": 96,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 3011,
+  "LCP": 3062,
+  "TBT": 92,
+  "CLS": 0,
+  "SI": 3011,
+  "TTI": 3229
+ },
+ "angular tasks desktop": {
+  "n": 3,
+  "perf": 100,
+  "a11y": 97,
+  "bp": 100,
+  "seo": 100,
+  "FCP": 609,
+  "LCP": 623,
+  "TBT": 0,
+  "CLS": 0.001,
+  "SI": 609,
+  "TTI": 624
+ },
+ "angular-kotlin dashboard mobile": {
+  "n": 3,
+  "perf": 79.0,
+  "a11y": 95.0,
+  "FCP": 3806,
+  "LCP": 3806,
+  "TBT": 84
+ },
+ "angular-kotlin dashboard desktop": {
+  "n": 3,
+  "perf": 99.0,
+  "a11y": 100,
+  "FCP": 752,
+  "LCP": 782,
+  "TBT": 0
+ },
+ "angular-kotlin tasks mobile": {
+  "n": 3,
+  "perf": 76.0,
+  "a11y": 95.0,
+  "FCP": 3774,
+  "LCP": 4069,
+  "TBT": 110
+ },
+ "angular-kotlin tasks desktop": {
+  "n": 3,
+  "perf": 99.0,
+  "a11y": 100,
+  "FCP": 739,
+  "LCP": 755,
+  "TBT": 0
+ },
+ "kotlin dashboard mobile": {
+  "n": 3,
+  "perf": 75.0,
+  "a11y": 100,
+  "FCP": 758,
+  "LCP": 3237,
+  "TBT": 737
+ },
+ "kotlin dashboard desktop": {
+  "n": 3,
+  "perf": 99.0,
+  "a11y": 100,
+  "FCP": 216,
+  "LCP": 679,
+  "TBT": 93
+ },
+ "kotlin tasks mobile": {
+  "n": 3,
+  "perf": 78.0,
+  "a11y": 100,
+  "FCP": 758,
+  "LCP": 3086,
+  "TBT": 619
+ },
+ "kotlin tasks desktop": {
+  "n": 3,
+  "perf": 99.0,
+  "a11y": 100,
+  "FCP": 209,
+  "LCP": 686,
+  "TBT": 107
+ }
+}

@@ -1,27 +1,46 @@
 {
-  "angular": {
-    "start": "2026-10-15T21:10:23Z",
-    "end": "2026-10-15T21:38:24Z",
-    "agent_duration_s": 1714,
-    "tokens": 237271,
-    "tool_uses": 79,
-    "tests": 31
-  },
-  "nuxt": {
-    "start": "2026-10-15T21:10:22Z",
-    "end": "2026-10-15T21:38:35Z",
-    "agent_duration_s": 1718,
-    "tokens": 252135,
-    "tool_uses": 117,
-    "tests": 21
-  },
-  "next": {
-    "start": "2026-10-15T21:10:23Z",
-    "end": "2026-10-15T21:50:01Z",
-    "agent_duration_s": null,
-    "tokens": 282421,
-    "tool_uses": null,
-    "tests": 26,
-    "note": "container restart around 21:45-21:48 interrupted the build; the resume used 7 tool calls and 187s"
-  }
+ "angular": {
+  "start": "2026-10-15T21:10:23Z",
+  "end": "2026-10-15T21:38:24Z",
+  "agent_duration_s": 1714,
+  "tokens": 237271,
+  "tool_uses": 79,
+  "tests": 31
+ },
+ "nuxt": {
+  "start": "2026-10-15T21:10:22Z",
+  "end": "2026-10-15T21:38:35Z",
+  "agent_duration_s": 1718,
+  "tokens": 252135,
+  "tool_uses": 117,
+  "tests": 21
+ },
+ "next": {
+  "start": "2026-10-15T21:10:23Z",
+  "end": "2026-10-15T21:50:01Z",
+  "agent_duration_s": null,
+  "tokens": 282421,
+  "tool_uses": null,
+  "tests": 26,
+  "note": "container restart around 21:45-21:48 interrupted the build; the resume used 7 tool calls and 187s"
+ },
+ "angular-kotlin": {
+  "start": "2026-10-16T10:17:48Z",
+  "end": "2026-10-16T10:53:35Z",
+  "agent_duration_s": 2178,
+  "tokens": 298647,
+  "tool_uses": 100,
+  "tests": 40,
+  "note": "5 builders sharing 4 cores"
+ },
+ "kotlin": {
+  "start": "2026-10-16T10:17:47Z",
+  "end": "2026-10-16T10:56:40Z",
+  "agent_duration_s": 2358,
+  "tokens": 301859,
+  "tool_uses": 111,
+  "tests": 29,
+  "test_runs": 60,
+  "note": "5 builders sharing 4 cores"
+ }
 }

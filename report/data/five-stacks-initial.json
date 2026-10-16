@@ -1,0 +1,143 @@
+{
+ "note": "As first built, before any feature requests. Nuxt/Vue, Next.js/React, Angular: first experiment; time-to-data and real-throttling Lighthouse for those three measured with compression enabled. Angular + Kotlin and Kotlin only: tags ak-0 / k-0, measured with the same scripts.",
+ "stacks": [
+  "Nuxt/Vue",
+  "Next.js/React",
+  "Angular",
+  "Angular + Kotlin",
+  "Kotlin only"
+ ],
+ "ai_build_minutes": [
+  28.2,
+  39.6,
+  28.0,
+  36.3,
+  39.3
+ ],
+ "ai_tokens_k": [
+  252,
+  282,
+  237,
+  299,
+  302
+ ],
+ "ai_tool_calls": [
+  117,
+  null,
+  79,
+  100,
+  111
+ ],
+ "app_lines": [
+  6312,
+  7141,
+  7577,
+  7031,
+  5139
+ ],
+ "styling_lines": [
+  2728,
+  2731,
+  2666,
+  2156,
+  593
+ ],
+ "templates_plus_logic_lines": [
+  3584,
+  4410,
+  4911,
+  4875,
+  4546
+ ],
+ "unit_tests": [
+  21,
+  26,
+  31,
+  40,
+  29
+ ],
+ "client_js_gzip_kb": [
+  124,
+  223,
+  142,
+  172,
+  286
+ ],
+ "mobile_lighthouse_as_delivered_dashboard": [
+  86,
+  98,
+  87,
+  79,
+  75
+ ],
+ "mobile_fcp_simulated_s": [
+  1.85,
+  0.91,
+  1.68,
+  3.81,
+  0.76
+ ],
+ "mobile_lcp_simulated_s": [
+  2.11,
+  2.3,
+  1.68,
+  3.81,
+  3.24
+ ],
+ "mobile_fcp_real_throttling_s": [
+  1.32,
+  1.34,
+  0.73,
+  0.72,
+  4.13
+ ],
+ "mobile_lcp_real_throttling_s": [
+  4.16,
+  3.29,
+  0.73,
+  0.74,
+  4.13
+ ],
+ "time_until_data_with_compression_s": [
+  1.48,
+  1.53,
+  1.24,
+  1.51,
+  2.21
+ ],
+ "board_5000_render_s": [
+  2.8,
+  1.04,
+  1.83,
+  1.6,
+  9.8
+ ],
+ "board_5000_heap_mb": [
+  87,
+  31,
+  50,
+  49,
+  118
+ ],
+ "heap_after_leaving_board_mb": [
+  8,
+  31,
+  45,
+  44,
+  14
+ ],
+ "detached_elements_after_board": [
+  4,
+  0,
+  50913,
+  50273,
+  19
+ ],
+ "shipped_with_compression": [
+  false,
+  true,
+  false,
+  false,
+  true
+ ]
+}
