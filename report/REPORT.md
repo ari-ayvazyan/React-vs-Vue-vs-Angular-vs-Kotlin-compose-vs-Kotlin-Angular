@@ -207,8 +207,8 @@ Measured with [lizard](https://github.com/terryyin/lizard). For Vue, the `<scrip
 ## 7. UI quality
 
 Screenshots of every page, in light and dark mode at desktop (1440 px) and mobile (375 px) width, are in `report/screenshots/`:
-- `compare/`: all three apps side by side, one image per page, mode and width.
-- `nuxt/`, `next/`, `angular/`: the full-size screenshots of each app (26 each).
+- `compare/`: all five apps side by side (including the two Kotlin variants from §11), one image per page, mode and width.
+- `nuxt/`, `next/`, `angular/`, `angular-kotlin/`, `kotlin/`: the full-size screenshots of each app (26 each).
 
 The three UIs look strikingly alike. The same model designed all three, and all used the same indigo-on-slate look, card-based KPIs and sidebar layout. All three have working dark mode and mobile layouts, and Lighthouse accessibility scores of 96–100.
 
@@ -287,4 +287,49 @@ The raw results are in `report/data/`.
 - **Next.js/React** wasn't changed. Its small differences between runs (±10%) show how noisy the measurements are.
 
 The first run's report is in the git history (commit `7d6db63`).
+
+---
+
+## 11. All five stacks: adding Angular + Kotlin and Kotlin only
+
+Two more variants were later built from the same spec, with the same rules and the same scripts:
+- **Angular + Kotlin:** Angular templates and thin TypeScript components, with all logic in Kotlin/JS.
+- **Kotlin only:** Compose HTML in the browser plus a Ktor server.
+
+They were measured as first built, at git tags `ak-0` and `k-0`, with the same scripts as the first three. Both were built while five agents shared 4 CPU cores, so their build times are somewhat inflated.
+
+| As first built | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+|---|---|---|---|---|---|
+| AI build time | 28 min | ~38–40 min | 28 min | 36 min | 39 min |
+| Tokens / tool calls | 252k / 117 | ~282k / n/a | 237k / 79 | 299k / 100 | 302k / 111 |
+| Lines of app code | 6,312 | 7,141 | 7,577 | 7,031 | **5,139** |
+| Client JS (gzip) | **124 KB** | 223 KB | 142 KB | 172 KB | 286 KB |
+| Unit tests | 21 | 26 | 31 | **40** | 29 (run on JVM and Node) |
+| Mobile Lighthouse, as delivered (dashboard) | 86 | **98** | 87 | 79 | 75 |
+| Mobile FCP / LCP, simulated | 1.85 / 2.11 s | 0.91 / 2.30 s | 1.68 / 1.68 s | 3.81 / 3.81 s | 0.76 / 3.24 s |
+| Mobile FCP / LCP, real throttling | 1.32 / 4.16 s | 1.34 / 3.29 s | 0.73 / 0.73 s | **0.72 / 0.74 s** | 4.13 / 4.13 s |
+| Time until data shows, with compression | 1.48 s | 1.53 s | **1.24 s** | 1.51 s | 2.21 s |
+| 5,000-card board | 2.80 s | **1.04 s** | 1.83 s | 1.60 s | 9.80 s |
+| Memory on that board | 87 MB | **31 MB** | 50 MB | 49 MB | 118 MB |
+| Memory after leaving it (after GC) | **8 MB** | 31 MB | 45 MB (leak) | 44 MB (leak) | 14 MB |
+| Shipped with compression | no | yes | no | no | **yes (agent added it)** |
+
+FCP is when the first content appears; LCP is when the largest element appears. For Nuxt/Vue, Next.js/React and Angular, the real-throttling and "time until data shows" rows were measured after compression was turned on. Angular + Kotlin was measured as delivered, uncompressed, for real throttling, and behind a gzip proxy for "time until data shows".
+
+**What the two Kotlin variants add:**
+- **Angular + Kotlin's runtime matches Angular.** Once compressed, the Kotlin core costs no measurable time; it only adds bundle size (172 KB against 142 KB).
+- **It also has the same incremental-hydration memory leak** (50,273 detached elements). Two separate codebases written by two separate agents leak identically, which confirms the leak comes from Angular's defaults.
+- **Kotlin only renders entirely in the browser.** That gives it the slowest real-throttled first paint (4.1 s), which Lighthouse's estimate misses entirely (0.76 s). Its Compose HTML board is about 5–10× slower than the others.
+- **Both Kotlin variants cost the AI more:** 36–39 minutes, about 300k tokens and 100+ tool calls, spent mostly on build setup and Kotlin/JS details (see each app's `DEVLOG.md`).
+- **One apparent slowdown in Angular + Kotlin was a test artifact.** Its first page change took 3.5 s in the benchmark, but the CPU profile was idle: a toast covered the pagination buttons for about 5 seconds after seeding.
+
+**UI quality.** The screenshots in `report/screenshots/compare/` show all five side by side.
+
+| | Angular + Kotlin | Kotlin only |
+|---|---|---|
+| Strengths | Very close to the Angular app; clear KPI tiles and charts | Clean dashboard; status chips on rows; theme works in both modes |
+| Weaknesses | Filters stay expanded on mobile | Filters stay expanded on mobile; a stray "( / )" in the search placeholder; the first paint is blank on slow devices |
+| Rating | **8.5** | **7.5** |
+
+The growth experiment, five feature requests on top of all five apps, is in [`growth/GROWTH.md`](growth/GROWTH.md).
 

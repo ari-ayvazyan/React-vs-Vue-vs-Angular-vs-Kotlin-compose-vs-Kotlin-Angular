@@ -28,16 +28,18 @@ Every app uses bun for packages and scripts. Each app's `RUN.md` explains how to
 
 ### 1. Build it: "build this with X", nothing else
 
-Nuxt/Vue, Next.js/React and Angular were built in parallel from the spec. The report is [`report/REPORT.md`](report/REPORT.md).
+All five stacks were built from the spec: first Nuxt/Vue, Next.js/React and Angular in parallel, then the two Kotlin variants. The report is [`report/REPORT.md`](report/REPORT.md) (§11 compares all five).
 
-- **Nuxt/Vue** got to a working app fastest (28 min), with the least code and the smallest JavaScript bundle.
+- **Nuxt/Vue** got to a working app fastest (28 min), with the smallest JavaScript bundle.
 - **Angular** produced the fastest-loading app under real mobile throttling.
-- **Next.js/React** took the longest (~40 min), shipped the most JavaScript, and was the only one with a visible bug.
+- **Angular + Kotlin** matched Angular at runtime once compressed. It took the AI longer (36 min) and has the most tests.
+- **Next.js/React** took the longest of the first three (~40 min), shipped a lot of JavaScript, and was the only one with a visible bug.
+- **Kotlin only** has the least code, but it renders in the browser only: 4 s to first paint on a throttled phone, and 10 s to render 5,000 cards.
 - **Framework defaults the AI didn't change:**
-  - No compression in Nuxt/Angular, which cost 10 points of mobile Lighthouse score.
-  - A memory leak in Angular's default incremental hydration: 51k detached DOM elements.
+  - No compression in three of the five.
+  - A memory leak in Angular's default incremental hydration, reproduced in both Angular apps: 50k detached DOM elements.
   - Next.js keeps hidden visited routes mounted.
-- **Lighthouse's default (simulated) mobile mode** ranked the frameworks differently from real throttling.
+- **Lighthouse's default (simulated) mobile mode** ranked the stacks differently from real throttling. It was off by 3 s in both directions.
 
 ### 2. Grow it: five feature requests
 
