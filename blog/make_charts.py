@@ -6,7 +6,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 SURFACE, INK, INK2, MUTED, AXIS, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#898781", "#c3c2b7", "#ecebe7"
-FW = ["Nuxt/Vue", "Next.js/React", "Angular", "Angular + Kotlin", "Kotlin only"]
+FW = ["Nuxt/Vue", "Next.js/React", "Angular", "Angular + Kotlin", "Kotlin Compose"]
 COL = dict(zip(FW, ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4"]))
 OUT = "/home/user/aa_empty_claude_agent/blog/images/"
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11, "text.color": INK, "axes.labelcolor": INK2,
@@ -76,9 +76,9 @@ fig.savefig(OUT + "lighthouse-sim-vs-real.png", dpi=150); plt.close(fig)
 
 # 3. Rendering 5,000 board cards: the Nuxt experiments next to all five as built
 labels = ["Nuxt/Vue, as built", "…NuxtLink → plain <a>", "…and icons inlined", "Next.js/React, as built", "Angular, as built",
-          "Angular + Kotlin, as built", "Kotlin only, as built"]
+          "Angular + Kotlin, as built", "Kotlin Compose, as built"]
 ms = [2.70, 2.09, 1.44, 1.04, 1.83, 1.60, 9.80]; mb = [88, 41, 22, 31, 50, 49, 118]
-cols = [COL["Nuxt/Vue"]] * 3 + [COL["Next.js/React"], COL["Angular"], COL["Angular + Kotlin"], COL["Kotlin only"]]
+cols = [COL["Nuxt/Vue"]] * 3 + [COL["Next.js/React"], COL["Angular"], COL["Angular + Kotlin"], COL["Kotlin Compose"]]
 fig, ax = plt.subplots(figsize=(11, 4.9))
 y = list(range(len(labels)))[::-1]
 ax.barh(y, ms, height=0.6, color=cols, edgecolor=SURFACE, linewidth=2)
@@ -93,9 +93,9 @@ ax.text(0, -0.85, "Hatched bars are my experiments on the Nuxt/Vue card, not shi
 fig.tight_layout(); fig.savefig(OUT + "nuxt-board.png", dpi=150); plt.close(fig)
 
 # 4. Memory after leaving the board
-labels = ["Nuxt/Vue", "Next.js/React", "Angular, as built", "Angular, incremental\nhydration off", "Angular + Kotlin, as built", "Kotlin only"]
+labels = ["Nuxt/Vue", "Next.js/React", "Angular, as built", "Angular, incremental\nhydration off", "Angular + Kotlin, as built", "Kotlin Compose"]
 mb = [8, 31, 45, 7, 44, 14]
-cols = [COL["Nuxt/Vue"], COL["Next.js/React"], COL["Angular"], COL["Angular"], COL["Angular + Kotlin"], COL["Kotlin only"]]
+cols = [COL["Nuxt/Vue"], COL["Next.js/React"], COL["Angular"], COL["Angular"], COL["Angular + Kotlin"], COL["Kotlin Compose"]]
 notes = ["released", "page kept mounted (hidden)", "51k detached elements", "leak gone", "50k detached elements (same leak)", "released"]
 fig, ax = plt.subplots(figsize=(11, 4.4))
 y = list(range(len(labels)))[::-1]

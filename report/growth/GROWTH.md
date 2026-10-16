@@ -14,7 +14,7 @@
 | Next.js/React | Next 16, React 19, built-ins only | the app from the first experiment |
 | Angular | Angular 22, signals, zoneless | the app from the first experiment |
 | Angular + Kotlin | Angular templates and thin TypeScript components; all logic in Kotlin/JS | a new build, same spec |
-| Kotlin only | Kotlin/JS with Compose HTML, plus a Ktor server | a new build, same spec |
+| Kotlin Compose | Kotlin/JS with Compose HTML, plus a Ktor server | a new build, same spec |
 
 The requests got progressively broader:
 1. Team members, assignees and recurring tasks.
@@ -34,7 +34,7 @@ The requests got progressively broader:
   - Lint, type checks, tests and build passed after every request in every app.
   - Test counts grew 2.6× to 4.6×.
 - **They aged differently:**
-  - **Next.js and Kotlin only put complexity into long functions.** React and Compose HTML components are functions that contain their markup, so each feature makes them longer. At the end they had 19 and 21 functions over 50 lines; the other three had 2 to 5.
+  - **Next.js and Kotlin Compose put complexity into long functions.** React and Compose HTML components are functions that contain their markup, so each feature makes them longer. At the end they had 19 and 21 functions over 50 lines; the other three had 2 to 5.
   - **Nuxt concentrates coupling in its store.** 33 files use its central store (`stores/tasks.ts`), against 19–23 for the store in each of the other four apps.
   - **Angular had the steepest rise in very complex functions** (3 → 18). Its average complexity was still the second lowest.
   - **Angular + Kotlin stayed the least complex throughout:** average complexity 2.08, only 8 functions above complexity 10, none above 20, and 2 long functions. Keeping all logic in Kotlin with thin components worked as an architectural constraint.
@@ -49,7 +49,7 @@ The requests got progressively broader:
 
 Start → after request 5:
 
-| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | Lines of app code | 6,312 → 11,577 (+83%) | 7,141 → 13,073 (+83%) | 7,577 → 14,401 (+90%) | 7,031 → 12,390 (+76%) | 5,139 → 9,761 (+90%) |
 | Source files | 46 → 76 | 51 → 82 | 59 → 89 | 57 → 84 | 33 → 51 |
@@ -70,7 +70,7 @@ Start → after request 5:
 - Next.js: `components/store-hooks.ts`
 - Angular: `services/store.service.ts`
 - Angular + Kotlin: `core/store.service.ts`, which wraps the Kotlin store
-- Kotlin only: `web/Store.kt`
+- Kotlin Compose: `web/Store.kt`
 
 **The most-imported file is usually harmless.** In four apps it is the shared type or model file, which naturally gets imported almost everywhere. The more telling number is how many files use the central store.
 
@@ -82,7 +82,7 @@ Start → after request 5:
 
 Measured with [lizard](https://github.com/terryyin/lizard). Vue `<script>` blocks are extracted first; TSX, TypeScript and Kotlin are measured directly. Start → after request 5:
 
-| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | Average cyclomatic complexity | 2.46 → 2.65 | 2.56 → **2.87** | 1.96 → 2.36 | 1.90 → **2.08** | 2.54 → 2.56 |
 | Functions with complexity > 10 | 8 → 20 | 8 → **22** | 3 → 18 | 2 → **8** | 8 → 9 |
@@ -92,14 +92,14 @@ Measured with [lizard](https://github.com/terryyin/lizard). Vue `<script>` block
 
 **How each stack ages:**
 - **Next.js/React** collected complexity fastest in the first two requests (8 → 18 very complex functions), then levelled off. It has the highest average complexity at every point.
-- **Kotlin only** kept its complexity per function flat (8 → 9), while long functions grew from 8 to 21. Compose HTML functions, like React components, grow in length rather than in branching.
+- **Kotlin Compose** kept its complexity per function flat (8 → 9), while long functions grew from 8 to 21. Compose HTML functions, like React components, grow in length rather than in branching.
 - **Angular** started cleanest and changed the most: very complex functions went 3 → 18, and files over 300 lines 4 → 15. Even so, its average complexity is still the second lowest.
 - **Angular + Kotlin** kept every measure lowest. Its Kotlin core is made of small, pure functions that the components call. Two effects show it:
   - its unit tests caught real logic bugs before any UI work (see §5).
 
 ## 3. What each feature cost
 
-| Request | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| Request | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | R1 time, files changed, lines | 13.6 min, 24 files, +975/−78 | 13.0 min, 32 files, +1,281/−190 | 13.9 min, 37 files, +1,432/−92 | 12.6 min, 32 files, +1,121/−56 | 13.6 min, 21 files, +797/−50 |
 | R2 | 16.2 min, 26 files, +1,871/−40 | 15.2 min, 27 files, +1,980/−31 | 13.5 min, 32 files, +1,956/−34 | 11.8 min, 27 files, +1,486/−19 | 16.4 min, 18 files, +1,368/−19 |
@@ -119,23 +119,23 @@ Measured with [lizard](https://github.com/terryyin/lizard). Vue `<script>` block
 - **The maintainers changed the status model in three ways:**
   - **Next.js renamed `Task.status`** to `statusId` plus a derived `category`, so the type checker listed all ~110 places that read it. Nothing could be missed, but it touched the most files and deleted the most lines.
   - **Angular + Kotlin kept the field name `status`** but made it hold the workflow status ID, and added a derived `category`. Kotlin's types then flagged the code that needed changing.
-  - **Nuxt, Angular and Kotlin only kept `status`** as the category and added `statusId`, with one function keeping the two in sync. That's quicker, but it adds a second source of truth that every later change has to respect.
-- **Kotlin only changes the fewest files per feature** (13 to 26): its files are bigger, so features land in fewer of them.
+  - **Nuxt, Angular and Kotlin Compose kept `status`** as the category and added `statusId`, with one function keeping the two in sync. That's quicker, but it adds a second source of truth that every later change has to respect.
+- **Kotlin Compose changes the fewest files per feature** (13 to 26): its files are bigger, so features land in fewer of them.
 - **Angular and Angular + Kotlin touch the most files** (20 to 37), because features spread across many small components and services.
 
 ## 4. Performance as the apps grew
 
-| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | Client JS, gzip, start → end | 124 → 164 KB (+32%) | 223 → 263 KB (+18%) | 142 → 190 KB (+34%) | 172 → 225 KB (+31%) | 286 → 384 KB (+34%) |
 | Clean build, start → end | 11.1 → 14.7 s | 15.8 → 14.4 s | 6.7 → 8.0 s | 9.7 → 10.4 s | 4.7 → 5.8 s ⁵ |
 | 5,000-card board, start → end | 2.6 → 3.2 s | 0.7 → 0.9 s | 1.9 → 2.2 s | 1.6 → 2.2 s | 10.0 → 13.7 s |
 
-⁵ The Kotlin-only build runs with a warm Gradle daemon (Gradle's background build process), after a `gradle clean`.
+⁵ The Kotlin Compose build runs with a warm Gradle daemon (Gradle's background build process), after a `gradle clean`.
 
 **Final speed test.** All five apps were measured one at a time with nothing else running, on throttled mobile: 4× CPU slowdown and about 1.6 Mbps.
 
-| After request 5 | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| After request 5 | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | Time until data shows, as delivered | 1.64 s | 1.66 s | **1.40 s** | 3.87 s ⁶ | 2.83 s |
 | Time until data shows, behind a gzip proxy | 1.70 s | 1.64 s | **1.35 s** | 1.69 s | 2.86 s |
@@ -147,18 +147,18 @@ Measured with [lizard](https://github.com/terryyin/lizard). Vue `<script>` block
 
 FCP is when the first content appears; LCP is when the largest element appears.
 
-⁶ **Angular + Kotlin shipped without compression**, like the original Angular app did; its maintainer never added it. Without network throttling it shows data as fast as Angular (0.48 s against 0.50 s), and behind a gzip proxy it takes 1.69 s. Its Kotlin code adds JavaScript size, but no runtime cost. The Kotlin-only maintainer added gzip to its Ktor server without being asked.
+⁶ **Angular + Kotlin shipped without compression**, like the original Angular app did; its maintainer never added it. Without network throttling it shows data as fast as Angular (0.48 s against 0.50 s), and behind a gzip proxy it takes 1.69 s. Its Kotlin code adds JavaScript size, but no runtime cost. The Kotlin Compose maintainer added gzip to its Ktor server without being asked.
 
 ![Final performance](final-perf.png)
 
-- **Kotlin only (Compose HTML) has a scaling problem.** It is client-rendered: one 384 KB bundle and no server rendering, so nothing shows until the JavaScript runs. That gives the worst first paint (5.0 s). Its board takes 13 s for 5,000 cards, and its memory is about 2× that of the others.
+- **Kotlin Compose has a scaling problem.** It is client-rendered: one 384 KB bundle and no server rendering, so nothing shows until the JavaScript runs. That gives the worst first paint (5.0 s). Its board takes 13 s for 5,000 cards, and its memory is about 2× that of the others.
 - **Next.js keeps the fastest board and the smallest board memory** at every stage. Its bundle also grew the least in relative terms (+18%).
 
 ## 5. What the maintainers struggled with
 
 216 entries from the five `ISSUES.md` files were sorted into categories by a separate agent ([data](data/issues-classified.json), [summary](data/issues-summary.md)). Some entries describe a design decision rather than a problem: 28 in total, 18 of them Angular's. They are left out of the "Real app bugs" row but stay in the other rows; the last row lists them.
 
-| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | Real app bugs | 11 | 13 | 13 ⁷ | 12 | 12 |
 | Mistakes in its own tests | 9 | 11 | 11 | 9 | 8 |
@@ -199,7 +199,7 @@ None were caught by lint.
   - compiler errors hidden from `grep`.
 
   On the other hand, its Kotlin unit tests caught real logic bugs before any UI existed.
-- **Kotlin only:** gaps in Compose HTML:
+- **Kotlin Compose:** gaps in Compose HTML:
   - no SVG text helpers;
   - no pointer events;
   - a function call that resolved to a private builder;
@@ -221,9 +221,9 @@ None were caught by lint.
 2. **Angular** had the best speed at the end (Lighthouse 91, data visible at 1.35 s) and still the second-lowest average complexity. Its complexity rose the steepest, though, and it spreads each feature across the most files.
 3. **Nuxt/Vue** produced the least code and stayed simple per function, but it routes more and more through one store: 33 files use it, against about 20 elsewhere. Its large board kept getting slower (2.6 → 3.4 s).
 4. **Next.js/React** keeps the fewest links between files and the best runtime on large lists, but its components grow big: the highest average complexity, and 19 functions over 50 lines.
-5. **Kotlin only** grew its long functions fastest (8 → 21) and has a real performance problem at scale: a 13 s board, 137 MB of memory and a 5 s first paint. The AI maintained it competently, but the stack itself is the bottleneck.
+5. **Kotlin Compose** grew its long functions fastest (8 → 21) and has a real performance problem at scale: a 13 s board, 137 MB of memory and a 5 s first paint. The AI maintained it competently, but the stack itself is the bottleneck.
 
-**None of them turned into spaghetti within five feature requests.** The AI kept tests green, avoided import cycles and kept duplication low everywhere. The differences are in where complexity accumulates: in long components (Next.js, Kotlin only), in a widely used store (Nuxt), in more and bigger files (Angular), or, least of all, in a pure logic layer (Angular + Kotlin).
+**None of them turned into spaghetti within five feature requests.** The AI kept tests green, avoided import cycles and kept duplication low everywhere. The differences are in where complexity accumulates: in long components (Next.js, Kotlin Compose), in a widely used store (Nuxt), in more and bigger files (Angular), or, least of all, in a pure logic layer (Angular + Kotlin).
 
 ## Limitations
 

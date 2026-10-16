@@ -1,6 +1,6 @@
 # Data: build-it experiment (all five stacks, as first built)
 
-- `five-stacks-initial.json`: every number behind the five-way charts in `blog/` and §11 of `REPORT.md`, one array per metric, in the order Nuxt/Vue, Next.js/React, Angular, Angular + Kotlin, Kotlin only.
+- `five-stacks-initial.json`: every number behind the five-way charts in `blog/` and §11 of `REPORT.md`, one array per metric, in the order Nuxt/Vue, Next.js/React, Angular, Angular + Kotlin, Kotlin Compose.
 - `lighthouse-simulated-five-stacks.json`: Lighthouse with its default simulated throttling (median of 3), dashboard and tasks pages, mobile and desktop, all five stacks as first built.
 - `agent-stats.json`: AI build time, tokens and tool calls for each initial build.
 - `initial-kotlin/<app>/`: raw results for the two Kotlin variants (runtime suite, time-to-data, board render, heap after the board, detached elements, hidden routes, lines of code, complexity, structure, quality gates, bundle).

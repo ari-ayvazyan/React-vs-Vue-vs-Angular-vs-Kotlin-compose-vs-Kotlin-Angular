@@ -290,15 +290,15 @@ The first run's report is in the git history (commit `7d6db63`).
 
 ---
 
-## 11. All five stacks: adding Angular + Kotlin and Kotlin only
+## 11. All five stacks: adding Angular + Kotlin and Kotlin Compose
 
 Two more variants were later built from the same spec, with the same rules and the same scripts:
 - **Angular + Kotlin:** Angular templates and thin TypeScript components, with all logic in Kotlin/JS.
-- **Kotlin only:** Compose HTML in the browser plus a Ktor server.
+- **Kotlin Compose:** Compose HTML in the browser plus a Ktor server.
 
 They were measured as first built, at git tags `ak-0` and `k-0`, with the same scripts as the first three. Both were built while five agents shared 4 CPU cores, so their build times are somewhat inflated.
 
-| As first built | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin only |
+| As first built | Nuxt/Vue | Next.js/React | Angular | Angular + Kotlin | Kotlin Compose |
 |---|---|---|---|---|---|
 | AI build time | 28 min | ~38–40 min | 28 min | 36 min | 39 min |
 | Tokens / tool calls | 252k / 117 | ~282k / n/a | 237k / 79 | 299k / 100 | 302k / 111 |
@@ -319,13 +319,13 @@ FCP is when the first content appears; LCP is when the largest element appears. 
 **What the two Kotlin variants add:**
 - **Angular + Kotlin's runtime matches Angular.** Once compressed, the Kotlin core costs no measurable time; it only adds bundle size (172 KB against 142 KB).
 - **It also has the same incremental-hydration memory leak** (50,273 detached elements). Two separate codebases written by two separate agents leak identically, which confirms the leak comes from Angular's defaults.
-- **Kotlin only renders entirely in the browser.** That gives it the slowest real-throttled first paint (4.1 s), which Lighthouse's estimate misses entirely (0.76 s). Its Compose HTML board is about 5–10× slower than the others.
+- **Kotlin Compose renders entirely in the browser.** That gives it the slowest real-throttled first paint (4.1 s), which Lighthouse's estimate misses entirely (0.76 s). Its Compose HTML board is about 5–10× slower than the others.
 - **Both Kotlin variants cost the AI more:** 36–39 minutes, about 300k tokens and 100+ tool calls, spent mostly on build setup and Kotlin/JS details (see each app's `DEVLOG.md`).
 - **One apparent slowdown in Angular + Kotlin was a test artifact.** Its first page change took 3.5 s in the benchmark, but the CPU profile was idle: a toast covered the pagination buttons for about 5 seconds after seeding.
 
 **UI quality.** The screenshots in `report/screenshots/compare/` show all five side by side.
 
-| | Angular + Kotlin | Kotlin only |
+| | Angular + Kotlin | Kotlin Compose |
 |---|---|---|
 | Strengths | Very close to the Angular app; clear KPI tiles and charts | Clean dashboard; status chips on rows; theme works in both modes |
 | Weaknesses | Filters stay expanded on mobile | Filters stay expanded on mobile; a stray "( / )" in the search placeholder; the first paint is blank on slow devices |

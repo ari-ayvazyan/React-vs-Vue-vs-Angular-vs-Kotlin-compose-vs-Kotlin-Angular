@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 SURFACE, INK, INK2, MUTED, AXIS, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#898781", "#c3c2b7", "#ecebe7"
 APPS = ["nuxt", "next", "angular", "angular-kotlin", "kotlin"]
-NAME = {"nuxt": "Nuxt/Vue", "next": "Next.js/React", "angular": "Angular", "angular-kotlin": "Angular + Kotlin", "kotlin": "Kotlin only"}
+NAME = {"nuxt": "Nuxt/Vue", "next": "Next.js/React", "angular": "Angular", "angular-kotlin": "Angular + Kotlin", "kotlin": "Kotlin Compose"}
 COL = {"nuxt": "#2a78d6", "next": "#eb6834", "angular": "#1baf7a", "angular-kotlin": "#eda100", "kotlin": "#e87ba4"}
 MARK = {"nuxt": "o", "next": "s", "angular": "^", "angular-kotlin": "D", "kotlin": "v"}
 OUT = "results/growth/charts/"

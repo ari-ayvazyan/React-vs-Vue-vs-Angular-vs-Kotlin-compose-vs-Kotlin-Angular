@@ -20,7 +20,7 @@ The spec banned UI kits, CSS frameworks and chart, drag-and-drop or date librari
 | [`apps/next-app`](apps/next-app) | Next.js/React: Next 16 App Router, React 19, built-in state only |
 | [`apps/angular-app`](apps/angular-app) | Angular 22: standalone components, signals, zoneless, SSR |
 | [`apps/angular-kotlin-app`](apps/angular-kotlin-app) | Angular UI with all logic in Kotlin/JS (Gradle, `@JsExport`) |
-| [`apps/kotlin-app`](apps/kotlin-app) | Kotlin only: Compose HTML in the browser, Ktor server |
+| [`apps/kotlin-app`](apps/kotlin-app) | Kotlin Compose: Compose HTML in the browser, Ktor server |
 
 Every app uses bun for packages and scripts. Each app's `RUN.md` explains how to build and run it. `DEVLOG.md` and `ISSUES.md` are the agents' own logs, including the mistakes they made.
 
@@ -34,7 +34,7 @@ All five stacks were built from the spec: first Nuxt/Vue, Next.js/React and Angu
 - **Angular** produced the fastest-loading app under real mobile throttling.
 - **Angular + Kotlin** matched Angular at runtime once compressed. It took the AI longer (36 min) and has the most tests.
 - **Next.js/React** took the longest of the first three (~40 min), shipped a lot of JavaScript, and was the only one with a visible bug.
-- **Kotlin only** has the least code, but it renders in the browser only: 4 s to first paint on a throttled phone, and 10 s to render 5,000 cards.
+- **Kotlin Compose** has the least code, but it renders in the browser only: 4 s to first paint on a throttled phone, and 10 s to render 5,000 cards.
 - **Framework defaults the AI didn't change:**
   - No compression in three of the five.
   - A memory leak in Angular's default incremental hydration, reproduced in both Angular apps: 50k detached DOM elements.
@@ -48,12 +48,12 @@ Each app got its own AI maintainer, which received five feature requests one at 
 - **Size:** grew by 76–90% everywhere.
 - **No spaghetti:** no stack turned into spaghetti. There were no import cycles in the TypeScript apps, duplication stayed at 1.5% or less, and tests stayed green.
 - **Where complexity piled up:**
-  - long components in Next.js/React and Kotlin only;
+  - long components in Next.js/React and Kotlin Compose;
   - a widely used store in Nuxt/Vue;
   - the most new very complex functions in Angular;
   - least of all in Angular + Kotlin, which had the lowest complexity throughout.
 - **The cross-cutting change request** doubled the AI's time in every stack.
-- **Kotlin only (Compose HTML)** has a performance problem at scale: 13 s to render 5,000 cards.
+- **Kotlin Compose** has a performance problem at scale: 13 s to render 5,000 cards.
 
 ## Repository layout
 
